@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd ./app && node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -79,7 +79,7 @@
     -   Florin Matei / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior)
     -   Alexandru-Mihai Varzaru (Backend Developer - Junior)
     -   Alexandru-Stefan Mica (Full-Stack Developer - Junior)
-    -   Petrut-Peonaru (Full-Stack Developr - Junior)
+    -   Petrut-Peonaru (Full-Stack Developer - Junior)
     -   Florin Chirica (Backend Developer - Junior)
 
 ##### Legend
