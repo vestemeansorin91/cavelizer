@@ -4,6 +4,7 @@ Mai jos ai cele mai utile comenzi de git
 
 | Comanda                               | Actiune                                                                   |
 | ------------------------------------- | ------------------------------------------------------------------------- |
+| git clone                             | Cloneaza proiect nou / duplica                                            |
 | git add                               | Adauga fisiere                                                            |
 | git commit -m "**mesajul-tau**"       | Modificarile pe care le-ai adaugat, vor fi trimise impreuna cu un mesaj   |
 | git push origin **numele-branchului** | Trimiti modificarile pe care le-ai facut local, online                    |

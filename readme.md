@@ -4,6 +4,16 @@
 
 ### The purpose of the application is to cover a wide range of passions that we have as a team that we formed at ReCODEnized.
 
+### Team
+
+![](https://trello.com/1/cards/6295e7bb0d9b977eb5f8800d/attachments/629623fe387d685d91438700/previews/629623ff387d685d9143873f/download/sorin-vestemean.png | width=100)
+ - Sorin Vestemean / SC SORIN IT SOLUTIONS SRL (Full-Stack Developer - Senior) 
+ - Florin Matei / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior) 
+ - Alexandru-Mihai Varzaru (Backend Developer - Junior) 
+ - Alexandru-Stefan Mica (Full-Stack Developer - Junior) 
+ - Petrut-Peonaru (Full-Stack Developer - Junior) 
+ - Florin Chirica (Backend Developer - Junior)
+
 #### User
 
     -   ❌ Authentication ( Login / Register / Forgot Password / Reset Password)
@@ -72,15 +82,6 @@
     -   Trello / Jira (Tasks oraganizer)
     -   Figma (UI/UX Templates)
     -   Discord (Communication Channel / Bugs reports)
-
-### Team
-
-    -   Sorin Vestemean / SC SORIN IT SOLUTIONS SRL (Full-Stack Developer - Senior)
-    -   Florin Matei / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior)
-    -   Alexandru-Mihai Varzaru (Backend Developer - Junior)
-    -   Alexandru-Stefan Mica (Full-Stack Developer - Junior)
-    -   Petrut-Peonaru (Full-Stack Developer - Junior)
-    -   Florin Chirica (Backend Developer - Junior)
 
 ##### Legend
 
