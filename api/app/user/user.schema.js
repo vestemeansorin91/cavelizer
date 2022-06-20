@@ -10,7 +10,6 @@ const userSchema = mongoose.Schema({
   },
   age: {
     type: Number,
-    defaul: 18,
   },
 });
 
