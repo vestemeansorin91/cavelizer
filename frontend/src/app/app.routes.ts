@@ -5,10 +5,10 @@ import { AuthGuard } from './modules/auth/auth.guard';
 import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent,
-  },
+  // {
+  //   path: '',
+  //   component: AppComponent,
+  // },
   {
     path: 'auth',
     loadChildren: () =>
