@@ -1,0 +1,7 @@
+<form [formGroup]="loginFormGroup">
+  <h1>Login</h1>
+  <a routerLink="/auth/register">Nu ai cont? Creeaza unul!</a>
+  <input formControlName="username" type="text" placeholder="Username" />
+  <input formControlName="password" type="password" placeholder="Password" />
+  <button (click)="loginClicked()">Login</button>
+</form>
