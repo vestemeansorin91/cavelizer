@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class DashboardService {
   constructor(private http: HttpClient) {}
 
-  public getClient() {
+  public getClients() {
     return this.http.get('http://localhost:3333/api/users');
   }
 }

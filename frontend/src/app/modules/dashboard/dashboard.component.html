@@ -1,0 +1,12 @@
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+    <app-sidenav
+      [isExpanded]="isExpanded"
+      (expanded)="isExpanded = $event"
+    ></app-sidenav>
+  </mat-drawer>
+
+  <div class="dashboard-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
