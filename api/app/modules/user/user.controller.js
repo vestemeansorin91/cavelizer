@@ -68,7 +68,7 @@ async function getUserByIdFn(id) {
   const userFound = await usersCollection.findById(id);
 
   if (!userFound) {
-    throw new Error("User not found COSTUMIZAT");
+    throw new Error("User not found!");
   }
 
   return userFound;

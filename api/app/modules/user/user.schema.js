@@ -6,7 +6,6 @@ const userSchema = mongoose.Schema({
   email: String,
   isActive: {
     type: Boolean,
-    default: true,
   },
   age: {
     type: Number,

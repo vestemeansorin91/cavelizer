@@ -1,0 +1,42 @@
+name: Shell Commands
+
+on:
+  # - push
+  repository_dispatch:
+    types:
+      - build
+  pull_request:
+    types:
+      - closed
+      - opened
+      - assigned
+      - reopened
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: echoa a string
+        run: echo "Hello World"
+        timeout-minutes: 1
+        continue-on-error: true
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: python Command
+        run: |
+          import platform
+          print
+          (platform.processor())
+        shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    needs:
+      - run-shell-command
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash

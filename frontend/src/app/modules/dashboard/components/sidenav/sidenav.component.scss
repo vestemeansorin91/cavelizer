@@ -23,7 +23,6 @@
   h1 {
     text-align: center;
     font-size: 32px;
-    margin-top: 0;
     cursor: default;
     user-select: none;
   }
@@ -37,23 +36,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    height: 100%;
+
     margin-top: 8px;
 
     li {
+      position: relative;
+
       display: flex;
       align-items: center;
-      margin-bottom: 4px;
       justify-content: center;
-      text-decoration: none;
-      color: black;
-      cursor: pointer;
+
       width: 100%;
+
+      margin-bottom: 4px;
       padding-left: 16px;
       padding-right: 16px;
 
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+
       i {
-        margin-right: 0;
-        font-size: 32px;
+        margin: 8px 0;
+        font-size: 24px;
       }
 
       span {
@@ -62,6 +69,7 @@
 
       &:hover {
         background-color: azure;
+
         span {
           font-weight: bold;
         }
@@ -71,6 +79,18 @@
         i,
         span {
           color: blue;
+        }
+      }
+
+      &.logout {
+        flex: 1;
+
+        &:hover {
+          background-color: white;
+          i,
+          span {
+            color: darkred;
+          }
         }
       }
     }
