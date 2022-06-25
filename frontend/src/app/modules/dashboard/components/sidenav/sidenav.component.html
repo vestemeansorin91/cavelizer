@@ -7,58 +7,49 @@
   </span>
 
   <ul [class.isExpanded]="isExpanded">
-    <li
-      [routerLink]="['/dashboard', 'panel']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-desktop"></i>
       <span>Dashboard</span>
     </li>
 
-    <li
-      [routerLink]="['/dashboard', 'users']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <li [routerLink]="['/dashboard', 'users']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-user-friends"></i>
       <span>Users</span>
     </li>
 
-    <li
-      [routerLink]="['/dashboard', 'products']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <li [routerLink]="['/dashboard', 'products']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-shopping-bag"></i>
       <span>Products</span>
     </li>
 
-    <li
-      [routerLink]="['/dashboard', 'roles']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <li [routerLink]="['/dashboard', 'roles']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-id-badge"></i> <span>Roles</span>
     </li>
 
-    <li
-      [routerLink]="['/dashboard', 'permissions']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
+    <li [routerLink]="['/dashboard', 'permissions']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-user-shield"></i>
       <span>Permissions</span>
     </li>
 
-    <li
-      [routerLink]="['/dashboard', 'categories']"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      <i class="las la-shapes"></i>
+    <li [routerLink]="['/dashboard', 'categories']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-list"></i>
       <span>Categories</span>
     </li>
+
+    <li [routerLink]="['/dashboard', 'docs']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-book"></i>
+      <span>Documentation</span>
+    </li>
+
+    <li [routerLink]="['/dashboard', 'cavelizer-components']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-shapes"></i>
+      <span>Components</span>
+    </li>
+
+
 
     <li (click)="logout()" class="logout">
       <i class="las la-power-off"></i>

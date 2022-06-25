@@ -34,7 +34,7 @@ export class AuthService {
     body: RegisterRequestInterface
   ): Observable<RegisterResponseInterface> {
     return this.http.post<RegisterResponseInterface>(
-      `${BASE_URL}/auth/login`,
+      `${BASE_URL}/auth/register`,
       body
     );
   }

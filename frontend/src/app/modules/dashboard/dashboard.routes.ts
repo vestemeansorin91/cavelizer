@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { CategoryListComponent } from './views/categories/components/category-list/category-list.component';
+import { CavelizerComponentsComponent } from './views/cavelizer-components/components/cavelizer-components.component';
+import { DocumentationComponent } from './views/documentation/documentation.component';
 import { PanelComponent } from './views/panel/panel.component';
 import { PermissionListComponent } from './views/permissions/components/permission-list/permission-list.component';
 import { ProductListComponent } from './views/products/components/product-list/product-list.component';
@@ -29,6 +31,14 @@ const routes: Routes = [
       {
         path: 'categories',
         component: CategoryListComponent,
+      },
+      {
+        path: 'cavelizer-components',
+        component: CavelizerComponentsComponent,
+      },
+      {
+        path: 'docs',
+        component: DocumentationComponent,
       },
       {
         path: 'permissions',
