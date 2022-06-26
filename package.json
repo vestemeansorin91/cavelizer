@@ -1,0 +1,13 @@
+{
+  "name": "cavelizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:api": "cd api && npm run start",
+    "start:frontend": "cd frontend && npm run start"
+  },
+  "keywords": ["cavelizer", "recodenized"],
+  "author": "Sorin Vestemean",
+  "license": "ISC"
+}

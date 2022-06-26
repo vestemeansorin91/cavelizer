@@ -51,9 +51,13 @@
 ## Technologies / Programming Languages:
 
 ### Backend:
-
-    - NodeJS
-    - Typescript
+    Languages
+        - NodeJS
+        - Typescript
+    - Libraries
+        - Express
+        - Mongoose
+        - Passport
 
 ### Database:
 
