@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const COMPONENTS: any[] = [PageNotFoundComponent];
 
@@ -16,6 +17,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatSidenavModule,
   MatIconModule,
   MatListModule,
+  MatTabsModule,
 ];
 
 const PIPES: any[] = [];

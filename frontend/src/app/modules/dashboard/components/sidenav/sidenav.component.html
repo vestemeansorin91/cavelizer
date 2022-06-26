@@ -1,6 +1,16 @@
 <div class="sidenav">
   <h1 *ngIf="isExpanded">cavelizer</h1>
   <h1 *ngIf="!isExpanded">c</h1>
+
+  <!-- Profile -->
+  <div [routerLink]="['/user/profile']" class="profile">
+    <img class="profile-img" src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/batman-icon.png">
+    <div *ngIf="isExpanded" class="profile-info">
+      <span>Sorin Vestemean</span>
+      <strong>Profile</strong>
+    </div>
+  </div>
+
   <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
     <i *ngIf="isExpanded" class="las la-angle-left"></i>
     <i *ngIf="!isExpanded" class="las la-angle-right"></i>
