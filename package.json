@@ -7,7 +7,10 @@
     "start:api": "cd api && npm run start",
     "start:frontend": "cd frontend && npm run start"
   },
-  "keywords": ["cavelizer", "recodenized"],
+  "keywords": [
+    "cavelizer",
+    "recodenized"
+  ],
   "author": "Sorin Vestemean",
   "license": "ISC"
 }

@@ -7,9 +7,6 @@ const userSchema = mongoose.Schema({
   isActive: {
     type: Boolean,
   },
-  age: {
-    type: Number,
-  },
 });
 
 const usersCollection = mongoose.model("User", userSchema);
