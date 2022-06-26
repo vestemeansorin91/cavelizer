@@ -2,9 +2,14 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
+
+/* Morgan */
+const morgan = require("morgan");
+app.use(morgan("tiny"));
 
 /* Swagger */
 const { initSwagger } = require("./app/swagger.init");
