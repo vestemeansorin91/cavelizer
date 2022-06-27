@@ -9,7 +9,8 @@
     "build:frontend": "cd frontend && npm run build",
     "heroku:local": "npm run build:frontend && cd .. && cd api && heroku local web",
     "heroku:local-skip-ui-build": "cd api && heroku local web",
-    "heroku:deploy": "heroku create && git push heroku master"
+    "heroku:deploy": "heroku create && git push heroku master",
+    "heroku:start": "cd api && npm run swagger && node server.js"
   },
   "keywords": [
     "cavelizer",
