@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("./app/modules/auth/passport.middleware");
 
 const express = require("express");
 const cors = require("cors");
@@ -6,7 +7,9 @@ const path = require("path");
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: "50mb" }));
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 
 /* Morgan */
 const morgan = require("morgan");
@@ -21,11 +24,13 @@ mongoose.Promise = global.Promise;
 
 /* Routes */
 const userRoutes = require("./app/modules/user/user.routes");
-const uiRoutes = require("./app/modules/ui/ui.routes");
+const authRoutes = require("./app/modules/auth/auth.routes");
 
 app.use("/api", userRoutes);
+app.use("/api", authRoutes);
 
 /* Frontend Build / Output */
+const uiRoutes = require("./app/modules/ui/ui.routes");
 app.use("/ui", express.static(path.join(__dirname, "/public/ui")));
 app.use("", uiRoutes);
 

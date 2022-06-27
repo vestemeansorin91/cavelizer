@@ -11,16 +11,6 @@ module.exports = {
         throw new Error(error);
       });
   },
-  createUser(request, response) {
-    createUserFn(request.body)
-      .then((users) => {
-        response.write(JSON.stringify(users));
-        response.end();
-      })
-      .catch((error) => {
-        throw new Error(error);
-      });
-  },
   getUserById(request, response) {
     const id = request.params.id;
 
@@ -61,10 +51,6 @@ module.exports = {
 
 async function getUsersFn() {
   return usersCollection.find();
-}
-
-async function createUserFn(userProps) {
-  return new usersCollection(userProps).save();
 }
 
 async function getUserByIdFn(id) {
