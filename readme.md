@@ -1,5 +1,7 @@
 # Cavelizer
 
+https://cavelizer.herokuapp.com/
+
 ## Functionalities
 
 ### The purpose of the application is to cover a wide range of passions that we have as a team that we formed at ReCODEnized.

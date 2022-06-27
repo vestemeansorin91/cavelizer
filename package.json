@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start:api": "cd api && npm run start",
-    "start:frontend": "cd frontend && npm run start"
+    "start:frontend": "cd frontend && npm run start",
+    "heroku:local": "heroku local web"
   },
   "keywords": [
     "cavelizer",
     "recodenized"
   ],
   "author": "Sorin Vestemean",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  }
 }

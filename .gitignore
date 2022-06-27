@@ -2,3 +2,5 @@
 .github
 .ide
 .vscode
+.DS_Store
+/*.env
