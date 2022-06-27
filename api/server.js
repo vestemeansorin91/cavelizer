@@ -31,10 +31,17 @@ app.use("", uiRoutes);
 
 initSwagger(app);
 
-mongoose.connect(process.env.MONGO_URL, function (err) {
-  if (err) console.log("Mongo error!", err);
-  console.log("Database is ready!");
-  app.listen(process.env.PORT, () =>
-    console.log(`Server started, on port ${process.env.PORT}`)
-  );
-});
+mongoose.connect(
+  process.env.MONGO_URL || "mongodb://localhost:27017/cavelizer",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  function (err) {
+    if (err) console.log("Mongo error!", err);
+    console.log("Database is ready!");
+    app.listen(process.env.PORT, () =>
+      console.log(`Server started, on port ${process.env.PORT}`)
+    );
+  }
+);
