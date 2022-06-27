@@ -1,0 +1,266 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-10-03T17:27:43.046Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_55c60223e0f14ef78707c7c610a19013",
+      "parentId": "fld_ce7c6b8788504369be136681e170c584",
+      "modified": "1637671845661",
+      "created": 1655228132887,
+      "url": "http://localhost:3333/api/users",
+      "name": "getUsers",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"age\": 31,\n\t\"gender\": \"male\",\n\t\"isHired\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_54ae4e138b2d4a42a3998f3b205ec865"
+        },
+        {
+          "id": "pair_683552aaff2441cfa98f02f37e81bafd",
+          "name": "Authorization",
+          "value": "Bearer rntb29hbg924gn924ng0283n9tg23",
+          "description": "",
+          "disabled": true
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1655228132887,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ce7c6b8788504369be136681e170c584",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1655228125311,
+      "name": "users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1655228125311,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__WORKSPACE_ID__",
+      "parentId": null,
+      "modified": "1637671845661",
+      "created": 1655226935759,
+      "name": "cavelizer",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_9897f4a3b6ec4856be305ea1c5ddf99e",
+      "parentId": "fld_ce7c6b8788504369be136681e170c584",
+      "modified": "1637671845661",
+      "created": 1655228176071,
+      "url": "http://localhost:3333/api/users",
+      "name": "createUser",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"newmagicfilms\",\n\t\"fullName\": \"Petrut\",\n\t\"password\": \"444214\",\n\t\"email\": \"sorin@mail.com\",\n\t\"isActive\": true,\n\t\"gender\": \"pahar\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_955cdc0e240c4fd5a5ba3bfea0ac4ec6"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1655228132837,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7c82429505054d73a9cf85ce1d2bfbb2",
+      "parentId": "fld_ce7c6b8788504369be136681e170c584",
+      "modified": "1637671845661",
+      "created": 1655228630713,
+      "url": "http://localhost:3333/api/users/62b89d32fde3e7a565318b5b",
+      "name": "getUserById",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1655228132862,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f59eef1758d4273bb8fcb44f35a4d32",
+      "parentId": "fld_ce7c6b8788504369be136681e170c584",
+      "modified": "1637671845661",
+      "created": 1655229472683,
+      "url": "http://localhost:3333/api/users/62b0b95f7475b7fc7c5e577a/toggleIsActive",
+      "name": "toggleIsActive",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1655228132787,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a8f08767e99b457182d923fe34ec5baf",
+      "parentId": "fld_ce7c6b8788504369be136681e170c584",
+      "modified": "1637671845661",
+      "created": 1655229948549,
+      "url": "http://localhost:3333/api/users/62b0baa1d20a2df96d9ece2d",
+      "name": "deleteUser",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1655228132737,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3ba39aade7f74bd0aa83b0387606fb23",
+      "parentId": "fld_dfa43878e38241698ed17d888daa8671",
+      "modified": "1637671845661",
+      "created": 1655718947241,
+      "url": "http://localhost:3333/api/login",
+      "name": "login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"sorin\",\n\t\"password\": \"1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_844cdb0a39794b9483bc538c362a8dea"
+        },
+        {
+          "id": "pair_de5b668c57a44aa384361f785c3bbe5f",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoic29yaW42QG1haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJfaWQiOiI2MmIwNWE4ZDdkZmI0NzQ2YTE2ZWNmMGYiLCJfX3YiOjB9LCJpYXQiOjE2NTU3MjQ2ODU1NjgsImV4cCI6MTY1NTgxMTA4NTU2OH0.aBB1wUj--J1Ej41KyIUIJmxTT7Ds53-ztp8IoHkLQhE",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1655718947241,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_dfa43878e38241698ed17d888daa8671",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1655718943417,
+      "name": "auth",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1655718943417,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b60fe1dc715043a293e0fc376a6286a8",
+      "parentId": "fld_dfa43878e38241698ed17d888daa8671",
+      "modified": "1637671845661",
+      "created": 1655718950765,
+      "url": "http://localhost:3333/api/register",
+      "name": "register",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"sorin6@mail.com\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e1b4d3a466994c7584ad21f3563058f8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1655718950765,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "__BASE_ENVIRONMENT_ID__",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1655226935762,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1655226935762,
+      "_type": "environment"
+    }
+  ]
+}
