@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4444 --proxy-config proxy.conf.json",
-    "build": "ng build --output-path=../build",
+    "build": "ng build --output-path=../api/public/ui --base-href=/ui/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

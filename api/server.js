@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -20,8 +21,13 @@ mongoose.Promise = global.Promise;
 
 /* Routes */
 const userRoutes = require("./app/modules/user/user.routes");
+const uiRoutes = require("./app/modules/ui/ui.routes");
 
 app.use("/api", userRoutes);
+
+/* Frontend Build / Output */
+app.use("/ui", express.static(path.join(__dirname, "/public/ui")));
+app.use("", uiRoutes);
 
 initSwagger(app);
 
