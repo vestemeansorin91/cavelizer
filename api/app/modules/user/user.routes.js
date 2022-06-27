@@ -14,6 +14,7 @@ router.patch(
   AuthenticatedMiddleware,
   UserController.toggleUserActive
 );
+router.post("/users/:id", UserController.updateUserPublicProfile);
 router.delete("/users/:id", AuthenticatedMiddleware, UserController.deleteUser);
 
 module.exports = router;
