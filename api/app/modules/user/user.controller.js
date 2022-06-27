@@ -47,6 +47,18 @@ module.exports = {
         throw new Error(error);
       });
   },
+
+  // profile
+  updateUserPublicProfile(request, response) {
+    updateUserPublicProfileFn()
+      .then(() => {
+        response.write(JSON.stringify({}));
+        response.end();
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+  },
 };
 
 async function getUsersFn() {

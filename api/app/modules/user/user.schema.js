@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const GenderEnum = require("../../shared/enums/gender.enum");
 
+const profileSchema = require("./schemas/profile.schema");
+
 const userSchema = mongoose.Schema({
   username: String,
   fullName: String,
@@ -14,6 +16,7 @@ const userSchema = mongoose.Schema({
     enum: GenderEnum,
     required: true,
   },
+  profile: profileSchema,
 });
 
 const usersCollection = mongoose.model("User", userSchema);
