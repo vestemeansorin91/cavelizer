@@ -1,0 +1,33 @@
+const usersCollection = require("../../user.schema");
+const { getById } = require("../../../../shared/helpers/user.helpers");
+
+module.exports = {
+  updateHrInformation(request, response) {
+    const userId = request.params.userId;
+
+    updateHrInformationFn(userId, request.body)
+      .then((newUser) => {
+        response.write(JSON.stringify(newUser));
+        response.end();
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+  },
+};
+
+async function updateHrInformationFn(userId, hrInformationProps) {
+  const userFound = await getById(userId, usersCollection, "User");
+
+  return usersCollection.findByIdAndUpdate(
+    userId,
+    {
+      profile: {
+        hrInformation: hrInformationProps,
+      },
+    },
+    {
+      new: true,
+    }
+  );
+}
