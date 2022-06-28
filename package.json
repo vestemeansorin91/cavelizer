@@ -6,11 +6,7 @@
   "scripts": {
     "start:api": "cd api && npm run start",
     "start:frontend": "cd frontend && npm run start",
-    "build:frontend": "cd frontend && npm run build",
-    "heroku:local": "npm run build:frontend && cd .. && cd api && heroku local web",
-    "heroku:local-skip-ui-build": "cd api && heroku local web",
-    "heroku:deploy": "heroku create && git push heroku master",
-    "heroku:start": "npm run build:frontend && cd .. cd api && npm run swagger && node server.js"
+    "heroku:start": "cd frontend && npm run build && cd .. cd api && npm run swagger && node server.js"
   },
   "keywords": [
     "cavelizer",
