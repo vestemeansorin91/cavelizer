@@ -7,7 +7,6 @@ module.exports = {
 
     updateHrInformationFn(userId, request.body)
       .then((newUser) => {
-        console.log(newUser);
         response.write(JSON.stringify(newUser));
         response.end();
       })
