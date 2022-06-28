@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const userPublicProfileSchema = require("./public-profile.schema");
+const userPublicProfileSchema = require("./public-profile/public-profile.schema");
 
 const ProfileSchema = mongoose.Schema({
   publicProfile: userPublicProfileSchema,

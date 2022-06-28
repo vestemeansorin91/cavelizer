@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
     enum: GenderEnum,
     required: true,
   },
-  profile: profileSchema,
+  profile: { type: profileSchema, default: {} },
 });
 
 const usersCollection = mongoose.model("User", userSchema);

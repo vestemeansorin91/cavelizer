@@ -1,13 +1,10 @@
 const mongoose = require("mongoose");
 
-const DepartmentEnum = require("../../../shared/enums/department.enum");
-const PositionEnum = require("../../../shared/enums/position.enum");
-const TeamEnum = require("../../../shared/enums/team.enum");
+const DepartmentEnum = require("../../../../shared/enums/department.enum");
+const PositionEnum = require("../../../../shared/enums/position.enum");
+const TeamEnum = require("../../../../shared/enums/team.enum");
 
 const publicProfileSchema = mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
   office: String,
   department: {
     type: String,

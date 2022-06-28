@@ -1,4 +1,5 @@
 const usersCollection = require("./user.schema");
+const { getById } = require("../../shared/helpers/user.helpers");
 
 module.exports = {
   getUsers(request, response) {
@@ -14,7 +15,7 @@ module.exports = {
   getUserById(request, response) {
     const id = request.params.id;
 
-    getUserByIdFn(id)
+    getById(id, usersCollection, "User")
       .then((user) => {
         response.write(JSON.stringify(user));
         response.end();
@@ -47,36 +48,14 @@ module.exports = {
         throw new Error(error);
       });
   },
-
-  // profile
-  updateUserPublicProfile(request, response) {
-    updateUserPublicProfileFn()
-      .then(() => {
-        response.write(JSON.stringify({}));
-        response.end();
-      })
-      .catch((error) => {
-        throw new Error(error);
-      });
-  },
 };
 
 async function getUsersFn() {
   return usersCollection.find();
 }
 
-async function getUserByIdFn(id) {
-  const userFound = await usersCollection.findById(id);
-
-  if (!userFound) {
-    throw new Error("User not found!");
-  }
-
-  return userFound;
-}
-
 async function toggleUserActiveFn(id) {
-  const userFound = await getUserByIdFn(id);
+  const userFound = await getById(id, usersCollection, "User");
 
   return usersCollection.findByIdAndUpdate(
     id,

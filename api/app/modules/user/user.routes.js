@@ -7,6 +7,9 @@ const AuthenticatedMiddleware = passport.authenticate("jwt", {
   session: false,
 });
 
+// nested routes
+const publicProfileRoutes = require("./schemas/public-profile/public-profile.routes");
+
 router.get("/users", UserController.getUsers);
 router.get("/users/:id", UserController.getUserById);
 router.patch(
@@ -14,7 +17,7 @@ router.patch(
   AuthenticatedMiddleware,
   UserController.toggleUserActive
 );
-router.post("/users/:id", UserController.updateUserPublicProfile);
+router.use(publicProfileRoutes);
 router.delete("/users/:id", AuthenticatedMiddleware, UserController.deleteUser);
 
 module.exports = router;
