@@ -9,6 +9,7 @@ const AuthenticatedMiddleware = passport.authenticate("jwt", {
 
 // nested routes
 const publicProfileRoutes = require("./schemas/public-profile/public-profile.routes");
+const hrInformationRoutes = require("./schemas/hr-information/hr-information-routes");
 
 router.get("/users", UserController.getUsers);
 router.get("/users/:id", UserController.getUserById);
@@ -18,6 +19,7 @@ router.patch(
   UserController.toggleUserActive
 );
 router.use(publicProfileRoutes);
+router.use(hrInformationRoutes);
 router.delete("/users/:id", AuthenticatedMiddleware, UserController.deleteUser);
 
 module.exports = router;
