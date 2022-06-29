@@ -45,7 +45,7 @@ mongoose.connect(
   },
   function (err) {
     if (err) console.log("Mongo error!", err);
-    console.log("Database is ready!");
+    console.log(`Database is ready! on ${process.env.MONGO_URL}`);
     app.listen(process.env.PORT, () =>
       console.log(`Server started, on port ${process.env.PORT}`)
     );

@@ -2,17 +2,15 @@ const usersCollection = require("./user.schema");
 const { getById } = require("../../shared/helpers/user.helpers");
 
 module.exports = {
-  getUsers(request, response) {
+  getUsers(request, response, next) {
     getUsersFn()
       .then((users) => {
         response.write(JSON.stringify(users));
         response.end();
       })
-      .catch((error) => {
-        throw new Error(error);
-      });
+      .catch((error) => next(error));
   },
-  getUserById(request, response) {
+  getUserById(request, response, next) {
     const id = request.params.id;
 
     getById(id, usersCollection, "User")
@@ -20,11 +18,9 @@ module.exports = {
         response.write(JSON.stringify(user));
         response.end();
       })
-      .catch((error) => {
-        throw new Error(error);
-      });
+      .catch((error) => next(error));
   },
-  toggleUserActive(request, response) {
+  toggleUserActive(request, response, next) {
     const id = request.params.id;
 
     toggleUserActiveFn(id)
@@ -32,11 +28,9 @@ module.exports = {
         response.write(JSON.stringify(updatedUser));
         response.end();
       })
-      .catch((error) => {
-        throw new Error(error);
-      });
+      .catch((error) => next(error));
   },
-  deleteUser(request, response) {
+  deleteUser(request, response, next) {
     const id = request.params.id;
 
     deleteUserFn(id)
@@ -44,9 +38,7 @@ module.exports = {
         response.write(JSON.stringify({}));
         response.end();
       })
-      .catch((error) => {
-        throw new Error(error);
-      });
+      .catch((error) => next(error));
   },
 };
 
@@ -69,5 +61,7 @@ async function toggleUserActiveFn(id) {
 }
 
 async function deleteUserFn(id) {
+  await getById(id, usersCollection, "User");
+
   return usersCollection.findByIdAndRemove(id);
 }

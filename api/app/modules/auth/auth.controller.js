@@ -5,27 +5,21 @@ const { generateToken } = require("./token-generator");
 const usersCollection = require("../user/user.schema");
 
 module.exports = {
-  register(request, response) {
+  register(request, response, next) {
     registerFn(request.body)
       .then((newUser) => {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => {
-        response.write(JSON.stringify({ error }));
-        response.end();
-      });
+      .catch((error) => next(error));
   },
-  login(request, response) {
+  login(request, response, next) {
     loginFn(request.body)
       .then((newUser) => {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => {
-        response.write(JSON.stringify({ error }));
-        response.end();
-      });
+      .catch((error) => next(error));
   },
 };
 

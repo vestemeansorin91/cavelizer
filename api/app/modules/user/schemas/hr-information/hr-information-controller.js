@@ -2,7 +2,7 @@ const usersCollection = require("../../user.schema");
 const { getById } = require("../../../../shared/helpers/user.helpers");
 
 module.exports = {
-  updateHrInformation(request, response) {
+  updateHrInformation(request, response, next) {
     const userId = request.params.userId;
 
     updateHrInformationFn(userId, request.body)
@@ -10,9 +10,7 @@ module.exports = {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => {
-        throw new Error(error);
-      });
+      .catch((error) => next(error));
   },
 };
 
