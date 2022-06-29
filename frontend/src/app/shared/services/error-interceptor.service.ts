@@ -1,10 +1,4 @@
-import {
-  HttpErrorResponse,
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-} from '@angular/common/http';
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationsService } from 'angular2-notifications';
@@ -13,17 +7,11 @@ import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-  constructor(
-    private notificationsService: NotificationsService,
-    private router: Router
-  ) {}
+  constructor(private notificationsService: NotificationsService, private router: Router) {}
 
-  intercept(
-    request: HttpRequest<unknown>,
-    next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
-      map((res) => {
+      map(res => {
         return res;
       }),
       catchError((error: HttpErrorResponse) => {
@@ -32,17 +20,7 @@ export class ErrorInterceptor implements HttpInterceptor {
         }
 
         let errorMsg = '';
-        if (error.error instanceof ErrorEvent) {
-          this.notificationsService.error(
-            'Client error:',
-            `${error.error.message}`
-          );
-        } else {
-          this.notificationsService.error(
-            'Server error:',
-            `[${error.status}] ${error.error.message}`
-          );
-        }
+        this.notificationsService.error('Server error:', `[${error.status}] ${error.error.message}`);
         return throwError(errorMsg);
       })
     );

@@ -5,5 +5,19 @@
   <input formControlName="email" type="text" placeholder="E-mail" />
   <input formControlName="username" type="text" placeholder="Username" />
   <input formControlName="password" type="password" placeholder="Password" />
+
+  <fieldset>
+    <legend>Gender:</legend>
+
+    <div>
+      <input type="radio" id="men" value="men" formControlName="gender">
+      <label for="men">Men</label>
+    </div>
+
+    <div>
+      <input type="radio" id="women" value="women" formControlName="gender">
+      <label for="women">Women</label>
+    </div>
+  </fieldset>
   <button (click)="registerClicked()">Register</button>
 </form>

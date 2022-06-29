@@ -10,7 +10,11 @@ module.exports = {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch((error) =>
+        response
+          .status(StatusCodes.BAD_REQUEST)
+          .send({ message: error.message })
+      );
   },
 };
 

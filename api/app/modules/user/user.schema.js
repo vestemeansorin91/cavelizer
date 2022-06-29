@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-const GenderEnum = require("../../shared/enums/gender.enum");
+const mongoose = require('mongoose');
+const GenderEnum = require('../../shared/enums/gender.enum');
 
-const profileSchema = require("./schemas/profile.schema");
+const profileSchema = require('./schemas/profile.schema');
 
 const userSchema = mongoose.Schema({
   username: String,
@@ -9,15 +9,15 @@ const userSchema = mongoose.Schema({
   password: String,
   email: String,
   isActive: {
-    type: Boolean,
+    type: Boolean
   },
   gender: {
     type: String,
     enum: GenderEnum,
-    required: true,
+    required: true
   },
-  profile: { type: profileSchema, default: {} },
+  profile: { type: profileSchema, default: {} }
 });
 
-const usersCollection = mongoose.model("User", userSchema);
+const usersCollection = mongoose.model('User', userSchema);
 module.exports = usersCollection;

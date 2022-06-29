@@ -1,11 +1,11 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 function generateToken(user) {
   return jwt.sign(
     {
       data: user,
       iat: new Date().getTime(),
-      exp: new Date().setDate(new Date().getDate() + 2),
+      exp: new Date().setDate(new Date().getDate() + 2)
     },
     process.env.SECRET_KEY_JWT
   );

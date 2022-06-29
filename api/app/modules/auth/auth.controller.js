@@ -1,42 +1,42 @@
 /* Passport */
-const passport = require("passport");
-const { generateToken } = require("./token-generator");
-
-const usersCollection = require("../user/user.schema");
+const passport = require('passport');
+const { generateToken } = require('./token-generator');
+const { StatusCodes } = require('http-status-codes');
+const usersCollection = require('../user/user.schema');
 
 module.exports = {
   register(request, response, next) {
     registerFn(request.body)
-      .then((newUser) => {
+      .then(newUser => {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
   login(request, response, next) {
     loginFn(request.body)
-      .then((newUser) => {
+      .then(newUser => {
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch((error) => next(error));
-  },
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  }
 };
 
 async function registerFn(userProps) {
   const userFound = await usersCollection.findOne({
     $or: [
       {
-        username: userProps.username,
+        username: userProps.username
       },
       {
-        email: userProps.email,
-      },
-    ],
+        email: userProps.email
+      }
+    ]
   });
 
   if (userFound) {
-    throw new Error("Username or Email already exists");
+    throw new Error('Username or Email already exists');
   }
 
   const newUser = new usersCollection(userProps);
@@ -46,18 +46,13 @@ async function registerFn(userProps) {
 }
 
 async function loginFn(userProps) {
-  // {
-  //   "username": "sorin",
-  //   "password": "1234"
-  // }
-
   const userWithCorrectCredentials = await usersCollection.findOne({
     username: userProps.username,
-    password: userProps.password,
+    password: userProps.password
   });
 
   if (!userWithCorrectCredentials) {
-    throw new Error("Username or Password incorrect!");
+    throw new Error('Username or Password incorrect!');
   }
 
   const accessToken = generateToken(userWithCorrectCredentials);

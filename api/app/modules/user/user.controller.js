@@ -8,7 +8,11 @@ module.exports = {
         response.write(JSON.stringify(users));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch((error) =>
+        response
+          .status(StatusCodes.BAD_REQUEST)
+          .send({ message: error.message })
+      );
   },
   getUserById(request, response, next) {
     const id = request.params.id;
@@ -18,7 +22,11 @@ module.exports = {
         response.write(JSON.stringify(user));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch((error) =>
+        response
+          .status(StatusCodes.BAD_REQUEST)
+          .send({ message: error.message })
+      );
   },
   toggleUserActive(request, response, next) {
     const id = request.params.id;
@@ -28,7 +36,11 @@ module.exports = {
         response.write(JSON.stringify(updatedUser));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch((error) =>
+        response
+          .status(StatusCodes.BAD_REQUEST)
+          .send({ message: error.message })
+      );
   },
   deleteUser(request, response, next) {
     const id = request.params.id;
@@ -38,7 +50,11 @@ module.exports = {
         response.write(JSON.stringify({}));
         response.end();
       })
-      .catch((error) => next(error));
+      .catch((error) =>
+        response
+          .status(StatusCodes.BAD_REQUEST)
+          .send({ message: error.message })
+      );
   },
 };
 
