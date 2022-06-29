@@ -1,5 +1,6 @@
-const usersCollection = require("../../user.schema");
-const { getById } = require("../../../../shared/helpers/user.helpers");
+const usersCollection = require('../../user.schema');
+const { getById } = require('../../../../shared/helpers/user.helpers');
+const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
   updatePublicProfile(request, response, next) {
@@ -10,22 +11,18 @@ module.exports = {
         response.write(JSON.stringify({}));
         response.end();
       })
-      .catch((error) =>
-        response
-          .status(StatusCodes.BAD_REQUEST)
-          .send({ message: error.message })
-      );
-  },
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  }
 };
 
 async function updatePublicProfileFn(userId, publicProfileProps) {
-  const userFound = await getById(userId, usersCollection, "User");
+  const userFound = await getById(userId, usersCollection, 'User');
   console.log({ userFound });
 
   await usersCollection.findByIdAndUpdate(userId, {
     profile: {
-      publicProfile: publicProfileProps,
-    },
+      publicProfile: publicProfileProps
+    }
   });
   return null;
 }
