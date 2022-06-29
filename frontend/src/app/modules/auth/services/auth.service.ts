@@ -20,9 +20,10 @@ export class AuthService {
       .post<LoginResponseInterface>(`${BASE_URL}/auth/login`, body)
       .pipe(
         tap((response) => {
-          this.token$.next(response.token);
+          console.log(response);
+          this.token$.next(response.accessToken);
 
-          this.tokenDecoded$.next(jwt_decode(response.token));
+          this.tokenDecoded$.next(jwt_decode(response.accessToken));
 
           console.log(this.token$.value);
           console.log(this.tokenDecoded$.value);
@@ -46,7 +47,7 @@ interface LoginRequestInterface {
 }
 
 interface LoginResponseInterface {
-  token: string;
+  accessToken: string;
 }
 
 interface RegisterRequestInterface {

@@ -1,8 +1,6 @@
 module.exports = {
   redirectToUI(request, response) {
+    console.log("redirect--->");
     response.redirect(308, "/ui");
-  },
-  serveUI(request, response) {
-    response.sendFile(process.env.PWD + "/public/ui/index.html");
   },
 };

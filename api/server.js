@@ -32,8 +32,8 @@ app.use("/api", authRoutes);
 /* Frontend Build / Output */
 const uiRoutes = require("./app/modules/ui/ui.routes");
 process.env.PWD = process.cwd();
-app.use(express.static(process.env.PWD + "/public/ui/"));
-app.use("", uiRoutes);
+app.use("/ui", express.static(process.env.PWD + "/public/ui"));
+app.use("/", uiRoutes);
 
 initSwagger(app);
 
