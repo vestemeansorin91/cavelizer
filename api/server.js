@@ -33,7 +33,8 @@ app.use("/api", authRoutes);
 const uiRoutes = require("./app/modules/ui/ui.routes");
 process.env.PWD = process.cwd();
 console.log("STATIC FOLDER PATH --->" + process.env.PWD);
-app.use("/ui", express.static(process.env.PWD + "/public/ui"));
+// app.use("/ui", express.static(process.env.PWD + "/public/ui"));
+app.use(express.static(process.env.PWD + "/public/ui"));
 app.use("", uiRoutes);
 
 initSwagger(app);

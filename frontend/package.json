@@ -2,11 +2,9 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve --port 4444 --proxy-config proxy.conf.json",
     "build": "ng build --output-path=../api/public/ui --base-href=/ui/",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {

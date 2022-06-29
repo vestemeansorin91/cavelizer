@@ -6,7 +6,8 @@
   "scripts": {
     "start:api": "cd api && npm run start",
     "start:frontend": "cd frontend && npm run start",
-    "heroku:start": "cd frontend && npm run build && cd .. cd api && npm run swagger && node server.js"
+    "build:frontend": "cd frontend && npm run build",
+    "heroku:start": "cd api && npm run swagger && node server.js"
   },
   "keywords": [
     "cavelizer",

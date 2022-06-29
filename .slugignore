@@ -4,3 +4,4 @@
 docs
 node_modules
 frontend/node_modules
+!api/public
