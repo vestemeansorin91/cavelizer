@@ -1,7 +1,7 @@
 .sidenav {
   &--menu-toggle {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 16px;
 
     i {
@@ -42,7 +42,6 @@
       height: 50px;
       border-radius: 8px;
       border: 1px solid grey;
-      margin-right: 8px;
       padding: 2px;
       cursor: pointer;
     }
@@ -120,8 +119,20 @@
         }
       }
     }
+  }
 
-    &.isExpanded {
+  &.isExpanded {
+    .sidenav--menu-toggle {
+      justify-content: flex-end;
+    }
+
+    .profile {
+      .profile-img {
+        margin-right: 8px;
+      }
+    }
+
+    ul {
       align-items: flex-start;
       min-width: 300px;
 

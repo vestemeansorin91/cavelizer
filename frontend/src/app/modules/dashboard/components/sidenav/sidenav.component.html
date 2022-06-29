@@ -1,4 +1,4 @@
-<div class="sidenav">
+<div class="sidenav" [class.isExpanded]="isExpanded">
   <h1 *ngIf="isExpanded">cavelizer</h1>
   <h1 *ngIf="!isExpanded">c</h1>
 
@@ -16,7 +16,7 @@
     <i *ngIf="!isExpanded" class="las la-angle-right"></i>
   </span>
 
-  <ul [class.isExpanded]="isExpanded">
+  <ul>
     <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-desktop"></i>
       <span>Dashboard</span>
