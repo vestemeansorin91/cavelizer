@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const hrInformationSchema = mongoose.Schema({
-  birthDate: Date,
+  birthDate: Date
 });
 
 module.exports = hrInformationSchema;

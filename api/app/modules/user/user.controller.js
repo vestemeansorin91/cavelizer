@@ -1,46 +1,34 @@
-const usersCollection = require("./user.schema");
-const { getById } = require("../../shared/helpers/user.helpers");
+const usersCollection = require('./user.schema');
+const { getById } = require('../../shared/helpers/user.helpers');
 
 module.exports = {
   getUsers(request, response, next) {
     getUsersFn()
-      .then((users) => {
+      .then(users => {
         response.write(JSON.stringify(users));
         response.end();
       })
-      .catch((error) =>
-        response
-          .status(StatusCodes.BAD_REQUEST)
-          .send({ message: error.message })
-      );
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
   getUserById(request, response, next) {
     const id = request.params.id;
 
-    getById(id, usersCollection, "User")
-      .then((user) => {
+    getById(id, usersCollection, 'User')
+      .then(user => {
         response.write(JSON.stringify(user));
         response.end();
       })
-      .catch((error) =>
-        response
-          .status(StatusCodes.BAD_REQUEST)
-          .send({ message: error.message })
-      );
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
   toggleUserActive(request, response, next) {
     const id = request.params.id;
 
     toggleUserActiveFn(id)
-      .then((updatedUser) => {
+      .then(updatedUser => {
         response.write(JSON.stringify(updatedUser));
         response.end();
       })
-      .catch((error) =>
-        response
-          .status(StatusCodes.BAD_REQUEST)
-          .send({ message: error.message })
-      );
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
   deleteUser(request, response, next) {
     const id = request.params.id;
@@ -50,12 +38,8 @@ module.exports = {
         response.write(JSON.stringify({}));
         response.end();
       })
-      .catch((error) =>
-        response
-          .status(StatusCodes.BAD_REQUEST)
-          .send({ message: error.message })
-      );
-  },
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  }
 };
 
 async function getUsersFn() {
@@ -63,21 +47,21 @@ async function getUsersFn() {
 }
 
 async function toggleUserActiveFn(id) {
-  const userFound = await getById(id, usersCollection, "User");
+  const userFound = await getById(id, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     id,
     {
-      isActive: !userFound.isActive,
+      isActive: !userFound.isActive
     },
     {
-      new: true,
+      new: true
     }
   );
 }
 
 async function deleteUserFn(id) {
-  await getById(id, usersCollection, "User");
+  await getById(id, usersCollection, 'User');
 
   return usersCollection.findByIdAndRemove(id);
 }

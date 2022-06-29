@@ -7,7 +7,9 @@
     "start:api": "cd api && npm run start",
     "start:frontend": "cd frontend && npm run start",
     "build:frontend": "cd frontend && npm run build",
-    "heroku:start": "cd api && npm run swagger && node server.js"
+    "heroku:start": "cd api && npm run swagger && node server.js",
+    "format:check": "prettier --check \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,yml,yaml,json,css,scss,md}\""
   },
   "keywords": [
     "cavelizer",
