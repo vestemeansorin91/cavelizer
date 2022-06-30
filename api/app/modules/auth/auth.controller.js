@@ -46,16 +46,18 @@ async function registerFn(userProps) {
 }
 
 async function loginFn(userProps) {
-  const userWithCorrectCredentials = await usersCollection.findOne({
-    username: userProps.username,
-    password: userProps.password
-  });
+  const userWithCorrectCredentials = await usersCollection
+    .findOne({
+      username: userProps.username,
+      password: userProps.password
+    })
+    .exec();
 
   if (!userWithCorrectCredentials) {
     throw new Error('Username or Password incorrect!');
   }
 
-  const accessToken = generateToken(userWithCorrectCredentials);
+  const accessToken = generateToken(userWithCorrectCredentials.toObject());
 
   return { accessToken };
 }
