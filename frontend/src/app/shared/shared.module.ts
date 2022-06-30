@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const COMPONENTS: any[] = [PageNotFoundComponent];
 
@@ -13,12 +14,7 @@ const SERVICES: any[] = [];
 
 const MODULES: any[] = [FormsModule, ReactiveFormsModule];
 
-const ANGULAR_MATERIAL_MODULES = [
-  MatSidenavModule,
-  MatIconModule,
-  MatListModule,
-  MatTabsModule,
-];
+const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatIconModule, MatListModule, MatTabsModule, MatExpansionModule];
 
 const PIPES: any[] = [];
 
@@ -28,13 +24,6 @@ const DIRECTIVES: any[] = [];
   declarations: [COMPONENTS, PIPES, DIRECTIVES],
   imports: [CommonModule, MODULES, ANGULAR_MATERIAL_MODULES],
   providers: [SERVICES],
-  exports: [
-    MODULES,
-    COMPONENTS,
-    PIPES,
-    DIRECTIVES,
-    SERVICES,
-    ANGULAR_MATERIAL_MODULES,
-  ],
+  exports: [MODULES, COMPONENTS, PIPES, DIRECTIVES, SERVICES, ANGULAR_MATERIAL_MODULES]
 })
 export class SharedModule {}

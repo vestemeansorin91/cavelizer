@@ -28,3 +28,8 @@ mat-drawer-container {
     border-bottom: 5px solid blue !important;
   }
 }
+
+mat-panel-title,
+mat-panel-description {
+  user-select: none;
+}
