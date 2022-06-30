@@ -1,0 +1,7 @@
+api/public
+api/node_modules
+api/app/config
+docs
+frontend/node_modules
+frontend/.angular
+package-lock.json

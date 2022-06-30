@@ -1,7 +1,7 @@
 const GENDERS = {
-  MEN: "men",
-  WOMEN: "women",
-  ALL: "all",
+  MEN: 'men',
+  WOMEN: 'women',
+  ALL: 'all'
 };
 
 module.exports = GENDERS;

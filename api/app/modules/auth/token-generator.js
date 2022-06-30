@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 function generateToken(user) {
   return jwt.sign(
     {
-      data: user,
+      ...user,
       iat: new Date().getTime(),
       exp: new Date().setDate(new Date().getDate() + 2)
     },

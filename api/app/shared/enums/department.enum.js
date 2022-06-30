@@ -1,6 +1,6 @@
 const DEPARTMENTS = {
-  DEVELOPMENT: "development",
-  QA: "qa",
+  DEVELOPMENT: 'development',
+  QA: 'qa'
 };
 
 module.exports = DEPARTMENTS;

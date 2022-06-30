@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { authActions } from '../../store';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
   public registerFormGroup: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
-  ) {
+  constructor(private fb: FormBuilder, private store: Store) {
     this.registerFormGroup = this.buildFormGroup();
   }
 
   ngOnInit(): void {}
 
   public registerClicked() {
-    this.authService.register(this.registerFormGroup.value).subscribe(() => {
-      this.router.navigate(['/auth/login']).then((_) => null);
-    });
+    this.store.dispatch(authActions.signUp(this.registerFormGroup.value));
   }
 
   private buildFormGroup() {
@@ -33,7 +27,7 @@ export class RegisterComponent implements OnInit {
       username: this.fb.control('', Validators.required),
       email: this.fb.control('', Validators.required),
       password: this.fb.control('', Validators.required),
-      gender: this.fb.control('men', Validators.required),
+      gender: this.fb.control('men', Validators.required)
     });
   }
 }

@@ -1,7 +1,7 @@
 const POSITION = {
-  JUNIOR: "junior",
-  MEDIOR: "medior",
-  SENIOR: "senior",
+  JUNIOR: 'junior',
+  MEDIOR: 'medior',
+  SENIOR: 'senior'
 };
 
 module.exports = POSITION;
