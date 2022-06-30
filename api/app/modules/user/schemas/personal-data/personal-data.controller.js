@@ -3,9 +3,10 @@ const { getById } = require('../../../../shared/helpers/user.helpers');
 const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  updateHrInformation(request, response) {
+  updatePersonalData(request, response) {
     const userId = request.params.userId;
-    updateHrInformationFn(userId, request.body)
+
+    updatePersonalDataFn(userId, request.body)
       .then(newUser => {
         response.write(JSON.stringify(newUser));
         response.end();
@@ -14,14 +15,14 @@ module.exports = {
   }
 };
 
-async function updateHrInformationFn(userId, hrInformationProps) {
+async function updatePersonalDataFn(userId, personalDataProps) {
   const userFound = await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     userId,
     {
       profile: {
-        hrInformation: hrInformationProps
+        personalData: personalDataProps
       }
     },
     {
