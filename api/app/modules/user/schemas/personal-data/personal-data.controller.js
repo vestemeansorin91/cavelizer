@@ -1,5 +1,6 @@
 const usersCollection = require('../../user.schema');
 const { getById } = require('../../../../shared/helpers/user.helpers');
+const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
   updatePersonalData(request, response) {
@@ -7,13 +8,10 @@ module.exports = {
 
     updatePersonalDataFn(userId, request.body)
       .then(newUser => {
-        console.log(newUser);
         response.write(JSON.stringify(newUser));
         response.end();
       })
-      .catch(error => {
-        throw new Error(error);
-      });
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   }
 };
 
