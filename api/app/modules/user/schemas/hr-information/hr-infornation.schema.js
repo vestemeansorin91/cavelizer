@@ -7,7 +7,8 @@ const hrInformationSchema = mongoose.Schema({
     type: String,
     enum: EmploymentEnum
   },
-  status: Boolean
+  status: Boolean,
+  nationality: String
 });
 
 module.exports = hrInformationSchema;
