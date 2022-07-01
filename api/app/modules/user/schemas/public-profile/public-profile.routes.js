@@ -4,6 +4,6 @@ const PublicProfileController = require('./public-profile.controller');
 
 const AuthenticatedMiddleware = require('../../../../shared/middlewares/passport/passport.middleware')
 
-router.post('/users/:userId/updatePublicProfile', AuthenticatedMiddleware, PublicProfileController.updatePublicProfile);
+router.patch('/users/:userId/updatePublicProfile', AuthenticatedMiddleware, PublicProfileController.updatePublicProfile);
 
 module.exports = router;

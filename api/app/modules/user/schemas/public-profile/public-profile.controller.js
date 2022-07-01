@@ -3,7 +3,7 @@ const { getById } = require('../../../../shared/helpers/user.helpers');
 const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  updatePublicProfile(request, response, next) {
+  updatePublicProfile(request, response) {
     const userId = request.params.userId;
 
     updatePublicProfileFn(userId, request.body)
@@ -16,13 +16,11 @@ module.exports = {
 };
 
 async function updatePublicProfileFn(userId, publicProfileProps) {
-  const userFound = await getById(userId, usersCollection, 'User');
-  console.log({ userFound });
+  await getById(userId, usersCollection, 'User');
 
-  await usersCollection.findByIdAndUpdate(userId, {
+  return usersCollection.findByIdAndUpdate(userId, {
     profile: {
       publicProfile: publicProfileProps
     }
   });
-  return null;
 }

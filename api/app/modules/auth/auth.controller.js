@@ -4,7 +4,7 @@ const { StatusCodes } = require('http-status-codes');
 const usersCollection = require('../user/user.schema');
 
 module.exports = {
-  register(request, response, next) {
+  register(request, response) {
     registerFn(request.body)
       .then(newUser => {
         response.write(JSON.stringify(newUser));
@@ -12,7 +12,7 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
-  login(request, response, next) {
+  login(request, response) {
     loginFn(request.body)
       .then(newUser => {
         response.write(JSON.stringify(newUser));

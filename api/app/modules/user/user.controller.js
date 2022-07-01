@@ -3,7 +3,7 @@ const { getById } = require('../../shared/helpers/user.helpers');
 const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  getUsers(request, response, next) {
+  getUsers(request, response) {
     getUsersFn()
       .then(users => {
         response.write(JSON.stringify(users));
@@ -11,7 +11,7 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
-  getUserById(request, response, next) {
+  getUserById(request, response) {
     const id = request.params.id;
 
     getById(id, usersCollection, 'User')
@@ -21,7 +21,7 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
-  toggleUserActive(request, response, next) {
+  toggleUserActive(request, response) {
     const id = request.params.id;
 
     toggleUserActiveFn(id)
@@ -31,7 +31,7 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
-  deleteUser(request, response, next) {
+  deleteUser(request, response) {
     const id = request.params.id;
 
     deleteUserFn(id)
