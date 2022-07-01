@@ -8,7 +8,8 @@ const hrInformationSchema = mongoose.Schema({
     enum: EmploymentEnum
   },
   status: Boolean,
-  nationality: String
+  nationality: String,
+  weeklyHours: Number
 });
 
 module.exports = hrInformationSchema;
