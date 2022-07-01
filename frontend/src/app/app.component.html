@@ -1,1 +1,4 @@
-<router-outlet></router-outlet> <simple-notifications></simple-notifications>
+<cavelizer-button *ngIf="isAdminBtnVisible" class="shortcut-dashboard-btn small grey" [routerLink]="['/dashboard', 'panel']"><i class="las la-user-shield "></i></cavelizer-button>
+<cavelizer-button *ngIf="isLoginBtnVisible" class="shortcut-login-btn small grey" [routerLink]="['/auth', 'login']"><i class="las la-unlock-alt"></i></cavelizer-button>
+<router-outlet></router-outlet>
+<simple-notifications></simple-notifications>

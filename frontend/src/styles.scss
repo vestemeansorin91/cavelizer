@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+.mat-drawer-content {
+  overflow-y: overlay !important;
+}
+
 mat-drawer-container {
   height: 100vh;
   transition: width 0.3s ease-in-out;
@@ -34,4 +38,36 @@ mat-drawer-container {
 mat-panel-title,
 mat-panel-description {
   user-select: none;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+a {
+  color: #6a983c;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.shortcut-dashboard-btn {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+}
+
+.shortcut-login-btn {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  z-index: 999;
+}
+
+i {
+  &.big {
+    font-size: 32px;
+  }
 }

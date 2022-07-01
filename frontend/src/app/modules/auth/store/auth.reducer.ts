@@ -3,16 +3,16 @@ import { JwtPayloadInterface } from 'src/app/shared/types/jwt-payload.interface'
 import { authActions } from './index';
 
 export interface AuthStateInterface {
-  currentUser: JwtPayloadInterface | null;
-  token: string | null;
+  currentUser: JwtPayloadInterface;
+  token: string;
   isLoading: boolean;
   isLoggedIn: boolean;
   hideSidenav: boolean;
 }
 
 export const initialState: AuthStateInterface = {
-  currentUser: null,
-  token: null,
+  currentUser: {} as JwtPayloadInterface,
+  token: '',
   isLoading: false,
   isLoggedIn: false,
   hideSidenav: false

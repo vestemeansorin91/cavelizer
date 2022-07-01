@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .profile-img {
+      width: 150px;
+    }
   }
 
   h1 {

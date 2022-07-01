@@ -8,6 +8,9 @@ import { authActions } from './modules/auth/store';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+  public isAdminBtnVisible = true;
+  public isLoginBtnVisible = true;
+
   constructor(private router: Router, private store: Store) {}
 
   ngOnInit() {

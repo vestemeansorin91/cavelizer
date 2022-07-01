@@ -21,9 +21,11 @@ const COMPONENTS = [
   UserPersonalDataComponent,
   UserProfileComponent,
   UserStartEndDatesComponent,
+  ProfileComponent
 ];
+
 @NgModule({
-  declarations: [COMPONENTS, ProfileComponent],
-  imports: [CommonModule, UserProfileRoutes, SharedModule],
+  declarations: [COMPONENTS],
+  imports: [CommonModule, UserProfileRoutes, SharedModule]
 })
 export class UserProfileModule {}

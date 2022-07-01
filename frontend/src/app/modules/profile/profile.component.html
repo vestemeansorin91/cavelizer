@@ -1,8 +1,8 @@
-<div class="profile">
+<div *ngIf="currentUser$ | async as currentUser" class="profile">
     <div class="profile-header">
         <img class="profile-img"
-            src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/batman-icon.png">
-        <h1>Sorin Vestemean</h1>
+             [src]=" currentUser?.avatarBlobUrl || 'https://media.istockphoto.com/vectors/profile-placeholder-image-gray-silhouette-no-photo-vector-id1320751178?k=20&m=1320751178&s=612x612&w=0&h=qBg0zl3GQvll4dI5m0VDidziZN5VWnghNQ2rt-6aln0='">
+        <h1>{{ currentUser?.fullName }}</h1>
 
     </div>
 </div>
