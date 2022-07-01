@@ -1,6 +1,5 @@
 /* Passport */
-const passport = require('passport');
-const { generateToken } = require('./token-generator');
+const { generateToken } = require('../../shared/middlewares/passport/token-generator');
 const { StatusCodes } = require('http-status-codes');
 const usersCollection = require('../user/user.schema');
 

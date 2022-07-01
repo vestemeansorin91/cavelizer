@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const UserController = require('./user.controller');
 
-const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', { session: false });
+const AuthenticatedMiddleware = require('../../shared/middlewares/passport/passport.middleware');
 
 // User routes
 router.get('/users', UserController.getUsers);

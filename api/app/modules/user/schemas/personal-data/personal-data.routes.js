@@ -2,10 +2,7 @@ const express = require('express');
 const router = express.Router();
 const PersonalDataController = require('./personal-data.controller');
 
-const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', {
-  session: false
-});
+const AuthenticatedMiddleware = require('../../../../shared/middlewares/passport/passport.middleware')
 
 router.patch('/users/:userId/updatePersonalData', AuthenticatedMiddleware, PersonalDataController.updatePersonalData);
 

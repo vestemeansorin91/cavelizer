@@ -18,6 +18,11 @@
   </span>
 
   <ul>
+    <li  [routerLink]="['/store']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-store-alt"></i>
+      <span>Go to store</span>
+    </li>
+
     <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-desktop"></i>
       <span>Dashboard</span>
