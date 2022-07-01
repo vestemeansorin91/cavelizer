@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const UserController = require('./user.controller');
 
-const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', { session: false });
+const AuthenticatedMiddleware = require('../../shared/middlewares/passport/passport.middleware');
 
 // User routes
 router.get('/users', UserController.getUsers);
@@ -14,8 +13,12 @@ router.delete('/users/:id', AuthenticatedMiddleware, UserController.deleteUser);
 // Nested routes
 const publicProfileRoutes = require('./schemas/public-profile/public-profile.routes');
 const hrInformationRoutes = require('./schemas/hr-information/hr-information-routes');
+const personalDataRoutes = require('./schemas/personal-data/personal-data.routes');
+const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 
 router.use(publicProfileRoutes);
 router.use(hrInformationRoutes);
+router.use(personalDataRoutes);
+router.use(bankDetailsRoutes);
 
 module.exports = router;

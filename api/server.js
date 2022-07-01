@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./app/modules/auth/passport.middleware');
+require('./app/shared/middlewares/passport/passport.middleware');
 
 const express = require('express');
 const cors = require('cors');
@@ -23,11 +23,11 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 /* Routes */
-const userRoutes = require('./app/modules/user/user.routes');
 const authRoutes = require('./app/modules/auth/auth.routes');
+const userRoutes = require('./app/modules/user/user.routes');
 
-app.use('/api', userRoutes);
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
 /* Frontend Build / Output */
 const uiRoutes = require('./app/modules/ui/ui.routes');

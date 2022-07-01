@@ -1,10 +1,10 @@
 const usersCollection = require('../../user.schema');
 const { getById } = require('../../../../shared/helpers/user.helpers');
+const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  updateHrInformation(request, response, next) {
+  updateHrInformation(request, response) {
     const userId = request.params.userId;
-
     updateHrInformationFn(userId, request.body)
       .then(newUser => {
         response.write(JSON.stringify(newUser));
