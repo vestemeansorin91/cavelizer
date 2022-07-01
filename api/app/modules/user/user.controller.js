@@ -1,5 +1,6 @@
 const usersCollection = require('./user.schema');
 const { getById } = require('../../shared/helpers/user.helpers');
+const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
   getUsers(request, response, next) {

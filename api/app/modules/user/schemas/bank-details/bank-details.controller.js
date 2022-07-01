@@ -1,11 +1,12 @@
 const usersCollection = require('../../user.schema');
 const { getById } = require('../../../../shared/helpers/user.helpers');
+const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  updateHrInformation(request, response, next) {
+  updateBankDetails(request, response) {
     const userId = request.params.userId;
 
-    updateHrInformationFn(userId, request.body)
+    updateBankDetailsFn(userId, request.body)
       .then(newUser => {
         response.write(JSON.stringify(newUser));
         response.end();
@@ -14,14 +15,14 @@ module.exports = {
   }
 };
 
-async function updateHrInformationFn(userId, hrInformationProps) {
-  const userFound = await getById(userId, usersCollection, 'User');
+async function updateBankDetailsFn(userId, bankDetailsProps) {
+  await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     userId,
     {
       profile: {
-        hrInformation: hrInformationProps
+        bankDetails: bankDetailsProps
       }
     },
     {

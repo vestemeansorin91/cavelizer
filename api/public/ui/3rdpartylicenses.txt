@@ -66,6 +66,18 @@ MIT
 @angular/router
 MIT
 
+@ngrx/effects
+MIT
+
+@ngrx/router-store
+MIT
+
+@ngrx/store
+MIT
+
+@ngrx/store-devtools
+MIT
+
 angular2-notifications
 MIT
 The MIT License (MIT)

@@ -3,10 +3,11 @@
   <h1 *ngIf="!isExpanded">c</h1>
 
   <!-- Profile -->
-  <div [routerLink]="['/user/profile']" class="profile">
-    <img class="profile-img" src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/batman-icon.png">
+  <div *ngIf="currentUser$ | async as currentUser" [routerLink]="['/user/profile']" class="profile">
+    <img class="profile-img"
+      [src]=" currentUser?.avatarBlobUrl || 'https://media.istockphoto.com/vectors/profile-placeholder-image-gray-silhouette-no-photo-vector-id1320751178?k=20&m=1320751178&s=612x612&w=0&h=qBg0zl3GQvll4dI5m0VDidziZN5VWnghNQ2rt-6aln0='">
     <div *ngIf="isExpanded" class="profile-info">
-      <span>Sorin Vestemean</span>
+      <span>{{ currentUser.fullName }}</span>
       <strong>Profile</strong>
     </div>
   </div>
@@ -17,6 +18,11 @@
   </span>
 
   <ul>
+    <li  [routerLink]="['/store']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-store-alt"></i>
+      <span>Go to store</span>
+    </li>
+
     <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-desktop"></i>
       <span>Dashboard</span>

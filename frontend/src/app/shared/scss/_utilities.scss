@@ -1,0 +1,171 @@
+/*
+    PADDING pt-- pr-- pb-- pl-- px-- py-- p--
+*/
+@for $i from 0 through 24 {
+  $j: $i * 4;
+
+  .pt--#{$j} {
+    padding-top: #{$j}px !important;
+  }
+
+  .pr--#{$j} {
+    padding-right: #{$j}px !important;
+  }
+
+  .pb--#{$j} {
+    padding-bottom: #{$j}px !important;
+  }
+
+  .pl--#{$j} {
+    padding-left: #{$j}px !important;
+  }
+
+  .px--#{$j} {
+    padding-left: #{$j}px !important;
+    padding-right: #{$j}px !important;
+  }
+
+  .py--#{$j} {
+    padding-top: #{$j}px !important;
+    padding-bottom: #{$j}px !important;
+  }
+
+  .p--#{$j} {
+    padding: #{$j}px !important;
+  }
+}
+
+/*
+    MARGIN mt-- mr-- mb-- ml-- mx-- my-- m--
+*/
+
+@for $i from 0 through 20 {
+  $j: $i * 4;
+
+  .mt--#{$j} {
+    margin-top: #{$j}px !important;
+  }
+
+  .mr--#{$j} {
+    margin-right: #{$j}px !important;
+  }
+
+  .mb--#{$j} {
+    margin-bottom: #{$j}px !important;
+  }
+
+  .ml--#{$j} {
+    margin-left: #{$j}px !important;
+  }
+
+  .mx--#{$j} {
+    margin-left: #{$j}px !important;
+    margin-right: #{$j}px !important;
+  }
+
+  .my--#{$j} {
+    margin-top: #{$j}px !important;
+    margin-bottom: #{$j}px !important;
+  }
+
+  .m--#{$j} {
+    margin: #{$j}px !important;
+  }
+}
+
+/*
+    BORDER RADIUS b-radius--
+*/
+
+@for $i from 1 through 8 {
+  $j: $i * 4;
+
+  .b-radius--#{$j} {
+    border-radius: #{$j}px !important;
+  }
+}
+
+/*
+    HEIGHT height--
+*/
+
+@for $i from 1 through 10 {
+  $j: $i * 10;
+
+  .height--#{$j} {
+    height: #{$j}px !important;
+  }
+}
+
+/*
+    WIDTH width--
+*/
+
+@for $i from 1 through 100 {
+  $j: $i * 10;
+
+  .width--#{$j} {
+    width: #{$j}px !important;
+  }
+}
+
+/*
+    SIZE size--
+*/
+
+@for $i from 1 through 10 {
+  $j: $i * 10;
+
+  .size--#{$j} {
+    height: #{$j}px !important;
+    width: #{$j}px !important;
+  }
+}
+
+/*
+    FLEX GAP gap--
+*/
+
+@for $i from 2 through 32 {
+  $j: $i * 2;
+
+  .gap--#{$j} {
+    gap: #{$j}px !important;
+  }
+}
+
+/*
+    FONT SIZE fs--
+*/
+
+@for $i from 6 through 24 {
+  $j: $i * 2;
+
+  .fs--#{$j} {
+    font-size: #{$j}px !important;
+  }
+}
+
+/*
+    FONT WEIGHT fw--
+*/
+
+@for $i from 1 through 9 {
+  $j: $i * 100;
+
+  .fw--#{$j} {
+    font-weight: #{$j} !important;
+  }
+}
+
+.text--light {
+  font-weight: 300;
+}
+
+.text--normal {
+  font-weight: 400;
+}
+
+.text--bold {
+  font-weight: 700;
+}

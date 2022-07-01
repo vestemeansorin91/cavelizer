@@ -9,7 +9,12 @@ const userSchema = mongoose.Schema({
   password: String,
   email: String,
   isActive: {
-    type: Boolean
+    type: Boolean,
+    default: true
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
   },
   gender: {
     type: String,

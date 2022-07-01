@@ -1,0 +1,107 @@
+@import './colors';
+
+/*
+  FLEX HELPERS
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify--center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify--space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify--end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align--center {
+  display: flex;
+  align-items: center;
+}
+
+.align--start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.align--end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex--1 {
+  flex: 1;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.width--full {
+  width: 100%;
+}
+
+.width--fit-content {
+  width: fit-content;
+}
+
+.height--full {
+  height: 100%;
+}
+
+/*
+  COMMON
+*/
+
+.user-select--none {
+  user-select: none;
+}
+
+.pointer-events--none {
+  pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* TEXT ALIGN */
+.text--left {
+  text-align: center;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: center;
+}
+
+.position--relative {
+  position: relative;
+}
+
+.text--ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cursor--default {
+  cursor: default !important;
+}

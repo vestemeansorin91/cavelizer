@@ -7,42 +7,38 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'auth',
+    redirectTo: 'auth'
   },
   {
     path: 'auth',
-    loadChildren: () =>
-      import('./modules/auth/auth.module').then((m) => m.AuthModule),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'store',
+    loadChildren: () => import('./modules/store/store.module').then(m => m.Store)
   },
   {
     path: 'user',
-    loadChildren: () =>
-      import('./modules/profile/profile.module').then(
-        (m) => m.UserProfileModule
-      ),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.UserProfileModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',
-    loadChildren: () =>
-      import('./modules/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'not-found',
-    component: PageNotFoundComponent,
+    component: PageNotFoundComponent
   },
   {
     path: '**',
-    redirectTo: 'not-found',
-  },
+    redirectTo: 'not-found'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutesModule {}

@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'colors';
+
+button {
+  /* Reset */
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 12px 16px;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+
+  background-color: $main-color;
+  border: 2px solid $main-dark-color;
+  border-radius: $border-radius-md;
+
+  .prefix,
+  .suffix {
+    color: white;
+  }
+
+  .prefix {
+    margin-right: 4px;
+  }
+
+  .suffix {
+    margin-left: 4px;
+  }
+}
+
+:host {
+  &.white {
+    button {
+      border-color: #92c064;
+      color: black;
+      background-color: white;
+
+      .prefix,
+      .suffix {
+        color: #92c064;
+      }
+    }
+  }
+
+  &.small {
+    button {
+      padding: 6px 12px;
+    }
+  }
+
+  &.big {
+    button {
+      padding: 16px 48px;
+      font-size: 22px;
+    }
+  }
+
+  &.grey {
+    button {
+      border-color: #f5f5f5;
+      background-color: #f5f5f5;
+      color: black;
+
+      .prefix,
+      .suffix {
+        color: black;
+      }
+    }
+  }
+
+  &.transparent {
+    button {
+      border-color: transparent;
+      background-color: transparent;
+      color: black;
+
+      .prefix,
+      .suffix {
+        color: black;
+      }
+    }
+  }
+}
