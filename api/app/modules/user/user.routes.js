@@ -14,9 +14,11 @@ router.delete('/users/:id', AuthenticatedMiddleware, UserController.deleteUser);
 const publicProfileRoutes = require('./schemas/public-profile/public-profile.routes');
 const hrInformationRoutes = require('./schemas/hr-information/hr-information-routes');
 const personalDataRoutes = require('./schemas/personal-data/personal-data.routes');
+const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 
 router.use(publicProfileRoutes);
 router.use(hrInformationRoutes);
 router.use(personalDataRoutes);
+router.use(bankDetailsRoutes);
 
 module.exports = router;
