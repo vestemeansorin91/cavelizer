@@ -4,10 +4,22 @@ const GenderEnum = require('../../shared/enums/gender.enum');
 const profileSchema = require('./schemas/profile.schema');
 
 const userSchema = mongoose.Schema({
-  username: String,
-  fullName: String,
-  password: String,
-  email: String,
+  username: {
+    type: String,
+    required: true
+  },
+  fullName: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
   isActive: {
     type: Boolean,
     default: true

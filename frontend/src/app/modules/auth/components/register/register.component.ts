@@ -23,11 +23,11 @@ export class RegisterComponent implements OnInit {
 
   private buildFormGroup() {
     return this.fb.group({
-      fullName: this.fb.control('', Validators.required),
+      fullName: this.fb.control('', [Validators.required]),
       username: this.fb.control('', Validators.required),
-      email: this.fb.control('', Validators.required),
+      email: this.fb.control('', [Validators.required, Validators.email]),
       password: this.fb.control('', Validators.required),
-      gender: this.fb.control('men', Validators.required)
+      gender: this.fb.control('man', Validators.required)
     });
   }
 }

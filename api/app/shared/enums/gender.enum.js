@@ -1,6 +1,6 @@
 const GENDERS = {
-  MEN: 'men',
-  WOMEN: 'women',
+  MAN: 'man',
+  WOMAN: 'woman',
   ALL: 'all'
 };
 

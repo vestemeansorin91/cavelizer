@@ -10,14 +10,15 @@
     <legend>Gender:</legend>
 
     <div>
-      <input type="radio" id="men" value="men" formControlName="gender">
-      <label for="men">Men</label>
+      <input type="radio" id="man" value="man" formControlName="gender">
+      <label for="man">Man</label>
     </div>
 
     <div>
-      <input type="radio" id="women" value="women" formControlName="gender">
-      <label for="women">Women</label>
+      <input type="radio" id="woman" value="woman" formControlName="gender">
+      <label for="woman">Woman</label>
     </div>
   </fieldset>
-  <cavelizer-button (click)="registerClicked()" class="width-full">Register</cavelizer-button>
+  <button (click)="registerClicked()" [attr.disabled]="!registerFormGroup.valid || null">Register</button>
+<!--  <cavelizer-button (click)="registerClicked()" class="width-full">Register</cavelizer-button>-->
 </form>
