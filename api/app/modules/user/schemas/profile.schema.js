@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const publicProfileSchema = require('./public-profile/public-profile.schema');
-const hrInformationSchema = require('./hr-information/hr-infornation.schema');
+const hrInformationSchema = require('./hr-information/hr-information.schema');
 const personalDataSchema = require('./personal-data/personal-data.schema');
 const bankDetailsSchema = require('./bank-details/bank-details.schema');
 
