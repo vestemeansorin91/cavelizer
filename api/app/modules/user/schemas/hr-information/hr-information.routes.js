@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const HrInformationController = require('./hr-information-controller');
+const HrInformationController = require('./hr-information.controller');
 
 const AuthenticatedMiddleware = require('../../../../shared/middlewares/passport/passport.middleware');
 
