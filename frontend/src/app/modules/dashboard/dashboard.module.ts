@@ -22,10 +22,12 @@ import { RoleListComponent } from './views/roles/components/role-list/role-list.
 import { UserDetailsComponent } from './views/users/components/user-details/user-details.component';
 import { UserFormComponent } from './views/users/components/user-form/user-form.component';
 import { UserListComponent } from './views/users/components/user-list/user-list.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 const COMPONENTS = [
   DashboardComponent,
   SidenavComponent,
+  TopbarComponent,
 
   CategoryDetailsComponent,
   CategoryFormComponent,

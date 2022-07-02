@@ -10,18 +10,20 @@
     margin: 8px 0 4px;
 
     li {
+      display: inline;
       font-size: 14px;
       font-weight: 400;
-      display: inline;
-      color: lightgrey;
+      color: #A9A9A9;
 
       word-break: break-all;
 
       &.active {
-        color: black;
+        color: #151515;
       }
 
       a {
+        font-size: 14px;
+        font-weight: 400;
         color: grey;
         text-decoration: none;
         box-shadow: none;
@@ -30,8 +32,8 @@
     }
 
     li + li:before {
-      content: ' > ';
-      color: grey;
+      content: ' / ';
+      color: #A9A9A9;
     }
   }
 
