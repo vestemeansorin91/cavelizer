@@ -1,7 +1,7 @@
 /*
     PADDING pt-- pr-- pb-- pl-- px-- py-- p--
 */
-@for $i from 0 through 24 {
+@for $i from 0 through 30 {
   $j: $i * 4;
 
   .pt--#{$j} {
