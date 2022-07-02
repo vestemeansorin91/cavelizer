@@ -1,0 +1,62 @@
+:host {
+  &.selected {
+    .chat-contact-item {
+      background-color: #eaf3ff;
+    }
+  }
+}
+
+.chat-contact-item {
+  position: relative;
+  display: flex;
+
+  background-color: #EFF2F4;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 0 24px;
+
+  width: 347px;
+  max-width: 347px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #e1e6e7;
+  }
+
+  .avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &-last-message {
+      color: #B6B6B6;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .last-message-time {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    color: #B6B6B6;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}

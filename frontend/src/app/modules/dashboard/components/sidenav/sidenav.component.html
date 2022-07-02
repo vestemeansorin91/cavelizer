@@ -50,6 +50,12 @@
       <span>Components</span>
     </li>
 
+    <li [routerLink]="['/dashboard', 'chat']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-comment-alt"></i>
+      <span>Chat</span>
+    </li>
+
     <li  [routerLink]="['/shop']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-store-alt"></i>
       <span>Go to shop</span>
