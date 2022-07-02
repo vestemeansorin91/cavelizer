@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const PublicProfileController = require('./public-profile.controller');
 
-const AuthenticatedMiddleware = require('../../../../shared/middlewares/passport/passport.middleware')
+const isAuthenticatedMiddleware = require('../../../../shared/middlewares/is-authenticated.middleware')
 
-router.patch('/users/:userId/updatePublicProfile', AuthenticatedMiddleware, PublicProfileController.updatePublicProfile);
+router.patch('/users/:userId/updatePublicProfile', isAuthenticatedMiddleware, PublicProfileController.updatePublicProfile);
 
 module.exports = router;

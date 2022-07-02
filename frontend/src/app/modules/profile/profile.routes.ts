@@ -1,19 +1,25 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { UserBankDetailsComponent } from './components/user-bank-details/user-bank-details.component';
-import { UserClothesSizesComponent } from './components/user-clothes-sizes/user-clothes-sizes.component';
-import { UserEmergencyContactComponent } from './components/user-emergency-contact/user-emergency-contact.component';
-import { UserHrInformationComponent } from './components/user-hr-information/user-hr-information.component';
-import { UserPayrollInformationComponent } from './components/user-payroll-information/user-payroll-information.component';
-import { UserPersonalDataComponent } from './components/user-personal-data/user-personal-data.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { UserStartEndDatesComponent } from './components/user-start-end-dates/user-start-end-dates.component';
-import { ProfileComponent } from './profile.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {UserBankDetailsComponent} from './components/user-bank-details/user-bank-details.component';
+import {UserClothesSizesComponent} from './components/user-clothes-sizes/user-clothes-sizes.component';
+import {UserEmergencyContactComponent} from './components/user-emergency-contact/user-emergency-contact.component';
+import {UserHrInformationComponent} from './components/user-hr-information/user-hr-information.component';
+import {
+  UserPayrollInformationComponent
+} from './components/user-payroll-information/user-payroll-information.component';
+import {UserPersonalDataComponent} from './components/user-personal-data/user-personal-data.component';
+import {UserProfileComponent} from './components/user-profile/user-profile.component';
+import {UserStartEndDatesComponent} from './components/user-start-end-dates/user-start-end-dates.component';
+import {ProfileComponent} from './profile.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ProfileComponent,
+    data: {
+      breadcrumb: 'Profile',
+      breadcrumbPath: '/user/profile'
+    },
     children: [
       {
         path: '',
@@ -23,10 +29,15 @@ const routes: Routes = [
       {
         path: 'profile',
         component: UserProfileComponent,
+        data: {
+          breadcrumb: '',
+          breadcrumbPath: '/user/profile'
+        },
       },
       {
         path: 'hr-information',
         component: UserHrInformationComponent,
+
       },
       {
         path: 'start-end-dates',
@@ -64,4 +75,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class UserProfileRoutes {}
+export class UserProfileRoutes {
+}

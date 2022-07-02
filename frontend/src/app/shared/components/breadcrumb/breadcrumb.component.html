@@ -1,0 +1,26 @@
+<ul class="breadcrumb-component">
+  <li
+    *ngFor="let breadcrumb of breadcrumbs; last as isLast"
+    [class.active]="isLast"
+    aria-current="page"
+    class="breadcrumb-item"
+  >
+    <a (click)="goToHome($event)" *ngIf="breadcrumb.external" class="pointer">
+      {{ breadcrumb.label }}
+    </a>
+
+    <ng-container *ngIf="!breadcrumb.external">
+      <a
+        *ngIf="!isLast; else lastRoute"
+        [routerLink]="[breadcrumb.url]"
+        routerLinkActive="active"
+      >{{ breadcrumb.label }} </a
+      >
+    </ng-container>
+
+    <ng-template #lastRoute>
+      {{ breadcrumb.label }}
+    </ng-template>
+  </li>
+</ul>
+

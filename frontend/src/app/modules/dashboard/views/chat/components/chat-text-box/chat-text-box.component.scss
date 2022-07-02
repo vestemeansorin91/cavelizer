@@ -1,0 +1,15 @@
+.chat-text-box {
+  background: #EFF2F4;
+
+  &--message {
+    width: 100%;
+    margin: 0 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
+
+:host {
+  padding-left: 44px;
+}

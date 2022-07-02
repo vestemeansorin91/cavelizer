@@ -17,6 +17,7 @@ export class AuthService {
   public signUp(signUp: SignUpPayloadInterface): Observable<SignUpPayloadInterface> {
     return this.http.post<SignUpPayloadInterface>(`${API}/register`, { ...signUp });
   }
+
   public forgotPassword(user: ForgotPasswordPayloadInterface): Observable<any> {
     return this.http.post<any>(API, { user });
   }

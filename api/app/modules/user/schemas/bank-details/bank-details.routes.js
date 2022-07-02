@@ -1,12 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const BankDetailsController = require('./bank-details.controller');
+const isAuthenticatedMiddleware = require('../../../../shared/middlewares/is-authenticated.middleware');
 
-const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', {
-  session: false
-});
-
-router.patch('/users/:userId/updateBankDetails', AuthenticatedMiddleware, BankDetailsController.updateBankDetails);
+router.patch('/users/:userId/updateBankDetails', isAuthenticatedMiddleware, BankDetailsController.updateBankDetails);
 
 module.exports = router;
