@@ -16,10 +16,12 @@ const publicProfileRoutes = require('./schemas/public-profile/public-profile.rou
 const hrInformationRoutes = require('./schemas/hr-information/hr-information.routes');
 const personalDataRoutes = require('./schemas/personal-data/personal-data.routes');
 const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
+const clothesSizesRoutes = require('./schemas/clothes-sizes/clothes-sizes.routes');
 
 router.use(publicProfileRoutes);
 router.use(hrInformationRoutes);
 router.use(personalDataRoutes);
 router.use(bankDetailsRoutes);
+router.use(clothesSizesRoutes);
 
 module.exports = router;
