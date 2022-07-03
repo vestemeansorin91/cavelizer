@@ -6,10 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: ShopComponent,
+    data: {
+      breadcrumb: ''
+    },
     children: [
       {
         path: '**',
-        redirectTo: ''
+        redirectTo: '',
       }
     ]
   }

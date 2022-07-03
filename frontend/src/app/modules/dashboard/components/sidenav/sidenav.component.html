@@ -2,27 +2,12 @@
   <h1 *ngIf="isExpanded">cavelizer</h1>
   <h1 *ngIf="!isExpanded">c</h1>
 
-  <!-- Profile -->
-  <div *ngIf="currentUser$ | async as currentUser" [routerLink]="['/user/profile']" class="profile">
-    <img class="profile-img"
-      [src]=" currentUser?.avatarBlobUrl || 'https://media.istockphoto.com/vectors/profile-placeholder-image-gray-silhouette-no-photo-vector-id1320751178?k=20&m=1320751178&s=612x612&w=0&h=qBg0zl3GQvll4dI5m0VDidziZN5VWnghNQ2rt-6aln0='">
-    <div *ngIf="isExpanded" class="profile-info">
-      <span>{{ currentUser.fullName }}</span>
-      <strong>Profile</strong>
-    </div>
-  </div>
-
   <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
     <i *ngIf="isExpanded" class="las la-angle-left"></i>
     <i *ngIf="!isExpanded" class="las la-angle-right"></i>
   </span>
 
   <ul>
-    <li  [routerLink]="['/shop']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-store-alt"></i>
-      <span>Go to shop</span>
-    </li>
-
     <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <i class="las la-desktop"></i>
       <span>Dashboard</span>
@@ -65,9 +50,18 @@
       <span>Components</span>
     </li>
 
+    <li [routerLink]="['/dashboard', 'chat']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-comment-alt"></i>
+      <span>Chat</span>
+    </li>
 
+    <li  [routerLink]="['/shop']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="las la-store-alt"></i>
+      <span>Go to shop</span>
+    </li>
 
-    <li (click)="logout()" class="logout">
+    <li (click)="logout()">
       <i class="las la-power-off"></i>
       <span>Logout</span>
     </li>

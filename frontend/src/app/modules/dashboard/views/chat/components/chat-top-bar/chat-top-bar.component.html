@@ -1,0 +1,16 @@
+<div class="chat-top-bar pt--20 pb--24 px--24 justify--space-between align--center width--full">
+  <div *ngIf="contact" class="flex">
+    <img class="ml--32 mr--16 size--54 circle" [src]="contact.avatarBlobUrl" alt="">
+
+    <div class="flex--column">
+      <span class="fs--16 text--bold">{{contact.fullName}}</span>
+      <span class="color--grey text--light">Typing...</span>
+    </div>
+  </div>
+
+  <div class="flex gap--40">
+    <i class="las la-phone fs--32 color--grey"></i>
+    <i class="las la-video fs--32 color--grey"></i>
+    <i class="las la-ellipsis-v fs--32 color--grey"></i>
+  </div>
+</div>
