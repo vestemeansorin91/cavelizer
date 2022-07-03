@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import jwt_decode from 'jwt-decode';
-import { JwtPayloadInterface } from 'src/app/shared/types/jwt-payload.interface';
+import {JwtPayloadInterface} from 'src/app/shared/types/jwt-payload.interface';
 
-const AUTH_DATA_KEY = 'user_profile';
+const AUTH_DATA_KEY = 'userProfile';
 const ACCESS_TOKEN_KEY = 'accessToken';
 
 @Injectable({
@@ -30,11 +30,8 @@ export class JWTTokenService {
   }
 
   public setCurrentUser(accessToken: any) {
-    if (!localStorage.getItem(ACCESS_TOKEN_KEY)) {
-      localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
-    }
-
-    this._accessToken = accessToken;
+    this.accessToken = accessToken;
+    localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
     localStorage.setItem(AUTH_DATA_KEY, JSON.stringify(this.getUser()));
   }
 
