@@ -11,8 +11,8 @@ const personalDataSchema = mongoose.Schema({
   },
   phoneNumber: String,
   privateEmail: String,
-  validityIdentityCard: Date
-  children: Number,
+  validityIdentityCard: Date,
+  children: Number
 });
 
 module.exports = personalDataSchema;
