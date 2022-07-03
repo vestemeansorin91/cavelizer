@@ -17,7 +17,5 @@ passport.use(
     )
 );
 
-const AuthenticatedMiddleware = passport.authenticate('jwt', {session: false});
 
-module.exports = AuthenticatedMiddleware;
 

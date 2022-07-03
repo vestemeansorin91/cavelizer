@@ -1,0 +1,10 @@
+<div *ngIf="contact" class="chat-contact-item">
+  <img class="avatar" [src]="contact.avatarBlobUrl" />
+
+  <div class="info">
+    <div class="info-name">{{contact.fullName}}</div>
+    <div class="info-last-message">{{contact.lastMessage | slice: 0: 30}} ...</div>
+  </div>
+
+  <div class="last-message-time">{{contact.lastMessageTime | date: 'h:mm a'}}</div>
+</div>
