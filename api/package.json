@@ -23,10 +23,14 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "mongoose": "^6.3.8",
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
+    "request": "^2.88.2",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1",
     "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {

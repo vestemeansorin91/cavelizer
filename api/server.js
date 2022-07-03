@@ -25,9 +25,11 @@ mongoose.Promise = global.Promise;
 /* Routes */
 const authRoutes = require('./app/modules/auth/auth.routes');
 const userRoutes = require('./app/modules/user/user.routes');
+const chatRoutes = require('./app/modules/chat/chat.routes');
 
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api/chat', chatRoutes);
 
 /* Frontend Build / Output */
 const uiRoutes = require('./app/modules/ui/ui.routes');

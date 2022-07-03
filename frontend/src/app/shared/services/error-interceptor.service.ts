@@ -11,8 +11,8 @@ export class ErrorInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
-      map(res => {
-        return res;
+      map(response => {
+        return response;
       }),
       catchError((error: HttpErrorResponse) => {
         if (error.error.statusCode === 307) {
