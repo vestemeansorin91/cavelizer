@@ -3,6 +3,7 @@ const CityEnum = require('../../../../shared/enums/city.enum');
 
 const personalDataSchema = mongoose.Schema({
   street: String,
+  houseNumber: Number,
   phoneNumber: String,
   children: Number,
   city: {
