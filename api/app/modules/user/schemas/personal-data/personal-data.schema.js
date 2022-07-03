@@ -7,7 +7,9 @@ const personalDataSchema = mongoose.Schema({
   city: {
     type: String,
     enum: CityEnum
-  }
+  },
+  validityIdentityCard: Date,
+  children: Number
 });
 
 module.exports = personalDataSchema;
