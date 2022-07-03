@@ -8,7 +8,7 @@ import {ChatContact, generateRandomContact} from "../../../../shared/mock/chat";
 })
 export class ChatComponent implements OnInit {
   public contacts: ChatContact[] = [];
-  public selectedContact: ChatContact | undefined;
+  public selectedContact: ChatContact = {} as ChatContact;
   public selectedContactIndex = 0;
 
   public usersOnline: string[] = [];

@@ -4,7 +4,6 @@ require('./app/shared/middlewares/passport/passport.middleware');
 const express = require('express');
 const app = express();
 
-/* Prepare mongo setup */
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -17,6 +16,7 @@ require('./app/swagger.init').initSwagger(app).then(_ => null);
 const _ = require("lodash");
 const server = require("http").createServer(app);
 const io = require("socket.io").listen(server);
+
 const { User } = require("./app/shared/helpers/user.class");
 require("./app/sockets/streams")(io, User, _);
 require("./app/sockets/private")(io);

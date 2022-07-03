@@ -3,7 +3,7 @@
 
   <div class="flex--column justify--space-between width--full pr--32">
     <app-chat-top-bar [contact]="selectedContact"></app-chat-top-bar>
-    <app-chat-messages [usersOnline]="usersOnline"></app-chat-messages>
+    <app-chat-messages [selectedContact]="selectedContact" [usersOnline]="usersOnline"></app-chat-messages>
     <app-chat-text-box [contact]="selectedContact"></app-chat-text-box>
   </div>
 </div>

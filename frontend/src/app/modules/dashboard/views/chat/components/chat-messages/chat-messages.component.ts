@@ -1,14 +1,17 @@
-import {AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ChatService} from "../../services/chat.service";
 import {environment} from "../../../../../../../environments/environment";
+import {ChatContact} from "../../../../../../shared/mock/chat";
+import {ChatService} from "../../services/chat.service";
 import {Subscription} from "rxjs";
 import {StoreStateInterface} from "../../../../../../store";
 import {Store} from "@ngrx/store";
 import {getUserSelector} from "../../../../../auth/store/auth.selectors";
 import {JwtPayloadInterface} from "../../../../../../shared/types/jwt-payload.interface";
 import * as _ from 'lodash';
-import { Socket } from 'ngx-socket-io';
+// @ts-ignore
+import io from 'socket.io-client';
+
 // import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
 
 interface Message {
@@ -27,30 +30,33 @@ interface Message {
   templateUrl: './chat-messages.component.html',
   styleUrls: ['./chat-messages.component.scss']
 })
-export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit {
+export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
   @Input() public usersOnline: string[] = [];
-  public receiverData: any | undefined;
+  @Input() public selectedContact: ChatContact = {} as ChatContact;
+
+  public receiverData: any = null;
   public receiverName = '';
   public user: JwtPayloadInterface = {} as JwtPayloadInterface;
   public message = '';
-  public socket: any;
-  public typingMessage: any;
+  public typingMessage: any = null;
   public typing = false;
   public messages: Message[] = [];
   public isOnline = false;
 
   // EMOJI PICKER
-  public eventMock: any;
-  public eventPosMock: any;
+  public eventMock: any = null;
+  public eventPosMock: any = null;
   public toggled = false;
   public content = ' ';
 
+  public socket: any;
   private subs: Subscription[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private store: Store<StoreStateInterface>,
     private chatService: ChatService) {
+    this.socket = io(environment.baseUrl);
   }
 
   ngOnInit(): void {
@@ -61,33 +67,18 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit {
         this.receiverName = params['name'];
         this.getUserByUsername();
 
-        this.socket.fromEvent('refreshPage', () => {
+        this.socket.on('refreshPage', () => {
           this.getUserByUsername();
         });
       }))
 
-
-    this.socket.fromEvent('is_typing', (data: any) => {
-      if (data.sender === this.receiverName) {
-        this.typing = true;
-      }
-    });
-
-    this.socket.fromEvent('has_stopped_typing', (data: any) => {
-      if (data.sender === this.receiverName) {
-        this.typing = false;
-      }
-    });
+    this.socketUserIsTyping();
+    this.socketUserStoppedTyping();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['users'] && changes['users'].currentValue.length > 0) {
-      const result = _.indexOf(changes['users'].currentValue, this.receiverName);
-      if (result > -1) {
-        this.isOnline = true;
-      } else {
-        this.isOnline = false;
-      }
+      this.isOnline = (_.indexOf(changes['users'].currentValue, this.receiverName) > -1);
     }
   }
 
@@ -138,6 +129,28 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit {
   public getAllMessages(sender: string, receiver: string) {
     this.chatService.getMessages(sender, receiver).subscribe((data) => {
       this.messages = data.messages.message;
+    });
+  }
+
+  ngOnDestroy() {
+    this.socket.removeListener('is_typing');
+    this.socket.removeListener('has_stopped_typing');
+    this.subs.forEach(s => s.unsubscribe());
+  }
+
+  private socketUserIsTyping() {
+    this.socket.on('is_typing', (data: any) => {
+      if (data.sender === this.receiverName) {
+        this.typing = true;
+      }
+    });
+  }
+
+  private socketUserStoppedTyping() {
+    this.socket.on('has_stopped_typing', (data: any) => {
+      if (data.sender === this.receiverName) {
+        this.typing = false;
+      }
     });
   }
 
