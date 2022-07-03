@@ -11,6 +11,8 @@ export class ChatComponent implements OnInit {
   public selectedContact: ChatContact | undefined;
   public selectedContactIndex = 0;
 
+  public usersOnline: string[] = [];
+
   ngOnInit(): void {
     this.generateFakeContacts();
     this.selectedContact = this.contacts[this.selectedContactIndex];
@@ -19,6 +21,10 @@ export class ChatComponent implements OnInit {
   public onSelectedContactChanged(index:number) {
     this.selectedContactIndex = index;
     this.selectedContact = this.contacts[this.selectedContactIndex];
+  }
+
+  public online(event: string[]): void {
+    this.usersOnline = event;
   }
 
   private generateFakeContacts() {

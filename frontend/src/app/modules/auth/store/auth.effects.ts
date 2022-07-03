@@ -53,11 +53,15 @@ export class AuthEffects {
     () =>
       this.actions$.pipe(
         ofType(authActions.signUp),
-        switchMap(response => this.service.signUp(response)),
+        switchMap(response => {
+          console.log(response)
+          return this.service.signUp(response.payload)
+        }),
         tap(async () => {
           this.router.navigate(['/auth/login']).then(_ => null);
         }),
         catchError((errorResponse: HttpErrorResponse) => {
+          console.log(errorResponse);
           this.notificationsService.error('Eroare', errorResponse.error.message);
           return of({ errors: errorResponse.error });
         })

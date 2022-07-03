@@ -1,14 +1,21 @@
 const {StatusCodes} = require('http-status-codes');
 
-const messagesCollection = require('../models/message.model');
-const conversationsCollection = require('../models/conversation.model');
-const usersCollection = require('../models/user.model');
+const messagesCollection = require('./schemas/message.schema');
+const conversationsCollection = require('./schemas/conversation.schema');
+const usersCollection = require('../user/user.schema');
 
 module.exports = {
     getMessages(request, response) {
         const {senderId, receiverId} = request.params;
         getMessagesFn(senderId, receiverId).then((conversation) => {
             response.write(JSON.stringify({conversation}));
+            response.end();
+        }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
+    },
+    getUserByUsername(request, response) {
+        const {username} = request.params;
+        getUserByUsernameFn(username).then((user) => {
+            response.write(JSON.stringify({user}));
             response.end();
         }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
     },
@@ -195,21 +202,7 @@ async function markReceiverMessagesFn(sender, receiver) {
             }
         }
     ]);
-    // TODO duplicated move to a function
-    if (messages.length > 0) {
-        await Promise.all(messages.map(async (msg) => {
-            await messagesCollection.update(
-                {
-                    'message._id': msg.messages._id
-                },
-                {
-                    $set: {
-                        'message.$.isRead': true
-                    }
-                }
-            );
-        }))
-    }
+    await _markMessagesAsRead(messages);
     return {message: 'Messages marked as read'};
     // err Error occurred while messages marked as read
 }
@@ -230,23 +223,20 @@ async function markAllMessagesFn(sender) {
             }
         }
     ]);
-    // TODO duplicated move to a function
-    if (messages.length > 0) {
-        await Promise.all(messages.map(async (msg) => {
-            await messagesCollection.update(
-                {
-                    'message._id': msg.message._id
-                },
-                {
-                    $set: {
-                        'message.$.isRead': true
-                    }
-                }
-            );
-        }));
-    }
+
+    await _markMessagesAsRead(messages);
     return {message: 'All messages marked as read'};
     // err 'Error occured while all messages marked as read'
+}
+
+async function getUserByUsernameFn(username) {
+    const userFound = await usersCollection.findOne({username});
+
+    if (!userFound) {
+        throw new Error(`Couldn't find user by username`)
+    }
+
+    return userFound;
 }
 
 /* Private functions */
@@ -314,4 +304,21 @@ async function _updateChatList(user, receiverId, msgId) {
             }
         }
     );
+}
+
+async function _markMessagesAsRead(messages) {
+    if (messages.length > 0) {
+        await Promise.all(messages.map(async (msg) => {
+            await messagesCollection.findOneAndUpdate(
+                {
+                    'message._id': msg.message._id
+                },
+                {
+                    $set: {
+                        'message.$.isRead': true
+                    }
+                }
+            );
+        }));
+    }
 }

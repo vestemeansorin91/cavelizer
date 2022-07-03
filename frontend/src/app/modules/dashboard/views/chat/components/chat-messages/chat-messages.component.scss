@@ -1,0 +1,32 @@
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 5px 10px;
+  min-height: 40px;
+  width: auto;
+  border-radius: 10px;
+  color: white;
+
+  div {
+    display: inline-flex;
+  }
+}
+
+.message-left-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .message-left {
+    background-color: grey;
+  }
+}
+
+.message-right-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .message-right {
+    background-color: cornflowerblue;
+  }
+}

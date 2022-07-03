@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   public registerClicked() {
-    this.store.dispatch(authActions.signUp(this.registerFormGroup.value));
+    this.store.dispatch(authActions.signUp({payload: this.registerFormGroup.value}));
   }
 
   private buildFormGroup() {
