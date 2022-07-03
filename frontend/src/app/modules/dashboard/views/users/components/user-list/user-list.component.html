@@ -1,1 +1,7 @@
 <h1>USERS LIST</h1>
+
+<pre *ngIf="users$ | async  as users">
+  <div *ngFor="let user of users">
+    <pre>{{user | json }}</pre>
+  </div>
+</pre>
