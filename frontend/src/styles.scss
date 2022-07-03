@@ -31,7 +31,7 @@ mat-drawer-container {
   border-bottom: 5px solid transparent;
   transition: all 0.4s ease-in-out;
   &.active {
-    border-bottom: 5px solid blue !important;
+    border-bottom: 5px solid #46760A !important;
   }
 }
 
@@ -54,19 +54,27 @@ a {
 
 .shortcut-dashboard-btn {
   position: fixed;
-  top:0;
-  left: 0;
+  bottom:0;
+  right: 0;
   z-index: 999;
 }
 
 .shortcut-login-btn {
   position: fixed;
-  top: 35px;
-  left: 0;
+  bottom: 35px;
+  right: 0;
   z-index: 999;
 }
 
 i {
+  color: #4B5563;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: black;
+  }
+
   &.big {
     font-size: 32px;
   }

@@ -1,0 +1,53 @@
+
+:host {
+  position: relative;
+
+  ul.breadcrumb-component {
+    padding: 0;
+    background: no-repeat;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px 0 4px;
+
+    li {
+      display: inline;
+      font-size: 14px;
+      font-weight: 400;
+      color: #A9A9A9;
+
+      word-break: break-all;
+
+      &.active {
+        color: #151515;
+      }
+
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        color: grey;
+        text-decoration: none;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+    li + li:before {
+      content: ' / ';
+      color: #A9A9A9;
+    }
+  }
+
+  &.white-transparent {
+    display: block;
+
+    ul.breadcrumb-component {
+      background-color: transparent;
+
+      li.active,
+      li:before,
+      a {
+        color: white !important;
+      }
+    }
+  }
+}
