@@ -46,7 +46,6 @@ async function registerFn(userProps) {
     isActive: joi.optional(),
     isAdmin: joi.optional(),
     gender: joi.string().valid(...Object.values(GenderEnum)),
-    profile: profile.optional()
   });
 
   const { error } = validateSchema.validate(userProps);

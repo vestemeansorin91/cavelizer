@@ -19,16 +19,21 @@ https://cavelizer.herokuapp.com/
 
 #### User
 
-    -   ❌ Authentication ( Login / Register / Forgot Password / Reset Password)
+    -   ❌ Authentication ( ✅ Login / ✅ Register / Forgot Password / Reset Password)
     -   ❌ Buy / Sell / Rent - Books, Movies
     -   ❌ Bookmark article
     -   ❌ Leaderboard
 
 #### Dashboard
 
-    -   ❌ Admin
+    -   ❌ Dashboard
+    -   ❌ Users
+    -   ❌ Products
     -   ❌ Roles
-    -   ❌ Categories (books, movies, sports, board games)
+    -   ❌ Permissions
+    -   ❌ Categories
+    -   ❌ Documentation
+    -   ❌ Components
     -   ❌ Blog
     -   ❌ Leaderboard (for games)
 

@@ -1,6 +1,6 @@
 <div class="sidenav" [class.isExpanded]="isExpanded">
-  <h1 *ngIf="isExpanded">cavelizer</h1>
-  <h1 *ngIf="!isExpanded">c</h1>
+  <h1 *ngIf="isExpanded" [routerLink]="['/dashboard', 'panel']">cavelizer</h1>
+  <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']">c</h1>
 
   <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
     <i *ngIf="isExpanded" class="las la-angle-left"></i>
