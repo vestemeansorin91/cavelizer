@@ -8,6 +8,7 @@ import {StoreRouterConnectingModule} from '@ngrx/router-store';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {SimpleNotificationsModule} from 'angular2-notifications';
+import {NgxEmojiPickerModule} from "ngx-emoji-picker";
 import {environment} from 'src/environments/environment';
 
 import {AppComponent} from './app.component';
@@ -44,6 +45,7 @@ const HashStrategy = {
     BrowserModule,
     BrowserAnimationsModule,
     SimpleNotificationsModule.forRoot(),
+    NgxEmojiPickerModule.forRoot(),
     EffectsModule.forRoot(effects),
     StoreModule.forRoot(reducers, {
       metaReducers,

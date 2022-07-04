@@ -4,7 +4,14 @@
          (keydown)="isTyping()" name="message"
          [(ngModel)]="message" class="chat-text-box--message" type="text" placeholder="Write your message...">
   <div class="align--center gap--32">
-    <span class="fs--24 pointer">😍</span>
+<!--      <i-->
+<!--        (click)="toggled = !toggled"-->
+<!--        [(emojiPickerIf)]="toggled"-->
+<!--        [emojiPickerDirection]="'top'"-->
+<!--        (emojiPickerSelect)="handleSelection($event)"-->
+<!--        class="fs&#45;&#45;24 text&#45;&#45;normal pointer"-->
+<!--      >😍</i>-->
+    <i class="text--normal pointer fs--24">😍</i>
     <i class="las la-link color--grey fs--24"></i>
   </div>
 </div>

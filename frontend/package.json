@@ -28,10 +28,12 @@
     "lodash": "^4.17.21",
     "ng2-emoji-picker": "^1.4.8",
     "ngx-auto-scroll": "^1.1.0",
+    "ngx-emoji-picker": "^0.1.6",
     "ngx-perfect-scrollbar": "^8.0.0",
     "rxjs": "~7.5.0",
     "socket.io-client": "^2.2.0",
     "tslib": "^2.3.0",
+    "twemoji": "^14.0.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

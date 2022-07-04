@@ -23,6 +23,11 @@ export class ChatTextBoxComponent {
     this.socket = io(environment.baseUrl);
   }
 
+  toggled: boolean = false;
+  handleSelection(event: any) {
+    this.message += event.char;
+  }
+
   public sendMessage() {
     console.log(this.receiver)
     if (this.message) {
