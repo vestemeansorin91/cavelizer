@@ -18,11 +18,13 @@ const hrInformationRoutes = require('./schemas/hr-information/hr-information.rou
 const personalDataRoutes = require('./schemas/personal-data/personal-data.routes');
 const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 const clothesSizesRoutes = require('./schemas/clothes-sizes/clothes-sizes.routes');
+const startEndDates = require('./schemas/start-end-dates/start-end-dates.routes');
 
 router.use(publicProfileRoutes);
 router.use(hrInformationRoutes);
 router.use(personalDataRoutes);
 router.use(bankDetailsRoutes);
 router.use(clothesSizesRoutes);
+router.use(startEndDates);
 
 module.exports = router;
