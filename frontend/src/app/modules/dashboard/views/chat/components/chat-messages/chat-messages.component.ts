@@ -43,6 +43,7 @@ interface Message {
 export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
   @Input() public usersOnline: string[] = [];
   @Input() public receiver: ChatContact;
+  @Input() public currentUser: JwtPayloadInterface | any;
   @Output() public receiverIsTyping: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public receiverData: any = null;
@@ -103,12 +104,15 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   }
 
   public sendMessage() {
-    if (this.message) {
+    if (this.message ) {
       const receiver = this.receiverData;
-      this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe((_) => {
-        this.socket.emit('refresh', {});
-        this.message = '';
-      });
+
+      if(this.user._id !== receiver._id) { // Need this extra for 2 windows on same pc
+        this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe((_) => {
+          this.socket.emit('refresh', {});
+          this.message = '';
+        });
+      }
     }
   }
 

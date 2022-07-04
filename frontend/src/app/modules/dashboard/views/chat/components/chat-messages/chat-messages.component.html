@@ -1,12 +1,13 @@
 <div class="messages" ngx-auto-scroll observe-attributes [lock-y-offset]="10">
   <ng-container *ngIf="messages && messages.length > 0; else noMessagesTpl">
-    <div *ngFor="let message of messages">
+    <div *ngFor="let message of messages" class="message-box">
       <div class="message-left-wrapper" *ngIf="user.username !== receiverName && user.username !== message.senderName">
         <div class="chat-message message-left">
           <div class="message">
             {{ message.body }}
           </div>
         </div>
+        <img class="avatar" [src]="receiver.avatarBlobUrl | defaultImage"/>
       </div>
 
       <div class="message-right-wrapper" *ngIf="user.username === message.senderName">
@@ -15,6 +16,7 @@
             {{ message.body }}
           </div>
         </div>
+        <img class="avatar" [src]="currentUser.avatarBlobUrl | defaultImage"/>
       </div>
     </div>
   </ng-container>

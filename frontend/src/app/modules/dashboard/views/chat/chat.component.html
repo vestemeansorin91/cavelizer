@@ -3,7 +3,7 @@
 
   <div *ngIf="selectedContact" class="flex--column justify--space-between width--full">
     <app-chat-top-bar [contact]="selectedContact" [receiverIsTyping]="receiverIsTyping"></app-chat-top-bar>
-    <app-chat-messages (receiverIsTyping)="receiverIsTyping = $event" [receiver]="selectedContact" [usersOnline]="usersOnline"></app-chat-messages>
+    <app-chat-messages (receiverIsTyping)="receiverIsTyping = $event" [receiver]="selectedContact" [usersOnline]="usersOnline" [currentUser]="currentUser$ | async"></app-chat-messages>
     <app-chat-text-box [receiver]="selectedContact" [currentUser]="currentUser$ | async" ></app-chat-text-box>
   </div>
 </div>

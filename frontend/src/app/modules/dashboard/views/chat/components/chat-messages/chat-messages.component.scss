@@ -30,21 +30,73 @@
   }
 }
 
+.avatar {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+
 .message-left-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
+  margin-left: 94px;
 
   .message-left {
     background: #EFF2F4;
     color: black;
   }
+
+  .avatar {
+    left: -54px;
+  }
 }
 
 .message-right-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
+  margin-right: 94px;
 
   .message-right {
     background-color: #377DFF;
+  }
+
+  .avatar {
+    right: -54px;
+  }
+}
+
+.messages {
+
+  .message-box {
+    //border: 3px solid red;
+    margin: 2px 0;
+
+    &:last-of-type {
+      //border: 2px solid blue;
+
+      .message-left-wrapper {
+        .avatar {
+          visibility: visible;
+        }
+      }
+    }
+
+    &:last-child {
+      //border: 2px solid green;
+
+      .message-right-wrapper {
+        .avatar {
+          visibility: visible;
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 <div *ngIf="contact" class="chat-contact-item">
   <div class="avatar">
     <img class="avatar-image" [src]="contact.avatarBlobUrl | defaultImage"/>
-    <span class="avatar-status"></span>
+    <span class="avatar-status online"></span>
   </div>
   <div class="info">
     <div class="info-name">{{contact.fullName}}</div>
@@ -9,5 +9,6 @@
   </div>
 
   <div *ngIf="contact.lastMessageTime" class="last-message-time">{{contact.lastMessageTime | date: 'h:mm a'}}</div>
-  <span class="unread-message--bullet"></span>
+  <!--    TODO: Unread message bullet -->
+  <!--  <span class="unread-message&#45;&#45;bullet"></span>-->
 </div>

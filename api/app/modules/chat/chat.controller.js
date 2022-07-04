@@ -177,7 +177,7 @@ async function sendMessageFn(senderId, receiverId, body, user) {
                     }
                 }
             }
-        );
+        ).populate('chats');
 
         await usersCollection.findOneAndUpdate({_id: receiverId},
             {
@@ -193,7 +193,7 @@ async function sendMessageFn(senderId, receiverId, body, user) {
                     }
                 }
             }
-        );
+        ).populate('chats');
 
         await newMessage.save();
         return {message: 'messagesCollection sent!'};
@@ -246,6 +246,7 @@ async function markAllMessagesFn(sender) {
 
 /* Private functions */
 async function _updateChatList(user, receiverId, msgId) {
+    /* */
     await usersCollection.findOneAndUpdate(
         {
             _id: user._id
@@ -257,8 +258,9 @@ async function _updateChatList(user, receiverId, msgId) {
                 }
             }
         }
-    );
+    ).populate('chats');
 
+    /* */
     await usersCollection.findOneAndUpdate(
         {
             _id: receiverId
@@ -270,8 +272,9 @@ async function _updateChatList(user, receiverId, msgId) {
                 }
             }
         }
-    );
+    ).populate('chats');
 
+    /* */
     await usersCollection.findOneAndUpdate(
         {
             _id: user._id
@@ -289,8 +292,9 @@ async function _updateChatList(user, receiverId, msgId) {
                 }
             }
         }
-    );
+    ).populate('chats');
 
+    /* */
     await usersCollection.findOneAndUpdate(
         {
             _id: receiverId
@@ -308,7 +312,7 @@ async function _updateChatList(user, receiverId, msgId) {
                 }
             }
         }
-    );
+    ).populate('chats');
 }
 
 async function _markMessagesAsRead(messages) {

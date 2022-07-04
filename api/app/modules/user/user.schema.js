@@ -34,18 +34,22 @@ const userSchema = mongoose.Schema({
     required: true
   },
   profile: { type: profileSchema, default: {} },
-  chats: [
-    {
-      receiverId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-      },
-      messageId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Message'
+  chats: {
+    type: [
+      {
+        receiverId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'User'
+        },
+        messageId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Message'
+        }
       }
-    }
-  ]
+    ],
+    default: [],
+    select: false
+  }
 });
 
 const usersCollection = mongoose.model('User', userSchema);
