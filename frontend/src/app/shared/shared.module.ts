@@ -1,18 +1,19 @@
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatTabsModule} from '@angular/material/tabs';
-import {RouterModule} from "@angular/router";
-import {BreadcrumbComponent} from "./components/breadcrumb/breadcrumb.component";
-import {ButtonComponent} from './components/button/button.component';
-import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {DefaultImagePipe} from "./pipes/default-image.pipe";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule } from '@angular/router';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { ButtonComponent } from './components/button/button.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { MiniBannerComponent } from './components/mini-banner/mini-banner.component';
 
-const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent];
+const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent, MiniBannerComponent];
 
 const SERVICES: any[] = [];
 
