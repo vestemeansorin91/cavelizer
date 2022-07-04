@@ -44,7 +44,7 @@ return router;
 /_ Controller / logic for endpoints _/
 // create new file for SomeController, to folder controllers
 module.exports = {
-getUsers(req,res) {
+getUsers(request,response) {
 // LOGIC HERE
 
         getUsers(params)

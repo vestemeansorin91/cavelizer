@@ -21,6 +21,13 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
+getUserByUsername(request, response) {
+    const {username} = request.params;
+    getUserByUsernameFn(username).then((user) => {
+        response.write(JSON.stringify({user}));
+        response.end();
+    }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
+},
   toggleUserActive(request, response) {
     const id = request.params.id;
 
@@ -45,6 +52,16 @@ module.exports = {
 
 async function getUsersFn() {
   return usersCollection.find();
+}
+
+async function getUserByUsernameFn(username) {
+    const userFound = await usersCollection.findOne({username});
+
+    if (!userFound) {
+        throw new Error(`Couldn't find user by username`)
+    }
+
+    return userFound;
 }
 
 async function toggleUserActiveFn(id) {

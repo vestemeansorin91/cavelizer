@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ChatContact} from "../../../../../../shared/mock/chat";
 
 @Component({
@@ -6,10 +6,7 @@ import {ChatContact} from "../../../../../../shared/mock/chat";
   templateUrl: './chat-top-bar.component.html',
   styleUrls: ['./chat-top-bar.component.scss']
 })
-export class ChatTopBarComponent implements OnInit {
-  @Input() public contact: ChatContact | undefined;
-
-  ngOnInit(): void {
-  }
-
+export class ChatTopBarComponent {
+  @Input() public contact: ChatContact = {} as ChatContact;
+  @Input() public receiverIsTyping = false;
 }

@@ -1,8 +1,10 @@
-<div *ngIf="contact" class="chat-text-box b-radius--20 width--full p--16 pr--24 justify--space-between">
-  <img class="size--46 circle" [src]="contact.avatarBlobUrl">
-  <input class="chat-text-box--message" type="text" placeholder="Write your message...">
+<div *ngIf="receiver" class="chat-text-box b-radius--20 width--full p--16 pr--24 justify--space-between">
+  <img class="size--46 circle" [src]="receiver.avatarBlobUrl | defaultImage">
+  <input (keyup.enter)="sendMessage()"
+         (keydown)="isTyping()" name="message"
+         [(ngModel)]="message" class="chat-text-box--message" type="text" placeholder="Write your message...">
   <div class="align--center gap--32">
-    <span class="fs--24">😍</span>
+    <span class="fs--24 pointer">😍</span>
     <i class="las la-link color--grey fs--24"></i>
   </div>
 </div>

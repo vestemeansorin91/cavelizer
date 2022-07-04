@@ -17,7 +17,7 @@ export const signInSuccess = createAction(ActionTypes.SIGN_IN_SUCCESS, props<Sig
 export const signInFailure = createAction(ActionTypes.SIGN_IN_FAILURE, props<{ errors: ApiErrorsInterface }>());
 
 /*    Sign up   */
-export const signUp = createAction(ActionTypes.SIGN_UP, props<SignUpPayloadInterface>());
+export const signUp = createAction(ActionTypes.SIGN_UP, props<{payload: SignUpPayloadInterface}>());
 export const signUpSuccess = createAction(ActionTypes.SIGN_UP_SUCCESS, props<JwtPayloadInterface>());
 export const signUpFailure = createAction(ActionTypes.SIGN_UP_FAILURE, props<{ errors: ApiErrorsInterface }>());
 

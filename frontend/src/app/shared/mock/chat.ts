@@ -8,7 +8,9 @@ export enum ChatContactStatusEnum {
 }
 
 export interface ChatContact {
+  _id: string;
   fullName: string;
+  username: string;
   lastMessage: string;
   lastMessageTime: Date;
   avatarBlobUrl: string;
@@ -17,6 +19,8 @@ export interface ChatContact {
 
 export function generateRandomContact(): ChatContact {
   return {
+    _id: faker.database.mongodbObjectId(),
+    username: faker.name.firstName(),
     fullName: faker.name.firstName() + ' ' + faker.name.lastName(),
     lastMessage: faker.lorem.text(),
     lastMessageTime: faker.date.recent(),

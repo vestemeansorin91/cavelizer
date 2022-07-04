@@ -13,7 +13,8 @@ import {environment} from 'src/environments/environment';
 import {AppComponent} from './app.component';
 import {AppRoutesModule} from './app.routes';
 import {DashboardService} from './modules/dashboard/dashboard.service';
-import {ErrorInterceptor} from './shared/services/error-interceptor.service';
+import {ErrorInterceptor} from "./shared/interceptors/error-interceptor.service";
+import {TokenInterceptor} from "./shared/interceptors/token-interceptor.service";
 import {SharedModule} from "./shared/shared.module";
 import {effects, metaReducers, reducers, strictStateChecks} from './store';
 
@@ -22,6 +23,13 @@ const ErrorInterceptorService = {
   useClass: ErrorInterceptor,
   multi: true
 };
+
+const TokenInterceptorService = {
+  provide: HTTP_INTERCEPTORS,
+  useClass: TokenInterceptor,
+  multi: true
+};
+
 
 const HashStrategy = {
   provide: LocationStrategy,
@@ -60,7 +68,7 @@ const HashStrategy = {
     }),
     SharedModule
   ],
-  providers: [DashboardService, ErrorInterceptorService, HashStrategy],
+  providers: [DashboardService, ErrorInterceptorService,TokenInterceptorService, HashStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule {

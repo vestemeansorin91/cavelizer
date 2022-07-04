@@ -1,10 +1,13 @@
 <div class="chat-top-bar pt--20 pb--24 px--24 justify--space-between align--center width--full">
   <div *ngIf="contact" class="flex">
-    <img class="ml--32 mr--16 size--54 circle" [src]="contact.avatarBlobUrl" alt="">
+    <div class="avatar">
+      <img class="ml--32 mr--16 size--54 circle" [src]="contact.avatarBlobUrl | defaultImage" alt="">
+      <span class="avatar-status"></span>
+    </div>
 
     <div class="flex--column">
       <span class="fs--16 text--bold">{{contact.fullName}}</span>
-      <span class="color--grey text--light">Typing...</span>
+      <span *ngIf="receiverIsTyping" class="color--grey text--light">Typing...</span>
     </div>
   </div>
 

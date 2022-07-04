@@ -1,9 +1,10 @@
 <div class="chat-wrapper pb--64 mb--72 bg-white b-radius--16 flex gap--48">
   <app-chat-contacts [contacts]="contacts" [selectedContactIndex]="selectedContactIndex" (contactSelectionChange)="onSelectedContactChanged($event)"></app-chat-contacts>
 
-  <div class="flex--column justify--space-between width--full pr--32">
-    <app-chat-top-bar [contact]="selectedContact"></app-chat-top-bar>
-    <app-chat-messages></app-chat-messages>
-    <app-chat-text-box [contact]="selectedContact"></app-chat-text-box>
+  <div *ngIf="selectedContact" class="flex--column justify--space-between width--full">
+    <app-chat-top-bar [contact]="selectedContact" [receiverIsTyping]="receiverIsTyping"></app-chat-top-bar>
+    <app-chat-messages (receiverIsTyping)="receiverIsTyping = $event" [receiver]="selectedContact" [usersOnline]="usersOnline" [currentUser]="currentUser$ | async"></app-chat-messages>
+    <app-chat-text-box [receiver]="selectedContact" [currentUser]="currentUser$ | async" ></app-chat-text-box>
   </div>
 </div>
+

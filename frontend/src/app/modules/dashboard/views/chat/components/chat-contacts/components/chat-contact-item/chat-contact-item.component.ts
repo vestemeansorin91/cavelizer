@@ -7,5 +7,5 @@ import {ChatContact} from "../../../../../../../../shared/mock/chat";
   styleUrls: ['./chat-contact-item.component.scss']
 })
 export class ChatContactItemComponent{
-  @Input() public contact: ChatContact | undefined;
+  @Input() public contact: ChatContact = {} as ChatContact;
 }

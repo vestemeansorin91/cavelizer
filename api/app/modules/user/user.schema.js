@@ -33,7 +33,23 @@ const userSchema = mongoose.Schema({
     enum: GenderEnum,
     required: true
   },
-  profile: { type: profileSchema, default: {} }
+  profile: { type: profileSchema, default: {} },
+  chats: {
+    type: [
+      {
+        receiverId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'User'
+        },
+        messageId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Message'
+        }
+      }
+    ],
+    default: [],
+    select: false
+  }
 });
 
 const usersCollection = mongoose.model('User', userSchema);

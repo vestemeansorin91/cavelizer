@@ -2,6 +2,10 @@
   &.selected {
     .chat-contact-item {
       background-color: #eaf3ff;
+
+      &:hover {
+        background-color: #deebfc;
+      }
     }
   }
 }
@@ -25,10 +29,39 @@
   }
 
   .avatar {
+    position: relative;
     width: 54px;
     height: 54px;
-    border-radius: 50%;
     margin-right: 16px;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    &-status {
+      position: absolute;
+      bottom: 0px;
+      right: 8px;
+      width: 8px;
+      height: 8px;
+      z-index: 1;
+      background-color: grey;
+      border-radius: 50%;
+
+      &.online {
+        background-color: green;
+      }
+
+      &.offline {
+        background-color: grey;
+      }
+
+      &.away {
+        background-color: orange;
+      }
+    }
   }
 
   .info {
@@ -58,5 +91,15 @@
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
+  }
+
+  .unread-message--bullet {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 8px;
+    width:8px;
+    height: 8px;
+    background-color: #377DFF;
   }
 }
