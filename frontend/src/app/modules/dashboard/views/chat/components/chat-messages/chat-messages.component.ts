@@ -1,16 +1,26 @@
-import {AfterViewInit, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit, Output,
+  SimpleChanges
+} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {environment} from "../../../../../../../environments/environment";
-import {ChatContact} from "../../../../../../shared/mock/chat";
-import {ChatService} from "../../services/chat.service";
-import {Subscription} from "rxjs";
-import {StoreStateInterface} from "../../../../../../store";
 import {Store} from "@ngrx/store";
-import {getUserSelector} from "../../../../../auth/store/auth.selectors";
-import {JwtPayloadInterface} from "../../../../../../shared/types/jwt-payload.interface";
 import * as _ from 'lodash';
+import {Subscription} from "rxjs";
 // @ts-ignore
 import io from 'socket.io-client';
+import {environment} from "../../../../../../../environments/environment";
+import {ChatContact} from "../../../../../../shared/mock/chat";
+import {UsersService} from "../../../../../../shared/services/users.service";
+import {JwtPayloadInterface} from "../../../../../../shared/types/jwt-payload.interface";
+import {StoreStateInterface} from "../../../../../../store";
+import {getUserSelector} from "../../../../../auth/store/auth.selectors";
+import {ChatService} from "../../services/chat.service";
 
 // import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
 
@@ -32,14 +42,14 @@ interface Message {
 })
 export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
   @Input() public usersOnline: string[] = [];
-  @Input() public selectedContact: ChatContact = {} as ChatContact;
+  @Input() public receiver: ChatContact;
+  @Output() public receiverIsTyping: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public receiverData: any = null;
   public receiverName = '';
   public user: JwtPayloadInterface = {} as JwtPayloadInterface;
   public message = '';
   public typingMessage: any = null;
-  public typing = false;
   public messages: Message[] = [];
   public isOnline = false;
 
@@ -55,25 +65,19 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   constructor(
     private route: ActivatedRoute,
     private store: Store<StoreStateInterface>,
-    private chatService: ChatService) {
+    private chatService: ChatService,
+    private usersService: UsersService) {
     this.socket = io(environment.baseUrl);
   }
 
   ngOnInit(): void {
-    this.subs.push(
-      this.store.select(getUserSelector).subscribe(user => this.user = user),
-
-      this.route.params.subscribe((params) => {
-        this.receiverName = params['name'];
-        this.getUserByUsername();
-
-        this.socket.on('refreshPage', () => {
-          this.getUserByUsername();
-        });
-      }))
+    this.subs.push(this.store.select(getUserSelector).subscribe(user => this.user = user));
+    this.receiverName = this.receiver.username;
+    this.getUserByUsername();
 
     this.socketUserIsTyping();
     this.socketUserStoppedTyping();
+    this.socketEmitRefresh();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -91,35 +95,17 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
     this.socket.emit('join chat', params);
   }
 
-  public isTyping(): void {
-    this.socket.emit('start_typing', {
-      sender: this.user.username,
-      receiver: this.receiverName
-    });
-
-    if (this.typingMessage) {
-      clearTimeout(this.typingMessage);
-    }
-
-    this.typingMessage = setTimeout(() => {
-      this.socket.emit('stop_typing', {
-        sender: this.user.username,
-        receiver: this.receiverName
-      });
-    }, 500);
-  }
-
   public getUserByUsername() {
-    this.chatService.getUserByUsername(this.receiverName).subscribe((data: any) => {
-      this.receiverData = data.result;
-      this.getAllMessages(this.user._id, data.result._id);
-    });
+      this.usersService.getUserByUsername(this.receiverName).subscribe((data) => {
+        this.receiverData = data.user;
+        this.getAllMessages(this.user._id, data.user._id);
+      });
   }
 
   public sendMessage() {
     if (this.message) {
       const receiver = this.receiverData;
-      this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe((data) => {
+      this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe((_) => {
         this.socket.emit('refresh', {});
         this.message = '';
       });
@@ -128,7 +114,7 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
 
   public getAllMessages(sender: string, receiver: string) {
     this.chatService.getMessages(sender, receiver).subscribe((data) => {
-      this.messages = data.messages.message;
+      this.messages = data.message;
     });
   }
 
@@ -141,7 +127,7 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   private socketUserIsTyping() {
     this.socket.on('is_typing', (data: any) => {
       if (data.sender === this.receiverName) {
-        this.typing = true;
+        this.receiverIsTyping.emit(true);
       }
     });
   }
@@ -149,8 +135,14 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   private socketUserStoppedTyping() {
     this.socket.on('has_stopped_typing', (data: any) => {
       if (data.sender === this.receiverName) {
-        this.typing = false;
+        this.receiverIsTyping.emit(false);
       }
+    });
+  }
+
+  private socketEmitRefresh() {
+    this.socket.on('refreshPage', () => {
+      this.getUserByUsername();
     });
   }
 

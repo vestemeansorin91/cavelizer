@@ -3,6 +3,8 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import {environment} from "../../../../../../environments/environment";
+import {UserInterface} from "../../../../../shared/types/user.interface";
+import {SendMessageResponseInterface} from "../types/send-message-response.interface";
 
 const BASEURL = `${environment.apiUrl}/chat`;
 
@@ -12,20 +14,20 @@ const BASEURL = `${environment.apiUrl}/chat`;
 export class ChatService {
   constructor(private http: HttpClient) {}
 
-  public getMessages(senderId: string, receiverId: string): Observable<any> {
-    return this.http.get(`${BASEURL}/chat-messages/${senderId}/${receiverId}`);
+  public getUsersForChat(): Observable<UserInterface[]> {
+    return this.http.get<UserInterface[]>(`${BASEURL}/getUsersForChat`);
   }
 
-  public markMessages(sender: string, receiver: string): Observable<any> {
-    return this.http.get(`${BASEURL}/receiver-messages/${sender}/${receiver}`);
+  public getMessages(senderId: string, receiverId: string): Observable<any> {
+    return this.http.get(`${BASEURL}/chatMessages/${senderId}/${receiverId}/getMessages`);
+  }
+
+  public markReceiverMessages(sender: string, receiver: string): Observable<any> {
+    return this.http.get(`${BASEURL}/receiverMessages/${sender}/${receiver}/markReceiverMessages`);
   }
 
   public markAllMessages(): Observable<any> {
-    return this.http.get(`${BASEURL}/mark-all-messages`);
-  }
-
-  public getUserByUsername(username: string): Observable<any> {
-    return this.http.get(`${BASEURL}/username/${username}`);
+    return this.http.get(`${BASEURL}/markAllMessages`);
   }
 
   public sendMessage(
@@ -33,8 +35,8 @@ export class ChatService {
     receiverId: string,
     receiverName: string,
     message: string
-  ): Observable<any> {
-    return this.http.post(`${BASEURL}/chat-messages/${senderId}/${receiverId}`, {
+  ): Observable<SendMessageResponseInterface> {
+    return this.http.post<SendMessageResponseInterface>(`${BASEURL}/chatMessages/${senderId}/${receiverId}/sendMessage`, {
       receiverId,
       receiverName,
       message,

@@ -6,7 +6,7 @@
 
   <div class="contacts-scroll flex--column gap--12 mt--32 pt--8">
     <app-chat-contact-item
-      *ngFor="let contact of contacts; let i = index"
+      *ngFor="let contact of contacts; let i = index; trackBy: trackByFn"
       [class.selected]="selectedContactIndex === i" [contact]="contact"
       (click)="contactSelectionChange.emit(i)"
     ></app-chat-contact-item>

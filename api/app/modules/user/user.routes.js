@@ -7,7 +7,8 @@ const isAdminMiddleware = require('../../shared/middlewares/is-admin.middleware'
 
 // User routes
 router.get('/users', UserController.getUsers);
-router.get('/users/:id', UserController.getUserById);
+router.get('/users/:id/getUserById', UserController.getUserById);
+router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
 router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
 router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
 

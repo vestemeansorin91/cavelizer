@@ -5,17 +5,17 @@ const conversationsCollection = require('./schemas/conversation.schema');
 const usersCollection = require('../user/user.schema');
 
 module.exports = {
+    getUsersForChat(request, response) {
+        getUsersForChatFn(request.user).then((users) => {
+            response.write(JSON.stringify(users));
+            response.end();
+        })
+            .catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
+    },
     getMessages(request, response) {
         const {senderId, receiverId} = request.params;
         getMessagesFn(senderId, receiverId).then((conversation) => {
-            response.write(JSON.stringify({conversation}));
-            response.end();
-        }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
-    },
-    getUserByUsername(request, response) {
-        const {username} = request.params;
-        getUserByUsernameFn(username).then((user) => {
-            response.write(JSON.stringify({user}));
+            response.write(JSON.stringify(conversation));
             response.end();
         }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
     },
@@ -44,6 +44,16 @@ module.exports = {
     }
 };
 
+async function getUsersForChatFn(user) {
+    return usersCollection.find( {
+        _id: {
+            $not: {
+                $eq: user._id
+            }
+        }
+    });
+}
+
 async function getMessagesFn(senderId, receiverId) {
     const conversation = await conversationsCollection.findOne({
         $or: [
@@ -71,7 +81,10 @@ async function getMessagesFn(senderId, receiverId) {
     }).select('_id');
 
     if (!conversation) {
-        throw new Error(`Conversation not found!`);
+        // throw new Error(`Conversation not found!`);
+        return {
+            messages: {message: null}
+        };
     }
 
     return messagesCollection.findOne({
@@ -80,7 +93,7 @@ async function getMessagesFn(senderId, receiverId) {
 }
 
 async function sendMessageFn(senderId, receiverId, body, user) {
-    const conversation = conversationsCollection.find(
+    const conversation = await conversationsCollection.find(
         {
             $or: [
                 {
@@ -106,6 +119,8 @@ async function sendMessageFn(senderId, receiverId, body, user) {
     if (!conversation) {
         throw new Error(`Conversation not found!`);
     }
+
+    console.log(conversation);
 
     if (conversation.length > 0) {
         const msg = await messagesCollection.findOne({conversation: conversation[0]._id});
@@ -148,7 +163,7 @@ async function sendMessageFn(senderId, receiverId, body, user) {
             body: body.message
         });
 
-        await usersCollection.update({_id: user._id},
+        await usersCollection.findOneAndUpdate({_id: user._id},
             {
                 $push: {
                     chats: {
@@ -164,7 +179,7 @@ async function sendMessageFn(senderId, receiverId, body, user) {
             }
         );
 
-        await usersCollection.update({_id: receiverId},
+        await usersCollection.findOneAndUpdate({_id: receiverId},
             {
                 $push: {
                     chats: {
@@ -229,19 +244,9 @@ async function markAllMessagesFn(sender) {
     // err 'Error occured while all messages marked as read'
 }
 
-async function getUserByUsernameFn(username) {
-    const userFound = await usersCollection.findOne({username});
-
-    if (!userFound) {
-        throw new Error(`Couldn't find user by username`)
-    }
-
-    return userFound;
-}
-
 /* Private functions */
 async function _updateChatList(user, receiverId, msgId) {
-    await usersCollection.update(
+    await usersCollection.findOneAndUpdate(
         {
             _id: user._id
         },
@@ -254,7 +259,7 @@ async function _updateChatList(user, receiverId, msgId) {
         }
     );
 
-    await usersCollection.update(
+    await usersCollection.findOneAndUpdate(
         {
             _id: receiverId
         },
@@ -267,7 +272,7 @@ async function _updateChatList(user, receiverId, msgId) {
         }
     );
 
-    await usersCollection.update(
+    await usersCollection.findOneAndUpdate(
         {
             _id: user._id
         },
@@ -286,7 +291,7 @@ async function _updateChatList(user, receiverId, msgId) {
         }
     );
 
-    await usersCollection.update(
+    await usersCollection.findOneAndUpdate(
         {
             _id: receiverId
         },

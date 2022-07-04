@@ -1,4 +1,5 @@
-  <div class="messages" ngx-auto-scroll observe-attributes lock-y-offset="10">
+<div class="messages" ngx-auto-scroll observe-attributes [lock-y-offset]="10">
+  <ng-container *ngIf="messages && messages.length > 0; else noMessagesTpl">
     <div *ngFor="let message of messages">
       <div class="message-left-wrapper" *ngIf="user.username !== receiverName && user.username !== message.senderName">
         <div class="chat-message message-left">
@@ -8,15 +9,18 @@
         </div>
       </div>
 
-      <div class=" message-right-wrapper" *ngIf="user.username === message.senderName">
-        <div class="chat-message  message-right">
+      <div class="message-right-wrapper" *ngIf="user.username === message.senderName">
+        <div class="chat-message message-right">
           <div class="message">
             {{ message.body }}
           </div>
         </div>
       </div>
     </div>
-    <div *ngIf="typing" class="user-typing">
-      {{ receiverName + ' is typing...' }}
-    </div>
-  </div>
+  </ng-container>
+</div>
+
+
+<ng-template #noMessagesTpl>
+    <span class="justify--center color--grey text--light text--ellipsis"> No messages </span>
+</ng-template>

@@ -1,12 +1,29 @@
+:host {
+  padding-bottom: 16px;
+}
+
+.messages {
+  height: calc(100vh - 390px);
+  overflow: overlay;
+  padding: 16px 32px 16px 16px;
+}
+
 .chat-message {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  align-items: flex-start;
+  padding: 16px;
   margin: 5px 10px;
   min-height: 40px;
   width: auto;
-  border-radius: 10px;
+  border-radius: 18px;
   color: white;
+
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 
   div {
     display: inline-flex;
@@ -18,7 +35,8 @@
   flex-direction: row;
 
   .message-left {
-    background-color: grey;
+    background: #EFF2F4;
+    color: black;
   }
 }
 
@@ -27,6 +45,6 @@
   flex-direction: row-reverse;
 
   .message-right {
-    background-color: cornflowerblue;
+    background-color: #377DFF;
   }
 }

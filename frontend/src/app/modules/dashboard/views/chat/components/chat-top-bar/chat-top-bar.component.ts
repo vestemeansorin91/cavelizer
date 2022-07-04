@@ -8,4 +8,5 @@ import {ChatContact} from "../../../../../../shared/mock/chat";
 })
 export class ChatTopBarComponent {
   @Input() public contact: ChatContact = {} as ChatContact;
+  @Input() public receiverIsTyping = false;
 }

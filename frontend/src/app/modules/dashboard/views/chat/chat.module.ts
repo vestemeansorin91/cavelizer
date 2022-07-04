@@ -1,5 +1,7 @@
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
+import {NgxAutoScrollModule} from "ngx-auto-scroll";
+import {SharedModule} from "../../../../shared/shared.module";
 import {ChatComponent} from "./chat.component";
 import {ChatContactsComponent} from "./components/chat-contacts/chat-contacts.component";
 import {
@@ -13,7 +15,7 @@ const COMPONENTS = [ChatComponent, ChatContactsComponent, ChatMessagesComponent,
 
 @NgModule({
   declarations: [COMPONENTS],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule, NgxAutoScrollModule],
 })
 
 export class ChatModule {

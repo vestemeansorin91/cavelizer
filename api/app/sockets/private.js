@@ -6,11 +6,11 @@ module.exports = function(io) {
         });
 
         socket.on('start_typing', (data) => {
-            io.to(data.reciever).emit('is_typing', data);
+            io.to(data.receiver).emit('is_typing', data);
         });
 
         socket.on('stop_typing', (data) => {
-            io.to(data.reciever).emit('has_stopped_typing', data);
+            io.to(data.receiver).emit('has_stopped_typing', data);
         });
     });
 };
