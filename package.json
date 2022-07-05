@@ -35,8 +35,8 @@
     "nodemon": "^2.0.18",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
-    "swagger-ui-express": "^4.4.0",
-    "swagger-autogen": "^2.21.4"
+    "swagger-autogen": "^2.21.4",
+    "swagger-ui-express": "^4.4.0"
   },
   "engines": {
     "node": "14.x"

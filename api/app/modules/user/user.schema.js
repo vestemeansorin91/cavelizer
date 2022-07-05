@@ -33,6 +33,10 @@ const userSchema = mongoose.Schema({
     enum: GenderEnum,
     required: true
   },
+  avatarBlobUrl: {
+    type: String,
+    default: ''
+  },
   profile: { type: profileSchema, default: {} },
   chats: {
     type: [
