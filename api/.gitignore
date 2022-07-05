@@ -1,2 +1,3 @@
 node_modules
 app/config/swagger/swagger-output.json
+public/assets

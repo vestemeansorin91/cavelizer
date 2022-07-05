@@ -37,6 +37,9 @@ process.env.PWD = process.cwd();
 app.use('/ui', express.static(process.env.PWD + '/public/ui'));
 app.use('/', uiRoutes);
 
+/* File upload */
+app.use('/public/assets', express.static(process.env.PWD + '/public/assets'));
+
 const mongoConfig = require('./app/config/mongo.config');
 const srv = (err) => {
     if (err) console.log('Mongo error!', err);
