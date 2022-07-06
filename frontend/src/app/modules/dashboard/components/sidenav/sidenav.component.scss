@@ -38,7 +38,6 @@
     flex-direction: column;
     align-items: center;
 
-
     li {
       position: relative;
 
@@ -72,18 +71,16 @@
       }
 
       &.active {
-        background-color: #4A4B5C;
+        background-color: #4a4b5c;
 
         i,
         span {
-          color: #46B9DF;
+          color: #46b9df;
         }
       }
 
-
-
       &:not(:last-of-type) {
-        &:nth-last-of-type(-n+2) {
+        &:nth-last-of-type(-n + 2) {
           margin-top: 128px;
         }
       }
