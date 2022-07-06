@@ -3,30 +3,23 @@ const { getById } = require('../../../../shared/helpers/user.helpers');
 const { StatusCodes } = require('http-status-codes');
 
 module.exports = {
-  updatePersonalData(request, response) {
+  updatePayrollInformation(request, response) {
     const userId = request.params.userId;
-
-    updatePersonalDataFn(userId, request.body)
-      .then(newUser => {
-        response.write(JSON.stringify(newUser));
+    updatePayrollInformationFn(userId, request.body)
+      .then(user => {
+        response.write(JSON.stringify(user));
         response.end();
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   }
 };
 
-async function updatePersonalDataFn(userId, personalDataProps) {
+async function updatePayrollInformationFn(userId, payrollInformationProps) {
   await getById(userId, usersCollection, 'User');
 
-  return usersCollection.findByIdAndUpdate(
-    userId,
-    {
-      profile: {
-        personalData: personalDataProps
-      }
-    },
-    {
-      new: true
+  return usersCollection.findByIdAndUpdate(userId, {
+    profile: {
+      payrollInformation: payrollInformationProps
     }
-  );
+  });
 }

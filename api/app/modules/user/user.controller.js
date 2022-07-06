@@ -21,13 +21,15 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
-getUserByUsername(request, response) {
-    const {username} = request.params;
-    getUserByUsernameFn(username).then((user) => {
-        response.write(JSON.stringify({user}));
+  getUserByUsername(request, response) {
+    const { username } = request.params;
+    getUserByUsernameFn(username)
+      .then(user => {
+        response.write(JSON.stringify({ user }));
         response.end();
-    }).catch(error => response.status(StatusCodes.BAD_REQUEST).send({message: error.message}));
-},
+      })
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  },
   toggleUserActive(request, response) {
     const id = request.params.id;
 
@@ -47,21 +49,44 @@ getUserByUsername(request, response) {
         response.end();
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  },
+  uploadAvatar(request, response) {
+    const userId = request.params.id;
+    const filePath = request.file.path;
+
+    uploadAvatarFn(userId, filePath)
+      .then(newUserUpdated => {
+        response.write(JSON.stringify(newUserUpdated));
+        response.end();
+      })
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   }
 };
+
+async function uploadAvatarFn(userId, filePath) {
+  await getById(userId, usersCollection, 'User');
+
+  return usersCollection.findByIdAndUpdate(
+    userId,
+    {
+      avatarBlobUrl: filePath
+    },
+    { new: true }
+  );
+}
 
 async function getUsersFn() {
   return usersCollection.find();
 }
 
 async function getUserByUsernameFn(username) {
-    const userFound = await usersCollection.findOne({username});
+  const userFound = await usersCollection.findOne({ username });
 
-    if (!userFound) {
-        throw new Error(`Couldn't find user by username`)
-    }
+  if (!userFound) {
+    throw new Error(`Couldn't find user by username`);
+  }
 
-    return userFound;
+  return userFound;
 }
 
 async function toggleUserActiveFn(id) {

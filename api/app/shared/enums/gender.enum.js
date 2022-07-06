@@ -1,7 +1,7 @@
-const GENDERS = {
+const GENDER = {
   MAN: 'man',
   WOMAN: 'woman',
   ALL: 'all'
 };
 
-module.exports = GENDERS;
+module.exports = GENDER;

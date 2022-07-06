@@ -7,8 +7,8 @@ module.exports = {
     const userId = request.params.userId;
 
     updatePublicProfileFn(userId, request.body)
-      .then(() => {
-        response.write(JSON.stringify({}));
+      .then(updatedUser => {
+        response.write(JSON.stringify(updatedUser));
         response.end();
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
@@ -18,9 +18,13 @@ module.exports = {
 async function updatePublicProfileFn(userId, publicProfileProps) {
   await getById(userId, usersCollection, 'User');
 
-  return usersCollection.findByIdAndUpdate(userId, {
-    profile: {
-      publicProfile: publicProfileProps
-    }
-  });
+  return usersCollection.findByIdAndUpdate(
+    userId,
+    {
+      profile: {
+        publicProfile: publicProfileProps
+      }
+    },
+    { new: true }
+  );
 }
