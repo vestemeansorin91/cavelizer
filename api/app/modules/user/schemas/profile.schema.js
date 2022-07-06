@@ -4,6 +4,7 @@ const hrInformationSchema = require('./hr-information/hr-information.schema');
 const personalDataSchema = require('./personal-data/personal-data.schema');
 const bankDetailsSchema = require('./bank-details/bank-details.schema');
 const startEndDatesSchema = require('./start-end-dates/start-end-dates.schema');
+const payrollInformationSchema = require('./payroll-information/payroll-information.schema');
 
 const ProfileSchema = mongoose.Schema({
   publicProfile: publicProfileSchema,
@@ -22,7 +23,12 @@ const ProfileSchema = mongoose.Schema({
   startEndDates: {
     type: startEndDatesSchema,
     default: null
+  },
+  payrollInformation: {
+    type: payrollInformationSchema,
+    default: null
   }
+
 
   // TODO: Alex6665
   // TODO: mihaiFirst
