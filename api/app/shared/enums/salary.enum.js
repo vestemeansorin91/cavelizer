@@ -1,7 +1,6 @@
-const SALARY = {
-   FIXED:"fixed salary",
-   FLEXIBLE:"flexible salary"
+const SALARY_TYPE = {
+  FIXED: 'fixed',
+  FLEXIBLE: 'flexible'
+};
 
-  };
-  
-  module.exports = SALARY
+module.exports = SALARY_TYPE;

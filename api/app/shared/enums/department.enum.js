@@ -1,6 +1,6 @@
-const DEPARTMENTS = {
+const DEPARTMENT = {
   DEVELOPMENT: 'development',
   QA: 'qa'
 };
 
-module.exports = DEPARTMENTS;
+module.exports = DEPARTMENT;

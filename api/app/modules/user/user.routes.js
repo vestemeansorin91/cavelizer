@@ -13,8 +13,7 @@ router.get('/users/:id/getUserById', UserController.getUserById);
 router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
 router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
 router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
-router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar)
-
+router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar);
 
 // Nested routes
 const publicProfileRoutes = require('./schemas/public-profile/public-profile.routes');

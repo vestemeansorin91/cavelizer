@@ -1,3 +1,4 @@
+.github/workflows
 api/public
 api/node_modules
 api/app/config

@@ -1,4 +1,4 @@
-const SHIRTSIZE = {
+const SHIRT_SIZE = {
   XS: 'xs',
   S: 'S',
   M: 'm',
@@ -7,4 +7,4 @@ const SHIRTSIZE = {
   XXL: 'xxl'
 };
 
-module.exports = SHIRTSIZE;
+module.exports = SHIRT_SIZE;

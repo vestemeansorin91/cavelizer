@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ShirtSizeEnum = require('../../../../shared/enums/shirtSize.enum');
+const ShirtSizeEnum = require('../../../../shared/enums/shirt-size.enum');
 
 const clothesSizesSchema = mongoose.Schema({
   shirtSize: {
