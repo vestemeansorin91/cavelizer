@@ -2,18 +2,22 @@ const express = require('express');
 const router = express.Router();
 const UserController = require('./user.controller');
 
-const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', { session: false });
+/* Middlewares */
+const isAuthenticatedMiddleware = require('../../shared/middlewares/is-authenticated.middleware');
+const isAdminMiddleware = require('../../shared/middlewares/is-admin.middleware');
+const uploadAvatarMiddleware = require('../../shared/middlewares/upload-avatar.middleware');
 
 // User routes
 router.get('/users', UserController.getUsers);
-router.get('/users/:id', UserController.getUserById);
-router.patch('/users/:id/toggleIsActive', AuthenticatedMiddleware, UserController.toggleUserActive);
-router.delete('/users/:id', AuthenticatedMiddleware, UserController.deleteUser);
+router.get('/users/:id/getUserById', UserController.getUserById);
+router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
+router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
+router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
+router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar);
 
 // Nested routes
 const publicProfileRoutes = require('./schemas/public-profile/public-profile.routes');
-const hrInformationRoutes = require('./schemas/hr-information/hr-information-routes');
+const hrInformationRoutes = require('./schemas/hr-information/hr-information.routes');
 const personalDataRoutes = require('./schemas/personal-data/personal-data.routes');
 const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 const emergencyContactRoutes = require('./schemas/emergency-contact/emergency-contact.routes');

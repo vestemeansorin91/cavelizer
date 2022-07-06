@@ -3,10 +3,10 @@ const router = express.Router();
 const EmegencyContactController = require('./emergency-contact.controller');
 
 const passport = require('passport');
-const AuthenticatedMiddleware = passport.authenticate('jwt', {
+const isAuthenticatedMiddleware = passport.authenticate('jwt', {
   session: false
 });
 
-router.patch('/users/:userId/updateEmergencyContact', AuthenticatedMiddleware, EmegencyContactController.updateEmergencyContact);
+router.patch('/users/:userId/updateEmergencyContact', isAuthenticatedMiddleware, EmegencyContactController.updateEmergencyContact);
 
 module.exports = router;
