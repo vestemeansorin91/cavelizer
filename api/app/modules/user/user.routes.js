@@ -35,6 +35,7 @@ const personalDataRoutes = require('./schemas/personal-data/personal-data.routes
 const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 const clothesSizesRoutes = require('./schemas/clothes-sizes/clothes-sizes.routes');
 const startEndDates = require('./schemas/start-end-dates/start-end-dates.routes');
+const payrollInformationRoutes = require('./schemas/payroll-information/payroll-information.routes');
 
 router.use(publicProfileRoutes);
 router.use(hrInformationRoutes);
@@ -42,5 +43,6 @@ router.use(personalDataRoutes);
 router.use(bankDetailsRoutes);
 router.use(clothesSizesRoutes);
 router.use(startEndDates);
+router.use(payrollInformationRoutes);
 
 module.exports = router;
