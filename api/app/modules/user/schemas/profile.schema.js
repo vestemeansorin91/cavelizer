@@ -3,6 +3,7 @@ const publicProfileSchema = require('./public-profile/public-profile.schema');
 const hrInformationSchema = require('./hr-information/hr-infornation.schema');
 const personalDataSchema = require('./personal-data/personal-data.schema');
 const bankDetailsSchema = require('./bank-details/bank-details.schema');
+const emergencyContactSchema = require('./emergency-contact/emergency-contact.schema');
 
 const ProfileSchema = mongoose.Schema({
   publicProfile: publicProfileSchema,
@@ -16,6 +17,10 @@ const ProfileSchema = mongoose.Schema({
   },
   bankDetails : {
     type:bankDetailsSchema,
+    default:null
+  },
+  emergencyContact : {
+    type:emergencyContactSchema,
     default:null
   }
 
