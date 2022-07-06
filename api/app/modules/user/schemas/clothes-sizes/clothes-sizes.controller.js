@@ -16,7 +16,7 @@ module.exports = {
 };
 
 async function updateClothesSizesFn(userId, clothesSizesProps) {
-  const userFound = await getById(userId, usersCollection, 'User');
+  await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     userId,

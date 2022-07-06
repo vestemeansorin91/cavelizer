@@ -2,22 +2,10 @@ const express = require('express');
 const router = express.Router();
 const UserController = require('./user.controller');
 
+/* Middlewares */
 const isAuthenticatedMiddleware = require('../../shared/middlewares/is-authenticated.middleware');
 const isAdminMiddleware = require('../../shared/middlewares/is-admin.middleware');
-
-const multer = require('multer');
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './public/assets')
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname);
-    }
-});
-
-const upload = multer({ storage: storage });
-const uploadMiddleware = upload.single('avatar');
+const uploadAvatarMiddleware = require('../../shared/middlewares/upload-avatar.middleware');
 
 // User routes
 router.get('/users', UserController.getUsers);
@@ -25,7 +13,7 @@ router.get('/users/:id/getUserById', UserController.getUserById);
 router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
 router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
 router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
-router.post('/users/:id/uploadAvatar', uploadMiddleware, UserController.uploadAvatar)
+router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar)
 
 
 // Nested routes
