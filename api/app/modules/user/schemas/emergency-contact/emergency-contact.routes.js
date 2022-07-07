@@ -1,6 +1,8 @@
+const express = require('express');
+const router = express.Router();
+const isAuthenticatedMiddleware = require('../../../../shared/middlewares/is-authenticated.middleware');
 const EmegencyContactController = require('./emergency-contact.controller');
 
-const passport = require('passport');
 
 const isAuthenticatedMiddleware = passport.authenticate('jwt', {
   session: false
@@ -8,3 +10,5 @@ const isAuthenticatedMiddleware = passport.authenticate('jwt', {
 
 
 router.patch('/users/:userId/updateEmergencyContact', isAuthenticatedMiddleware, EmegencyContactController.updateEmergencyContact);
+
+module.exports = router;
