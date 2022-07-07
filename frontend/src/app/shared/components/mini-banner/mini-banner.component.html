@@ -1,3 +1,12 @@
-<div>
-  <ng-content></ng-content>
+<div class="mini-banner" >
+  <img  alt="">
+  <span class="subtitle">
+    <ng-content select="[subtitle]"></ng-content>
+  </span>
+  <span class="title">
+    <ng-content select="[title]"></ng-content>
+  </span>
+  <span class="action">
+    <cavelizer-button> <ng-content select="[action]"></ng-content></cavelizer-button>
+  </span>
 </div>
