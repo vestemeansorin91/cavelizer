@@ -21,9 +21,7 @@ async function updatePersonalDataFn(userId, personalDataProps) {
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        personalData: personalDataProps
-      }
+      'profile.personalData': personalDataProps
     },
     {
       new: true

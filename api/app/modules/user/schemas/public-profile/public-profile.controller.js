@@ -21,9 +21,7 @@ async function updatePublicProfileFn(userId, publicProfileProps) {
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        publicProfile: publicProfileProps
-      }
+      'profile.publicProfile': publicProfileProps
     },
     { new: true }
   );

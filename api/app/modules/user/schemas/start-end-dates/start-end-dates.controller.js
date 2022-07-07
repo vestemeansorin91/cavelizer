@@ -15,14 +15,12 @@ module.exports = {
 };
 
 async function updateStartEndDatesFn(userId, startEndDatesProps) {
-  const userFound = await getById(userId, usersCollection, 'User');
+  await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        startEndDates: startEndDatesProps
-      }
+      'profile.startEndDates': startEndDatesProps
     },
     {
       new: true

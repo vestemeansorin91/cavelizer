@@ -18,8 +18,6 @@ async function updatePayrollInformationFn(userId, payrollInformationProps) {
   await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(userId, {
-    profile: {
-      payrollInformation: payrollInformationProps
-    }
+    'profile.payrollInformation': payrollInformationProps
   });
 }

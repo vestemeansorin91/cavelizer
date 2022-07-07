@@ -21,9 +21,7 @@ async function updateClothesSizesFn(userId, clothesSizesProps) {
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        clothesSizes: clothesSizesProps
-      }
+      'profile.clothesSizes': clothesSizesProps
     },
     {
       new: true

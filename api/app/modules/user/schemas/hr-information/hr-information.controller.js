@@ -15,14 +15,12 @@ module.exports = {
 };
 
 async function updateHrInformationFn(userId, hrInformationProps) {
-  const userFound = await getById(userId, usersCollection, 'User');
+  await getById(userId, usersCollection, 'User');
 
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        hrInformation: hrInformationProps
-      }
+      'profile.hrInformation': hrInformationProps
     },
     {
       new: true

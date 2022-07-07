@@ -8,7 +8,7 @@ import {DashboardRoutesModule} from './dashboard.routes';
 import {CategoryDetailsComponent} from './views/categories/components/category-details/category-details.component';
 import {CategoryFormComponent} from './views/categories/components/category-form/category-form.component';
 import {CategoryListComponent} from './views/categories/components/category-list/category-list.component';
-import {CavelizerComponentsComponent} from './views/cavelizer-components/components/cavelizer-components.component';
+import {CavelizerComponentsModule} from "./views/cavelizer-components/cavelizer-components.module";
 import {ChatModule} from "./views/chat/chat.module";
 import {DocumentationComponent} from './views/documentation/documentation.component';
 import {PanelComponent} from './views/panel/panel.component';
@@ -36,8 +36,6 @@ const COMPONENTS = [
   CategoryFormComponent,
   CategoryListComponent,
 
-  CavelizerComponentsComponent,
-
   DocumentationComponent,
 
   PanelComponent,
@@ -61,6 +59,7 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [COMPONENTS],
-  imports: [CommonModule, ChatModule, DashboardRoutesModule, SharedModule],
+  imports: [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule],
 })
-export class DashboardModule {}
+export class DashboardModule {
+}
