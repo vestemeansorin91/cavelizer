@@ -21,9 +21,7 @@ async function updateBankDetailsFn(userId, bankDetailsProps) {
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        bankDetails: bankDetailsProps
-      }
+      'profile.bankDetails': bankDetailsProps
     },
     {
       new: true

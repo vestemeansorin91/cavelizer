@@ -21,6 +21,16 @@ module.exports = {
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   },
+  getUserByIdWithProfile(request, response) {
+    const id = request.params.id;
+
+    getUserByIdWithProfileFn(id)
+      .then(user => {
+        response.write(JSON.stringify(user));
+        response.end();
+      })
+      .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  },
   getUserByUsername(request, response) {
     const { username } = request.params;
     getUserByUsernameFn(username)
@@ -63,20 +73,18 @@ module.exports = {
   }
 };
 
-async function uploadAvatarFn(userId, filePath) {
-  await getById(userId, usersCollection, 'User');
-
-  return usersCollection.findByIdAndUpdate(
-    userId,
-    {
-      avatarBlobUrl: filePath
-    },
-    { new: true }
-  );
-}
-
 async function getUsersFn() {
   return usersCollection.find();
+}
+
+async function getUserByIdWithProfileFn(id) {
+  const userFound = await usersCollection.findById(id).select('+profile');
+
+  if (!userFound) {
+    throw new Error('User not found!');
+  }
+
+  return userFound.profile;
 }
 
 async function getUserByUsernameFn(username) {
@@ -107,4 +115,16 @@ async function deleteUserFn(id) {
   await getById(id, usersCollection, 'User');
 
   return usersCollection.findByIdAndRemove(id);
+}
+
+async function uploadAvatarFn(userId, filePath) {
+  await getById(userId, usersCollection, 'User');
+
+  return usersCollection.findByIdAndUpdate(
+    userId,
+    {
+      avatarBlobUrl: filePath
+    },
+    { new: true }
+  );
 }

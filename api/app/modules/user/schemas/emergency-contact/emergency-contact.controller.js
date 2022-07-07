@@ -21,9 +21,7 @@ async function updateEmergencyContactFn(userId, emergencyContactProps) {
   return usersCollection.findByIdAndUpdate(
     userId,
     {
-      profile: {
-        emergencyContact: emergencyContactProps
-      }
+      'profile.emergencyContact': emergencyContactProps
     },
     {
       new: true

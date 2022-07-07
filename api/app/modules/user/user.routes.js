@@ -10,6 +10,7 @@ const uploadAvatarMiddleware = require('../../shared/middlewares/upload-avatar.m
 // User routes
 router.get('/users', UserController.getUsers);
 router.get('/users/:id/getUserById', UserController.getUserById);
+router.get('/users/:id/getUserByIdWithProfile', UserController.getUserByIdWithProfile);
 router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
 router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
 router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
