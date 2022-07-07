@@ -17,7 +17,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { MiniBannerComponent } from './components/mini-banner/mini-banner.component';
 
-const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent, DropdownComponent, MiniBannerComponent];
+const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent, MiniBannerComponent, DropdownComponent];
 
 const SERVICES: any[] = [];
 
