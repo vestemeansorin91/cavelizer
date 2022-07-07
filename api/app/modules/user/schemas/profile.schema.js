@@ -7,6 +7,7 @@ const bankDetailsSchema = require('./bank-details/bank-details.schema');
 const startEndDatesSchema = require('./start-end-dates/start-end-dates.schema');
 const clothesSizesSchema = require('./clothes-sizes/clothes-sizes.schema');
 const payrollInformationSchema = require('./payroll-information/payroll-information.schema');
+const emergencyContactSchema = require("./emergency-contact/emergency-contact.schema");
 
 const ProfileSchema = mongoose.Schema({
   publicProfile: { type: publicProfileSchema, default: null },
@@ -15,7 +16,8 @@ const ProfileSchema = mongoose.Schema({
   hrInformation: { type: hrInformationSchema, default: null },
   personalData: { type: personalDataSchema, default: null },
   startEndDates: { type: startEndDatesSchema, default: null },
-  payrollInformation: { type: payrollInformationSchema, default: null }
+  payrollInformation: { type: payrollInformationSchema, default: null },
+  emergencyContact : {type:emergencyContactSchema, default:null}
 });
 
 module.exports = ProfileSchema;
