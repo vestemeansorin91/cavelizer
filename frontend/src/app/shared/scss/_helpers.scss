@@ -126,3 +126,9 @@
 .text-decoration--none {
   text-decoration: none;
 }
+
+.empty {
+  &:empty {
+    display: none;
+  }
+}
