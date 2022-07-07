@@ -1,3 +1,4 @@
+import {OverlayModule} from "@angular/cdk/overlay";
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -9,20 +10,23 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {RouterModule} from "@angular/router";
 import {BreadcrumbComponent} from "./components/breadcrumb/breadcrumb.component";
 import {ButtonComponent} from './components/button/button.component';
+import {DropdownItemDirective} from "./components/dropdown/dropdown-item.directive";
+import {DropdownTriggerForDirective} from "./components/dropdown/dropdown-trigger-for.directive";
+import {DropdownComponent} from './components/dropdown/dropdown.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from "./pipes/default-image.pipe";
 
-const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent];
+const COMPONENTS: any[] = [PageNotFoundComponent, ButtonComponent, BreadcrumbComponent, DropdownComponent];
 
 const SERVICES: any[] = [];
 
-const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule];
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, OverlayModule];
 
 const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatIconModule, MatListModule, MatTabsModule, MatExpansionModule];
 
 const PIPES: any[] = [DefaultImagePipe];
 
-const DIRECTIVES: any[] = [];
+const DIRECTIVES: any[] = [DropdownTriggerForDirective, DropdownItemDirective];
 
 @NgModule({
   declarations: [COMPONENTS, PIPES, DIRECTIVES],
@@ -30,4 +34,5 @@ const DIRECTIVES: any[] = [];
   providers: [SERVICES],
   exports: [MODULES, COMPONENTS, PIPES, DIRECTIVES, SERVICES, ANGULAR_MATERIAL_MODULES]
 })
-export class SharedModule {}
+export class SharedModule {
+}
