@@ -2,10 +2,18 @@
 $main-color: #6a983c;
 $main-dark-color: #46760a;
 
-/* Classes */
+/* Classes - Text */
+
+.color--main {
+  color: $main-color;
+}
+
 .color--grey {
   color: #b6b6b6;
 }
+
+
+/* Classes - Background */
 
 .bg-light {
   background-color: #f5f5f5;
@@ -15,10 +23,10 @@ $main-dark-color: #46760a;
   background-color: white;
 }
 
+
+/* Items */
 .border-bottom {
-  box-shadow: 0px 1.8755556344985962px 0.9377778172492981px 0px #0000000d;
+  box-shadow: 0 1.8755556344985962px 0.9377778172492981px 0 #0000000d;
 }
 
-.main-color {
-  color: $main-color;
-}
+

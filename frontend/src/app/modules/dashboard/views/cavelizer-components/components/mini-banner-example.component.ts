@@ -1,0 +1,29 @@
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app-mini-banner-example',
+  template: `<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong>cavelizer-mini-banner</strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        Creat de Mihai
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+<!--    <cavelizer-mini-banner>-->
+<!--      <ng-container subtitle>Banner subfocus</ng-container>-->
+<!--      <ng-container title>Space for heading</ng-container>-->
+<!--      <ng-container action>Read recepies</ng-container>-->
+<!--    </cavelizer-mini-banner>-->
+
+<!--    <cavelizer-mini-banner>-->
+<!--      <ng-container subtitle> subfocus</ng-container>-->
+<!--      <ng-container title> heading</ng-container>-->
+<!--      <ng-container action>recepies</ng-container>-->
+<!--    </cavelizer-mini-banner>-->
+  </mat-expansion-panel>`
+})
+export class MiniBannerExampleComponent {
+}

@@ -1,14 +1,13 @@
-import {Overlay, OverlayRef} from "@angular/cdk/overlay";
-import {TemplatePortal} from "@angular/cdk/portal";
-import {Directive, ElementRef, HostBinding, Input, ViewContainerRef} from "@angular/core";
-import {merge, Observable, Subscription} from "rxjs";
-import {DropdownPanel} from "./dropdown-panel";
-
+import {Overlay, OverlayRef} from '@angular/cdk/overlay';
+import {TemplatePortal} from '@angular/cdk/portal';
+import {Directive, ElementRef, HostBinding, Input, ViewContainerRef} from '@angular/core';
+import {merge, Observable, Subscription} from 'rxjs';
+import {DropdownPanel} from './dropdown-panel';
 
 @Directive({
-  selector: "[dropdownTriggerFor]",
+  selector: '[dropdownTriggerFor]',
   host: {
-    "(click)": "toggleDropdown()"
+    '(click)': 'toggleDropdown()'
   }
 })
 export class DropdownTriggerForDirective {
@@ -19,11 +18,7 @@ export class DropdownTriggerForDirective {
   @HostBinding('class') public className = 'dropdown';
   @Input('dropdownTriggerFor') public dropdownPanel: DropdownPanel;
 
-  constructor(
-    private overlay: Overlay,
-    private elementRef: ElementRef<HTMLElement>,
-    private viewContainerRef: ViewContainerRef
-  ) {}
+  constructor(private overlay: Overlay, private elementRef: ElementRef<HTMLElement>, private viewContainerRef: ViewContainerRef) {}
 
   toggleDropdown(): void {
     this.isDropdownOpen ? this.destroyDropdown() : this.openDropdown();
@@ -49,15 +44,10 @@ export class DropdownTriggerForDirective {
         ])
     });
 
-    const templatePortal = new TemplatePortal(
-      this.dropdownPanel.templateRef,
-      this.viewContainerRef
-    );
+    const templatePortal = new TemplatePortal(this.dropdownPanel.templateRef, this.viewContainerRef);
     this.overlayRef.attach(templatePortal);
 
-    this.dropdownClosingActionsSub = this.dropdownClosingActions().subscribe(
-      () => this.destroyDropdown()
-    );
+    this.dropdownClosingActionsSub = this.dropdownClosingActions().subscribe(() => this.destroyDropdown());
   }
 
   private dropdownClosingActions(): Observable<MouseEvent | void> {

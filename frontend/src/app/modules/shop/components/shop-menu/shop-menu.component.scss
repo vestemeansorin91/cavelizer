@@ -1,4 +1,22 @@
 .shop-menu {
   display: flex;
   align-items: center;
+  gap: 20px;
+
+  background-color: #F9F9F9;
+  padding: 16px 46px;
+
+  &--item {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    span {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      width: max-content;
+    }
+  }
 }

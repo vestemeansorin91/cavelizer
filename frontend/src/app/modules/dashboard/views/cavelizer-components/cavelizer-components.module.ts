@@ -2,13 +2,15 @@ import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {SharedModule} from "../../../../shared/shared.module";
 import {CavelizerComponentsComponent} from "./cavelizer-components.component";
-import {ButtonExampleComponent} from "./components/button-example/button-example.component";
-import {DropdownExampleComponent} from './components/dropdown-example/dropdown-example.component';
+import {ButtonExampleComponent} from "./components/button-example.component";
+import {DropdownExampleComponent} from "./components/dropdown-example.component";
+import {MiniBannerExampleComponent} from "./components/mini-banner-example.component";
 
 const COMPONENTS = [
   CavelizerComponentsComponent,
   ButtonExampleComponent,
-  DropdownExampleComponent
+  DropdownExampleComponent,
+  MiniBannerExampleComponent
 ]
 
 @NgModule({
