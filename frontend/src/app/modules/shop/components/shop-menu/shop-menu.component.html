@@ -1,9 +1,9 @@
 <div class="shop-menu">
   <ng-container *ngFor="let menu of menuItems">
-    <cavelizer-button [dropdownTriggerFor]="dropdown" class="small transparent">
+    <div [dropdownTriggerFor]="dropdown" class="shop-menu--item">
       <span>{{ menu.menuLabel }}</span>
-      <i class="las la-angle-down green" suffix></i>
-    </cavelizer-button>
+      <i class="color--main">▼</i>
+    </div>
 
     <cavelizer-dropdown #dropdown>
       <div *ngFor="let option of menu.options" (click)="test($event)" dropdownItem>{{option.value}}</div>

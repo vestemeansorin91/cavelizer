@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cavelizer-components',
-  templateUrl: './cavelizer-components.component.html',
-  styleUrls: ['./cavelizer-components.component.scss'],
-})
-export class CavelizerComponentsComponent implements OnInit {
-  constructor() {}
+  template: `
+    <h1>CAVELIZER COMPONENTS</h1>
 
-  ngOnInit(): void {}
+    <mat-accordion>
+      <app-button-example></app-button-example>
+      <app-dropdown-example></app-dropdown-example>
+      <app-mini-banner-example></app-mini-banner-example>
+    </mat-accordion>`
+})
+export class CavelizerComponentsComponent {
 }

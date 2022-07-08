@@ -7,8 +7,8 @@ const setUserOnRequest = require('../../shared/middlewares/set-user-on-request.m
 
 router.get('/getUsersForChat', isAuthenticatedMiddleware, setUserOnRequest, ChatController.getUsersForChat);
 router.get('/chatMessages/:senderId/:receiverId/getMessages', isAuthenticatedMiddleware, ChatController.getMessages);
+router.post('/chatMessages/:senderId/:receiverId/sendMessage', isAuthenticatedMiddleware, setUserOnRequest, ChatController.sendMessage);
 router.patch('/receiverMessages/:sender/:receiver/markReceiverMessages', isAuthenticatedMiddleware, setUserOnRequest, ChatController.markReceiverMessages);
 router.patch('/markAllMessages', isAuthenticatedMiddleware, ChatController.markAllMessages);
-router.post('/chatMessages/:senderId/:receiverId/sendMessage', isAuthenticatedMiddleware, setUserOnRequest, ChatController.sendMessage);
 
 module.exports = router;
