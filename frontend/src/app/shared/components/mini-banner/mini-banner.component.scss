@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'colors';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 390px;
+  padding: 16px;
+  margin: 16px;
+  background-image: url('/assets/mini-banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius-xl;
+
+  .subtitle {
+    margin-bottom: 20px;
+
+    color: $main-color;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .title {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+
+  .action {
+    margin-bottom: 20px;
+  }
+
+  .empty {
+    &:empty {
+      display: none;
+    }
+  }
+}

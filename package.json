@@ -4,7 +4,7 @@
   "description": "Heroku looks on this package json to install dependencies",
   "main": "index.js",
   "scripts": {
-    "install": "cd api && npm install && cd .. && cd frontend && npm install",
+    "install": "cd api && npm install && cd .. && cd frontend && npm install --legacy-peer-deps",
     "start:api": "cd api && npm run start",
     "start:frontend": "cd frontend && npm run start",
     "build:frontend": "cd frontend && npm run build",
