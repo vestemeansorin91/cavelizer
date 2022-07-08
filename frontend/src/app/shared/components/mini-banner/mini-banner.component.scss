@@ -1,10 +1,10 @@
-@import 'helpers';
 @import 'variables';
+@import 'colors';
 
 :host {
   display: flex;
   flex-direction: column;
-  height: 280px;
+  height: 100%;
   width: 390px;
   padding: 16px;
   margin: 16px;
@@ -14,8 +14,9 @@
   border-radius: $border-radius-xl;
 
   .subtitle {
-    color: $main-color;
     margin-bottom: 20px;
+
+    color: $main-color;
     font-size: 26px;
     font-weight: bold;
   }
