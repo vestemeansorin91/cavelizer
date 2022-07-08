@@ -5,7 +5,10 @@
   <ng-content select="[title]"></ng-content>
 </div>
 <div class="action empty">
-  <cavelizer-button class=" small">
+  <cavelizer-button class="small">
     <ng-content select="[action]"></ng-content>
   </cavelizer-button>
+  <span class="suffix">
+    <ng-content select="[suffix]"></ng-content>
+  </span>
 </div>

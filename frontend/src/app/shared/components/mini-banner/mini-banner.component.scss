@@ -1,26 +1,38 @@
 @import 'helpers';
+@import 'variables';
 
 :host {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  height: 280px;
+  width: 390px;
   padding: 16px;
   margin: 16px;
   background-image: url('/assets/mini-banner-bg.png');
   background-size: cover;
   background-position: center;
-  border-radius: 16px;
+  border-radius: $border-radius-xl;
 
   .subtitle {
+    color: $main-color;
     margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 33px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
   }
 
   .action {
     margin-bottom: 20px;
+  }
+
+  .empty {
+    &:empty {
+      display: none;
+    }
   }
 }
