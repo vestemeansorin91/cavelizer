@@ -1,0 +1,31 @@
+@import 'colors';
+
+:host {
+  .inner-tab-group {
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    margin: 24px auto;
+    border-radius: 8px;
+
+    background-color: lightgrey;
+
+    .inner-tab {
+      width: 200px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3px;
+      cursor: pointer;
+
+      &.active {
+        color: $main-color;
+        background-color: white;
+        border-radius: 8px;
+        cursor: inherit;
+        box-shadow: 0 0 4px 1px rgba(32, 32, 36, 0.15);
+      }
+    }
+  }
+}
