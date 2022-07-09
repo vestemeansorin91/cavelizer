@@ -1,4 +1,6 @@
 @import './colors';
+@import './mixins';
+@import './variables';
 
 /*
   FLEX HELPERS
@@ -110,8 +112,6 @@
   border: 1px solid lightgrey;
 }
 
-
-
 .vertical-divider {
   border-right: 1.5px solid #d1d5db;
 }
@@ -127,5 +127,26 @@
 .empty {
   &:empty {
     display: none;
+  }
+}
+/* RESPONSIVE HELPERS */
+.hide-on-mobile {
+  @media (max-width: $mobile-breakpoint) {
+    display: none !important;
+  }
+}
+.hide-on-tablet {
+  @media (max-width: $tablet-breakpoint) {
+    display: none !important;
+  }
+}
+.center-on-mobile {
+  @media (max-width: $mobile-breakpoint) {
+    text-align: center !important;
+  }
+}
+.hide-on-desktop {
+  @media (min-width: $desktop-breakpoint) {
+    display: none !important;
   }
 }

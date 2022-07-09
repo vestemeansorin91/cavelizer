@@ -1,6 +1,8 @@
 /* Variables */
 $main-color: #6a983c;
 $main-dark-color: #46760a;
+$color--black: #151515;
+$color--grey: #b6b6b6;
 
 /* Classes - Text */
 
@@ -12,7 +14,6 @@ $main-dark-color: #46760a;
   color: #b6b6b6;
 }
 
-
 /* Classes - Background */
 
 .bg-light {
@@ -23,10 +24,7 @@ $main-dark-color: #46760a;
   background-color: white;
 }
 
-
 /* Items */
 .border-bottom {
   box-shadow: 0 1.8755556344985962px 0.9377778172492981px 0 #0000000d;
 }
-
-
