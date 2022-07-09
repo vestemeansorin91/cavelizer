@@ -29,7 +29,7 @@
 
       i {
         align-items: center;
-        color: $main-color;
+        color: $color-main;
         font-size: 8px;
         padding-right: 24px;
         border-right: 1px solid #d1d1d1;
@@ -38,7 +38,7 @@
       .icon-search {
         cursor: pointer !important;
         font-size: 11px;
-        color: $color--black;
+        color: $color-black;
       }
     }
 
@@ -53,7 +53,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
-        color: $color--grey;
+        color: $color-grey;
         margin-left: 12px;
         flex: 1;
         padding-left: 24px;

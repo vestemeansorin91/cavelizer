@@ -1,13 +1,13 @@
 /* Variables */
-$main-color: #6a983c;
-$main-dark-color: #46760a;
-$color--black: #151515;
-$color--grey: #b6b6b6;
+$color-main: #6a983c;
+$color-main-dark: #46760a;
+$color-black: #151515;
+$color-grey: #b6b6b6;
 
 /* Classes - Text */
 
 .color--main {
-  color: $main-color;
+  color: $color-main;
 }
 
 .color--grey {
