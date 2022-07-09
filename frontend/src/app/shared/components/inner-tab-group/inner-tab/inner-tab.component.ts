@@ -1,0 +1,26 @@
+import {Component, Input, Optional} from '@angular/core';
+import {Router} from '@angular/router';
+import {TabGroupBase} from '../tab-group.base';
+
+@Component({
+  selector: 'cavelizer-inner-tab',
+  templateUrl: './inner-tab.component.html',
+})
+export class InnerTabComponent {
+  @Input() tabTitle: string;
+  @Input() urlTree: string[] = [];
+
+  constructor(
+    @Optional() private group: TabGroupBase,
+    private router: Router
+  ) {}
+
+  get active() {
+    return this.group ? this.group.isActive(this) : false;
+  }
+
+  onClick() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    this.urlTree && this.router.navigate(this.urlTree);
+  }
+}

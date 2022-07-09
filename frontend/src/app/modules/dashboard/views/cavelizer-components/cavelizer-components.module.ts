@@ -6,13 +6,15 @@ import {ButtonExampleComponent} from "./components/button-example.component";
 import {DropdownExampleComponent} from "./components/dropdown-example.component";
 import {IconsExampleComponent} from "./components/icons-example.component";
 import {MiniBannerExampleComponent} from "./components/mini-banner-example.component";
+import {InnerTabGroupExampleComponent} from "./components/inner-tab-group-example.component";
 
 const COMPONENTS = [
   CavelizerComponentsComponent,
   ButtonExampleComponent,
   DropdownExampleComponent,
   MiniBannerExampleComponent,
-  IconsExampleComponent
+  IconsExampleComponent,
+  InnerTabGroupExampleComponent
 ]
 
 @NgModule({

@@ -18,6 +18,8 @@ import {MiniBannerComponent} from './components/mini-banner/mini-banner.componen
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {InnerTabGroupComponent} from "./components/inner-tab-group/inner-tab-group.component";
+import {InnerTabComponent} from "./components/inner-tab-group/inner-tab/inner-tab.component";
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -25,7 +27,10 @@ const COMPONENTS: any[] = [
   BreadcrumbComponent,
   MiniBannerComponent,
   DropdownComponent,
-  IconComponent];
+  IconComponent,
+  InnerTabGroupComponent,
+  InnerTabComponent
+];
 
 const SERVICES: any[] = [];
 
