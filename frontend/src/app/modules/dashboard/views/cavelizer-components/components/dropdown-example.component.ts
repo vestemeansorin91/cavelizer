@@ -23,7 +23,6 @@ import { Component, OnInit } from '@angular/core';
       <div dropdownItem>Element 3</div>
     </cavelizer-dropdown>
   </mat-expansion-panel>`,
-  styleUrls: ['./dropdown-example.component.scss']
 })
 export class DropdownExampleComponent implements OnInit {
 
