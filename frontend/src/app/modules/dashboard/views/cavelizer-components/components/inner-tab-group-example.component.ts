@@ -12,7 +12,6 @@ import {Component} from '@angular/core';
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <div class="flex gap--30">
       <cavelizer-inner-tab-group>
         <cavelizer-inner-tab tabTitle="Tab 1">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores blanditiis deleniti dignissimos doloremque dolorum error expedita, explicabo illo illum impedit libero minus officiis porro quasi quidem reiciendis reprehenderit, repudiandae soluta.
@@ -23,9 +22,20 @@ import {Component} from '@angular/core';
         <cavelizer-inner-tab tabTitle="Tab 3">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur consequatur dolorum eaque quas sint ut voluptatibus. Aperiam dolore, eum ex inventore itaque quidem quis tempora velit veniam voluptatum? Quidem!
         </cavelizer-inner-tab>
-
       </cavelizer-inner-tab-group>
-    </div>
+
+
+    <cavelizer-inner-tab-group class="theme-v1">
+      <cavelizer-inner-tab tabTitle="Description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores blanditiis deleniti dignissimos doloremque dolorum error expedita, explicabo illo illum impedit libero minus officiis porro quasi quidem reiciendis reprehenderit, repudiandae soluta.
+      </cavelizer-inner-tab>
+      <cavelizer-inner-tab tabTitle="Reviews" [counter]="18">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at aut autem cumque, et eum, explicabo fuga ipsum iste laborum laudantium necessitatibus nesciunt odio quam qui, ratione repudiandae. Nobis, reprehenderit!
+      </cavelizer-inner-tab>
+      <cavelizer-inner-tab tabTitle="Questions" [counter]="4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur consequatur dolorum eaque quas sint ut voluptatibus. Aperiam dolore, eum ex inventore itaque quidem quis tempora velit veniam voluptatum? Quidem!
+      </cavelizer-inner-tab>
+    </cavelizer-inner-tab-group>
 
   </mat-expansion-panel>`,
 })

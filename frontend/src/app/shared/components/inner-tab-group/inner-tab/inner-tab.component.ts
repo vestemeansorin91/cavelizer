@@ -7,8 +7,9 @@ import {TabGroupBase} from '../tab-group.base';
   templateUrl: './inner-tab.component.html',
 })
 export class InnerTabComponent {
-  @Input() tabTitle: string;
-  @Input() urlTree: string[] = [];
+  @Input() public tabTitle: string;
+  @Input() public urlTree: string[] = [];
+  @Input() public counter: number | null = null;
 
   constructor(
     @Optional() private group: TabGroupBase,

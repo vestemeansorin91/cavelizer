@@ -18,6 +18,7 @@
       justify-content: center;
       margin: 3px;
       cursor: pointer;
+      user-select: none;
 
       &.active {
         color: $main-color;
@@ -25,6 +26,38 @@
         border-radius: 8px;
         cursor: inherit;
         box-shadow: 0 0 4px 1px rgba(32, 32, 36, 0.15);
+      }
+    }
+  }
+
+  &.theme-v1 {
+    .inner-tab-group {
+      background: transparent;
+      margin: 24px 0;
+
+      .inner-tab {
+        justify-content: flex-start;
+        padding-bottom: 16px;
+        margin-right: 32px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        box-shadow: none;
+        border-radius: 0;
+
+        &--counter {
+          color: #6A983C;
+          background: #F4F8EC;
+          border-radius: 12px;
+          padding: 0px 8px;
+          margin-left: 8px;
+        }
+
+        &.active {
+          border-bottom: 1px solid $main-color;
+        }
       }
     }
   }
