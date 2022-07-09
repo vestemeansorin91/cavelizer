@@ -14,12 +14,16 @@ import {projectIcons} from "../../../../../shared/components/icon/project-icons"
     </mat-expansion-panel-header>
 
 
-    <div class="flex gap--60">
-      <cavelizer-icon *ngFor="let icon of projectIcons" [name]="icon" class="size--24"></cavelizer-icon>
+    <div class="flex gap--30">
+      <cavelizer-icon *ngFor="let icon of projectIcons" [name]="icon" [matTooltip]="icon" [cdkCopyToClipboard]="copyToClipboard(icon)" class="width--24"></cavelizer-icon>
     </div>
 
   </mat-expansion-panel>`,
 })
 export class IconsExampleComponent{
   public projectIcons = Object.keys(projectIcons);
+
+  public copyToClipboard(icon: string) {
+    return `<cavelizer-icon [name]="${icon}" class="width--24"></cavelizer-icon>`
+  }
 }
