@@ -1,32 +1,62 @@
-/* Variables */
-$main-color: #6a983c;
-$main-dark-color: #46760a;
+/* Primary Color */
+$primary-color: #151515;
+$primary-color-010: #575757;
+$primary-color-020: #a9a9a9;
+$primary-color-030: #d1d1d1;
+$primary-color-040: #ebebeb;
+$primary-color-050: #f5f5f5;
+$primary-color-060: #f9f9f9;
+$primary-color-070: #ffffff;
+
+/* Secondary Color */
+$secondary-color: #6a983c;
+$secondary-color-010: #46760a;
+$secondary-color-020: #92c064;
+$secondary-color-030: #c8deb3;
+$secondary-color-030: #f4f8ec;
+
+/* Additional Color - Brown*/
+$additional-color: #d0a866;
+$additional-color-010: #b28a48;
+$additional-color-020: #ecd2a6;
+$additional-color-030: #faedd8;
+$additional-color-030: #fff9f0;
+
+/* Additional Color - Brick*/
+$additional-color: #e5704b;
+$additional-color-010: #c7522d;
+$additional-color-020: #eb8d70;
+$additional-color-030: #f7c6b7;
+$additional-color-030: #fff1ed;
+
+/* Additional Color - Brick*/
+$additional-color: #37d0d6;
+$additional-color-010: #19b2b8;
+$additional-color-020: #7cd0d3;
+$additional-color-030: #b9e6e8;
+$additional-color-030: #ecf6f6;
 
 /* Classes - Text */
 
 .color--main {
-  color: $main-color;
+  color: $secondary-color;
 }
 
 .color--grey {
-  color: #b6b6b6;
+  color: $primary-color-020;
 }
-
 
 /* Classes - Background */
 
 .bg-light {
-  background-color: #f5f5f5;
+  background-color: $primary-color-050;
 }
 
 .bg-white {
-  background-color: white;
+  background-color: $primary-color-070;
 }
-
 
 /* Items */
 .border-bottom {
   box-shadow: 0 1.8755556344985962px 0.9377778172492981px 0 #0000000d;
 }
-
-
