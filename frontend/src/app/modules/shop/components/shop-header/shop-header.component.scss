@@ -3,17 +3,17 @@
 .header-main {
   display: flex;
   justify-content: space-between;
-
   padding: 56px 45px;
+
   .logo {
     cursor: pointer;
     padding: 16px;
   }
+
   .search {
     display: flex;
     align-items: center;
     padding: 10px 16px;
-
     border: 1px solid #d1d1d1;
     border-radius: 12px;
     width: 500px;
@@ -22,17 +22,19 @@
       font-weight: 700;
       font-size: 15px;
       line-height: 22px;
+
       span {
         margin-right: 8px;
       }
+
       i {
         align-items: center;
         color: $main-color;
         font-size: 8px;
         padding-right: 24px;
-
         border-right: 1px solid #d1d1d1;
       }
+
       .icon-search {
         cursor: pointer !important;
         font-size: 11px;
@@ -44,6 +46,7 @@
       background-color: transparent;
       border: none;
       flex: 1;
+
       &::placeholder {
         font-family: 'Open Sans';
         font-style: normal;
@@ -57,24 +60,29 @@
         display: block;
         width: 400px;
       }
+
       &:focus {
-        outline: none !important ;
+        outline: none !important;
         text-align: center;
+
         &::placeholder {
           text-align: left;
         }
       }
     }
   }
+
   .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
+
     .icon-user {
       margin-right: 37px;
       font-size: 18px;
       cursor: pointer;
     }
+
     .icon-basket {
       position: relative;
       cursor: pointer;
@@ -82,18 +90,22 @@
     }
   }
 }
+
 @media (max-width: $mobile-breakpoint) {
   .header-main {
     flex-direction: column;
+
     .logo {
       width: 177px;
       height: 24px;
       margin: 0 auto;
       box-sizing: content-box !important;
     }
+
     .search {
       width: 75%;
       margin: 0 auto;
+
       .placeholder {
         flex: 1;
       }
