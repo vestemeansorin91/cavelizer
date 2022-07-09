@@ -13,10 +13,7 @@ import { Component } from '@angular/core';
     <cavelizer-mini-banner>
       <ng-container subtitle>Banner subfocus</ng-container>
       <ng-container title>Space for heading</ng-container>
-      <ng-container action
-        >Read recepies
-        <div class="las la-angle-right" suffix></div
-      ></ng-container>
+      <ng-container action> Read recepies </ng-container>
     </cavelizer-mini-banner>
   </mat-expansion-panel>`
 })

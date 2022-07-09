@@ -14,7 +14,7 @@ body {
 
 body {
   margin: 0;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .mat-drawer-content {
@@ -70,15 +70,5 @@ a {
 }
 
 i {
-  color: #4b5563;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    color: black;
-  }
-
-  &.big {
-    font-size: 32px;
-  }
 }
