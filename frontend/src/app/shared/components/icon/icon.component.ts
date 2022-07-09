@@ -7,6 +7,9 @@ import {projectIcons} from "./project-icons";
   template: '',
   styles: [`:host {
     display: inline-block;
+    width:24px;
+    height:24px;
+    cursor: pointer;
   }`],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

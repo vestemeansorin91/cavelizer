@@ -42,7 +42,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatTabsModule,
   MatExpansionModule,
   MatTooltipModule,
-  ClipboardModule
+  ClipboardModule,
 ];
 
 const PIPES: any[] = [DefaultImagePipe];
