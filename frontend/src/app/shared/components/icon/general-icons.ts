@@ -1,7 +1,7 @@
 export const generalIcons = {
-  arrowDown: `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+  arrowDown: `<svg width="16" height="16" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M1.81323 1.53345L4.55323 4.27345C4.67814 4.39761 4.84711 4.46731 5.02323 4.46731C5.19936 4.46731 5.36832
- 4.39761 5.49323 4.27345L8.1599 1.60678" stroke="#6A983C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel"/>
+ 4.39761 5.49323 4.27345L8.1599 1.60678" stroke="#151515" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel"/>
  </svg>`,
   arrowLeft: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
   <title>arrow-left</title>
@@ -19,7 +19,7 @@ export const generalIcons = {
   <path d="M8 13.9c-0.4 0-0.7-0.1-1-0.4l-2.7-2.7c-0.3-0.4-0.3-0.8 0-1.1s0.8-0.3 1.1 0l2.6 2.6 2.6-2.6c0.3-0.3 0.8-0.3
   1.1 0s0.3 0.8 0 1.1l-2.7 2.7c-0.2 0.2-0.6 0.4-1 0.4z"></path>
   </svg>`,
-  close: `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  close: `<svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M9.18031 9.18007L2.82031 2.82007" stroke="#151515" stroke-linecap="round" stroke-linejoin="bevel"/>
  <path d="M9.18031 2.82007L2.82031 9.18007" stroke="#151515" stroke-linecap="round" stroke-linejoin="bevel"/>
  </svg>
@@ -98,20 +98,17 @@ export const generalIcons = {
  </svg>
  `,
   starFull: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>star-full</title>
   <path d="M24 9.306l-8.292-1.205-3.708-7.514-3.708 7.514-8.292 1.205 6 5.849-1.416 8.258 7.416-3.899 7.416
   3.899-1.416-8.258 6-5.849z"></path>
   </svg>
  `,
   starEmpty: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>star-empty</title>
   <path d="M24 9.306l-8.292-1.205-3.708-7.514-3.708 7.514-8.292 1.205 6 5.849-1.416 8.258 7.416-3.899 7.416
   3.899-1.416-8.258 6-5.849zM12 17.66l-5.237 2.753 1-5.832-4.237-4.13 5.856-0.851 2.619-5.306 2.619 5.306 5.856
    0.851-4.237 4.13 1 5.832-5.237-2.753z"></path>
   </svg>
  `,
-  users: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48">
-  <title>users</title>
+  users: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 96 96">
   <path d="M36 42v-4c0-2.76-1.122-5.264-2.928-7.072s-4.312-2.928-7.072-2.928h-16c-2.76 0-5.264 1.122-7.072 2.928s-2.928
    4.312-2.928 7.072v4c0 1.104 0.896 2 2 2s2-0.896 2-2v-4c0-1.658 0.67-3.154 1.758-4.242s2.584-1.758
    4.242-1.758h16c1.658 0 3.154 0.67 4.242 1.758s1.758 2.584 1.758 4.242v4c0 1.104 0.896 2 2 2s2-0.896 2-2zM28
