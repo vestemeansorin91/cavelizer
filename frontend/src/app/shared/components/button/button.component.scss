@@ -18,8 +18,8 @@ button {
   font-size: 15px;
   font-weight: 600;
 
-  background-color: $main-color;
-  border: 2px solid $main-dark-color;
+  background-color: $grey-color;
+  border: 2px solid $grey-color-010;
   border-radius: $border-radius-md;
 
   .prefix,
@@ -39,7 +39,7 @@ button {
 :host {
   &.white {
     button {
-      border-color: #92c064;
+      border-color: $grey-color;
       color: black;
       background-color: white;
 

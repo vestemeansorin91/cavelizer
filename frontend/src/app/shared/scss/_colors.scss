@@ -1,32 +1,67 @@
-/* Variables */
-$main-color: #6a983c;
-$main-dark-color: #46760a;
+/* Primary Color - Green */
+
+$primary-color: #6a983c;
+$primary-color-010: #46760a;
+$primary-color-020: #92c064;
+$primary-color-030: #c8deb3;
+$primary-color-040: #f4f8ec;
+
+/* Secondary Color - Grey */
+
+$grey-color: #151515;
+$grey-color-010: #575757;
+$grey-color-020: #161616;
+$grey-color-030: #d1d1d1;
+$grey-color-040: #ebebeb;
+$grey-color-050: #f5f5f5;
+$grey-color-060: #f9f9f9;
+$grey-color-070: #ffffff;
+
+/* Additional Color - Brown */
+
+$brown-color: #d0a866;
+$brown-color-010: #b28a48;
+$brown-color-020: #ecd2a6;
+$brown-color-030: #faedd8;
+$brown-color-040: #fff9f0;
+
+/* Error Color - Brick */
+
+$Error-color: #e5704b;
+$Error-color-010: #c7522d;
+$Error-color-020: #eb8d70;
+$Error-color-030: #f7c6b7;
+$Error-color-040: #fff1ed;
+
+/* Additional Color - Cyan*/
+
+$cyan-color: #37d0d6;
+$cyan-color-010: #19b2b8;
+$cyan-color-020: #7cd0d3;
+$cyan-color-030: #b9e6e8;
+$cyan-color-040: #ecf6f6;
 
 /* Classes - Text */
 
-.color--main {
-  color: $main-color;
+.color--primary {
+  color: $primary-color;
 }
 
 .color--grey {
-  color: #b6b6b6;
+  color: $grey-color-010;
 }
-
 
 /* Classes - Background */
 
 .bg-light {
-  background-color: #f5f5f5;
+  background-color: $grey-color-050;
 }
 
 .bg-white {
-  background-color: white;
+  background-color: $grey-color-070;
 }
-
 
 /* Items */
 .border-bottom {
   box-shadow: 0 1.8755556344985962px 0.9377778172492981px 0 #0000000d;
 }
-
-

@@ -21,7 +21,7 @@
       user-select: none;
 
       &.active {
-        color: $main-color;
+        color: $secondary-color;
         background-color: white;
         border-radius: 8px;
         cursor: inherit;
@@ -48,15 +48,15 @@
         border-radius: 0;
 
         &--counter {
-          color: #6A983C;
-          background: #F4F8EC;
+          color: #6a983c;
+          background: #f4f8ec;
           border-radius: 12px;
           padding: 0px 8px;
           margin-left: 8px;
         }
 
         &.active {
-          border-bottom: 1px solid $main-color;
+          border-bottom: 1px solid $secondary-color;
         }
       }
     }
