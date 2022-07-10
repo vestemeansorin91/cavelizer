@@ -3,7 +3,7 @@ import {projectIcons} from "../../../../../shared/components/icon/project-icons"
 
 @Component({
   selector: 'app-icons-example',
-  template: `<mat-expansion-panel [expanded]="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-icon</strong>
