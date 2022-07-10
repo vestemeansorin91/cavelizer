@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
       <app-dropdown-example></app-dropdown-example>
       <app-mini-banner-example></app-mini-banner-example>
       <app-inner-tab-group-example></app-inner-tab-group-example>
+      <app-quote-example></app-quote-example>
     </mat-accordion>`
 })
 export class CavelizerComponentsComponent {
