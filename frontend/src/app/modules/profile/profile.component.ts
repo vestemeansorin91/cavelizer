@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
 import {JwtPayloadInterface} from "../../shared/types/jwt-payload.interface";
@@ -18,15 +18,16 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private store: Store<StoreStateInterface>,
-    public profileService: ProfileService,
-    private jwtTokenService: JWTTokenService) { }
+    private jwtTokenService: JWTTokenService,
+    public profileService: ProfileService) {
+  }
 
   ngOnInit(): void {
-    this.userId = this.jwtTokenService.getUser()._id;
     this.getUserProfile();
   }
 
   private getUserProfile() {
+    this.userId = this.jwtTokenService.getUser()._id;
     this.profileService.getUserByIdWithProfile(this.userId).subscribe(response => this.profileService.profile = response);
   }
 }

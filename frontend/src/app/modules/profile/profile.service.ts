@@ -12,7 +12,6 @@ export class ProfileService {
   constructor(private http: HttpClient) {
   }
 
-
   /* This is to get all user profile */
   public getUserByIdWithProfile(userId: string) {
     this.userId = userId;
