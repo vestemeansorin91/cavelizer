@@ -1,59 +1,64 @@
-/* Primary Color */
-$primary-color: #151515;
-$primary-color-010: #575757;
-$primary-color-020: #a9a9a9;
-$primary-color-030: #d1d1d1;
-$primary-color-040: #ebebeb;
-$primary-color-050: #f5f5f5;
-$primary-color-060: #f9f9f9;
-$primary-color-070: #ffffff;
+/* Primary Color - Green */
 
-/* Secondary Color */
-$secondary-color: #6a983c;
-$secondary-color-010: #46760a;
-$secondary-color-020: #92c064;
-$secondary-color-030: #c8deb3;
-$secondary-color-030: #f4f8ec;
+$primary-color: #6a983c;
+$primary-color-010: #46760a;
+$primary-color-020: #92c064;
+$primary-color-030: #c8deb3;
+$primary-color-040: #f4f8ec;
 
-/* Additional Color - Brown*/
-$additional-color: #d0a866;
-$additional-color-010: #b28a48;
-$additional-color-020: #ecd2a6;
-$additional-color-030: #faedd8;
-$additional-color-030: #fff9f0;
+/* Secondary Color - Grey */
 
-/* Additional Color - Brick*/
-$additional-color: #e5704b;
-$additional-color-010: #c7522d;
-$additional-color-020: #eb8d70;
-$additional-color-030: #f7c6b7;
-$additional-color-030: #fff1ed;
+$grey-color: #151515;
+$grey-color-010: #575757;
+$grey-color-020: #a9a9a9;
+$grey-color-030: #d1d1d1;
+$grey-color-040: #ebebeb;
+$grey-color-050: #f5f5f5;
+$grey-color-060: #f9f9f9;
+$grey-color-070: #ffffff;
 
-/* Additional Color - Brick*/
-$additional-color: #37d0d6;
-$additional-color-010: #19b2b8;
-$additional-color-020: #7cd0d3;
-$additional-color-030: #b9e6e8;
-$additional-color-030: #ecf6f6;
+/* Additional Color - Brown */
+
+$brown-color: #d0a866;
+$brown-color-010: #b28a48;
+$brown-color-020: #ecd2a6;
+$brown-color-030: #faedd8;
+$brown-color-040: #fff9f0;
+
+/* Error Color - Brick */
+
+$Error-color: #e5704b;
+$Error-color-010: #c7522d;
+$Error-color-020: #eb8d70;
+$Error-color-030: #f7c6b7;
+$Error-color-040: #fff1ed;
+
+/* Additional Color - Cyan*/
+
+$cyan-color: #37d0d6;
+$cyan-color-010: #19b2b8;
+$cyan-color-020: #7cd0d3;
+$cyan-color-030: #b9e6e8;
+$cyan-color-040: #ecf6f6;
 
 /* Classes - Text */
 
-.color--main {
-  color: $secondary-color;
+.color--primary {
+  color: $primary-color;
 }
 
 .color--grey {
-  color: $primary-color-020;
+  color: $grey-color-010;
 }
 
 /* Classes - Background */
 
 .bg-light {
-  background-color: $primary-color-050;
+  background-color: $grey-color-050;
 }
 
 .bg-white {
-  background-color: $primary-color-070;
+  background-color: $grey-color-070;
 }
 
 /* Items */
