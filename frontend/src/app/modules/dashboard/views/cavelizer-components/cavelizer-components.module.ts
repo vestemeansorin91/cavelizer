@@ -13,8 +13,8 @@ const COMPONENTS = [
   ButtonExampleComponent,
   DropdownExampleComponent,
   MiniBannerExampleComponent,
-  InnerTabGroupExampleComponent,
-  IconsExampleComponent
+  IconsExampleComponent,
+  InnerTabGroupExampleComponent
 ]
 
 @NgModule({
