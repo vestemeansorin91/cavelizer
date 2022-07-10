@@ -12,8 +12,15 @@ export class ProfileService {
   constructor(private http: HttpClient) {
   }
 
+
+  /* This is to get all user profile */
   public getUserByIdWithProfile(userId: string) {
     this.userId = userId;
     return this.http.get(`${BASE_URL}/${userId}/getUserByIdWithProfile`)
+  }
+
+  /* This you should implement for bank details, clothes sizes, emergency contact etc */
+  public saveUserPublicProfile(payload:any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updatePublicProfile`, payload)
   }
 }
