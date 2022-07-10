@@ -37,6 +37,8 @@
     <input id="phone" type="text" formControlName="phone">
   </div>
 
+  <cavelizer-button (click)="onSavePublicProfile()" >Save</cavelizer-button>
+
   <pre>{{ userPublicProfileFormGroup.value | json }}</pre>
 </form>
 
