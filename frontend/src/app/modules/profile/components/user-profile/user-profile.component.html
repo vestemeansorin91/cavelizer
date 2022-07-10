@@ -1,1 +1,46 @@
-<p>user-profile works!</p>
+<form [formGroup]="userPublicProfileFormGroup" class="flex--column align--center gap--8 mt--32">
+  <div>
+    <label class="mr--16" for="office">Office</label>
+    <input id="office" type="number" formControlName="office">
+  </div>
+
+  <div>
+    <label class="mr--16" for="department">Department</label>
+    <select id="department" formControlName="department">
+      <option value="development">Development</option>
+      <option value="qa">QA</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="mr--16" for="position">Position</label>
+    <select id="position" formControlName="position">
+      <option value="junior">Junior</option>
+      <option value="medior">Medior</option>
+      <option value="senior">Senior</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="mr--16" for="team">Team</label>
+    <select name="" id="team" formControlName="team">
+      <option value="frontend">Frontend</option>
+      <option value="backend">Backend</option>
+      <option value="tester">Tester</option>
+      <option value="qa">QA</option>
+      <option value="project manager">Project manager</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="mr--16" for="phone">Phone</label>
+    <input id="phone" type="text" formControlName="phone">
+  </div>
+
+  <cavelizer-button (click)="onSavePublicProfile()" >Save</cavelizer-button>
+
+  <!--  TODO: Delete it after implementations / used only for tutorial-->
+  <pre>{{ userPublicProfileFormGroup.value | json }}</pre>
+</form>
+
+
