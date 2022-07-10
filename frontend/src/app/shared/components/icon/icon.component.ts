@@ -1,23 +1,37 @@
-import {ChangeDetectionStrategy, Component, HostBinding, Input} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {ChangeDetectionStrategy, Component, HostBinding, Input, OnDestroy, OnInit} from "@angular/core";
 import {DomSanitizer} from "@angular/platform-browser";
-import {projectIcons} from "./project-icons";
+import {Subscription} from "rxjs";
+
+const ICONS_PATH = 'assets/icons/svg';
+const ICON_TYPE = '.svg';
 
 @Component({
   selector: 'cavelizer-icon',
-  template: '',
+  template: ``,
   styles: [`:host {
     display: inline-block;
-  }`],
+    cursor: pointer;
+  }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IconComponent {
-  @Input()
-  public set name(value: string) {
-    this.svg = this.domSanitizer.bypassSecurityTrustHtml(projectIcons[value]);
+export class IconComponent implements OnInit, OnDestroy {
+  @Input() public name = '';
+  private subscription = new Subscription();
+
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
 
   @HostBinding('innerHTML') public svg: any;
 
-  constructor(private domSanitizer: DomSanitizer) {
+  ngOnInit() {
+    this.subscription.add(this.http
+      .get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, {responseType: 'text'})
+      .subscribe(value => this.svg = this.sanitizer.bypassSecurityTrustHtml(value)));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
