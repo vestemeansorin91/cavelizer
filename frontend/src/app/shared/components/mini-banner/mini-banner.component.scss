@@ -4,9 +4,8 @@
 :host {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 390px;
-  padding: 16px;
+  padding: 48px 32px 32px;
   margin: 16px;
   background-image: url('/assets/mini-banner-bg.png');
   background-size: cover;
@@ -17,23 +16,13 @@
     margin-bottom: 20px;
 
     color: $primary-color;
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
   }
 
   .title {
-    font-size: 33px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 600;
     margin-bottom: 100px;
-  }
-
-  .action {
-    margin-bottom: 20px;
-  }
-
-  .empty {
-    &:empty {
-      display: none;
-    }
   }
 }
