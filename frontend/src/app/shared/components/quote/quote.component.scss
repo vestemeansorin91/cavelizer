@@ -1,19 +1,38 @@
 :host {
-  &.light {
-    h1 {
-      font-weight: 100;
-    }
+  flex: 1 1 auto;
+}
+
+
+.quote {
+  background: #FFFFFF;
+  border: 1px solid #F1F1F1;
+  border-radius: 12px;
+
+  padding: 24px 32px;
+  text-align: center;
+  margin-bottom: 24px;
+
+  .quote-message {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #151515;
+    margin-bottom: 24px;
   }
 
-  &.sick {
-    h1 {
-      color: green;
-    }
+  .quote-author {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A9A9A9;
+    margin-bottom: 16px;
   }
 
-  &.big {
-    h1 {
-      font-size: 80px;
-    }
+  .quote-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    margin: 0 auto -48px;
   }
 }

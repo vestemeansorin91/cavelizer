@@ -55,7 +55,6 @@ const MODULES: any[] = [
 
 const ANGULAR_MATERIAL_MODULES = [
   MatSidenavModule,
-  MatListModule,
   MatTabsModule,
   MatExpansionModule,
   MatTooltipModule,

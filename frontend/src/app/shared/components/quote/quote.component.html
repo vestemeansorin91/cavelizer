@@ -1,1 +1,9 @@
-<h1>PERLA HARGHITA DE QUOTE</h1>
+<div class="quote">
+  <div class="quote-message">
+    <ng-content select="[message]"></ng-content>
+  </div>
+  <div class="quote-author">
+    <ng-content select="[author]"></ng-content>
+  </div>
+  <img class="quote-avatar" [src]="avatar | defaultImage">
+</div>
