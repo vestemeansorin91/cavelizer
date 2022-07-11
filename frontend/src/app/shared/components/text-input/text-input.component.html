@@ -1,0 +1,13 @@
+<div class="text-input">
+  <input
+    #input
+    (blur)="onBlur($event)"
+    (input)="onInput($event)"
+    (keyup.enter)="onEnter($event)"
+    (keyup.escape)="onEscape($event)"
+    [disabled]="disabled"
+    [placeholder]="_placeholder"
+    [readOnly]="readonly"
+    type="text"
+  />
+</div>

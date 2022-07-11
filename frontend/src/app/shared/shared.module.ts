@@ -1,6 +1,7 @@
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
+import {CheckboxComponent} from "./components/checkbox/checkbox.component";
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -22,6 +23,11 @@ import { MiniBannerComponent } from './components/mini-banner/mini-banner.compon
 import { QuoteComponent } from './components/quote/quote.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import {MatSelectModule} from '@angular/material/select';
+import { InputGroupComponent } from './components/input-group/input-group.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
+import { ToggleComponent } from './components/toggle/toggle.component';
+import { MatInputModule} from '@angular/material/input';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -33,14 +39,28 @@ const COMPONENTS: any[] = [
   InnerTabGroupComponent,
   InnerTabComponent,
   QuoteComponent,
-  ChipComponent
+  ChipComponent,
+  InputGroupComponent,
+  CheckboxComponent,
+  TextInputComponent,
+  ToggleComponent
 ];
 
 const SERVICES: any[] = [];
 
 const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, OverlayModule];
 
-const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatListModule, MatTabsModule, MatExpansionModule, MatTooltipModule, ClipboardModule];
+const ANGULAR_MATERIAL_MODULES = [
+  MatSidenavModule,
+  MatListModule,
+  MatTabsModule,
+  MatExpansionModule,
+  MatTooltipModule,
+  ClipboardModule,
+  MatSelectModule,
+  MatInputModule
+
+];
 
 const PIPES: any[] = [DefaultImagePipe];
 

@@ -1,11 +1,13 @@
 @import '../_colors.scss';
 
 cavelizer-icon {
+  /* Default */
   svg {
     width: 24px;
     height: 24px;
   }
 
+  /* Sizes */
   &.small {
     svg {
       width: 16px;
@@ -35,6 +37,7 @@ cavelizer-icon {
     }
   }
 
+  /* Colors */
   &.primary-color {
     svg {
       path {
@@ -63,6 +66,14 @@ cavelizer-icon {
     svg {
       path {
         fill: $info-color;
+      }
+    }
+  }
+
+  &.white-color {
+    svg {
+      path {
+        fill: $white-color;
       }
     }
   }

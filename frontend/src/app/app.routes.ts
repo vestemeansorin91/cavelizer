@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {AdminGuard} from "./shared/guards/admin.guard";
-import {AuthGuard} from "./shared/guards/auth.guard";
-import { PageNotFoundComponent } from './shared/pages/page-not-found/page-not-found.component';
+import {PageNotFoundComponent} from './shared/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -17,11 +16,6 @@ const routes: Routes = [
   {
     path: 'shop',
     loadChildren: () => import('./modules/shop/shop.module').then(m => m.ShopModule),
-  },
-  {
-    path: 'user',
-    loadChildren: () => import('./modules/profile/profile.module').then(m => m.UserProfileModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',

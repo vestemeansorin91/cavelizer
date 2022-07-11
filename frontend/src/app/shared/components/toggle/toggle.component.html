@@ -1,0 +1,12 @@
+<div class="toggle-input">
+  <div
+    class="toggle-item"
+    [class.selected]="_checked"
+    [class.disabled]="disabled"
+    (click)="onInput($event)"
+  >
+    <div class="toggle-bullet"></div>
+  </div>
+
+  <span (click)="onInput($event)"><ng-content></ng-content></span>
+</div>

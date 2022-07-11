@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {AuthGuard} from "../../shared/guards/auth.guard";
 import {DashboardComponent} from './dashboard.component';
 import {CategoryListComponent} from './views/categories/components/category-list/category-list.component';
 import {CavelizerComponentsComponent} from "./views/cavelizer-components/cavelizer-components.component";
@@ -57,6 +58,11 @@ const routes: Routes = [
       {
         path: 'chat',
         component: ChatComponent,
+      },
+      {
+        path: 'user',
+        loadChildren: () => import('./views/profile/profile.module').then(m => m.UserProfileModule),
+        canActivate: [AuthGuard]
       },
     ],
   },
