@@ -26,15 +26,16 @@
       font-weight: 700;
       font-size: 15px;
       line-height: 22px;
+      display: flex;
+      align-items: center;
 
       span {
         margin-right: 8px;
       }
 
       cavelizer-icon {
-        align-items: center;
         color: $primary-color;
-
+        display: flex;
         padding-right: 24px;
         border-right: 1px solid #d1d1d1;
       }
