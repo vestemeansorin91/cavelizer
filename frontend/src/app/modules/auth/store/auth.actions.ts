@@ -36,5 +36,11 @@ export const getCurrentUser = createAction(ActionTypes.GET_CURRENT_USER);
 export const getCurrentUserSuccess = createAction(ActionTypes.GET_CURRENT_USER_SUCCESS, props<GetCurrentUserResponseInterface>());
 export const getCurrentUserFailure = createAction(ActionTypes.GET_CURRENT_USER_FAILURE, props<{ errors: ApiErrorsInterface }>());
 
+/* TODO: Should be moved to own store (profile) */
+/*    Avatar update   */
+export const avatarUpdate = createAction(ActionTypes.AVATAR_UPDATE, props<{file: File | null}>());
+export const avatarUpdateSuccess = createAction(ActionTypes.AVATAR_UPDATE_SUCCESS, props<SignInResponseInterface>());
+export const avatarUpdateFailure = createAction(ActionTypes.AVATAR_UPDATE_FAILURE, props<{ errors: ApiErrorsInterface }>());
+
 export const logoutAction = createAction(ActionTypes.LOGOUT);
 export const setHideSidenav = createAction(ActionTypes.SET_SIDENAV, props<{ shouldHide: boolean }>());

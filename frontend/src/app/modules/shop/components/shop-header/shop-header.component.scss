@@ -8,26 +8,31 @@
   padding: 56px 45px;
 
   .logo {
-    cursor: pointer;
     width: 177px;
     height: auto;
     margin-right: 16px;
+
+    cursor: pointer;
   }
 
   .search {
     display: flex;
     align-items: center;
     padding: 10px 16px;
-    border: 1px solid #d1d1d1;
-    border-radius: 12px;
+
     width: 500px;
 
+    border: 1px solid #d1d1d1;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+
     .all-categories {
+      display: flex;
+      align-items: center;
+
       font-weight: 700;
       font-size: 15px;
       line-height: 22px;
-      display: flex;
-      align-items: center;
 
       span {
         margin-right: 8px;
@@ -36,33 +41,35 @@
       cavelizer-icon {
         color: $primary-color;
         display: flex;
-        padding-right: 24px;
+        padding-right: 16px;
         border-right: 1px solid #d1d1d1;
       }
     }
 
     input {
+      flex: 1;
       background-color: transparent;
       border: none;
-      flex: 1;
+      padding-left: 24px;
+      padding-right: 24px;
 
       &::placeholder {
-        font-family: 'Open Sans';
+        display: flex;
+        flex: 1;
+        width: 400px;
+
+        margin-left: 12px;
+
+        font-family: 'Open Sans', serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
-        color: $grey-color;
-        margin-left: 12px;
-        flex: 1;
-        padding-left: 24px;
-        display: block;
-        width: 400px;
+        color: #A9A9A9;
       }
 
       &:focus {
         outline: none !important;
-        text-align: center;
 
         &::placeholder {
           text-align: left;

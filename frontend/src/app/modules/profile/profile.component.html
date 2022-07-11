@@ -2,8 +2,14 @@
   <cavelizer-breadcrumb></cavelizer-breadcrumb>
   <div *ngIf="currentUser$ | async as currentUser" class="profile">
     <div class="profile-header">
-      <img class="profile-img"
-           [src]=" currentUser?.avatarBlobUrl | defaultImage">
+      <div (click)="uploadInputRef.click()" class="avatar-wrapper">
+        <img  class="avatar" [src]=" currentUser.avatarBlobUrl | defaultImage" alt>
+        <i class="las la-pen"></i>
+        <input #uploadInputRef type="file"
+               id="file"
+               (change)="handleFileInput($event.target)">
+      </div>
+
       <h1>{{ currentUser?.fullName }}</h1>
     </div>
   </div>

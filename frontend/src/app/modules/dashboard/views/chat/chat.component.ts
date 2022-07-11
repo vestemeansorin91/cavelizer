@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {faker} from "@faker-js/faker";
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
 import {ChatContact, ChatContactStatusEnum} from "../../../../shared/mock/chat";
@@ -33,7 +32,7 @@ export class ChatComponent implements OnInit {
           username: user.username,
           lastMessage: '',
           lastMessageTime: new Date(),
-          avatarBlobUrl: faker.image.avatar(),
+          avatarBlobUrl: user.avatarBlobUrl,
           status: ChatContactStatusEnum.online,
         } as ChatContact;
       })

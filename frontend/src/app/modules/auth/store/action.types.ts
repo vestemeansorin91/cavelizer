@@ -19,6 +19,11 @@ export enum ActionTypes {
   GET_CURRENT_USER_SUCCESS = '[Auth] get current user success',
   GET_CURRENT_USER_FAILURE = '[Auth] get current user failure',
 
+  /* TODO: Should be moved to own store (profile) */
+  AVATAR_UPDATE = '[Profile] Avatar update',
+  AVATAR_UPDATE_SUCCESS = '[Profile] Avatar update success',
+  AVATAR_UPDATE_FAILURE = '[Profile] Avatar update failure',
+
   LOGOUT = '[Auth] logout',
   SET_SIDENAV = '[Auth] set sidenav'
 }
