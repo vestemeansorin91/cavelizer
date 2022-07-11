@@ -12,7 +12,7 @@ const ICON_TYPE = '.svg';
   styles: [
     `
       :host {
-        display: inline-block;
+        display: inline-flex;
         cursor: pointer;
       }
     `
