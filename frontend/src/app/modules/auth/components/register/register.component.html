@@ -6,19 +6,6 @@
   <input formControlName="username" type="text" placeholder="Username" />
   <input formControlName="password" type="password" placeholder="Password" />
 
-  <fieldset>
-    <legend>Gender:</legend>
-
-    <div>
-      <input type="radio" id="man" value="man" formControlName="gender">
-      <label for="man">Man</label>
-    </div>
-
-    <div>
-      <input type="radio" id="woman" value="woman" formControlName="gender">
-      <label for="woman">Woman</label>
-    </div>
-  </fieldset>
   <button (click)="registerClicked()" [attr.disabled]="!registerFormGroup.valid || null">Register</button>
 <!--  <cavelizer-button (click)="registerClicked()" class="width-full">Register</cavelizer-button>-->
 </form>

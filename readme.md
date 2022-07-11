@@ -13,9 +13,7 @@ https://cavelizer.herokuapp.com/
 - Sorin Vestemean / SC SORIN IT SOLUTIONS SRL (Full-Stack Developer - Senior)
 - Florin Matei / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior)
 - Alexandru-Mihai Varzaru (Backend Developer - Junior)
-- Alexandru-Stefan Mica (Full-Stack Developer - Junior)
 - Petrut-Poenaru (Full-Stack Developer - Junior)
-- Florin Chirica (Backend Developer - Junior)
 
 #### User
 

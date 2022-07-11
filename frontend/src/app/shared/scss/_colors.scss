@@ -1,27 +1,52 @@
-/* Variables */
-$color-main: #6a983c;
-$color-main-dark: #46760a;
-$color-black: #151515;
-$color-grey: #b6b6b6;
+$primary-color: #6a983c;
+$primary-color-010: #46760a;
+$primary-color-020: #92c064;
+$primary-color-030: #c8deb3;
+$primary-color-040: #f4f8ec;
+
+$grey-color: #151515;
+$grey-color-010: #575757;
+$grey-color-020: #161616;
+$grey-color-030: #d1d1d1;
+$grey-color-040: #ebebeb;
+$grey-color-050: #f5f5f5;
+$grey-color-060: #f9f9f9;
+$grey-color-070: #ffffff;
+
+$warning-color: #d0a866;
+$warning-color-010: #b28a48;
+$warning-color-020: #ecd2a6;
+$warning-color-030: #faedd8;
+$warning-color-040: #fff9f0;
+
+$error-color: #e5704b;
+$error-color-010: #c7522d;
+$error-color-020: #eb8d70;
+$error-color-030: #f7c6b7;
+$error-color-040: #fff1ed;
+
+$info-color: #37d0d6;
+$info-color-010: #19b2b8;
+$info-color-020: #7cd0d3;
+$info-color-030: #b9e6e8;
+$info-color-040: #ecf6f6;
 
 /* Classes - Text */
-
-.color--main {
-  color: $color-main;
+.color--primary {
+  color: $primary-color;
 }
 
 .color--grey {
-  color: #b6b6b6;
+  color: $grey-color-010;
 }
 
 /* Classes - Background */
-
 .bg-light {
-  background-color: #f5f5f5;
+  background-color: $grey-color-050;
 }
 
 .bg-white {
-  background-color: white;
+  background-color: $grey-color-070;
 }
 
 /* Items */

@@ -45,7 +45,6 @@ async function registerFn(userProps) {
     email: joi.string().email().required(),
     isActive: joi.optional(),
     isAdmin: joi.optional(),
-    gender: joi.string().valid(...Object.values(GenderEnum))
   });
 
   const { error } = validateSchema.validate(userProps);

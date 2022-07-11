@@ -54,7 +54,7 @@ const userSchema = mongoose.Schema({
     ],
     default: [],
     select: false
-  }
+  },
 });
 
 const usersCollection = mongoose.model('User', userSchema);

@@ -1,0 +1,64 @@
+@import 'colors';
+
+:host {
+  .inner-tab-group {
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    margin: 24px auto;
+    border-radius: 8px;
+
+    background-color: lightgrey;
+
+    .inner-tab {
+      width: 200px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3px;
+      cursor: pointer;
+      user-select: none;
+
+      &.active {
+        color: $primary-color;
+        background-color: white;
+        border-radius: 8px;
+        cursor: inherit;
+        box-shadow: 0 0 4px 1px rgba(32, 32, 36, 0.15);
+      }
+    }
+  }
+
+  &.theme-v1 {
+    .inner-tab-group {
+      background: transparent;
+      margin: 24px 0;
+
+      .inner-tab {
+        justify-content: flex-start;
+        padding-bottom: 16px;
+        margin-right: 32px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        box-shadow: none;
+        border-radius: 0;
+
+        &--counter {
+          color: $primary-color;
+          background: $primary-color-040;
+          border-radius: 12px;
+          padding: 0px 8px;
+          margin-left: 8px;
+        }
+
+        &.active {
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+}

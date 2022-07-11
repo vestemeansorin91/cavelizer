@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const generalIcons = {
   arrowDown: `<svg width="16" height="16" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M1.81323 1.53345L4.55323 4.27345C4.67814 4.39761 4.84711 4.46731 5.02323 4.46731C5.19936 4.46731 5.36832
@@ -127,3 +128,6 @@ export const generalIcons = {
   </svg>
   `
 };
+=======
+export const generalIcons = [];
+>>>>>>> 9e496deb31060f96ebae223b425b858cf4d2be95
