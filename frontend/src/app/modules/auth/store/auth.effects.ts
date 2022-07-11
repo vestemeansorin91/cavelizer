@@ -7,7 +7,7 @@ import {NotificationsService} from 'angular2-notifications';
 import {of} from 'rxjs';
 import {catchError, map, switchMap, tap} from 'rxjs/operators';
 import {JwtPayloadInterface} from 'src/app/shared/types/jwt-payload.interface';
-import {ProfileService} from "../../profile/profile.service";
+import {ProfileService} from "../../dashboard/views/profile/profile.service";
 import {AuthService} from '../services/auth.service';
 import {JWTTokenService} from '../services/jwt-token.service';
 import {avatarUpdateFailure, getCurrentUser, getCurrentUserFailure, getCurrentUserSuccess} from './auth.actions';

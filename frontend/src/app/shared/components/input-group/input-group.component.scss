@@ -1,0 +1,115 @@
+@import 'colors';
+
+:host {
+  position: relative;
+
+  .append,
+  .prepend {
+    padding: 0 8px;
+    line-height: 26px;
+  }
+
+  .input-group.error {
+    .append,
+    .prepend {
+      border-color: red;
+    }
+  }
+
+  &.no-margin {
+    .input-group {
+      margin: 0;
+    }
+  }
+
+  &.big-input {
+    .append,
+    .prepend {
+      font-weight: 600;
+      color: $primary-color;
+      border: none !important;
+      line-height: 38px;
+    }
+
+    &:disabled {
+      .append,
+      .prepend {
+        color: black;
+      }
+    }
+  }
+
+  &.normal {
+    display: block;
+
+    .append,
+    .prepend {
+      font-weight: 400;
+      color: unset;
+    }
+  }
+
+  &.add-inline {
+    .input-group {
+      margin: 0;
+      align-items: center;
+      padding: 6px 6px 6px 4px;
+    }
+
+    .content-input {
+      display: flex;
+      align-items: center;
+    }
+
+    pu-button {
+      margin-right: 6px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.is-disabled {
+    .input-group {
+      background: $grey-color-060;
+    }
+  }
+
+  &.transparent {
+    .input-group {
+      background: transparent;
+      border: none;
+    }
+  }
+
+  &.small-input {
+    .input-group {
+      width: 60px;
+      min-width: 60px;
+    }
+  }
+
+  &.no-margin-bottom {
+    .input-group {
+      margin-bottom: 0;
+    }
+  }
+
+  &.full-height {
+    display: block;
+
+    .input-group {
+      height: 100%;
+    }
+  }
+
+  &.width-full {
+    .input-group {
+      .content-input {
+        width: 100%;
+      }
+    }
+  }
+}
+

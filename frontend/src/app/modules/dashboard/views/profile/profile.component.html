@@ -1,0 +1,35 @@
+<div *ngIf="currentUser$ | async as currentUser" class="profile">
+  <div class="profile-header">
+    <div (click)="uploadInputRef.click()" class="avatar-wrapper">
+      <img class="avatar" [src]=" currentUser.avatarBlobUrl | defaultImage" alt>
+      <i class="las la-pen"></i>
+      <input #uploadInputRef type="file"
+             id="file"
+             accept="image/jpeg"
+             (change)="handleFileInput($event.target)">
+    </div>
+
+    <h1 class="mb--0">{{ currentUser?.fullName }}</h1>
+    <h2>{{ currentUser?.username }}</h2>
+  </div>
+</div>
+
+<ng-container *ngIf="profileService.profile">
+  <nav mat-tab-nav-bar>
+    <span mat-tab-link [routerLink]="['/dashboard','user','profile']" routerLinkActive="active">Profile</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','personal-data']"
+          routerLinkActive="active">Personal Data</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','hr-information']"
+          routerLinkActive="active">HR Information</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','payroll-information']" routerLinkActive="active">Payroll
+        Information</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','start-end-dates']"
+          routerLinkActive="active">Start End Dates</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','clothes-sizes']"
+          routerLinkActive="active">Clothes sizes</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','bank-details']"
+          routerLinkActive="active">Bank details</span>
+    <span mat-tab-link [routerLink]="['/dashboard','user','emergency-contact']" routerLinkActive="active">Emergency contact</span>
+  </nav>
+  <router-outlet></router-outlet>
+</ng-container>

@@ -1,12 +1,14 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
-import {JwtPayloadInterface} from "../../shared/types/jwt-payload.interface";
-import {StoreStateInterface} from "../../store";
-import {JWTTokenService} from "../auth/services/jwt-token.service";
-import {authActions} from "../auth/store";
-import {getUserSelector} from "../auth/store/auth.selectors";
+import {JwtPayloadInterface} from "../../../../shared/types/jwt-payload.interface";
+import {StoreStateInterface} from "../../../../store";
+import {JWTTokenService} from "../../../auth/services/jwt-token.service";
+import {authActions} from "../../../auth/store";
+import {getUserSelector} from "../../../auth/store/auth.selectors";
+
 import {ProfileService} from "./profile.service";
+
 
 @Component({
   selector: 'app-profile',

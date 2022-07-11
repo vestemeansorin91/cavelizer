@@ -11,7 +11,6 @@ $grey-color-030: #d1d1d1;
 $grey-color-040: #ebebeb;
 $grey-color-050: #f5f5f5;
 $grey-color-060: #f9f9f9;
-$grey-color-070: #ffffff;
 
 $warning-color: #d0a866;
 $warning-color-010: #b28a48;
@@ -31,6 +30,9 @@ $info-color-020: #7cd0d3;
 $info-color-030: #b9e6e8;
 $info-color-040: #ecf6f6;
 
+$white-color: white;
+$black-color: black;
+
 /* Classes - Text */
 .color--primary {
   color: $primary-color;
@@ -46,7 +48,7 @@ $info-color-040: #ecf6f6;
 }
 
 .bg-white {
-  background-color: $grey-color-070;
+  background-color: white;
 }
 
 /* Items */
