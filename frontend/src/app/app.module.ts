@@ -37,6 +37,7 @@ const HashStrategy = {
   useClass: HashLocationStrategy
 };
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -44,7 +45,11 @@ const HashStrategy = {
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    SimpleNotificationsModule.forRoot(),
+    SimpleNotificationsModule.forRoot({
+      showProgressBar: true,
+      timeOut: 3000,
+      preventDuplicates: true,
+    }),
     NgxEmojiPickerModule.forRoot(),
     EffectsModule.forRoot(effects),
     StoreModule.forRoot(reducers, {

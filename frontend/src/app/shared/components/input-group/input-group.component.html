@@ -1,0 +1,14 @@
+<div
+  #group
+  class="input-group"
+  [class.focused]="focused"
+  [class.error]="!focused && isInvalid"
+  [class.has-checkbox]="hasCheckbox"
+>
+  <div class="content-input">
+    <ng-content></ng-content>
+  </div>
+  <div #appendWrapper class="append empty">
+    <ng-content select="[append]"></ng-content>
+  </div>
+</div>

@@ -3,8 +3,8 @@
   <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']">c</h1>
 
   <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
-    <i *ngIf="isExpanded" class="las la-angle-left"></i>
-    <i *ngIf="!isExpanded" class="las la-angle-right"></i>
+    <cavelizer-icon *ngIf="isExpanded" name="arrow-left" class="white-color"></cavelizer-icon>
+    <cavelizer-icon *ngIf="!isExpanded" name="arrow-right"  class="white-color"></cavelizer-icon>
   </span>
 
   <ul>

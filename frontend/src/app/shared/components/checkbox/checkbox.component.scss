@@ -1,0 +1,151 @@
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+
+.checkbox-input {
+  cursor: pointer;
+  display: flex;
+  @include disable-select;
+
+  .checkbox-item {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: $border-radius-sm;
+    background: $white-color;
+    border: 1px solid $grey-color-050;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+
+    i {
+      position: absolute;
+      top: -1px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 20px;
+      color: $primary-color;
+      opacity: 0;
+      transition: all 0.3s;
+      font-size: 14px;
+      font-weight: 700;
+      transform: rotateZ(90deg);
+    }
+
+    span {
+      display: flex;
+      padding-left: 8px;
+    }
+
+    &.selected {
+      border-color: $primary-color;
+      background-color: $primary-color;
+
+      i {
+        color: $white-color;
+        opacity: 1;
+        transform: rotateZ(0);
+
+        transition: all 0.4s;
+      }
+    }
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &.disabled {
+      background: $grey-color-030;
+      border-color: $grey-color-050;
+      cursor: no-drop;
+
+      i {
+        color: $grey-color-050;
+      }
+    }
+  }
+}
+
+.checkbox-input {
+  &.radio {
+    .checkbox-item {
+      border-radius: 50%;
+
+      &:after {
+        transition: all 0.3s linear;
+        transform: scale(0);
+        width: 10px;
+        height: 10px;
+        content: '';
+        border-radius: 50%;
+        margin: auto auto;
+        background: $grey-color-060;
+      }
+
+      i {
+        display: none;
+      }
+
+      &:hover {
+        border-color: $grey-color-060;
+      }
+
+      &.selected {
+        border-color: $grey-color;
+
+        &:after {
+          transform: scale(1);
+        }
+
+        &:hover {
+          border-color: $grey-color;
+        }
+      }
+    }
+  }
+}
+
+:host {
+  &.full {
+    .checkbox-input {
+      display: flex;
+      width: 100%;
+      clear: both;
+
+      .checkbox-item {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &.action {
+    margin: 0 9px;
+    display: block;
+  }
+
+  &.inline {
+    .checkbox-input {
+      display: flex;
+
+      .checkbox-item {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &.flex-center {
+    .checkbox-input {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+:host(.spaced) {
+  .checkbox-input {
+    margin: 4px 0;
+  }
+}

@@ -1,0 +1,89 @@
+@import 'colors';
+@import 'mixins';
+
+.toggle-input {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  .toggle-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: 36px;
+    height: 20px;
+    border-radius: 16px;
+    background: $grey-color-060;
+    cursor: pointer;
+
+
+    .toggle-bullet {
+      background: $white-color;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: all 0.3s;
+    }
+    &.selected {
+      background-color: $primary-color;
+      .toggle-bullet {
+        left: 18px;
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      background-color: $primary-color-010;
+    }
+    &.disabled {
+      background: $grey-color-050;
+      cursor: no-drop;
+      .toggle-bullet {
+        background: $grey-color-030;
+      }
+
+      &.selected {
+        background-color: $grey-color-020;
+      }
+    }
+  }
+
+  span {
+    flex: 1 auto;
+    padding-left: 8px;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+:host(.bold) {
+  .toggle-input {
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.6;
+      letter-spacing: normal;
+    }
+  }
+}
+
+:host(.big) {
+  .toggle-input {
+    padding: 6px 0;
+  }
+}
+
+:host(.spaced) {
+  .toggle-input {
+    margin: 4px 0;
+  }
+}

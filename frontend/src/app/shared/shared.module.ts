@@ -11,14 +11,18 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {RouterModule} from '@angular/router';
 import {BreadcrumbComponent} from './components/breadcrumb/breadcrumb.component';
 import {ButtonComponent} from './components/button/button.component';
+import {CheckboxComponent} from "./components/checkbox/checkbox.component";
 import {DropdownItemDirective} from './components/dropdown/dropdown-item.directive';
 import {DropdownTriggerForDirective} from './components/dropdown/dropdown-trigger-for.directive';
 import {DropdownComponent} from './components/dropdown/dropdown.component';
 import {IconComponent} from "./components/icon/icon.component";
 import {InnerTabGroupComponent} from "./components/inner-tab-group/inner-tab-group.component";
 import {InnerTabComponent} from "./components/inner-tab-group/inner-tab/inner-tab.component";
+import {InputGroupComponent} from "./components/input-group/input-group.component";
 import {MiniBannerComponent} from './components/mini-banner/mini-banner.component';
 import {QuoteComponent} from "./components/quote/quote.component";
+import {TextInputComponent} from "./components/text-input/text-input.component";
+import {ToggleComponent} from "./components/toggle/toggle.component";
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
 
@@ -31,7 +35,11 @@ const COMPONENTS: any[] = [
   IconComponent,
   InnerTabGroupComponent,
   InnerTabComponent,
-  QuoteComponent
+  QuoteComponent,
+  InputGroupComponent,
+  CheckboxComponent,
+  TextInputComponent,
+  ToggleComponent
 ];
 
 const SERVICES: any[] = [];

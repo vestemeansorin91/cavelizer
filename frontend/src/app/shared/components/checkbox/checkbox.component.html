@@ -1,0 +1,11 @@
+<div class="checkbox-input" [class.radio]="radio">
+  <div
+    class="checkbox-item"
+    [class.selected]="_checked"
+    [class.disabled]="disabled"
+    (click)="onInput($event)"
+  >
+    <i class="las la-check"></i>
+  </div>
+  <span (click)="onInput($event)"><ng-content></ng-content></span>
+</div>
