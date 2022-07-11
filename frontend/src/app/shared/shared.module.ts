@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -25,6 +26,7 @@ import {TextInputComponent} from "./components/text-input/text-input.component";
 import {ToggleComponent} from "./components/toggle/toggle.component";
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
+import {MatSelectModule} from '@angular/material/select';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -58,6 +60,9 @@ const ANGULAR_MATERIAL_MODULES = [
   MatExpansionModule,
   MatTooltipModule,
   ClipboardModule,
+  MatSelectModule,
+  MatInputModule
+
 ];
 
 const PIPES: any[] = [DefaultImagePipe];
