@@ -1,0 +1,32 @@
+@import 'colors';
+@import 'variables';
+
+:host {
+  .container {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid $grey-color;
+    display: flex;
+    gap: 10px;
+
+    .container-column {
+      border: 2px solid black;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .tag-container {
+        display: flex;
+        height: 25px;
+        font-size: 20px;
+        align-items: center;
+        padding: 0px 8px;
+        justify-content: center;
+        background-color: green;
+        border: 1px solid $grey-color;
+        border-radius: $border-radius-sm;
+      }
+    }
+  }
+}
