@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
       <mat-panel-title>
         <strong>cavelizer-dropdown</strong>
       </mat-panel-title>
-      <mat-panel-description>
-        Creat de Sorin
-      </mat-panel-description>
+      <mat-panel-description> Creat de Sorin </mat-panel-description>
     </mat-expansion-panel-header>
 
     <span [dropdownTriggerFor]="dropdown" class="small transparent">
@@ -22,13 +20,10 @@ import { Component, OnInit } from '@angular/core';
       <div dropdownItem>Element 2</div>
       <div dropdownItem>Element 3</div>
     </cavelizer-dropdown>
-  </mat-expansion-panel>`,
+  </mat-expansion-panel>`
 })
 export class DropdownExampleComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

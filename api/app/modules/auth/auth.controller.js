@@ -36,8 +36,6 @@ async function registerFn(userProps) {
 
   if (userFound) throw new Error('Username or Email already exists');
 
-  const GenderEnum = require('../../shared/enums/gender.enum');
-
   const validateSchema = joi.object().keys({
     username: joi.string().min(5).max(25).required(),
     fullName: joi.string().min(5).required(),

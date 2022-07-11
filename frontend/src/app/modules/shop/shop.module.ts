@@ -5,8 +5,9 @@ import { ShopHeadlineComponent } from './components/shop-headline/shop-headline.
 import { ShopMenuComponent } from './components/shop-menu/shop-menu.component';
 import { ShopComponent } from './shop.component';
 import { ShopRoutes } from './shop.routes';
+import { ShopHeaderComponent} from './components/shop-header/shop-header.component';
 
-const COMPONENTS = [ShopComponent, ShopHeadlineComponent, ShopMenuComponent];
+const COMPONENTS = [ShopComponent, ShopHeadlineComponent, ShopMenuComponent , ShopHeaderComponent];
 
 @NgModule({
   declarations: [COMPONENTS],
