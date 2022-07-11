@@ -2,8 +2,11 @@
   <cavelizer-breadcrumb></cavelizer-breadcrumb>
   <div *ngIf="currentUser$ | async as currentUser" class="profile">
     <div class="profile-header">
-      <img class="profile-img"
-           [src]=" currentUser?.avatarBlobUrl | defaultImage">
+      <div class="avatar-wrapper">
+        <img class="avatar" [src]=" currentUser?.avatarBlobUrl | defaultImage">
+        <i class="las la-pen"></i>
+      </div>
+
       <h1>{{ currentUser?.fullName }}</h1>
     </div>
   </div>

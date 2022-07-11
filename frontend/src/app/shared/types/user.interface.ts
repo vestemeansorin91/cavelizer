@@ -6,4 +6,5 @@ export interface UserInterface {
   phone: string;
   isActive: boolean;
   isAdmin: boolean;
+  avatarBlobUrl: string;
 }
