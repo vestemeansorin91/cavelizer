@@ -8,7 +8,7 @@ import { projectIcons } from '../../../../../shared/components/icon/project-icon
       <mat-panel-title>
         <strong>cavelizer-icon</strong>
       </mat-panel-title>
-      <mat-panel-description> Creat de Sorin </mat-panel-description>
+      <mat-panel-description> Creat de Sorin/Petrut</mat-panel-description>
     </mat-expansion-panel-header>
 
     <div class="flex gap--30">
