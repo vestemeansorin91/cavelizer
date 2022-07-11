@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {projectIcons} from "../../../../../shared/components/icon/project-icons";
+import { Component } from '@angular/core';
+import { projectIcons } from '../../../../../shared/components/icon/project-icons';
 
 @Component({
   selector: 'app-icons-example',
@@ -8,9 +8,7 @@ import {projectIcons} from "../../../../../shared/components/icon/project-icons"
       <mat-panel-title>
         <strong>cavelizer-icon</strong>
       </mat-panel-title>
-      <mat-panel-description>
-        Creat de Sorin
-      </mat-panel-description>
+      <mat-panel-description> Creat de Sorin </mat-panel-description>
     </mat-expansion-panel-header>
 
     <select [(ngModel)]="iconsSize" class="mb--32">
@@ -21,18 +19,16 @@ import {projectIcons} from "../../../../../shared/components/icon/project-icons"
       <option value="xxl">XXL</option>
     </select>
 
-
     <div class="flex gap--30">
       <cavelizer-icon *ngFor="let icon of projectIcons" [name]="icon" [matTooltip]="icon" [cdkCopyToClipboard]="copyToClipboard(icon)" [ngClass]="iconsSize"></cavelizer-icon>
     </div>
-
-  </mat-expansion-panel>`,
+  </mat-expansion-panel>`
 })
-export class IconsExampleComponent{
+export class IconsExampleComponent {
   public projectIcons = projectIcons;
   public iconsSize = '';
 
   public copyToClipboard(icon: string) {
-    return `<cavelizer-icon [name]="${icon}" class="big"></cavelizer-icon>`
+    return `<cavelizer-icon [name]="${icon}" class="big"></cavelizer-icon>`;
   }
 }
