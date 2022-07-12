@@ -1,16 +1,21 @@
 $primary-color: #6a983c;
-$primary-color-010: #46760a;
-$primary-color-020: #92c064;
-$primary-color-030: #c8deb3;
-$primary-color-040: #f4f8ec;
+$primary-color-010: #3b6a58;
+$primary-color-020: #46760a;
+$primary-color-030: #92c064;
+$primary-color-040: #7bc4a9;
+$primary-color-050: #c8deb3;
+$primary-color-060: #bcddd0;
+$primary-color-070: #f4f8ec;
 
 $grey-color: #151515;
 $grey-color-010: #575757;
 $grey-color-020: #161616;
-$grey-color-030: #d1d1d1;
-$grey-color-040: #ebebeb;
-$grey-color-050: #f5f5f5;
-$grey-color-060: #f9f9f9;
+$grey-color-030: #8d9baa;
+$grey-color-040: #b2b3ba;
+$grey-color-050: #d1d1d1;
+$grey-color-060: #ebebeb;
+$grey-color-070: #f5f5f5;
+$grey-color-080: #f9f9f9;
 
 $warning-color: #d0a866;
 $warning-color-010: #b28a48;
@@ -18,20 +23,26 @@ $warning-color-020: #ecd2a6;
 $warning-color-030: #faedd8;
 $warning-color-040: #fff9f0;
 
-$error-color: #e5704b;
+$error-color: #eb3f3f;
 $error-color-010: #c7522d;
-$error-color-020: #eb8d70;
-$error-color-030: #f7c6b7;
-$error-color-040: #fff1ed;
+$error-color-020: #e5704b;
+$error-color-030: #eb8d70;
+$error-color-040: #f7c6b7;
+$error-color-050: #fff1ed;
 
 $info-color: #37d0d6;
-$info-color-010: #19b2b8;
-$info-color-020: #7cd0d3;
-$info-color-030: #b9e6e8;
-$info-color-040: #ecf6f6;
+$info-color-010: #396d8e;
+$info-color-020: #19b2b8;
+$info-color-030: #3da0ec;
+$info-color-040: #7cd0d3;
+$info-color-050: #a2d8ff;
+$info-color-060: #b7d5ec;
+$info-color-070: #b9e6e8;
+$info-color-080: #ecf6f6;
 
 $white-color: white;
 $black-color: black;
+$red-dark-color: #731917;
 
 /* Classes - Text */
 .color--primary {

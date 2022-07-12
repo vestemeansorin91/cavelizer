@@ -1,27 +1,94 @@
 @import 'colors';
 @import 'variables';
-$green-text: #3b6a58;
-$green-border: #dff5ea;
 
 .chip {
-  border: 2px solid rgba($green-text, 0.3);
-  color: $green-text;
+  border: 2px solid $primary-color-050;
+  color: $primary-color-010;
   background-color: transparent;
   padding: 4px 8px;
   display: inline-flex;
-  border-radius: 4px;
+  border-radius: $border-radius-md1;
 }
 
 :host {
+  //!! NO Background
+
   &.error {
     .chip {
-      border-color: red;
-      color: red;
+      color: $error-color;
+      border: 2px solid $error-color;
     }
+  }
+  &.info {
+    .chip {
+      color: $info-color-030;
+      border: 2px solid $info-color-050;
+    }
+  }
+  &.disabled {
+    .chip {
+      color: $grey-color-030;
+      border: 2px solid $grey-color-030;
+    }
+  }
 
-    &.fill {
+  //!! Light Background
+
+  &.fill-lighter {
+    .chip {
+      border: 2px solid $primary-color-040;
+      background-color: $primary-color-040;
+    }
+    &.error {
       .chip {
-        background-color: black;
+        border: 2px solid $error-color-020;
+        background-color: $error-color-020;
+        color: $red-dark-color;
+      }
+    }
+    &.info {
+      .chip {
+        border: 2px solid $info-color-050;
+        background-color: $info-color-050;
+        color: $info-color-010;
+      }
+    }
+    &.disabled {
+      .chip {
+        border: 2px solid $grey-color-040;
+        background-color: $grey-color-040;
+        color: $grey-color-010;
+      }
+    }
+  }
+
+  //!! Dark Background
+
+  &.fill {
+    .chip {
+      border: 2px solid $primary-color-030;
+      background-color: $primary-color-030;
+      color: $white-color;
+    }
+    &.error {
+      .chip {
+        border: 2px solid $error-color;
+        background-color: $error-color;
+        color: $white-color;
+      }
+    }
+    &.info {
+      .chip {
+        border: 2px solid $info-color-030;
+        background-color: $info-color-030;
+        color: $white-color;
+      }
+    }
+    &.disabled {
+      .chip {
+        border: 2px solid $grey-color-030;
+        background-color: $grey-color-030;
+        color: $white-color;
       }
     }
   }

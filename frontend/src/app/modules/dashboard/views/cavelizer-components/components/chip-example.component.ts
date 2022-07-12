@@ -9,10 +9,23 @@ import { Component } from '@angular/core';
       </mat-panel-title>
       <mat-panel-description> Creat de Mihai</mat-panel-description>
     </mat-expansion-panel-header>
-    <div class="flex flex--wrap gap--16">
-      <cavelizer-chip>48% </cavelizer-chip>
-      <cavelizer-chip class="error">48% </cavelizer-chip>
-      <cavelizer-chip class="error fill">48% </cavelizer-chip>
+    <div class="flex flex--wrap gap--16 mb--16">
+      <cavelizer-chip>48%</cavelizer-chip>
+      <cavelizer-chip class="error">48%</cavelizer-chip>
+      <cavelizer-chip class="info">48%</cavelizer-chip>
+      <cavelizer-chip class="disabled">48%</cavelizer-chip>
+    </div>
+    <div class="flex flex--wrap gap--16 mb--16">
+      <cavelizer-chip class="fill-lighter">48%</cavelizer-chip>
+      <cavelizer-chip class="fill-lighter error">48%</cavelizer-chip>
+      <cavelizer-chip class="fill-lighter info">48%</cavelizer-chip>
+      <cavelizer-chip class="fill-lighter disabled">48%</cavelizer-chip>
+    </div>
+    <div class="flex flex--wrap gap--16 mb--16">
+      <cavelizer-chip class="fill fill-lighter">48%</cavelizer-chip>
+      <cavelizer-chip class="fill fill-lighter error">48%</cavelizer-chip>
+      <cavelizer-chip class="fill fill-lighter info">48%</cavelizer-chip>
+      <cavelizer-chip class="fill fill-lighter disabled">48%</cavelizer-chip>
     </div>
   </mat-expansion-panel>`
 })
