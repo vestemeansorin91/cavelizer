@@ -9,10 +9,11 @@ import { Component } from '@angular/core';
       </mat-panel-title>
       <mat-panel-description> Creat de Mihai</mat-panel-description>
     </mat-expansion-panel-header>
-
-    <cavelizer-chip>
-      <ng-container tag>48%</ng-container>
-    </cavelizer-chip>
+    <div class="flex flex--wrap gap--16">
+      <cavelizer-chip>48% </cavelizer-chip>
+      <cavelizer-chip class="error">48% </cavelizer-chip>
+      <cavelizer-chip class="error fill">48% </cavelizer-chip>
+    </div>
   </mat-expansion-panel>`
 })
 export class ChipExampleComponent {}
