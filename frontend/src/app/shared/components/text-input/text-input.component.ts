@@ -34,6 +34,7 @@ export class TextInputComponent implements ControlValueAccessor {
   @Input() public mask = null;
   @Input() public disabled = false;
   @Input() public readonly = false;
+  @Input() public type = 'text';
 
   @Output() public onEnterKey = new EventEmitter();
   @Output() public onEscKey = new EventEmitter();

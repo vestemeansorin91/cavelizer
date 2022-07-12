@@ -1,7 +1,21 @@
 <form [formGroup]="loginFormGroup">
   <h1>Login</h1>
+
   <a routerLink="/auth/register">You don't have an account? Create one!</a>
-  <input formControlName="username" type="text" placeholder="Username" />
-  <input formControlName="password" type="password" placeholder="Password" />
-  <cavelizer-button (click)="loginClicked()" class="width-full">Login</cavelizer-button>
+  <div class="flex--column align--start ">
+    <label class="mr--16 text--bold" for="username">Username</label>
+    <cavelizer-input-group class="width--full">
+      <cavelizer-text-input id="username" type="text" formControlName="username"
+                            class="width--full"></cavelizer-text-input>
+    </cavelizer-input-group>
+  </div>
+
+  <div class="flex--column align--start ">
+    <label class="mr--16 text--bold" for="password">Password</label>
+    <cavelizer-input-group class="width--full">
+      <cavelizer-text-input id="password" type="password" formControlName="password"
+                            class="width--full"></cavelizer-text-input>
+    </cavelizer-input-group>
+  </div>
+  <cavelizer-button (click)="loginClicked()" class="width--full">Login</cavelizer-button>
 </form>

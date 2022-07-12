@@ -52,7 +52,6 @@ const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, OverlayM
 
 const ANGULAR_MATERIAL_MODULES = [
   MatSidenavModule,
-  MatListModule,
   MatTabsModule,
   MatExpansionModule,
   MatTooltipModule,
