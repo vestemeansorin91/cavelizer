@@ -52,6 +52,6 @@ export class IconsExampleComponent {
       classes = ` class="${this.iconsSize} ${this.iconsColor}"`;
     }
 
-    return `<cavelizer-icon [name]="${icon}"${classes}></cavelizer-icon>`;
+    return `<cavelizer-icon name="${icon}"${classes}></cavelizer-icon>`;
   }
 }

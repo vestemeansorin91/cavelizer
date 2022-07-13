@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 
     <span [dropdownTriggerFor]="dropdown" class="small transparent">
       Trigger dropdown
-      <i class="las la-angle-down green" suffix></i>
+      <cavelizer-icon name="arrow-down" class="primary-color"></cavelizer-icon>
     </span>
 
     <cavelizer-dropdown #dropdown>

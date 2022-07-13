@@ -1,12 +1,39 @@
 <div class="shop-layout flex--column">
   <app-shop-headline></app-shop-headline>
   <app-shop-header></app-shop-header>
-  <cavelizer-breadcrumb></cavelizer-breadcrumb>
+
+  <!--  Categories / Mini banners -->
+  <div class="flex pl--46 pr--30">
+    <div class="flex--column flex--1">
+      <span class="fs--18 my--16 text--bold">Category menu</span>
+
+      <div class="flex--column flex--1">
+        <a class="mb--12">Bakery</a>
+        <a class="mb--12">Fruit and vegetables</a>
+        <a class="mb--12">Meat and fish</a>
+        <a class="mb--12">Drinks</a>
+        <a class="mb--12">Kitchen</a>
+      </div>
+
+      <cavelizer-button class="small grey mb--16">More categories <cavelizer-icon name="arrow-right" ></cavelizer-icon> </cavelizer-button>
+    </div>
+
+    <cavelizer-mini-banner>
+      <ng-container subtitle>Banner subfocus</ng-container>
+      <ng-container title>Space for heading</ng-container>
+      <ng-container action> Read recepies </ng-container>
+    </cavelizer-mini-banner>
+
+    <cavelizer-mini-banner>
+      <ng-container subtitle>Banner subfocus</ng-container>
+      <ng-container title>Space for heading</ng-container>
+      <ng-container action> Read recepies </ng-container>
+    </cavelizer-mini-banner>
+  </div>
 
   <div>
     <a href="https://trello.com/c/HzZh3nWm/63-component-product-item" target="_blank">products list component</a>
   </div>
-
 
   <!-- Reviews -->
   <div class="justify--space-between width--full pl--44 mt--24 pr--20 mb--36">
