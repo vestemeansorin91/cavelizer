@@ -2,12 +2,13 @@
 @import 'variables';
 
 .chip {
-  border: 2px solid $primary-color-050;
-  color: $primary-color-010;
-  background-color: transparent;
-  padding: 4px 8px;
   display: inline-flex;
-  border-radius: $border-radius-md1;
+  padding: 4px 8px;
+
+  color: $color-primary-010;
+  background-color: transparent;
+  border: 2px solid $color-primary-050;
+  border-radius: $border-radius-md;
 }
 
 :host {
@@ -15,20 +16,20 @@
 
   &.error {
     .chip {
-      color: $error-color;
-      border: 2px solid $error-color;
+      color: $color-error;
+      border: 2px solid $color-error;
     }
   }
   &.info {
     .chip {
-      color: $info-color-030;
-      border: 2px solid $info-color-050;
+      color: $color-info-030;
+      border: 2px solid $color-info-050;
     }
   }
   &.disabled {
     .chip {
-      color: $grey-color-030;
-      border: 2px solid $grey-color-030;
+      color: $color-grey-030;
+      border: 2px solid $color-grey-030;
     }
   }
 
@@ -36,28 +37,28 @@
 
   &.fill-lighter {
     .chip {
-      border: 2px solid $primary-color-040;
-      background-color: $primary-color-040;
+      border: 2px solid $color-primary-040;
+      background-color: $color-primary-040;
     }
     &.error {
       .chip {
-        border: 2px solid $error-color-020;
-        background-color: $error-color-020;
-        color: $red-dark-color;
+        border: 2px solid $color-error-020;
+        background-color: $color-error-020;
+        color: $color-red-dark;
       }
     }
     &.info {
       .chip {
-        border: 2px solid $info-color-050;
-        background-color: $info-color-050;
-        color: $info-color-010;
+        border: 2px solid $color-info-050;
+        background-color: $color-info-050;
+        color: $color-info-010;
       }
     }
     &.disabled {
       .chip {
-        border: 2px solid $grey-color-040;
-        background-color: $grey-color-040;
-        color: $grey-color-010;
+        border: 2px solid $color-grey-040;
+        background-color: $color-grey-040;
+        color: $color-grey-010;
       }
     }
   }
@@ -66,29 +67,29 @@
 
   &.fill {
     .chip {
-      border: 2px solid $primary-color-030;
-      background-color: $primary-color-030;
-      color: $white-color;
+      border: 2px solid $color-primary-030;
+      background-color: $color-primary-030;
+      color: $color-white;
     }
     &.error {
       .chip {
-        border: 2px solid $error-color;
-        background-color: $error-color;
-        color: $white-color;
+        border: 2px solid $color-error;
+        background-color: $color-error;
+        color: $color-white;
       }
     }
     &.info {
       .chip {
-        border: 2px solid $info-color-030;
-        background-color: $info-color-030;
-        color: $white-color;
+        border: 2px solid $color-info-030;
+        background-color: $color-info-030;
+        color: $color-white;
       }
     }
     &.disabled {
       .chip {
-        border: 2px solid $grey-color-030;
-        background-color: $grey-color-030;
-        color: $white-color;
+        border: 2px solid $color-grey-030;
+        background-color: $color-grey-030;
+        color: $color-white;
       }
     }
   }

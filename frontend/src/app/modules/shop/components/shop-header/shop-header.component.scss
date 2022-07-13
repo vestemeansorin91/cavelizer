@@ -24,7 +24,7 @@
 
     border: 1px solid #d1d1d1;
     border-radius: 12px;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
 
     .all-categories {
       display: flex;
@@ -39,7 +39,7 @@
       }
 
       cavelizer-icon {
-        color: $primary-color;
+        color: $color-primary;
         display: flex;
         padding-right: 16px;
         border-right: 1px solid #d1d1d1;
@@ -65,7 +65,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
-        color: #A9A9A9;
+        color: #a9a9a9;
       }
 
       &:focus {

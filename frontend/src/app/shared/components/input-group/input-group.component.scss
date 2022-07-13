@@ -26,7 +26,7 @@
     .append,
     .prepend {
       font-weight: 600;
-      color: $primary-color;
+      color: $color-primary;
       border: none !important;
       line-height: 38px;
     }
@@ -72,7 +72,7 @@
 
   &.is-disabled {
     .input-group {
-      background: $grey-color-060;
+      background: $color-grey-060;
     }
   }
 
@@ -112,4 +112,3 @@
     }
   }
 }
-
