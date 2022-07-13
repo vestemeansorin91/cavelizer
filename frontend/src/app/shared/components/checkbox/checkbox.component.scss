@@ -11,9 +11,9 @@
     width: 20px;
     min-width: 20px;
     height: 20px;
-    border-radius: $border-radius-sm;
-    background: $white-color;
-    border: 1px solid $grey-color-050;
+    border-radius: $border-radius-xs;
+    background: $color-white;
+    border: 1px solid $color-grey-050;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -27,7 +27,7 @@
       height: 100%;
       text-align: center;
       line-height: 20px;
-      color: $primary-color;
+      color: $color-primary;
       opacity: 0;
       transition: all 0.3s;
       font-size: 14px;
@@ -41,11 +41,11 @@
     }
 
     &.selected {
-      border-color: $primary-color;
-      background-color: $primary-color;
+      border-color: $color-primary;
+      background-color: $color-primary;
 
       i {
-        color: $white-color;
+        color: $color-white;
         opacity: 1;
         transform: rotateZ(0);
 
@@ -54,16 +54,16 @@
     }
 
     &:hover {
-      border-color: $primary-color;
+      border-color: $color-primary;
     }
 
     &.disabled {
-      background: $grey-color-030;
-      border-color: $grey-color-050;
+      background: $color-grey-030;
+      border-color: $color-grey-050;
       cursor: no-drop;
 
       i {
-        color: $grey-color-050;
+        color: $color-grey-050;
       }
     }
   }
@@ -82,7 +82,7 @@
         content: '';
         border-radius: 50%;
         margin: auto auto;
-        background: $grey-color-060;
+        background: $color-grey-060;
       }
 
       i {
@@ -90,18 +90,18 @@
       }
 
       &:hover {
-        border-color: $grey-color-060;
+        border-color: $color-grey-060;
       }
 
       &.selected {
-        border-color: $grey-color;
+        border-color: $color-grey;
 
         &:after {
           transform: scale(1);
         }
 
         &:hover {
-          border-color: $grey-color;
+          border-color: $color-grey;
         }
       }
     }

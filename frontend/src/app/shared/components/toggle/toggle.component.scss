@@ -14,12 +14,11 @@
     width: 36px;
     height: 20px;
     border-radius: 16px;
-    background: $grey-color-060;
+    background: $color-grey-060;
     cursor: pointer;
 
-
     .toggle-bullet {
-      background: $white-color;
+      background: $color-white;
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -29,24 +28,24 @@
       transition: all 0.3s;
     }
     &.selected {
-      background-color: $primary-color;
+      background-color: $color-primary;
       .toggle-bullet {
         left: 18px;
         transition: all 0.3s;
       }
     }
     &:hover {
-      background-color: $primary-color-010;
+      background-color: $color-primary-010;
     }
     &.disabled {
-      background: $grey-color-050;
+      background: $color-grey-050;
       cursor: no-drop;
       .toggle-bullet {
-        background: $grey-color-030;
+        background: $color-grey-030;
       }
 
       &.selected {
-        background-color: $grey-color-020;
+        background-color: $color-grey-020;
       }
     }
   }

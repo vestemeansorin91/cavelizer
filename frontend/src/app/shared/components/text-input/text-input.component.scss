@@ -3,7 +3,7 @@
 
 .text-input {
   display: inline-flex;
-  border: 1px solid $grey-color-030;
+  border: 1px solid $color-grey-030;
   border-radius: $border-radius-md !important;
 
   margin-right: 8px;
@@ -60,7 +60,6 @@
     }
   }
 }
-
 
 :host(.normal) {
   input {

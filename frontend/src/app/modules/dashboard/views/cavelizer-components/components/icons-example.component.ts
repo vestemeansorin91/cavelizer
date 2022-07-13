@@ -3,7 +3,7 @@ import { projectIcons } from '../../../../../shared/components/icon/project-icon
 
 @Component({
   selector: 'app-icons-example',
-  template: `<mat-expansion-panel expanded="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-icon</strong>
@@ -30,7 +30,13 @@ import { projectIcons } from '../../../../../shared/components/icon/project-icon
     </div>
 
     <div class="flex flex--wrap justify--space-between gap--30">
-      <cavelizer-icon *ngFor="let icon of projectIcons" [name]="icon" [matTooltip]="icon" [cdkCopyToClipboard]="copyToClipboard(icon)" [ngClass]="[iconsSize, iconsColor]"></cavelizer-icon>
+      <cavelizer-icon
+        *ngFor="let icon of projectIcons"
+        [name]="icon"
+        [matTooltip]="icon"
+        [cdkCopyToClipboard]="copyToClipboard(icon)"
+        [ngClass]="[iconsSize, iconsColor]"
+      ></cavelizer-icon>
     </div>
   </mat-expansion-panel>`
 })
@@ -42,7 +48,7 @@ export class IconsExampleComponent {
   public copyToClipboard(icon: string) {
     let classes = '';
 
-    if(this.iconsColor || this.iconsSize) {
+    if (this.iconsColor || this.iconsSize) {
       classes = ` class="${this.iconsSize} ${this.iconsColor}"`;
     }
 

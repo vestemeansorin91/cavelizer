@@ -1,0 +1,96 @@
+@import 'colors';
+@import 'variables';
+
+.chip {
+  display: inline-flex;
+  padding: 4px 8px;
+
+  color: $color-primary-010;
+  background-color: transparent;
+  border: 2px solid $color-primary-050;
+  border-radius: $border-radius-md;
+}
+
+:host {
+  //!! NO Background
+
+  &.error {
+    .chip {
+      color: $color-error;
+      border: 2px solid $color-error;
+    }
+  }
+  &.info {
+    .chip {
+      color: $color-info-030;
+      border: 2px solid $color-info-050;
+    }
+  }
+  &.disabled {
+    .chip {
+      color: $color-grey-030;
+      border: 2px solid $color-grey-030;
+    }
+  }
+
+  //!! Light Background
+
+  &.fill-lighter {
+    .chip {
+      border: 2px solid $color-primary-040;
+      background-color: $color-primary-040;
+    }
+    &.error {
+      .chip {
+        border: 2px solid $color-error-020;
+        background-color: $color-error-020;
+        color: $color-red-dark;
+      }
+    }
+    &.info {
+      .chip {
+        border: 2px solid $color-info-050;
+        background-color: $color-info-050;
+        color: $color-info-010;
+      }
+    }
+    &.disabled {
+      .chip {
+        border: 2px solid $color-grey-040;
+        background-color: $color-grey-040;
+        color: $color-grey-010;
+      }
+    }
+  }
+
+  //!! Dark Background
+
+  &.fill {
+    .chip {
+      border: 2px solid $color-primary-030;
+      background-color: $color-primary-030;
+      color: $color-white;
+    }
+    &.error {
+      .chip {
+        border: 2px solid $color-error;
+        background-color: $color-error;
+        color: $color-white;
+      }
+    }
+    &.info {
+      .chip {
+        border: 2px solid $color-info-030;
+        background-color: $color-info-030;
+        color: $color-white;
+      }
+    }
+    &.disabled {
+      .chip {
+        border: 2px solid $color-grey-030;
+        background-color: $color-grey-030;
+        color: $color-white;
+      }
+    }
+  }
+}
