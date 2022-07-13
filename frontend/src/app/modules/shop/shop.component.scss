@@ -1,0 +1,48 @@
+.scroll-parent {
+  position: relative;
+  width: 100%;
+  height: 244px;
+  overflow-x: hidden;
+}
+
+.scroll-element {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.scroll-element cavelizer-quote {
+  width: 33.3%;
+  margin: 0 8px;
+}
+
+.primary {
+  animation: primary 60s linear infinite;
+}
+
+.secondary {
+  animation: secondary 60s linear infinite;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
