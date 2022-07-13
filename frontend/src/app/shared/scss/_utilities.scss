@@ -1,8 +1,8 @@
 /*
     PADDING pt-- pr-- pb-- pl-- px-- py-- p--
 */
-@for $i from 0 through 30 {
-  $j: $i * 4;
+@for $i from 0 through 50 {
+  $j: $i * 2;
 
   .pt--#{$j} {
     padding-top: #{$j}px !important;
@@ -35,12 +35,13 @@
   }
 }
 
+
 /*
     MARGIN mt-- mr-- mb-- ml-- mx-- my-- m--
 */
 
-@for $i from 0 through 20 {
-  $j: $i * 4;
+@for $i from 0 through 50 {
+  $j: $i * 2;
 
   .mt--#{$j} {
     margin-top: #{$j}px !important;
