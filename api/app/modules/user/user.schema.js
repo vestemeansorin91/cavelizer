@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const GenderEnum = require('../../shared/enums/gender.enum');
-
 const profileSchema = require('./schemas/profile.schema');
 
 const userSchema = mongoose.Schema({
@@ -17,6 +15,11 @@ const userSchema = mongoose.Schema({
     required: true,
     select: false
   },
+  salt: {
+    type: String,
+    required: true,
+    select: false,
+  },
   email: {
     type: String,
     required: true
@@ -28,11 +31,6 @@ const userSchema = mongoose.Schema({
   isAdmin: {
     type: Boolean,
     default: false
-  },
-  gender: {
-    type: String,
-    enum: GenderEnum,
-    required: true
   },
   avatarBlobUrl: {
     type: String,
