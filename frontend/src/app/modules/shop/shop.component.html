@@ -102,12 +102,18 @@
    Blog
   </div>
 
-  <div class="bordered text--center p--32">
-    links
+  <div class="flex py--64 px--46 justify--space-between">
+    <div *ngFor="let group of footerLinkGroups" class="flex--column">
+      <span class="fs--18 my--16 text--bold">{{ group.headline }}</span>
+
+      <div class="flex--column flex--1">
+        <a *ngFor="let item of group.items" [routerLink]="item.urlPath" class="mb--12">{{ item.name }}</a>
+      </div>
+    </div>
   </div>
 
-  <div class="bordered text--center p--32">
-    copyright
+  <div class="text--center p--32 fs--12 color--grey">
+    Copyright © 2022 - cavelizer team
   </div>
 
 </div>

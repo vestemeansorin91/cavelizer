@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FOOTER_LINK_GROUPS_MOCK} from "./mock/footer-link-groups.mock";
+import {LinkGroupInterface} from "./types/link-group.interface";
+
 
 @Component({
   selector: 'app-shop',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
+  footerLinkGroups: LinkGroupInterface[] = FOOTER_LINK_GROUPS_MOCK;
+
   constructor() {}
 
   ngOnInit(): void {}
