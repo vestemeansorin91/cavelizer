@@ -2,7 +2,7 @@
   <ng-container *ngFor="let menu of menuItems">
     <div [dropdownTriggerFor]="dropdown" class="shop-menu--item">
       <span>{{ menu.menuLabel }}</span>
-      <i class="color--main">▼</i>
+      <cavelizer-icon name="arrow-down"></cavelizer-icon>
     </div>
 
     <cavelizer-dropdown #dropdown>
