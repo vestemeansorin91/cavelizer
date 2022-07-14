@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
   salt: {
     type: String,
     required: true,
-    select: false,
+    select: false
   },
   email: {
     type: String,
@@ -52,7 +52,7 @@ const userSchema = mongoose.Schema({
     ],
     default: [],
     select: false
-  },
+  }
 });
 
 const usersCollection = mongoose.model('User', userSchema);

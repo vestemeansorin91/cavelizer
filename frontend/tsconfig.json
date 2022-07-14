@@ -22,7 +22,7 @@
     "lib": ["es2020", "dom"],
     "paths": {
       "@cavelizer": ["src/app/shared"]
-    },
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

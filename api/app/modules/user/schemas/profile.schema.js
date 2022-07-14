@@ -10,14 +10,14 @@ const payrollInformationSchema = require('./payroll-information/payroll-informat
 const emergencyContactSchema = require('./emergency-contact/emergency-contact.schema');
 
 const ProfileSchema = mongoose.Schema({
-    bankDetails: {type: bankDetailsSchema, default: null},
-    clothesSizes: {type: clothesSizesSchema, default: null},
-    emergencyContact: {type: emergencyContactSchema, default: null},
-    hrInformation: {type: hrInformationSchema, default: null},
-    payrollInformation: {type: payrollInformationSchema, default: null},
-    personalData: {type: personalDataSchema, default: null},
-    publicProfile: {type: publicProfileSchema, default: null},
-    startEndDates: {type: startEndDatesSchema, default: null}
+  bankDetails: { type: bankDetailsSchema, default: null },
+  clothesSizes: { type: clothesSizesSchema, default: null },
+  emergencyContact: { type: emergencyContactSchema, default: null },
+  hrInformation: { type: hrInformationSchema, default: null },
+  payrollInformation: { type: payrollInformationSchema, default: null },
+  personalData: { type: personalDataSchema, default: null },
+  publicProfile: { type: publicProfileSchema, default: null },
+  startEndDates: { type: startEndDatesSchema, default: null }
 });
 
 module.exports = ProfileSchema;
