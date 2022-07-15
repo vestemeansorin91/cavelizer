@@ -5,9 +5,8 @@ import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {TopbarComponent} from './components/topbar/topbar.component';
 import {DashboardComponent} from './dashboard.component';
 import {DashboardRoutesModule} from './dashboard.routes';
-import {CategoryDetailsComponent} from './views/categories/components/category-details/category-details.component';
-import {CategoryFormComponent} from './views/categories/components/category-form/category-form.component';
-import {CategoryListComponent} from './views/categories/components/category-list/category-list.component';
+import {ArticlesComponent} from "./views/articles/articles.component";
+
 import {CavelizerComponentsModule} from "./views/cavelizer-components/cavelizer-components.module";
 import {ChatModule} from "./views/chat/chat.module";
 import {DocumentationComponent} from './views/documentation/documentation.component';
@@ -20,6 +19,16 @@ import {PermissionListComponent} from './views/permissions/components/permission
 import {ProductDetailsComponent} from './views/products/components/product-details/product-details.component';
 import {ProductFormComponent} from './views/products/components/product-form/product-form.component';
 import {ProductListComponent} from './views/products/components/product-list/product-list.component';
+import {
+  CategoryDetailsComponent
+} from "./views/products/views/categories/components/category-details/category-details.component";
+import {
+  CategoryFormComponent
+} from "./views/products/views/categories/components/category-form/category-form.component";
+import {
+  CategoryListComponent
+} from "./views/products/views/categories/components/category-list/category-list.component";
+import {TagsComponent} from './views/products/views/tags/tags.component';
 import {RoleDetailsComponent} from './views/roles/components/role-details/role-details.component';
 import {RoleFormComponent} from './views/roles/components/role-form/role-form.component';
 import {RoleListComponent} from './views/roles/components/role-list/role-list.component';
@@ -32,9 +41,7 @@ const COMPONENTS = [
   SidenavComponent,
   TopbarComponent,
 
-  CategoryDetailsComponent,
-  CategoryFormComponent,
-  CategoryListComponent,
+  ArticlesComponent,
 
   DocumentationComponent,
 
@@ -44,9 +51,14 @@ const COMPONENTS = [
   PermissionFormComponent,
   PermissionListComponent,
 
+  /* Move to module */
   ProductDetailsComponent,
   ProductFormComponent,
   ProductListComponent,
+    TagsComponent,
+    CategoryDetailsComponent,
+    CategoryFormComponent,
+    CategoryListComponent,
 
   RoleDetailsComponent,
   RoleFormComponent,
@@ -58,7 +70,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  declarations: [COMPONENTS],
+  declarations: [COMPONENTS ],
   imports: [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule],
 })
 export class DashboardModule {

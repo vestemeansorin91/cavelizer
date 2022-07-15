@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Subscription } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {ChangeDetectionStrategy, Component, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import {Subscription} from 'rxjs';
 
 const ICONS_PATH = 'assets/icons/svg';
 const ICON_TYPE = '.svg';

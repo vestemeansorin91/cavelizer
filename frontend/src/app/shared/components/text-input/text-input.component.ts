@@ -1,12 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  forwardRef,
-  Input,
-  Output,
-  ViewChild
-} from '@angular/core';
+import {Component, ElementRef, EventEmitter, forwardRef, Input, Output, ViewChild} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 export const CAVELIZER_TEXT_INPUT_VALUE_ACCESSOR: any = {
@@ -36,9 +28,9 @@ export class TextInputComponent implements ControlValueAccessor {
   @Input() public readonly = false;
   @Input() public type = 'text';
 
-  @Output() public onEnterKey = new EventEmitter();
-  @Output() public onEscKey = new EventEmitter();
-  @Output() public blur = new EventEmitter();
+  @Output() public onEnterKey: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public onEscKey: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public blur: EventEmitter<any> = new EventEmitter<any>();
   public _placeholder = '';
   // private lastMaskedValue = '';
   public onTouched = () => {

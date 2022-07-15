@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UserHrInformationComponent } from './user-hr-information.component';
+import {UserHrInformationComponent} from './user-hr-information.component';
 
 describe('UserHrInformationComponent', () => {
   let component: UserHrInformationComponent;

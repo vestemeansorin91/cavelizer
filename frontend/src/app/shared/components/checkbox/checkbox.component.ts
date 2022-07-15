@@ -26,7 +26,7 @@ export class CheckboxComponent implements ControlValueAccessor {
   public _checked = false;
   public onTouched = () => {};
 
-  @Output() public change = new EventEmitter<CavelizerCheckboxChange>();
+  @Output() public changeValue = new EventEmitter<CavelizerCheckboxChange>();
   private propagateChange: any = () => {};
 
   @Input() set value(v: any) {
@@ -43,7 +43,7 @@ export class CheckboxComponent implements ControlValueAccessor {
         this._checked = !this._checked;
       } else {
       }
-      this.change.emit({
+      this.changeValue.emit({
         source: this,
         checked: this._checked
       });

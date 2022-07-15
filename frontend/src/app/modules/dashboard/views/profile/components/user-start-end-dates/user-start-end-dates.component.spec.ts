@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UserStartEndDatesComponent } from './user-start-end-dates.component';
+import {UserStartEndDatesComponent} from './user-start-end-dates.component';
 
 describe('UserStartEndDatesComponent', () => {
   let component: UserStartEndDatesComponent;

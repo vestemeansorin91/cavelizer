@@ -1,6 +1,6 @@
-import { createAction, props } from '@ngrx/store';
-import { ApiErrorsInterface } from 'src/app/shared/types/api-errors.interface';
-import { JwtPayloadInterface } from 'src/app/shared/types/jwt-payload.interface';
+import {createAction, props} from '@ngrx/store';
+import {ApiErrorsInterface} from 'src/app/shared/types/api-errors.interface';
+import {JwtPayloadInterface} from 'src/app/shared/types/jwt-payload.interface';
 import {
   ForgotPasswordPayloadInterface,
   GetCurrentUserResponseInterface,
@@ -9,7 +9,7 @@ import {
   SignInResponseInterface,
   SignUpPayloadInterface
 } from '../types';
-import { ActionTypes } from './action.types';
+import {ActionTypes} from './action.types';
 
 /*    Sign in   */
 export const signIn = createAction(ActionTypes.SIGN_IN, props<SignInPayloadInterface>());

@@ -13,5 +13,5 @@ export class UserListComponent {
 
   constructor(private usersService: UsersService) {
   }
-
 }
+

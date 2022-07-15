@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { projectIcons } from '../../../../../shared/components/icon/project-icons';
+import {Component} from '@angular/core';
+import {projectIcons} from '../../../../../shared/components/icon/project-icons';
 
 @Component({
   selector: 'app-icons-example',

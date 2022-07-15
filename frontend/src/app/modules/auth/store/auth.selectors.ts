@@ -1,7 +1,7 @@
-import { createSelector } from '@ngrx/store';
+import {createSelector} from '@ngrx/store';
 import {JwtPayloadInterface} from "../../../shared/types/jwt-payload.interface";
-import { StoreStateInterface } from '../../../store';
-import { AuthStateInterface } from './auth.reducer';
+import {StoreStateInterface} from '../../../store';
+import {AuthStateInterface} from './auth.reducer';
 
 export const authFeatureSelector = (state: StoreStateInterface): AuthStateInterface => state.auth;
 

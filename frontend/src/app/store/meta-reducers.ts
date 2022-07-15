@@ -1,3 +1,3 @@
-import { MetaReducer } from '@ngrx/store';
+import {MetaReducer} from '@ngrx/store';
 
 export const metaReducers: MetaReducer[] = [];

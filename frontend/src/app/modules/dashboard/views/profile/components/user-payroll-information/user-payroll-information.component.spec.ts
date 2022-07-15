@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UserPayrollInformationComponent } from './user-payroll-information.component';
+import {UserPayrollInformationComponent} from './user-payroll-information.component';
 
 describe('UserPayrollInformationComponent', () => {
   let component: UserPayrollInformationComponent;

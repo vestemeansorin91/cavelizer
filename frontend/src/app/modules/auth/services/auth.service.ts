@@ -1,8 +1,14 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from '../../../../environments/environment';
-import { ForgotPasswordPayloadInterface, ResetPasswordPayloadInterface, SignInPayloadInterface, SignInResponseInterface, SignUpPayloadInterface } from '../types';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {environment} from '../../../../environments/environment';
+import {
+  ForgotPasswordPayloadInterface,
+  ResetPasswordPayloadInterface,
+  SignInPayloadInterface,
+  SignInResponseInterface,
+  SignUpPayloadInterface
+} from '../types';
 
 const API = environment.apiUrl + '/auth';
 

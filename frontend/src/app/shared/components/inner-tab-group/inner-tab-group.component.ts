@@ -8,10 +8,10 @@ import {
   Output,
   QueryList
 } from '@angular/core';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { InnerTabComponent } from './inner-tab/inner-tab.component';
-import { TabGroupBase } from './tab-group.base';
+import {Router} from '@angular/router';
+import {Subscription} from 'rxjs';
+import {InnerTabComponent} from './inner-tab/inner-tab.component';
+import {TabGroupBase} from './tab-group.base';
 
 @Component({
   selector: 'cavelizer-inner-tab-group',

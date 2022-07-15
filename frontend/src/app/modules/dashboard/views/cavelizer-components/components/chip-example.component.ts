@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-chip-example',
-  template: `<mat-expansion-panel [expanded]="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-chip</strong>

@@ -5,7 +5,8 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit, Output,
+  OnInit,
+  Output,
   SimpleChanges
 } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";

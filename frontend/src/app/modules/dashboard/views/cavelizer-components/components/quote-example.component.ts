@@ -9,7 +9,7 @@ import {Component} from "@angular/core";
           <strong>cavelizer-quote</strong>
         </mat-panel-title>
         <mat-panel-description>
-          Creat de Alex sper
+          Creat de Sorin
         </mat-panel-description>
       </mat-expansion-panel-header>
 

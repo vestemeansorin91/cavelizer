@@ -20,7 +20,7 @@ export class ToggleComponent implements ControlValueAccessor {
   _placeholder = '';
   public onTouched = () => {
   };
-  @Output() change = new EventEmitter();
+  @Output() changeValue: EventEmitter<any> = new EventEmitter<any>();
   private propagateChange: any = () => {};
 
   @Input() set value(v: any) {
@@ -50,7 +50,7 @@ export class ToggleComponent implements ControlValueAccessor {
     if (!this.disabled) {
       this._checked = !this._checked;
       this.propagateChange(this._checked);
-      this.change.emit({checked: this._checked, source: this});
+      this.changeValue.emit({checked: this._checked, source: this});
       this.onTouched();
     }
   }
