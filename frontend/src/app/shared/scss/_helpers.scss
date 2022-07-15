@@ -154,3 +154,18 @@
     display: none !important;
   }
 }
+
+.hovered {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+  user-select: none;
+
+  &:active {
+    border: 1px solid $color-grey-030;
+  }
+
+  &:hover {
+    background-color: $color-grey-070;
+  }
+}
