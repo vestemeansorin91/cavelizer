@@ -5,10 +5,13 @@ import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {TopbarComponent} from './components/topbar/topbar.component';
 import {DashboardComponent} from './dashboard.component';
 import {DashboardRoutesModule} from './dashboard.routes';
+import {SidenavItemHasChildrenPipe} from "./pipes/sidenav-item-has-children.pipe";
+import {SidenavSubmenuHeightPipe} from "./pipes/sidenav-submenu-height.pipe";
 import {ArticlesComponent} from "./views/articles/articles.component";
 
 import {CavelizerComponentsModule} from "./views/cavelizer-components/cavelizer-components.module";
 import {ChatModule} from "./views/chat/chat.module";
+import {CommentsComponent} from "./views/comments/comments.component";
 import {DocumentationComponent} from './views/documentation/documentation.component';
 import {PanelComponent} from './views/panel/panel.component';
 import {
@@ -41,37 +44,44 @@ const COMPONENTS = [
   SidenavComponent,
   TopbarComponent,
 
-  ArticlesComponent,
-
-  DocumentationComponent,
-
+  /* TODO: Dashboard/Panel - Move to own module */
   PanelComponent,
+  DocumentationComponent, /* FIXME: Probably we will delete this in the future */
 
-  PermissionDetailsComponent,
-  PermissionFormComponent,
-  PermissionListComponent,
-
-  /* Move to module */
-  ProductDetailsComponent,
-  ProductFormComponent,
-  ProductListComponent,
+  /* TODO: Shop - Move to own module */
+    ProductDetailsComponent,
+    ProductFormComponent,
+    ProductListComponent,
     TagsComponent,
     CategoryDetailsComponent,
     CategoryFormComponent,
     CategoryListComponent,
 
-  RoleDetailsComponent,
-  RoleFormComponent,
-  RoleListComponent,
+  /* TODO: Blog - Move to own module */
+    ArticlesComponent,
+    CommentsComponent,
 
-  UserDetailsComponent,
-  UserFormComponent,
-  UserListComponent,
+  /* TODO: Clients - Move to own module */
+    UserDetailsComponent,
+    UserFormComponent,
+    UserListComponent,
+
+    RoleDetailsComponent,
+    RoleFormComponent,
+    RoleListComponent,
+
+    PermissionDetailsComponent,
+    PermissionFormComponent,
+    PermissionListComponent,
 ];
 
+const PIPES = [SidenavItemHasChildrenPipe, SidenavSubmenuHeightPipe];
+
+const MODULES = [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule];
+
 @NgModule({
-  declarations: [COMPONENTS ],
-  imports: [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule],
+  declarations: [COMPONENTS, PIPES],
+  imports: [MODULES],
 })
 export class DashboardModule {
 }

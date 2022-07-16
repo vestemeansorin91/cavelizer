@@ -5,6 +5,7 @@ import {DashboardComponent} from './dashboard.component';
 import {ArticlesComponent} from "./views/articles/articles.component";
 import {CavelizerComponentsComponent} from "./views/cavelizer-components/cavelizer-components.component";
 import {ChatComponent} from "./views/chat/chat.component";
+import {CommentsComponent} from "./views/comments/comments.component";
 import {DocumentationComponent} from './views/documentation/documentation.component';
 import {PanelComponent} from './views/panel/panel.component';
 import {PermissionListComponent} from './views/permissions/components/permission-list/permission-list.component';
@@ -39,7 +40,10 @@ const routes: Routes = [
         path: 'articles',
         component: ArticlesComponent,
       },
-
+      {
+        path: 'comments',
+        component: CommentsComponent,
+      },
       {
         path: 'cavelizer-components',
         component: CavelizerComponentsComponent,
@@ -89,4 +93,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DashboardRoutesModule {}
+export class DashboardRoutesModule {
+}

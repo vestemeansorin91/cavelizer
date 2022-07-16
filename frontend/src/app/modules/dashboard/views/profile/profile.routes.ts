@@ -44,7 +44,7 @@ const routes: Routes = [
         component: UserStartEndDatesComponent,
       },
       {
-        path: 'personal-data',
+        path: 'personal-mock',
         component: UserPersonalDataComponent,
       },
       {
