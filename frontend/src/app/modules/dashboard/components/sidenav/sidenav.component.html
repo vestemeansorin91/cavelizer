@@ -1,69 +1,47 @@
-<div class="sidenav" [class.isExpanded]="isExpanded">
-  <h1 *ngIf="isExpanded" [routerLink]="['/dashboard', 'panel']">cavelizer</h1>
-  <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']">c</h1>
+<div class="sidenav" [class.toggle-expanded]="isExpanded">
+  <h1 *ngIf="isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">cavelizer</h1>
+  <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">c</h1>
 
   <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
-    <cavelizer-icon *ngIf="isExpanded" name="arrow-left" class="white-color"></cavelizer-icon>
-    <cavelizer-icon *ngIf="!isExpanded" name="arrow-right"  class="white-color"></cavelizer-icon>
+    <cavelizer-icon *ngIf="isExpanded" name="arrow-left" class="color-white toggle-btn"></cavelizer-icon>
+    <cavelizer-icon *ngIf="!isExpanded" name="arrow-right" class="color-white toggle-btn"></cavelizer-icon>
   </span>
 
-  <ul>
-    <li [routerLink]="['/dashboard', 'panel']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-desktop"></i>
-      <span>Dashboard</span>
-    </li>
+  <div class="menu">
+    <div
+      *ngFor="let sidenavItem of sidenav"
+      class="menu-item"
+      [class.has-children]="sidenavItem | sidenavItemHasChildren"
+      [class.submenu-expanded]="sidenavItem.isSubmenuExpanded"
+    >
+      <div class="menu-item--link"
+           routerLinkActive="active"
+           (click)="toggleSidenav(sidenavItem)"
+           [routerLink]="sidenavItem.pathUrl"
+           [routerLinkActiveOptions]="{ exact: true }">
+        <i [ngClass]="sidenavItem.icon" [matTooltip]="isExpanded ? '' : sidenavItem.name"></i>
+        <span>{{sidenavItem.name}}</span>
+        <cavelizer-icon name="arrow-left" class="color-white"></cavelizer-icon>
+      </div>
 
-    <li [routerLink]="['/dashboard', 'users']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-user-friends"></i>
-      <span>Users</span>
-    </li>
+      <div class="sub-menu"
+           [style.height]="sidenavItem | sidenavSubmenuHeight">
+        <div *ngFor="let subSidenavItem of sidenavItem.submenus"
+             class="menu-item--link"
+             routerLinkActive="active"
+             [routerLink]="subSidenavItem.pathUrl"
+             [routerLinkActiveOptions]="{ exact: true }">
+          <i [ngClass]="subSidenavItem.icon"></i>
+          <span>{{subSidenavItem.name}}</span>
+        </div>
+      </div>
+    </div>
 
-    <li [routerLink]="['/dashboard', 'products']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-shopping-bag"></i>
-      <span>Products</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'roles']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-id-badge"></i> <span>Roles</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'permissions']" routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-user-shield"></i>
-      <span>Permissions</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'categories']" routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-list"></i>
-      <span>Categories</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'docs']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-book"></i>
-      <span>Documentation</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'cavelizer-components']" routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-shapes"></i>
-      <span>Components</span>
-    </li>
-
-    <li [routerLink]="['/dashboard', 'chat']" routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-comment-alt"></i>
-      <span>Chat</span>
-    </li>
-
-    <li  [routerLink]="['/shop']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="las la-store-alt"></i>
-      <span>Go to shop</span>
-    </li>
-
-    <li (click)="logout()">
-      <i class="las la-power-off"></i>
-      <span>Logout</span>
-    </li>
-  </ul>
+    <div class="menu-item" (click)="logout()">
+      <div class="menu-item--link">
+        <i class="las la-power-off"></i>
+        <span>Logout</span>
+      </div>
+    </div>
+  </div>
 </div>

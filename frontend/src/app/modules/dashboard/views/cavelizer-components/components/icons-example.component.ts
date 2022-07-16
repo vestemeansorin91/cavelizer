@@ -25,10 +25,10 @@ import {projectIcons} from '../../../../../shared/components/icon/project-icons'
 
         <select [(ngModel)]="iconsColor" class="mb--32">
           <option value="">Default</option>
-          <option value="primary-color">primary-color</option>
-          <option value="warning-color">warning-color</option>
-          <option value="error-color">error-color</option>
-          <option value="info-color">info-color</option>
+          <option value="color-primary">color-primary</option>
+          <option value="color-warning">color-warning</option>
+          <option value="color-error">color-error</option>
+          <option value="color-info">color-info</option>
         </select>
       </div>
 

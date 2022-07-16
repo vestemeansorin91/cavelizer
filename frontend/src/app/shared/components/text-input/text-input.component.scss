@@ -15,38 +15,38 @@
     padding: 8px 15px;
     font-size: 16px;
     font-weight: 400;
-    color: black;
+    color: $color-black;
     border: none;
     border-radius: $border-radius-md !important;
-    background: transparent;
+    background-color: $color-white;
 
     &::-webkit-input-placeholder {
       font-size: 16px;
       font-weight: 400;
-      color: black;
+      color: $color-black;
     }
 
     &::-moz-placeholder {
       font-size: 16px;
       font-weight: 400;
-      color: black;
+      color: $color-black;
     }
 
     &:-ms-input-placeholder {
       font-size: 16px;
       font-weight: 400;
-      color: black;
+      color: $color-black;
     }
 
     &:-moz-placeholder {
       font-size: 16px;
       font-weight: 400;
-      color: black;
+      color: $color-black;
     }
 
     &:focus {
       &::placeholder {
-        color: black;
+        color: $color-black;
       }
     }
 
