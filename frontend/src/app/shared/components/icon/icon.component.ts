@@ -1,5 +1,14 @@
 import {HttpClient} from '@angular/common/http';
-import {ChangeDetectionStrategy, Component, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges
+} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {Subscription} from 'rxjs';
 
@@ -19,7 +28,7 @@ const ICON_TYPE = '.svg';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IconComponent implements OnInit, OnDestroy {
+export class IconComponent implements OnInit, OnChanges, OnDestroy {
   @Input() public name = '';
   private subscription = new Subscription();
 
@@ -31,6 +40,14 @@ export class IconComponent implements OnInit, OnDestroy {
     this.subscription.add(
       this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' }).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
     );
+  }
+
+  ngOnChanges(changes: SimpleChanges):void {
+    if(changes['name'] && !changes['name'].firstChange) {
+      this.subscription.add(
+        this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' }).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
+      );
+    }
   }
 
   ngOnDestroy() {

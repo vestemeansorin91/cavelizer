@@ -2,9 +2,11 @@
   <h1 *ngIf="isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">cavelizer</h1>
   <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">c</h1>
 
-  <span (click)="isExpanded = !isExpanded" class="sidenav--menu-toggle">
-    <cavelizer-icon *ngIf="isExpanded" name="arrow-left" class="color-white toggle-btn"></cavelizer-icon>
-    <cavelizer-icon *ngIf="!isExpanded" name="arrow-right" class="color-white toggle-btn"></cavelizer-icon>
+  <span class="sidenav--menu-toggle">
+    <cavelizer-icon
+      (click)="isExpanded = !isExpanded"
+      [name]="isExpanded ? 'arrow-left' : 'arrow-right'"
+      class="color-white toggle-btn"></cavelizer-icon>
   </span>
 
   <div class="menu">
