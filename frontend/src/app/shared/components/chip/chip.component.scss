@@ -12,82 +12,87 @@
 }
 
 :host {
-  //!! NO Background
-
+  /* No background */
   &.error {
     .chip {
       color: $color-error;
-      border: 2px solid $color-error;
+      border-color: $color-error;
     }
   }
+
   &.info {
     .chip {
       color: $color-info-030;
-      border: 2px solid $color-info-050;
+      border-color: $color-info-050;
     }
   }
+
   &.disabled {
     .chip {
       color: $color-grey-030;
-      border: 2px solid $color-grey-030;
+      border-color: $color-grey-030;
     }
   }
 
-  //!! Light Background
-
+  /* Light background */
   &.fill-lighter {
     .chip {
-      border: 2px solid $color-primary-040;
+      border-color: $color-primary-040;
       background-color: $color-primary-040;
     }
+
     &.error {
       .chip {
-        border: 2px solid $color-error-020;
+        border-color: $color-error-020;
         background-color: $color-error-020;
         color: $color-red-dark;
       }
     }
+
     &.info {
       .chip {
-        border: 2px solid $color-info-050;
+        border-color: $color-info-050;
         background-color: $color-info-050;
         color: $color-info-010;
       }
     }
+
     &.disabled {
       .chip {
-        border: 2px solid $color-grey-040;
+        border-color: $color-grey-040;
         background-color: $color-grey-040;
         color: $color-grey-010;
       }
     }
   }
 
-  //!! Dark Background
-
+  /* Dark background */
   &.fill {
     .chip {
-      border: 2px solid $color-primary-030;
+      border-color: $color-primary-030;
       background-color: $color-primary-030;
       color: $color-white;
     }
+
     &.error {
       .chip {
-        border: 2px solid $color-error;
+        border-color: $color-error;
         background-color: $color-error;
         color: $color-white;
       }
     }
+
     &.info {
       .chip {
-        border: 2px solid $color-info-030;
+        border-color: $color-info-030;
         background-color: $color-info-030;
         color: $color-white;
       }
     }
+
     &.disabled {
       .chip {
-        border: 2px solid $color-grey-030;
+        border-color: $color-grey-030;
         background-color: $color-grey-030;
         color: $color-white;
       }
