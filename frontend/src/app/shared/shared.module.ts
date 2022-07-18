@@ -27,6 +27,7 @@ import {TextInputComponent} from './components/text-input/text-input.component';
 import {ToggleComponent} from './components/toggle/toggle.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
+import {PhonePipe} from "./pipes/phone-format.pipe";
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -59,7 +60,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatInputModule
 ];
 
-const PIPES: any[] = [DefaultImagePipe];
+const PIPES: any[] = [DefaultImagePipe, PhonePipe];
 
 const DIRECTIVES: any[] = [DropdownTriggerForDirective, DropdownItemDirective];
 

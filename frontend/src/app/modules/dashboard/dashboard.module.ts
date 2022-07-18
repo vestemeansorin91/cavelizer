@@ -80,7 +80,7 @@ const PIPES = [SidenavItemHasChildrenPipe, SidenavSubmenuHeightPipe];
 const MODULES = [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule];
 
 @NgModule({
-  declarations: [COMPONENTS, PIPES],
+  declarations: [COMPONENTS, PIPES ],
   imports: [MODULES],
 })
 export class DashboardModule {
