@@ -15,8 +15,8 @@ export class ErrorInterceptor implements HttpInterceptor {
         return response;
       }),
       catchError((error: HttpErrorResponse) => {
-        if (error.error.statusCode === 307) {
-          this.router.navigate(['/page-not-found']);
+        if (error.status === 307) {
+          this.router.navigate(['/page-not-found']).then(_ => null);
         }
 
         let errorMsg = '';
