@@ -20,8 +20,20 @@ module.exports = {
         response.end();
       })
       .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  },
+  forgotPassword(request, response) {
+    forgotPasswordFn(request.body)
+        .then()
+        .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
+  },
+  resetPassword(request, response){
+    resetPasswordFn(request.body)
+        .then()
+        .catch(error => response.status(StatusCodes.BAD_REQUEST).send({ message: error.message }));
   }
 };
+
+
 
 async function registerFn(userProps) {
   const userFound = await usersCollection.findOne({
@@ -86,3 +98,9 @@ async function validateUserPassword(username, password) {
 
   throw new Error('Password or User wrong!');
 }
+
+async function forgotPasswordFn() {
+
+}
+
+async function resetPasswordFn() {}
