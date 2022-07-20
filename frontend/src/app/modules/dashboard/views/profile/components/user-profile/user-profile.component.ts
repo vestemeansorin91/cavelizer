@@ -1,27 +1,23 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {NotificationsService} from "angular2-notifications";
-import {ProfileService} from "../../profile.service";
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NotificationsService } from 'angular2-notifications';
+import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
+  templateUrl: './user-profile.component.html'
 })
 export class UserProfileComponent {
   public userPublicProfileFormGroup: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private profileService: ProfileService,
-    private notificationsService: NotificationsService
-  ) {
+  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
 
   public onSavePublicProfile() {
     this.profileService.saveUserPublicProfile(this.userPublicProfileFormGroup.value).subscribe(() => {
-      this.notificationsService.success('Success', 'User profile saved!')
+      this.notificationsService.success('Success', 'User profile saved!');
     });
   }
 
@@ -38,9 +34,9 @@ export class UserProfileComponent {
 
   // Etapa .... optinal .. de patch
   private patchFormGroup() {
-    const {publicProfile} = this.profileService.profile;
+    const { publicProfile } = this.profileService.profile;
 
-    if(!publicProfile) {
+    if (!publicProfile) {
       return;
     }
 
@@ -49,10 +45,7 @@ export class UserProfileComponent {
       department: publicProfile.department,
       position: publicProfile.position,
       team: publicProfile.team,
-      phone: publicProfile.phone,
+      phone: publicProfile.phone
     });
   }
 }
-
-
-
