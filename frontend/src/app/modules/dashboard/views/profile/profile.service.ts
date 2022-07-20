@@ -31,4 +31,8 @@ export class ProfileService {
   public saveUserClothesSizes(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updateClothesSizes`, payload);
   }
+
+  public saveUserPayrollInformation(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updatePayrollInformation`, payload);
+  }
 }
