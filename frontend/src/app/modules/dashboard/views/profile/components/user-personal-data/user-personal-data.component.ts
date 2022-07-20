@@ -56,14 +56,3 @@ export class UserPersonalDataComponent {
     });
   }
 }
-
-// <!--
-
-// street: String,
-// houseNumber: Number,
-// zipCode: String,
-// city: String,
-// phoneNumber: String,
-// privateEmail: String,
-// validityIdentityCard: Date,
-// children: Number -->
