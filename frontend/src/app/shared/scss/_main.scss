@@ -1,10 +1,11 @@
-@import './components/dropdown';
-@import './components/icon';
+@use './components/dropdown';
+@use './components/icon';
+@use './components/range-slider';
 
-@import './colors';
-@import './helpers';
-@import './layouts';
-@import './mixins';
-@import './utilities';
-@import './variables';
-@import './vendors';
+@use './colors';
+@use './helpers';
+@use './layouts';
+@use './mixins';
+@use './utilities';
+@use './variables';
+@use './vendors';

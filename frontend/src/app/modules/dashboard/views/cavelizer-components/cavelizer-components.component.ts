@@ -15,6 +15,7 @@ import {Component} from '@angular/core';
       <app-checkbox-example></app-checkbox-example>
       <app-text-input-example></app-text-input-example>
       <app-toggle-example></app-toggle-example>
+      <app-range-slider-example></app-range-slider-example>
     </mat-accordion>`
 })
 export class CavelizerComponentsComponent {}

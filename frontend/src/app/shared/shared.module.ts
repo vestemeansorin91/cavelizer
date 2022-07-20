@@ -28,6 +28,7 @@ import {ToggleComponent} from './components/toggle/toggle.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
 import {PhonePipe} from "./pipes/phone-format.pipe";
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -48,7 +49,7 @@ const COMPONENTS: any[] = [
 
 const SERVICES: any[] = [];
 
-const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, OverlayModule];
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];
 
 const ANGULAR_MATERIAL_MODULES = [
   MatSidenavModule,
@@ -57,7 +58,8 @@ const ANGULAR_MATERIAL_MODULES = [
   MatTooltipModule,
   ClipboardModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  OverlayModule
 ];
 
 const PIPES: any[] = [DefaultImagePipe, PhonePipe];

@@ -10,6 +10,7 @@ import {IconsExampleComponent} from './components/icons-example.component';
 import {InnerTabGroupExampleComponent} from './components/inner-tab-group-example.component';
 import {MiniBannerExampleComponent} from './components/mini-banner-example.component';
 import {QuoteExampleComponent} from './components/quote-example.component';
+import {RangeSliderComponent} from "./components/range-slider.component";
 import {TextInputComponent} from "./components/text-input.component";
 import {ToggleExampleComponent} from "./components/toggle-example.component";
 
@@ -24,7 +25,8 @@ const COMPONENTS = [
   ChipExampleComponent,
   CheckboxExampleComponent,
   TextInputComponent,
-  ToggleExampleComponent
+  ToggleExampleComponent,
+  RangeSliderComponent
 ]
 
 @NgModule({

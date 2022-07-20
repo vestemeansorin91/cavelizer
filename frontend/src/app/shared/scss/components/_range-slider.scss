@@ -1,0 +1,36 @@
+@import './colors';
+@import './variables';
+
+/* Bar */
+.ngx-slider-bar {
+  background-color: #EBEBEB !important;
+}
+
+.ngx-slider-selection {
+  background: #6A983C !important;
+}
+
+/* Dot */
+.ngx-slider-pointer {
+  &.ngx-slider-pointer-min,
+  &.ngx-slider-pointer-max {
+    top: -10px !important;
+    width: 20px !important;
+    height: 20px !important;
+
+    background: #FFFFFF !important;
+    border: 1px solid #D1D1D1 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.15) !important;
+
+    &:after {
+      content: unset !important;
+    }
+  }
+}
+
+.ngx-slider-bubble {
+  visibility: hidden !important;
+}
+
+
+
