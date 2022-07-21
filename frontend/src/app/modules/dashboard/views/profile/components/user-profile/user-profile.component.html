@@ -1,10 +1,9 @@
 <div class="flex justify--center">
   <form [formGroup]="userPublicProfileFormGroup" class="flex--column gap--8 mt--32 width--300">
-    <div class="flex--column align--start ">
+    <div class="flex--column align--start">
       <label class="mr--16 text--bold" for="office">Office</label>
       <cavelizer-input-group class="width--full">
-        <cavelizer-text-input id="office" type="text" formControlName="office"
-                              class="width--full"></cavelizer-text-input>
+        <cavelizer-text-input id="office" type="text" formControlName="office" class="width--full"></cavelizer-text-input>
       </cavelizer-input-group>
     </div>
 
@@ -43,10 +42,8 @@
       </cavelizer-input-group>
     </div>
 
-    <cavelizer-button (click)="onSavePublicProfile()" class="width--full mt--32"
-                      [attr.disabled]="!userPublicProfileFormGroup.dirty">Save
-    </cavelizer-button>
+    <cavelizer-button (click)="onSavePublicProfile()" class="width--full mt--32" [attr.disabled]="!userPublicProfileFormGroup.dirty">Save </cavelizer-button>
     <!--  TODO: Delete it after implementations / used only for tutorial-->
-<!--    <pre>{{ userPublicProfileFormGroup.value | json }}</pre>-->
+    <!--    <pre>{{ userPublicProfileFormGroup.value | json }}</pre>-->
   </form>
 </div>

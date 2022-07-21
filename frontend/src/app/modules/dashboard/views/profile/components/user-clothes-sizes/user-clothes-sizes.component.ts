@@ -20,7 +20,7 @@ export class UserClothesSizesComponent {
 
   public onSaveClothesSizes() {
     this.profileService.saveUserClothesSizes(this.userClothesSizesFormGroup.value).subscribe(() => {
-      this.notificationsService.success('Success', 'User profile saved!');
+      this.notificationsService.success('Success', 'User Clothes Sizes saved!');
     });
   }
 
