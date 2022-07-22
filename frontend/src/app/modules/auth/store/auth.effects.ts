@@ -72,23 +72,56 @@ export class AuthEffects {
     () =>
       this.actions$.pipe(
         ofType(authActions.forgotPassword),
-        tap(async () => {
-          this.router.navigate(['/auth/reset-password']).then(_ => null);
-        })
-      ),
-    {dispatch: false}
+        switchMap(({emailOrUsername}) => this.service.forgotPassword({
+          emailOrUsername
+        }).pipe(
+          map(() => authActions.forgotPasswordSuccess()),
+          catchError((errorResponse: HttpErrorResponse) => {
+            this.notificationsService.error('Eroare', errorResponse.error.message);
+            return of(authActions.forgotPasswordFailure);
+          })
+        ))
+      )
   );
+
+  forgotPasswordSuccess$ = createEffect(
+    () => this.actions$.pipe(
+      ofType(authActions.forgotPasswordSuccess),
+      tap(() => {
+        this.notificationsService.success('Success', 'Reset code sent to mentioned mail/username');
+        this.router.navigate(['/auth/reset-password']).then(_ => null);
+      })
+    ), {dispatch: false}
+  )
 
   resetPassword$ = createEffect(
     () =>
       this.actions$.pipe(
         ofType(authActions.resetPassword),
-        tap(async () => {
-          this.router.navigate(['/auth/login']).then(_ => null);
+        switchMap(({code, email, password, confirmPassword}) => this.service.resetPassword({
+          code,
+          email,
+          password,
+          confirmPassword
         })
+          .pipe(
+            map(
+              () => authActions.resetPasswordSuccess()
+            ),
+            catchError((errorResponse: HttpErrorResponse) =>
+              of(authActions.resetPasswordFailure({errors: errorResponse.error})))))
       ),
-    {dispatch: false}
   );
+
+  resetPasswordSuccess$ = createEffect(
+    () => this.actions$.pipe(
+      ofType(authActions.resetPasswordSuccess),
+      tap(() => {
+        this.notificationsService.success('Success', 'Your password was successfully reset!');
+        this.router.navigate(['/auth/login']).then(_ => null);
+      })
+    ), {dispatch: false}
+  )
 
   getCurrentUser$ = createEffect(() =>
     this.actions$.pipe(

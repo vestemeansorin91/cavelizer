@@ -59,7 +59,7 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
-      [ng-reflect-router-link="/shop"] {
+      [ng-reflect-router-link='/shop'] {
         margin-top: 200px;
       }
 
@@ -90,7 +90,8 @@
         &.active {
           background-color: $sidenav-bg-color-active;
 
-          i, span {
+          i,
+          span {
             color: $sidenav-text-color-active;
           }
         }
@@ -116,7 +117,8 @@
           }
 
           &.active {
-            i, span {
+            i,
+            span {
               color: $color-white;
             }
           }
@@ -152,7 +154,8 @@
       &.active {
         background-color: $sidenav-bg-color-active !important;
 
-        i, span {
+        i,
+        span {
           color: $sidenav-text-color-active !important;
         }
       }

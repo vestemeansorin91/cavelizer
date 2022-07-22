@@ -24,6 +24,10 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  resetCode: {
+    type: String,
+    select: false
+  },
   isActive: {
     type: Boolean,
     default: true

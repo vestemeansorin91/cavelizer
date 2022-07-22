@@ -5,6 +5,7 @@
 .checkbox-input {
   @include disable-select;
   display: flex;
+  align-items: center;
   cursor: pointer;
 
   .checkbox-item {

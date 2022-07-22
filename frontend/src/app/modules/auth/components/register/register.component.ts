@@ -25,7 +25,9 @@ export class RegisterComponent {
       username: this.fb.control('', Validators.required),
       email: this.fb.control('', [Validators.required, Validators.email]),
       password: this.fb.control('', Validators.required),
-      confirmPassword: this.fb.control('', Validators.required)
+      confirmPassword: this.fb.control('', Validators.required),
+      agreeTermsConditions: this.fb.control(false, Validators.requiredTrue),
+      agreePolicyPrivacy: this.fb.control(false, Validators.requiredTrue)
     });
   }
 }
