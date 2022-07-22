@@ -17,7 +17,7 @@ https://cavelizer.herokuapp.com/
 
 #### User
 
-    -   ❌ Authentication ( ✅ Login / ✅ Register / Forgot Password / Reset Password)
+    -   ✅ Authentication ( ✅ Login / ✅ Register / ✅ Forgot Password / ✅ Reset Password)
     -   ❌ Buy / Sell / Rent - Books, Movies
     -   ❌ Bookmark article
     -   ❌ Leaderboard
@@ -26,13 +26,14 @@ https://cavelizer.herokuapp.com/
 
     -   ❌ Dashboard
     -   ❌ Users
+    -   ❌ User Profile
     -   ❌ Products
     -   ❌ Roles
     -   ❌ Permissions
     -   ❌ Categories
     -   ❌ Documentation
-    -   ❌ Components
-    -   ❌ Blog
+    -   ❌ Custom Components
+    -   ❌ Blog (Article/Comments)
     -   ❌ Leaderboard (for games)
 
 #### Store with following categories:
