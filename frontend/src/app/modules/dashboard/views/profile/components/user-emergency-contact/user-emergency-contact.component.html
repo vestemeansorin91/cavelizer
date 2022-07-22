@@ -1,1 +1,26 @@
-<p>user-emergency-contact works!</p>
+<div class="flex justify--center">
+  <form [formGroup]="userEmergencyContactFormGroup" class="flex--column mt--40 gap--8">
+    <div>
+      <label class="mr--16" for="fullName">Full Name</label>
+      <input id="fullName" type="string" formControlName="fullName" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="phoneNumber">Phone Number</label>
+      <input id="phoneNumber" type="number" formControlName="phoneNumber" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="relationshipType">Relationship Type</label>
+      <select name="" id="relationshipType" formControlName="relationshipType">
+        <option value="partner">Partner</option>
+        <option value="sibling">Sibling</option>
+        <option value="parent">Parent</option>
+        <option value="child">Child</option>
+        <option value="friend">Friend</option>
+      </select>
+    </div>
+
+    <cavelizer-button (click)="onSaveUserEmergencyContact()"> Save</cavelizer-button>
+  </form>
+</div>
