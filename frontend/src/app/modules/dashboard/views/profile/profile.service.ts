@@ -36,6 +36,10 @@ export class ProfileService {
     return this.http.patch(`${BASE_URL}/${this.userId}/updateEmergencyContact`, payload);
   }
 
+  public saveUserPersonalData(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updatePersonalData`, payload);
+  }
+
   public saveUserPayrollInformation(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updatePayrollInformation`, payload);
   }
