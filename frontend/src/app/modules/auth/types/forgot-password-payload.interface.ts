@@ -1,3 +1,3 @@
 export interface ForgotPasswordPayloadInterface {
-  email: string;
+  emailOrUsername: string;
 }

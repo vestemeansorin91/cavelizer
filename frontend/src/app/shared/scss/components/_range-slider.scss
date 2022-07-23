@@ -3,11 +3,11 @@
 
 /* Bar */
 .ngx-slider-bar {
-  background-color: #EBEBEB !important;
+  background-color: #ebebeb !important;
 }
 
 .ngx-slider-selection {
-  background: #6A983C !important;
+  background: #6a983c !important;
 }
 
 /* Dot */
@@ -18,8 +18,8 @@
     width: 20px !important;
     height: 20px !important;
 
-    background: #FFFFFF !important;
-    border: 1px solid #D1D1D1 !important;
+    background: #ffffff !important;
+    border: 1px solid #d1d1d1 !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.15) !important;
 
     &:after {
@@ -31,6 +31,3 @@
 .ngx-slider-bubble {
   visibility: hidden !important;
 }
-
-
-
