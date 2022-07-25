@@ -1,10 +1,12 @@
+@import 'colors';
+
 :host {
   &.selected {
     .chat-contact-item {
-      background-color: #eaf3ff;
+      background-color: $chat-bg-color-select;
 
       &:hover {
-        background-color: #deebfc;
+        background-color: $chat-bg-color-hover;
       }
     }
   }
@@ -14,7 +16,7 @@
   position: relative;
   display: flex;
 
-  background-color: #eff2f4;
+  background-color: $chat-bg-color;
   border-radius: 16px;
   padding: 18px;
   margin: 0 24px;
@@ -25,7 +27,7 @@
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #e1e6e7;
+    background-color: $chat-bg-color;
   }
 
   .avatar {
@@ -47,19 +49,19 @@
       width: 8px;
       height: 8px;
       z-index: 1;
-      background-color: grey;
+      background-color: $color-grey;
       border-radius: 50%;
 
       &.online {
-        background-color: green;
+        background-color: $color-green;
       }
 
       &.offline {
-        background-color: grey;
+        background-color: $color-grey;
       }
 
       &.away {
-        background-color: orange;
+        background-color: $color-orange;
       }
     }
   }
@@ -75,7 +77,7 @@
     }
 
     &-last-message {
-      color: #b6b6b6;
+      color: $color-grey-040;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -87,7 +89,7 @@
     top: 18px;
     right: 18px;
 
-    color: #b6b6b6;
+    color: $color-grey-040;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -100,6 +102,6 @@
     border-radius: 8px;
     width: 8px;
     height: 8px;
-    background-color: #377dff;
+    background-color: $color-info-090;
   }
 }

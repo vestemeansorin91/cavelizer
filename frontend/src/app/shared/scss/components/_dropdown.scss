@@ -1,3 +1,5 @@
+@import 'colors';
+
 /* Dropdown button */
 .dropdown {
   display: inline-flex;
@@ -7,14 +9,14 @@
 .dropdown-panel {
   width: 14rem;
   padding: 0.5rem 0;
-  background-color: white;
+  background-color: $color-white;
   border-radius: 6px;
   box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
 
   /* Dropdown popup panel - item */
   &--item {
     &:hover {
-      background-color: lightgrey;
+      background-color: $color-lightgrey;
     }
   }
 }

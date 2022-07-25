@@ -1,10 +1,12 @@
+@import 'colors';
+
 :host {
   flex: 1 1 auto;
 }
 
 .quote {
-  background: #ffffff;
-  border: 1px solid #f1f1f1;
+  background: $quote-bg-color;
+  border: 1px solid $color-grey-100;
   border-radius: 12px;
 
   padding: 24px 32px;
@@ -15,7 +17,7 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
-    color: #151515;
+    color: $color-grey;
     margin-bottom: 24px;
   }
 
@@ -23,7 +25,7 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
-    color: #a9a9a9;
+    color: $color-grey-090;
     margin-bottom: 16px;
   }
 
@@ -31,7 +33,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: lightgrey;
+    background-color: $color-lightgrey;
     margin: 0 auto -48px;
   }
 }

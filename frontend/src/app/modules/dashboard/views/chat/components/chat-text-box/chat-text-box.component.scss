@@ -1,10 +1,12 @@
+@import 'colors';
+
 :host {
   padding-left: 44px;
   margin-right: 32px;
 }
 
 .chat-text-box {
-  background: #eff2f4;
+  background: $chat-bg-color;
 
   &--message {
     width: 100%;
@@ -34,19 +36,19 @@
     width: 8px;
     height: 8px;
     z-index: 1;
-    background-color: grey;
+    background-color: $color-grey;
     border-radius: 50%;
 
     &.online {
-      background-color: green;
+      background-color: $color-green;
     }
 
     &.offline {
-      background-color: grey;
+      background-color: $color-grey;
     }
 
     &.away {
-      background-color: orange;
+      background-color: $color-orange;
     }
   }
 }

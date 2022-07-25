@@ -22,9 +22,9 @@
 
     width: 500px;
 
-    border: 1px solid #d1d1d1;
+    border: 1px solid $color-grey-050;
     border-radius: 12px;
-    background-color: #f9f9f9;
+    background-color: $color-grey-080;
 
     .all-categories {
       display: flex;
@@ -42,7 +42,7 @@
         color: $color-primary;
         display: flex;
         padding-right: 16px;
-        border-right: 1px solid #d1d1d1;
+        border-right: 1px solid $color-grey-050;
       }
     }
 
@@ -65,7 +65,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
-        color: #a9a9a9;
+        color: $color-grey-090;
       }
 
       &:focus {

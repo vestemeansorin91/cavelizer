@@ -1,3 +1,5 @@
+@import 'colors';
+
 :host {
   position: relative;
   margin: 0 44px;
@@ -13,18 +15,18 @@
       display: inline;
       font-size: 14px;
       font-weight: 400;
-      color: #a9a9a9;
+      color: $color-grey-090;
 
       word-break: break-all;
 
       &.active {
-        color: #151515;
+        color: $color-grey;
       }
 
       a {
         font-size: 14px;
         font-weight: 400;
-        color: grey;
+        color: $color-grey;
         text-decoration: none;
         box-shadow: none;
         outline: none;
@@ -33,7 +35,7 @@
 
     li + li:before {
       content: ' / ';
-      color: #a9a9a9;
+      color: $color-grey-090;
     }
   }
 
@@ -46,7 +48,7 @@
       li.active,
       li:before,
       a {
-        color: white !important;
+        color: $color-white !important;
       }
     }
   }

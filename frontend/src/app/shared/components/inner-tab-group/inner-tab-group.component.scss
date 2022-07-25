@@ -8,7 +8,7 @@
     margin: 24px auto;
     border-radius: 8px;
 
-    background-color: lightgrey;
+    background-color: $color-lightgrey;
 
     .inner-tab {
       width: 200px;
@@ -22,7 +22,7 @@
 
       &.active {
         color: $color-primary;
-        background-color: white;
+        background-color: $color-white;
         border-radius: 8px;
         cursor: inherit;
         box-shadow: 0 0 4px 1px rgba(32, 32, 36, 0.15);

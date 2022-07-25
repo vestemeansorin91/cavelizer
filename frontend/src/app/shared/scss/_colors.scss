@@ -1,11 +1,12 @@
 $color-primary: #6a983c;
 $color-primary-010: #3b6a58;
 $color-primary-020: #46760a;
-$color-primary-030: #92c064;
-$color-primary-040: #7bc4a9;
-$color-primary-050: #c8deb3;
-$color-primary-060: #bcddd0;
-$color-primary-070: #f4f8ec;
+$color-primary-030: #6a983c;
+$color-primary-040: #92c064;
+$color-primary-050: #7bc4a9;
+$color-primary-060: #c8deb3;
+$color-primary-070: #bcddd0;
+$color-primary-080: #f4f8ec;
 
 $color-grey: #151515;
 $color-grey-010: #575757;
@@ -16,6 +17,9 @@ $color-grey-050: #d1d1d1;
 $color-grey-060: #ebebeb;
 $color-grey-070: #f5f5f5;
 $color-grey-080: #f9f9f9;
+$color-grey-090: #a9a9a9;
+$color-grey-100: #f1f1f1;
+$color-grey-110: #d1d5db;
 
 $color-warning: #d0a866;
 $color-warning-010: #b28a48;
@@ -39,16 +43,31 @@ $color-info-050: #a2d8ff;
 $color-info-060: #b7d5ec;
 $color-info-070: #b9e6e8;
 $color-info-080: #ecf6f6;
+$color-info-090: #377dff;
 
 $color-white: white;
+$color-lightgrey: lightgrey;
 $color-black: black;
+$color-red: red;
 $color-red-dark: #731917;
+$color-green: green;
+$color-orange: orange;
+$color-grey: grey;
 
 /* Sidenav */
 $sidenav-bg-color: #363746;
 $sidenav-bg-color-hover: #3e405c;
 $sidenav-bg-color-active: #4a4b5c;
 $sidenav-text-color-active: #46b9df;
+
+/* Chat-Contact */
+
+$chat-bg-color-select: #eaf3ff;
+$chat-bg-color-hover: #deebfc;
+$chat-bg-color: #eff2f4;
+
+/* Quote-Component */
+$quote-bg-color: #ffffff;
 
 /* Classes - Text */
 .color--primary {
