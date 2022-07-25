@@ -45,29 +45,19 @@ $color-info-070: #b9e6e8;
 $color-info-080: #ecf6f6;
 $color-info-090: #377dff;
 
-$color-white: white;
-$color-lightgrey: lightgrey;
-$color-black: black;
-$color-red: red;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-red: #ff0000;
 $color-red-dark: #731917;
-$color-green: green;
-$color-orange: orange;
-$color-grey: grey;
+$color-green: #008000;
+$color-orange: #ffa500;
+$color-grey: #808080;
 
 /* Sidenav */
 $sidenav-bg-color: #363746;
 $sidenav-bg-color-hover: #3e405c;
 $sidenav-bg-color-active: #4a4b5c;
 $sidenav-text-color-active: #46b9df;
-
-/* Chat-Contact */
-
-$chat-bg-color-select: #eaf3ff;
-$chat-bg-color-hover: #deebfc;
-$chat-bg-color: #eff2f4;
-
-/* Quote-Component */
-$quote-bg-color: #ffffff;
 
 /* Classes - Text */
 .color--primary {

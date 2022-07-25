@@ -1,4 +1,7 @@
 @import 'colors';
+$chat-bg-color: #eff2f4;
+$chat-bg-color-hover: #deebfc;
+$chat-bg-color-select: #eaf3ff;
 
 :host {
   &.selected {
