@@ -1,0 +1,135 @@
+@import 'colors';
+@import 'variables';
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  padding: 0px 8px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: $border-radius-xl;
+}
+
+:host {
+  /* Green background */
+  &.narrow {
+    .tag {
+      width: $dimension-40;
+      color: $color-primary;
+      background-color: $color-primary-070;
+    }
+  }
+
+  &.extended {
+    .tag {
+      width: $dimension-50;
+      color: $color-primary;
+      background-color: $color-primary-070;
+    }
+  }
+
+  &.fat {
+    .tag {
+      align-items: center;
+      width: $dimension-40;
+      height: $dimension-35;
+      color: $color-primary;
+      background-color: $color-primary-070;
+    }
+  }
+
+  &.fat {
+    &.extended {
+      .tag {
+        width: $dimension-50;
+      }
+    }
+  }
+
+  /* Grey background */
+  &.disabled {
+    &.narrow {
+      .tag {
+        width: $dimension-40;
+        color: $color-grey;
+        background-color: $color-grey-050;
+      }
+    }
+  }
+
+  &.disabled {
+    &.extended {
+      .tag {
+        width: $dimension-50;
+        color: $color-grey;
+        background-color: $color-grey-050;
+      }
+    }
+  }
+
+  &.disabled {
+    &.fat {
+      .tag {
+        width: $dimension-40;
+        height: $dimension-35;
+        color: $color-grey;
+        background-color: $color-grey-050;
+      }
+    }
+  }
+
+  &.disabled {
+    &.fat {
+      &.extended {
+        .tag {
+          width: $dimension-50;
+        }
+      }
+    }
+  }
+
+  /* Grey border */
+  &.default {
+    &.narrow {
+      .tag {
+        width: $dimension-40;
+        color: $color-grey;
+        background-color: $color-white;
+        border: 1px solid $color-grey-050;
+      }
+    }
+  }
+
+  &.default {
+    &.extended {
+      .tag {
+        width: $dimension-50;
+        color: $color-grey;
+        background-color: $color-white;
+        border: 1px solid $color-grey-050;
+      }
+    }
+  }
+
+  &.default {
+    &.fat {
+      .tag {
+        width: $dimension-40;
+        height: $dimension-35;
+        color: $color-grey;
+        background-color: $color-white;
+        border: 1px solid $color-grey-050;
+      }
+    }
+  }
+
+  &.default {
+    &.fat {
+      &.extended {
+        .tag {
+          width: $dimension-50;
+        }
+      }
+    }
+  }
+}
