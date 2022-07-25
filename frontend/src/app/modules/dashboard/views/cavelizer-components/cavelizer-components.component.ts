@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cavelizer-components',
@@ -11,6 +11,7 @@ import {Component} from '@angular/core';
       <app-mini-banner-example></app-mini-banner-example>
       <app-inner-tab-group-example></app-inner-tab-group-example>
       <app-quote-example></app-quote-example>
+      <app-tag-example></app-tag-example>
       <app-chip-example></app-chip-example>
       <app-checkbox-example></app-checkbox-example>
       <app-text-input-example></app-text-input-example>
