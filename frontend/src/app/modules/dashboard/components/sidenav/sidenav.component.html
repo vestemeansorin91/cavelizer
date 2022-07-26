@@ -14,25 +14,29 @@
       *ngFor="let sidenavItem of sidenav"
       class="menu-item"
       [class.has-children]="sidenavItem | sidenavItemHasChildren"
-      [class.submenu-expanded]="sidenavItem.isSubmenuExpanded"
-    >
+      [class.submenu-expanded]="sidenavItem.isSubmenuExpanded">
       <div class="menu-item--link"
            routerLinkActive="active"
            (click)="toggleSidenav(sidenavItem)"
            [routerLink]="sidenavItem.pathUrl"
-           [routerLinkActiveOptions]="{ exact: true }">
-        <i [ngClass]="sidenavItem.icon" [matTooltip]="isExpanded ? '' : sidenavItem.name"></i>
+           [routerLinkActiveOptions]="{ exact: true }"
+           [caveTooltip]="isExpanded ? '' : sidenavItem.name"
+           placement="right">
+        <i [ngClass]="sidenavItem.icon"></i>
         <span>{{sidenavItem.name}}</span>
         <cavelizer-icon name="arrow-left" class="color-white"></cavelizer-icon>
       </div>
 
       <div class="sub-menu"
-           [style.height]="sidenavItem | sidenavSubmenuHeight">
+           [style.height]="sidenavItem | sidenavSubmenuHeight"
+      >
         <div *ngFor="let subSidenavItem of sidenavItem.submenus"
              class="menu-item--link"
              routerLinkActive="active"
              [routerLink]="subSidenavItem.pathUrl"
-             [routerLinkActiveOptions]="{ exact: true }">
+             [routerLinkActiveOptions]="{ exact: true }"
+             [caveTooltip]="isExpanded ? '' : subSidenavItem.name"
+             placement="right">
           <i [ngClass]="subSidenavItem.icon"></i>
           <span>{{subSidenavItem.name}}</span>
         </div>
