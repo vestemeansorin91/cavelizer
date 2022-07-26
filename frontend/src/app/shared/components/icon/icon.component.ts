@@ -38,14 +38,16 @@ export class IconComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnInit() {
     this.subscription.add(
-      this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' }).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
+      this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
+        .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
     );
   }
 
   ngOnChanges(changes: SimpleChanges):void {
     if(changes['name'] && !changes['name'].firstChange) {
       this.subscription.add(
-        this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' }).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
+        this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
+          .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
       );
     }
   }

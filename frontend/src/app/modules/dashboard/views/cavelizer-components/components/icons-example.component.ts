@@ -15,21 +15,29 @@ import {projectIcons} from '../../../../../shared/components/icon/project-icons'
       </mat-expansion-panel-header>
 
       <div class="flex gap--30">
-        <select [(ngModel)]="iconsSize" class="mb--32">
-          <option value="small">Small (16x16px)</option>
-          <option value="">Normal (24x24px)</option>
-          <option value="big">Big (32x32px)</option>
-          <option value="xl">XL (64x64px)</option>
-          <option value="xxl">XXL (128x128px)</option>
-        </select>
+        <mat-form-field appearance="outline">
+          <mat-label>Size</mat-label>
 
-        <select [(ngModel)]="iconsColor" class="mb--32">
-          <option value="">Default</option>
-          <option value="color-primary">color-primary</option>
-          <option value="color-warning">color-warning</option>
-          <option value="color-error">color-error</option>
-          <option value="color-info">color-info</option>
-        </select>
+          <mat-select [(ngModel)]="iconsSize">
+            <mat-option value="small">Small (16x16px)</mat-option>
+            <mat-option value="">Normal (24x24px)</mat-option>
+            <mat-option value="big">Big (32x32px)</mat-option>
+            <mat-option value="xl">XL (64x64px)</mat-option>
+            <mat-option value="xxl">XXL (128x128px)</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Color</mat-label>
+
+          <mat-select [(ngModel)]="iconsColor">
+            <mat-option value="">Default</mat-option>
+            <mat-option value="color-primary">color-primary</mat-option>
+            <mat-option value="color-warning">color-warning</mat-option>
+            <mat-option value="color-error">color-error</mat-option>
+            <mat-option value="color-info">color-info</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <div class="flex flex--wrap justify--space-between gap--12">

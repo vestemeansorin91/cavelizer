@@ -13,22 +13,27 @@ import {Component} from '@angular/core';
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <!-- TODO: Petrut replace all
-               <i class="las la-angle-left" prefix></i>
-               <i class="las la-angle-right" suffix></i> -->
       <div class="flex--column align--start gap--16">
-        <select [(ngModel)]="size">
-          <option value="small">Small</option>
-          <option value="">Normal</option>
-          <option value="big">Big</option>
-        </select>
+        <div class="align--center gap--32">
+          <mat-form-field appearance="outline">
+            <mat-label>Size</mat-label>
+            <mat-select [(ngModel)]="size">
+              <mat-option value="small">Small</mat-option>
+              <mat-option value="">Normal</mat-option>
+              <mat-option value="big">Big</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <select [(ngModel)]="style">
-          <option value="grey">Grey</option>
-          <option value="transparent">Transparent</option>
-          <option value="">Normal (green)</option>
-          <option value="white">White</option>
-        </select>
+          <mat-form-field appearance="outline">
+            <mat-label>Color</mat-label>
+            <mat-select [(ngModel)]="style">
+              <mat-option value="grey">Grey</mat-option>
+              <mat-option value="transparent">Transparent</mat-option>
+              <mat-option value="">Normal (green)</mat-option>
+              <mat-option value="white">White</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
 
         <span>Classes added: {{size}} {{style}}</span>
         <cavelizer-button [ngClass]="[size, style]">Submit</cavelizer-button>
@@ -39,5 +44,4 @@ import {Component} from '@angular/core';
 export class ButtonExampleComponent {
   public size: 'big' | 'small' | '' = '';
   public style: 'grey' | 'transparent' | 'white' | '' = '';
-
 }
