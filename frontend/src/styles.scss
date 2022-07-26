@@ -1,5 +1,6 @@
 @import 'main';
 @import '~@angular/cdk/overlay-prebuilt.css';
+@import 'colors';
 
 * {
   font-size: 16px;
@@ -14,7 +15,7 @@ body {
 
 body {
   margin: 0;
-  background-color: #f9f9f9;
+  background-color: $color-grey-080;
 }
 
 .mat-drawer-content {
@@ -34,7 +35,7 @@ mat-drawer-container {
   border-bottom: 5px solid transparent;
   transition: all 0.4s ease-in-out;
   &.active {
-    border-bottom: 5px solid #46760a !important;
+    border-bottom: 5px solid $color-primary-020 !important;
   }
 }
 
@@ -49,7 +50,7 @@ h1 {
 }
 
 a {
-  color: #6a983c;
+  color: $color-primary-030;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;

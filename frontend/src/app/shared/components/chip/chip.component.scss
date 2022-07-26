@@ -7,7 +7,7 @@
 
   color: $color-primary-010;
   background-color: transparent;
-  border: 2px solid $color-primary-050;
+  border: 2px solid $color-primary-070;
   border-radius: $border-radius-md;
 }
 
@@ -37,8 +37,8 @@
   /* Light background */
   &.fill-lighter {
     .chip {
-      border-color: $color-primary-040;
-      background-color: $color-primary-040;
+      border-color: $color-primary-070;
+      background-color: $color-primary-070;
     }
 
     &.error {

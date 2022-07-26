@@ -1,9 +1,11 @@
+@import 'colors';
+
 .shop-menu {
   display: flex;
   align-items: center;
   gap: 20px;
 
-  background-color: #f9f9f9;
+  background-color: $color-grey-080;
   padding: 16px 46px;
 
   &--item {

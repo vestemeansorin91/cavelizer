@@ -51,7 +51,7 @@
     }
 
     &.ng-invalid.ng-touched {
-      border-color: red;
+      border-color: $color-red;
     }
 
     .validation-message {

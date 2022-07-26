@@ -1,3 +1,5 @@
+@import 'colors';
+
 .profile {
   display: flex;
   justify-content: center;
@@ -27,7 +29,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         visibility: hidden;
-        color: white;
+        color: $color-white;
         font-size: 32px;
       }
 
