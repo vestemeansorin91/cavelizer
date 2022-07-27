@@ -37,20 +37,8 @@
       </select>
     </div>
 
-    <cavelizer-button (click)="onSaveHrInformation()"> Save</cavelizer-button>
+    <cavelizer-button (click)="onSaveHrInformation()">Save</cavelizer-button>
   </form>
+
 </div>
-
-<!-- [formGroup]="userClothesSizesFormGroup" -->
-
-<!-- birthDate: Date,
-    employmentType: {
-        type: String,
-        enum: EmploymentTypeEnum
-    },
-    status: Boolean,
-    nationality: String,
-    weeklyHours: Number,
-    gender: {
-        type: String,
-        enum: GenderEnum -->
+<pre class="justify--center">{{ userHrInformationFormGroup.value | json }}</pre>
