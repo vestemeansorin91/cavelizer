@@ -42,8 +42,10 @@ export class UserHrInformationComponent {
       return;
     }
 
+    const birthDate = hrInformation.birthDate.substring(0, 10);
+
     this.userHrInformationFormGroup.patchValue({
-      birthDate: hrInformation.birthDate,
+      birthDate,
       employmentType: hrInformation.employmentType,
       status: hrInformation.status,
       nationality: hrInformation.nationality,
