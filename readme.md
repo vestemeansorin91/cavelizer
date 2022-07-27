@@ -8,13 +8,22 @@ https://cavelizer.herokuapp.com/
 
 ### Team
 
-![](https://trello.com/1/cards/6295e7bb0d9b977eb5f8800d/attachments/629623fe387d685d91438700/previews/629623ff387d685d9143873f/download/sorin-vestemean.png
-| width=100)
+<div style="text-align: center"> <img src="https://iili.io/S1t3Ne.jpg" height="100px" alt="sorin vestemean"> </div>
+<div style="text-align: center"><strong>Sorin Vestemean</strong> / SC SORIN IT SOLUTIONS SRL 
+(Full-Stack Developer - Senior / Instructor)</div>
+<br>
+<div style="text-align: center"> <img src="https://iili.io/S1t5xa.jpg" height="100px" alt="florin matei"> </div>
+<div style="text-align: center"><strong>Florin Matei</strong> / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior)</div>
+<br>
 
-- Sorin Vestemean / SC SORIN IT SOLUTIONS SRL (Full-Stack Developer - Senior)
-- Florin Matei / PIXELTIME WEB SOLUTIONS SRL (UI/UX - Senior)
-- Alexandru-Mihai Varzaru (Full-Stack Developer - Junior)
-- Petrut-Poenaru (Full-Stack Developer - Junior)
+<div style="text-align: center"> <img src="https://iili.io/S1t2R9.jpg" height="100px" alt="alexandru mihai varzaru"> </div>
+<div style="text-align: center"><strong>Alexandru-Mihai Varzaru</strong> (Full-Stack Developer - Junior)</div>
+<br>
+
+<div style="text-align: center"> <img src="https://iili.io/S1tFDu.jpg" height="100px" alt="petrut poenaru"> </div>
+<div style="text-align: center"><strong>Petrut-Poenaru</strong> (Full-Stack Developer - Junior)</div>
+<br>
+
 
 #### User
 
