@@ -1,17 +1,16 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {environment} from '../../../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from '../../../../../environments/environment';
 
 const BASE_URL = environment.apiUrl + '/users';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class ProfileService {
   public profile: any = null;
   public userId = '';
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   public uploadAvatar(fileToUpload: File | any): Observable<any> {
     const formData: FormData = new FormData();
@@ -44,5 +43,9 @@ export class ProfileService {
 
   public saveUserPayrollInformation(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updatePayrollInformation`, payload);
+  }
+
+  public saveUserHrInformation(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateHrInformation`, payload);
   }
 }

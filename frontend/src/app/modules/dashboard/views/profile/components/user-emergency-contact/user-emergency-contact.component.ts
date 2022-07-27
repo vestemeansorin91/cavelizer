@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {NotificationsService} from 'angular2-notifications';
-import {ProfileService} from '../../profile.service';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NotificationsService } from 'angular2-notifications';
+import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-emergency-contact',
@@ -31,7 +31,7 @@ export class UserEmergencyContactComponent {
   }
 
   private patchFormGroup() {
-    const {emergencyContact} = this.profileService.profile;
+    const { emergencyContact } = this.profileService.profile;
 
     if (!emergencyContact) {
       return;
