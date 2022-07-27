@@ -1,12 +1,13 @@
-# Cavelizer
+<h1 align="center">Cavelizer</h1>
 
-https://cavelizer.herokuapp.com/
+<div align="center">
+    <a  href="https://cavelizer.herokuapp.com/" target="_blank">Check deployed version (heroku)</a>
+</div>
 
-## Functionalities
+<h2 align="center">Functionalities</h2>
 
-### The purpose of the application is to cover a wide range of passions that we have as a team that we formed at ReCODEnized.
-
-### Team
+<h3 align="center"> The purpose of the application is to cover a wide range of passions that we have as a team that we formed at ReCODEnized.
+</h3>
 
 <div align="center"> <img src="https://iili.io/S1t3Ne.jpg" height="100px" alt="sorin vestemean"> </div>
 <div align="center"><strong>Sorin Vestemean</strong> / SC SORIN IT SOLUTIONS SRL 
