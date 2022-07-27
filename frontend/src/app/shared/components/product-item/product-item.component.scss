@@ -1,0 +1,60 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+.best-product-item {
+  border: 1px solid $color-grey-050;
+
+  .image {
+    background: $color-grey-080;
+    height: 180px;
+
+    .discount {
+      @include default-poppins-text();
+      font-weight: 600;
+      color: $color-primary;
+      background-color: $color-primary-070;
+      display: none;
+    }
+  }
+
+  .title {
+    @include default-poppins-text();
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .description {
+    @include default-open-sans-text();
+    color: $color-grey-010;
+  }
+
+  .rating {
+    display: flex;
+    display: none;
+    cavelizer-icon {
+      color: $color-grey;
+    }
+    &.there--is {
+      display: block;
+    }
+  }
+
+  .footer {
+    .price {
+      @include default-poppins-text();
+      font-weight: 600;
+      line-height: 27px;
+
+      .first-price {
+        @include default-poppins-text();
+        font-weight: 600;
+        color: $color-grey-050;
+
+        &.there--is {
+          display: block;
+        }
+      }
+    }
+  }
+}
