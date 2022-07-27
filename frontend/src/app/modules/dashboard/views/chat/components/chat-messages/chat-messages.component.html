@@ -4,8 +4,9 @@
          [class.message-right-wrapper]="user.username === message.senderName"
          class="message-wrapper">
       <div class="message">{{ message.body }}</div>
-      <img [src]="(user.username === message.senderName ? currentUser.avatarBlobUrl :  receiver.avatarBlobUrl) | defaultImage"
-           class="avatar"/>
+      <img
+        [src]="(user.username === message.senderName ? currentUser.avatarBlobUrl :  receiver.avatarBlobUrl) | defaultImage"
+        class="avatar"/>
     </div>
   </ng-container>
 </div>
