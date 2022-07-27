@@ -1,6 +1,6 @@
 import {LinkGroupInterface} from "../types/link-group.interface";
 
-export const FOOTER_LINK_GROUPS_MOCK:LinkGroupInterface[] = [
+export const FOOTER_LINK_GROUPS_MOCK: LinkGroupInterface[] = [
   {
     headline: 'Get in touch',
     items: [

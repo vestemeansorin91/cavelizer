@@ -19,9 +19,14 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "paths": {
-      "@cavelizer": ["src/app/shared"]
+      "@cavelizer": [
+        "src/app/shared"
+      ]
     }
   },
   "angularCompilerOptions": {
@@ -30,5 +35,7 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "includes": ["src/custom.d.ts"]
+  "includes": [
+    "src/custom.d.ts"
+  ]
 }

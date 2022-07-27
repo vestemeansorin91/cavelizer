@@ -23,4 +23,5 @@ const COMPONENTS = [
   providers: [AuthService],
   exports: [COMPONENTS],
 })
-export class AuthModule {}
+export class AuthModule {
+}

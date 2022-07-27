@@ -24,7 +24,7 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'profile',
+        redirectTo: 'profile'
       },
       {
         path: 'profile',
@@ -32,48 +32,47 @@ const routes: Routes = [
         data: {
           breadcrumb: '',
           breadcrumbPath: '/user/profile'
-        },
+        }
       },
       {
         path: 'hr-information',
-        component: UserHrInformationComponent,
-
+        component: UserHrInformationComponent
       },
       {
         path: 'start-end-dates',
-        component: UserStartEndDatesComponent,
+        component: UserStartEndDatesComponent
       },
       {
         path: 'personal-mock',
-        component: UserPersonalDataComponent,
+        component: UserPersonalDataComponent
       },
       {
         path: 'clothes-sizes',
-        component: UserClothesSizesComponent,
+        component: UserClothesSizesComponent
       },
       {
         path: 'bank-details',
-        component: UserBankDetailsComponent,
+        component: UserBankDetailsComponent
       },
       {
         path: 'emergency-contact',
-        component: UserEmergencyContactComponent,
+        component: UserEmergencyContactComponent
       },
       {
         path: 'payroll-information',
-        component: UserPayrollInformationComponent,
+        component: UserPayrollInformationComponent
       },
       {
         path: '**',
-        redirectTo: 'profile',
-      },
-    ],
-  },
+        redirectTo: 'profile'
+      }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class UserProfileRoutes {
 }

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProfileService } from '../../profile.service';
-import { NotificationsService } from 'angular2-notifications';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NotificationsService} from 'angular2-notifications';
+import {ProfileService} from '../../profile.service';
 
 @Component({
   selector: 'app-user-clothes-sizes',
@@ -16,7 +16,8 @@ export class UserClothesSizesComponent {
     this.patchFormGroup();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   public onSaveClothesSizes() {
     this.profileService.saveUserClothesSizes(this.userClothesSizesFormGroup.value).subscribe(() => {
@@ -33,7 +34,7 @@ export class UserClothesSizesComponent {
   }
 
   private patchFormGroup() {
-    const { clothesSizes } = this.profileService.profile;
+    const {clothesSizes} = this.profileService.profile;
 
     if (!clothesSizes) {
       return;

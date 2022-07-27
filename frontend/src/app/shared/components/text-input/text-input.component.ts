@@ -14,28 +14,27 @@ export const CAVELIZER_TEXT_INPUT_VALUE_ACCESSOR: any = {
   providers: [CAVELIZER_TEXT_INPUT_VALUE_ACCESSOR]
 })
 export class TextInputComponent implements ControlValueAccessor {
-  @Input() set placeholder(value: any) {
-    this._placeholder = value === null ? '' : value;
-  }
-
-  @Input() set value(v: any) {
-    this.writeValue(v);
-  }
-
   @ViewChild('input', {static: true}) input: ElementRef;
   @Input() public mask = null;
   @Input() public disabled = false;
   @Input() public readonly = false;
   @Input() public type = 'text';
-
   @Output() public onEnterKey: EventEmitter<any> = new EventEmitter<any>();
   @Output() public onEscKey: EventEmitter<any> = new EventEmitter<any>();
   @Output() public blur: EventEmitter<any> = new EventEmitter<any>();
+
+  @Input() set value(v: any) {
+    this.writeValue(v);
+  }
+
   public _placeholder = '';
+
+  @Input() set placeholder(value: any) {
+    this._placeholder = value === null ? '' : value;
+  }
+
   // private lastMaskedValue = '';
   public onTouched = () => {
-  };
-  private propagateChange: any = () => {
   };
 
   public onEnter(e: any) {
@@ -51,16 +50,16 @@ export class TextInputComponent implements ControlValueAccessor {
     this.blur.emit(e);
   }
 
-  public writeValue(value:any) {
+  public writeValue(value: any) {
     value = this.parseValueWithMask(value);
     this.input.nativeElement.value = value;
   }
 
-  public parseValueWithMask(value:any) {
+  public parseValueWithMask(value: any) {
     return value;
   }
 
-  public onInput(ev:any) {
+  public onInput(ev: any) {
     if (!this.disabled) {
       let value = this.input.nativeElement.value;
       value = this.parseValueWithMask(value);
@@ -68,16 +67,19 @@ export class TextInputComponent implements ControlValueAccessor {
     }
   }
 
-  public registerOnChange(fn:any) {
+  public registerOnChange(fn: any) {
     this.propagateChange = fn;
   }
 
-  public registerOnTouched(fn:any) {
+  public registerOnTouched(fn: any) {
     this.onTouched = fn;
   }
 
   public setDisabledState(isDisabled: boolean) {
     this.disabled = isDisabled;
   }
+
+  private propagateChange: any = () => {
+  };
 
 }

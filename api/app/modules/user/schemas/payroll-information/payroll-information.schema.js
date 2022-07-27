@@ -6,24 +6,24 @@ const TypeOfHealthInsuranceEnum = require('../../../../shared/enums/type-of-heal
 const ReligionEnum = require('../../../../shared/enums/religion.enum');
 
 const payrollInformationSchema = mongoose.Schema({
-  levelOfEducation: {
-    type: String,
-    enum: LevelOfEducationEnum
-  },
-  salaryType: {
-    type: String,
-    enum: SalaryTypeEnum
-  },
-  typeOfHealthInsurance: {
-    type: String,
-    enum: TypeOfHealthInsuranceEnum
-  },
-  religion: {
-    type: String,
-    enum: ReligionEnum
-  },
-  cnp: String,
-  healthInsurance: String
+    levelOfEducation: {
+        type: String,
+        enum: LevelOfEducationEnum
+    },
+    salaryType: {
+        type: String,
+        enum: SalaryTypeEnum
+    },
+    typeOfHealthInsurance: {
+        type: String,
+        enum: TypeOfHealthInsuranceEnum
+    },
+    religion: {
+        type: String,
+        enum: ReligionEnum
+    },
+    cnp: String,
+    healthInsurance: String
 });
 
 module.exports = payrollInformationSchema;

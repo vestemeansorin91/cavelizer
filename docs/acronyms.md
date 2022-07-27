@@ -2,9 +2,10 @@
 
 ## General
 
-- Library - A library refers to a collection of files, programs, routines, scripts, or functions that can be referenced in the programming code
-- Framework - A framework is a set of tools in programming on which to build well-structured, reliable software and systems. Or a collection
-  of libraries in some cases
+- Library - A library refers to a collection of files, programs, routines, scripts, or functions that can be referenced
+  in the programming code
+- Framework - A framework is a set of tools in programming on which to build well-structured, reliable software and
+  systems. Or a collection of libraries in some cases
 
 - Retro - Meeting where team discuss what went good / wrong , webstorming for solutions.
 - Grooming - Meeting where team discuss about tasks and decide about some technical or business logic

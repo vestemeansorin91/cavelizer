@@ -10,5 +10,5 @@ export const isLoggedInSelector = createSelector(authFeatureSelector, (state: Au
 export const isLoggedOutSelector = createSelector(authFeatureSelector, (state: AuthStateInterface) => !state.isLoggedIn);
 export const getTokenSelector = createSelector(authFeatureSelector, (state: AuthStateInterface) => state.token);
 export const isLoadingSelector = createSelector(authFeatureSelector, (state: AuthStateInterface) => state.isLoading);
-export const isAdminSelector = createSelector(getUserSelector, (state:JwtPayloadInterface ) => state.isAdmin)
+export const isAdminSelector = createSelector(getUserSelector, (state: JwtPayloadInterface) => state.isAdmin)
 export const showSidenavSelector = createSelector(authFeatureSelector, (state: AuthStateInterface) => state.isLoggedIn && !state.hideSidenav);

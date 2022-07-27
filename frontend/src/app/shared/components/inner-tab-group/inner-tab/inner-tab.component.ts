@@ -14,7 +14,8 @@ export class InnerTabComponent {
   constructor(
     @Optional() private group: TabGroupBase,
     private router: Router
-  ) {}
+  ) {
+  }
 
   get active() {
     return this.group ? this.group.isActive(this) : false;

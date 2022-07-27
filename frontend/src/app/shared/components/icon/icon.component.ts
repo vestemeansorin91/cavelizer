@@ -30,25 +30,19 @@ const ICON_TYPE = '.svg';
 })
 export class IconComponent implements OnInit, OnChanges, OnDestroy {
   @Input() public name = '';
+  @HostBinding('innerHTML') public svg: any;
   private subscription = new Subscription();
 
-  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {}
-
-  @HostBinding('innerHTML') public svg: any;
-
-  ngOnInit() {
-    this.subscription.add(
-      this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
-        .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
-    );
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
 
-  ngOnChanges(changes: SimpleChanges):void {
-    if(changes['name'] && !changes['name'].firstChange) {
-      this.subscription.add(
-        this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
-          .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
-      );
+  ngOnInit() {
+    this.subscription.add(this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, {responseType: 'text'}).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value))));
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['name'] && !changes['name'].firstChange) {
+      this.subscription.add(this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, {responseType: 'text'}).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value))));
     }
   }
 

@@ -16,16 +16,10 @@ export const CAVELIZER_TOGGLE_VALUE_ACCESSOR: any = {
 export class ToggleComponent implements ControlValueAccessor {
   @Input() disabled = false;
   @Input() readonly = false;
-  _checked = false;
   _placeholder = '';
-  public onTouched = () => {
-  };
   @Output() changeValue: EventEmitter<any> = new EventEmitter<any>();
-  private propagateChange: any = () => {};
 
-  @Input() set value(v: any) {
-    this.writeValue(v);
-  }
+  _checked = false;
 
   public get checked() {
     return this._checked;
@@ -36,16 +30,23 @@ export class ToggleComponent implements ControlValueAccessor {
     this._checked = v;
   }
 
+  @Input() set value(v: any) {
+    this.writeValue(v);
+  }
+
+  public onTouched = () => {
+  };
+
   @HostListener('select-item', ['$event'])
-  onSelectItem(e:any) {
+  onSelectItem(e: any) {
     this.onInput(e);
   }
 
-  public writeValue(value:any) {
+  public writeValue(value: any) {
     this._checked = value;
   }
 
-  public onInput(e:any) {
+  public onInput(e: any) {
     e.stopPropagation();
     if (!this.disabled) {
       this._checked = !this._checked;
@@ -66,4 +67,7 @@ export class ToggleComponent implements ControlValueAccessor {
   public setDisabledState(isDisabled: boolean) {
     this.disabled = isDisabled;
   }
+
+  private propagateChange: any = () => {
+  };
 }

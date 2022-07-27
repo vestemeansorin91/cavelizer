@@ -6,7 +6,7 @@
     </div>
 
     <cavelizer-dropdown #dropdown>
-      <div *ngFor="let option of menu.options" (click)="test($event)" dropdownItem>{{option.value}}</div>
+      <div (click)="test($event)" *ngFor="let option of menu.options" dropdownItem>{{option.value}}</div>
     </cavelizer-dropdown>
   </ng-container>
 </div>

@@ -30,4 +30,5 @@ const COMPONENTS = [
   declarations: [COMPONENTS],
   imports: [CommonModule, UserProfileRoutes, SharedModule]
 })
-export class UserProfileModule {}
+export class UserProfileModule {
+}

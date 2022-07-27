@@ -8,9 +8,9 @@ describe('UserStartEndDatesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserStartEndDatesComponent ]
+      declarations: [UserStartEndDatesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

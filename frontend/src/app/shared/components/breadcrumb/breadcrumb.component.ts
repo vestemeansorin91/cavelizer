@@ -11,10 +11,10 @@ import {BreadCrumb} from './breadcrumb';
 })
 export class BreadcrumbComponent implements OnInit, OnDestroy {
   public breadcrumbs: BreadCrumb[] = [];
-  private subs: Subscription[] = [];
   translations: any = {
     // '@@messages.breadcrumb.home': $localize`:@@messages.breadcrumb.home:Home`,
   };
+  private subs: Subscription[] = [];
 
   constructor(private route: ActivatedRoute) {
   }

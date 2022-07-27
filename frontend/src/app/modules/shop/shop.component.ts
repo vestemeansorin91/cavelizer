@@ -7,6 +7,6 @@ import {LinkGroupInterface} from "./types/link-group.interface";
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.scss']
 })
-export class ShopComponent{
+export class ShopComponent {
   public footerLinkGroups: LinkGroupInterface[] = FOOTER_LINK_GROUPS_MOCK;
 }

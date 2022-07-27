@@ -5,51 +5,51 @@
   <div class="flex--column align--start ">
     <label class="mr--16 text--bold" for="fullName">Full name</label>
     <cavelizer-input-group class="width--full">
-      <cavelizer-text-input id="fullName" type="text" formControlName="fullName" placeholder="Full name"
-                            class="width--full"></cavelizer-text-input>
+      <cavelizer-text-input class="width--full" formControlName="fullName" id="fullName" placeholder="Full name"
+                            type="text"></cavelizer-text-input>
     </cavelizer-input-group>
   </div>
 
   <div class="flex--column align--start ">
     <label class="mr--16 text--bold" for="email">E-mail</label>
     <cavelizer-input-group class="width--full">
-      <cavelizer-text-input id="email" type="text" formControlName="email" placeholder="E-mail"
-                            class="width--full"></cavelizer-text-input>
+      <cavelizer-text-input class="width--full" formControlName="email" id="email" placeholder="E-mail"
+                            type="text"></cavelizer-text-input>
     </cavelizer-input-group>
   </div>
 
   <div class="flex--column align--start ">
     <label class="mr--16 text--bold" for="username">Username</label>
     <cavelizer-input-group class="width--full">
-      <cavelizer-text-input id="username" type="text" formControlName="username" placeholder="Username"
-                            class="width--full"></cavelizer-text-input>
+      <cavelizer-text-input class="width--full" formControlName="username" id="username" placeholder="Username"
+                            type="text"></cavelizer-text-input>
     </cavelizer-input-group>
   </div>
 
   <div class="flex--column align--start ">
     <label class="mr--16 text--bold" for="password">Password</label>
     <cavelizer-input-group class="width--full">
-      <cavelizer-text-input id="password" type="password" formControlName="password" placeholder="Password"
-                            class="width--full"></cavelizer-text-input>
+      <cavelizer-text-input class="width--full" formControlName="password" id="password" placeholder="Password"
+                            type="password"></cavelizer-text-input>
     </cavelizer-input-group>
   </div>
 
   <div class="flex--column align--start ">
     <label class="mr--16 text--bold" for="confirmPassword">Confirm password</label>
     <cavelizer-input-group class="width--full">
-      <cavelizer-text-input id="confirmPassword" type="password" formControlName="confirmPassword"
+      <cavelizer-text-input class="width--full" formControlName="confirmPassword" id="confirmPassword"
                             placeholder="Confirm password"
-                            class="width--full"></cavelizer-text-input>
+                            type="password"></cavelizer-text-input>
     </cavelizer-input-group>
   </div>
 
   <cavelizer-checkbox formControlName="agreeTermsConditions">Agree with Terms & Conditions</cavelizer-checkbox>
   <cavelizer-checkbox formControlName="agreePolicyPrivacy">Agree with Policy & Privacy</cavelizer-checkbox>
 
-  <cavelizer-button class="width--full" (click)="registerClicked()"
-                    [attr.disabled]="!registerFormGroup.valid
+  <cavelizer-button (click)="registerClicked()" [attr.disabled]="!registerFormGroup.valid
                     || registerFormGroup.get('password')?.value !== registerFormGroup.get('confirmPassword')?.value
-                    || null">
+                    || null"
+                    class="width--full">
     Register
   </cavelizer-button>
 </form>

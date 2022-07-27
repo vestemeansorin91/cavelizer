@@ -75,7 +75,7 @@ const HashStrategy = {
     }),
     SharedModule
   ],
-  providers: [DashboardService, ErrorInterceptorService,TokenInterceptorService, HashStrategy],
+  providers: [DashboardService, ErrorInterceptorService, TokenInterceptorService, HashStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule {

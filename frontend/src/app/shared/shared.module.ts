@@ -1,3 +1,4 @@
+import {NgxSliderModule} from '@angular-slider/ngx-slider';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {CommonModule} from '@angular/common';
@@ -23,14 +24,13 @@ import {InnerTabComponent} from './components/inner-tab-group/inner-tab/inner-ta
 import {InputGroupComponent} from './components/input-group/input-group.component';
 import {MiniBannerComponent} from './components/mini-banner/mini-banner.component';
 import {QuoteComponent} from './components/quote/quote.component';
+import {TagComponent} from './components/tag/tag.component';
 import {TextInputComponent} from './components/text-input/text-input.component';
 import {ToggleComponent} from './components/toggle/toggle.component';
-import {TooltipModule} from "./components/tooltip/tooltip.module";
+import {TooltipModule} from './components/tooltip/tooltip.module';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {DefaultImagePipe} from './pipes/default-image.pipe';
 import {PhonePipe} from './pipes/phone-format.pipe';
-import {NgxSliderModule} from '@angular-slider/ngx-slider';
-import {TagComponent} from './components/tag/tag.component';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
@@ -52,24 +52,9 @@ const COMPONENTS: any[] = [
 
 const SERVICES: any[] = [];
 
-const MODULES: any[] = [
-  FormsModule,
-  ReactiveFormsModule,
-  RouterModule,
-  NgxSliderModule,
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule, TooltipModule];
 
-  TooltipModule
-];
-
-const ANGULAR_MATERIAL_MODULES = [
-  MatSidenavModule,
-  MatTabsModule,
-  MatExpansionModule,
-  MatTooltipModule,
-  ClipboardModule,
-  MatSelectModule,
-  MatInputModule,
-  OverlayModule];
+const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatTabsModule, MatExpansionModule, MatTooltipModule, ClipboardModule, MatSelectModule, MatInputModule, OverlayModule];
 
 const PIPES: any[] = [DefaultImagePipe, PhonePipe];
 

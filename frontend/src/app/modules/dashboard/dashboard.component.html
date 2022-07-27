@@ -1,8 +1,8 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+  <mat-drawer #drawer disableClose="true" mode="side" opened="true">
     <app-sidenav
-      [isExpanded]="isExpanded"
       (expanded)="isExpanded = $event"
+      [isExpanded]="isExpanded"
     ></app-sidenav>
   </mat-drawer>
   <app-topbar></app-topbar>

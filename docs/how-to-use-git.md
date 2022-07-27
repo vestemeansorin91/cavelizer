@@ -42,8 +42,12 @@ $ git status
 ![Status](https://i.ibb.co/QHdW4M9/screen-1.png)
 
 3. Acum tu ai o copie a proiectului, poti sa incepi sa lucrezi.
-4. Ai terminat de lucrat, iar in VS Code poti deja sa vezi ce fisiere ai modificat si diferentele (fata de copia de la inceput)
-   ![modifications](https://i.ibb.co/y4jcQBg/mura-in-gura.png) 1. Butonul ala e destul de **smart** si stie daca ai un proiect git initiat, iar daca ai cand incepi sa modifici fisiere iti apar acolo (in cazul asta 2 fisiere) 2. Aici poti sa vezi fisierele modificate, in cazul meu am modificat **index.html** si am adaugat o imagine cu rubik 3. Aici am modificat titlul 4. Aici am modificat iconita
+4. Ai terminat de lucrat, iar in VS Code poti deja sa vezi ce fisiere ai modificat si diferentele (fata de copia de la
+   inceput)
+   ![modifications](https://i.ibb.co/y4jcQBg/mura-in-gura.png) 1. Butonul ala e destul de **smart** si stie daca ai un
+   proiect git initiat, iar daca ai cand incepi sa modifici fisiere iti apar acolo (in cazul asta 2 fisiere) 2. Aici
+   poti sa vezi fisierele modificate, in cazul meu am modificat **index.html** si am adaugat o imagine cu rubik 3. Aici
+   am modificat titlul 4. Aici am modificat iconita
 5. Acum vreau ca modificarile astea pe care le-am facut sa le pun online.
 
 ```sh
@@ -56,8 +60,8 @@ sau
 $ git add .
 ```
 
-care adauga toate fisierele modificate. Eu o folosesc in 99% din cazuri a doua varianta.
-Uite statusul inainte si dupa adaugare (index.html e un fisier modificat, rubik_icon.ico e un fisier adaugat)
+care adauga toate fisierele modificate. Eu o folosesc in 99% din cazuri a doua varianta. Uite statusul inainte si dupa
+adaugare (index.html e un fisier modificat, rubik_icon.ico e un fisier adaugat)
 
 ##### inainte
 
@@ -81,19 +85,21 @@ $ git commit -m "Mesajul tau aici, care sa fie cat mai scurt si explicit"
 $ git push origin website-title-icon
 ```
 
-Putem spune ca treaba ta s-a terminat! Ai facut o copie la proiect, ai facut modificari, ai trimis modificarile tale. Acum va trebui sa ma anunti, iar eu va trebui sa iti verific codul inainte sa ajunga online pe master (pe proiectul principal), va trebui sa faci un pull request pe care il poti face foarte usor din github
+Putem spune ca treaba ta s-a terminat! Ai facut o copie la proiect, ai facut modificari, ai trimis modificarile tale.
+Acum va trebui sa ma anunti, iar eu va trebui sa iti verific codul inainte sa ajunga online pe master (pe proiectul
+principal), va trebui sa faci un pull request pe care il poti face foarte usor din github
 
 1. Mergi pe github la proiect , in cazul nostru aici
 2. ![merge-request](https://i.ibb.co/PQYVmFs/merge-request.png)
-   1.Pull requests
-   2.New pull request
+   1.Pull requests 2.New pull request
 3. ![compare](https://i.ibb.co/ZmDtpKm/2019-09-13-18-33.png)
-   1. Alegi branch-ul (in cazul nostru website-title-icon)
-   2. Selectezi **Create pull request**, iar pe urma o sa fie mai jos inca o data **Create pull request**
+    1. Alegi branch-ul (in cazul nostru website-title-icon)
+    2. Selectezi **Create pull request**, iar pe urma o sa fie mai jos inca o data **Create pull request**
 
 ### Felicitar! Tocmai ai facut primul tau commit!
 
-Daca vrei sa incepi sa lucrezi la altceva o iei de la inceput. Prima data te duci pe master, creezi un nou branch, te muti pe noul branch, modifici , adaugi, faci commit, push , merge request. Asta e flow-ul.
+Daca vrei sa incepi sa lucrezi la altceva o iei de la inceput. Prima data te duci pe master, creezi un nou branch, te
+muti pe noul branch, modifici , adaugi, faci commit, push , merge request. Asta e flow-ul.
 
 ```sh
 $ git checkout master

@@ -8,9 +8,9 @@ describe('UserPayrollInformationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserPayrollInformationComponent ]
+      declarations: [UserPayrollInformationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

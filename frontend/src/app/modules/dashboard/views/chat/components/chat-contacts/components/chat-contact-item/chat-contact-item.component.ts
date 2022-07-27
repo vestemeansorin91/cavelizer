@@ -6,6 +6,6 @@ import {ChatContact} from "../../../../../../../../shared/mock/chat";
   templateUrl: './chat-contact-item.component.html',
   styleUrls: ['./chat-contact-item.component.scss']
 })
-export class ChatContactItemComponent{
+export class ChatContactItemComponent {
   @Input() public contact: ChatContact = {} as ChatContact;
 }

@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './role-list.component.html',
   styleUrls: ['./role-list.component.scss'],
 })
-export class RoleListComponent { }
+export class RoleListComponent {
+}

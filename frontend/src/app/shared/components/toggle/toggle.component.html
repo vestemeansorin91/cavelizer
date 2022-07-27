@@ -1,9 +1,9 @@
 <div class="toggle-input">
   <div
-    class="toggle-item"
-    [class.selected]="_checked"
-    [class.disabled]="disabled"
     (click)="onInput($event)"
+    [class.disabled]="disabled"
+    [class.selected]="_checked"
+    class="toggle-item"
   >
     <div class="toggle-bullet"></div>
   </div>

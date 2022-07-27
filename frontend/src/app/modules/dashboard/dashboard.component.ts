@@ -8,12 +8,12 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class DashboardComponent implements OnInit {
   public isExpanded = true;
 
+  ngOnInit(): void {
+    this.onResize();
+  }
+
   @HostListener('window:resize', ['$event'])
   private onResize() {
     this.isExpanded = window.innerWidth > 820;
-  }
-
-  ngOnInit(): void {
-    this.onResize();
   }
 }

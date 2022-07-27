@@ -27,19 +27,24 @@
       left: 2px;
       transition: all 0.3s;
     }
+
     &.selected {
       background-color: $color-primary;
+
       .toggle-bullet {
         left: 18px;
         transition: all 0.3s;
       }
     }
+
     &:hover {
       background-color: $color-primary-010;
     }
+
     &.disabled {
       background: $color-grey-050;
       cursor: no-drop;
+
       .toggle-bullet {
         background: $color-grey-030;
       }

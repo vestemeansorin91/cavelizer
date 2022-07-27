@@ -1,6 +1,7 @@
 <div class="border-bottom py--16 px--32 width--full justify--space-between align--center">
   <cavelizer-input-group class="width--320">
-    <cavelizer-text-input id="password" type="text" class="width--full" placeholder="Search for ..."></cavelizer-text-input>
+    <cavelizer-text-input class="width--full" id="password" placeholder="Search for ..."
+                          type="text"></cavelizer-text-input>
   </cavelizer-input-group>
 
   <div class="align--center">
@@ -10,10 +11,13 @@
 
     <ng-container *ngIf="currentUser$ | async as currentUser">
       <div class="flex--column align--end">
-        <span class="ml--32 mr--12 fs--14 pointer" [routerLink]="['/dashboard/user/profile']">{{ currentUser.fullName }}</span>
-        <span class="ml--32 mr--12 fs--14 text--bold pointer" [routerLink]="['/dashboard/user/profile']">{{ currentUser.username }}</span>
+        <span [routerLink]="['/dashboard/user/profile']"
+              class="ml--32 mr--12 fs--14 pointer">{{ currentUser.fullName }}</span>
+        <span [routerLink]="['/dashboard/user/profile']"
+              class="ml--32 mr--12 fs--14 text--bold pointer">{{ currentUser.username }}</span>
       </div>
-      <img class="size--40 circle pointer"  [routerLink]="['/dashboard/user/profile']" [src]="currentUser?.avatarBlobUrl | defaultImage">
+      <img [routerLink]="['/dashboard/user/profile']" [src]="currentUser?.avatarBlobUrl | defaultImage"
+           class="size--40 circle pointer">
     </ng-container>
   </div>
 </div>

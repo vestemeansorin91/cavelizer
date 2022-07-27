@@ -1,9 +1,9 @@
-<div class="checkbox-input" [class.radio]="radio">
+<div [class.radio]="radio" class="checkbox-input">
   <div
-    class="checkbox-item"
-    [class.selected]="_checked"
-    [class.disabled]="disabled"
     (click)="onInput($event)"
+    [class.disabled]="disabled"
+    [class.selected]="_checked"
+    class="checkbox-item"
   >
     <i class="las la-check"></i>
   </div>

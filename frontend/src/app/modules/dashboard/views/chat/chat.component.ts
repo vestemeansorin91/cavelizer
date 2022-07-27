@@ -19,6 +19,7 @@ export class ChatComponent implements OnInit {
   public selectedContactIndex = 0; // fixme: I should rely on _id not on index
   public usersOnline: string[] = []; // fixme; should be deleted, same as contacts
   public receiverIsTyping: boolean = false;
+
   constructor(private chatService: ChatService, private store: Store<StoreStateInterface>) {
   }
 
@@ -41,7 +42,7 @@ export class ChatComponent implements OnInit {
     })
   }
 
-  public onSelectedContactChanged(index:number) {
+  public onSelectedContactChanged(index: number) {
     this.selectedContactIndex = index;
     this.selectedContact = this.contacts[this.selectedContactIndex];
   }

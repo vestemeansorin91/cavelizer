@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './category-form.component.html',
   styleUrls: ['./category-form.component.scss'],
 })
-export class CategoryFormComponent { }
+export class CategoryFormComponent {
+}

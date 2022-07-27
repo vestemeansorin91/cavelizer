@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProfileService } from '../../profile.service';
-import { NotificationsService } from 'angular2-notifications';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NotificationsService} from 'angular2-notifications';
+import {ProfileService} from '../../profile.service';
 
 @Component({
   selector: 'app-user-personal-data',
@@ -16,7 +16,8 @@ export class UserPersonalDataComponent {
     this.patchFormGroup();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   public onSavePersonalData() {
     this.profileService.saveUserPersonalData(this.userPersonalDataFormGroup.value).subscribe(() => {
@@ -38,7 +39,7 @@ export class UserPersonalDataComponent {
   }
 
   private patchFormGroup() {
-    const { personalData } = this.profileService.profile;
+    const {personalData} = this.profileService.profile;
 
     if (!personalData) {
       return;

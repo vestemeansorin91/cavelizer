@@ -11,14 +11,14 @@ import {DropdownPanel} from './dropdown-panel';
   }
 })
 export class DropdownTriggerForDirective {
+  @HostBinding('class') public className = 'dropdown';
+  @Input('dropdownTriggerFor') public dropdownPanel: DropdownPanel;
   private isDropdownOpen = false;
   private overlayRef: OverlayRef;
   private dropdownClosingActionsSub = Subscription.EMPTY;
 
-  @HostBinding('class') public className = 'dropdown';
-  @Input('dropdownTriggerFor') public dropdownPanel: DropdownPanel;
-
-  constructor(private overlay: Overlay, private elementRef: ElementRef<HTMLElement>, private viewContainerRef: ViewContainerRef) {}
+  constructor(private overlay: Overlay, private elementRef: ElementRef<HTMLElement>, private viewContainerRef: ViewContainerRef) {
+  }
 
   toggleDropdown(): void {
     this.isDropdownOpen ? this.destroyDropdown() : this.openDropdown();
@@ -50,6 +50,12 @@ export class DropdownTriggerForDirective {
     this.dropdownClosingActionsSub = this.dropdownClosingActions().subscribe(() => this.destroyDropdown());
   }
 
+  ngOnDestroy(): void {
+    if (this.overlayRef) {
+      this.overlayRef.dispose();
+    }
+  }
+
   private dropdownClosingActions(): Observable<MouseEvent | void> {
     const backdropClick$ = this.overlayRef.backdropClick();
     const detachment$ = this.overlayRef.detachments();
@@ -66,11 +72,5 @@ export class DropdownTriggerForDirective {
     this.dropdownClosingActionsSub.unsubscribe();
     this.isDropdownOpen = false;
     this.overlayRef.detach();
-  }
-
-  ngOnDestroy(): void {
-    if (this.overlayRef) {
-      this.overlayRef.dispose();
-    }
   }
 }

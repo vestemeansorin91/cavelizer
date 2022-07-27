@@ -7,10 +7,11 @@ import {ShopMenuComponent} from './components/shop-menu/shop-menu.component';
 import {ShopComponent} from './shop.component';
 import {ShopRoutes} from './shop.routes';
 
-const COMPONENTS = [ShopComponent, ShopHeadlineComponent, ShopMenuComponent , ShopHeaderComponent];
+const COMPONENTS = [ShopComponent, ShopHeadlineComponent, ShopMenuComponent, ShopHeaderComponent];
 
 @NgModule({
   declarations: [COMPONENTS],
   imports: [CommonModule, ShopRoutes, SharedModule]
 })
-export class ShopModule {}
+export class ShopModule {
+}

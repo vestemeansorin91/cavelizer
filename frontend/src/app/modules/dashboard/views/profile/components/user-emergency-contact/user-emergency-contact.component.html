@@ -2,17 +2,17 @@
   <form [formGroup]="userEmergencyContactFormGroup" class="flex--column mt--40 gap--8">
     <div>
       <label class="mr--16" for="fullName">Full Name</label>
-      <input id="fullName" type="string" formControlName="fullName" />
+      <input formControlName="fullName" id="fullName" type="string"/>
     </div>
 
     <div>
       <label class="mr--16" for="phoneNumber">Phone Number</label>
-      <input id="phoneNumber" type="number" formControlName="phoneNumber" />
+      <input formControlName="phoneNumber" id="phoneNumber" type="number"/>
     </div>
 
     <div>
       <label class="mr--16" for="relationshipType">Relationship Type</label>
-      <select name="" id="relationshipType" formControlName="relationshipType">
+      <select formControlName="relationshipType" id="relationshipType" name="">
         <option value="partner">Partner</option>
         <option value="sibling">Sibling</option>
         <option value="parent">Parent</option>

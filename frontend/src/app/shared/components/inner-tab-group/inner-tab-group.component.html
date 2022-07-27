@@ -1,5 +1,6 @@
 <div class="inner-tab-group">
-  <div *ngFor="let tab of tabs; let i = index;" (click)="selectTab(tab, i)" class="inner-tab" [class.active]="tab.active">
+  <div (click)="selectTab(tab, i)" *ngFor="let tab of tabs; let i = index;" [class.active]="tab.active"
+       class="inner-tab">
     {{tab.tabTitle}}
     <div *ngIf="tab.counter !== null" class="inner-tab--counter">{{ tab.counter }}</div>
   </div>

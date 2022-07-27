@@ -3,11 +3,12 @@
     <div class="flex--column align--start">
       <label class="mr--16 text--bold" for="office">Office</label>
       <cavelizer-input-group class="width--full">
-        <cavelizer-text-input id="office" type="text" formControlName="office" class="width--full"></cavelizer-text-input>
+        <cavelizer-text-input class="width--full" formControlName="office" id="office"
+                              type="text"></cavelizer-text-input>
       </cavelizer-input-group>
     </div>
 
-    <mat-form-field class="mt--16" appearance="fill">
+    <mat-form-field appearance="fill" class="mt--16">
       <mat-label>Department</mat-label>
       <mat-select formControlName="department">
         <mat-option value="development">Development</mat-option>
@@ -38,11 +39,13 @@
     <div class="flex--column align--start">
       <label class="mr--16 text--bold" for="phone">Phone</label>
       <cavelizer-input-group class="width--full">
-        <cavelizer-text-input id="phone" type="text" formControlName="phone"></cavelizer-text-input>
+        <cavelizer-text-input formControlName="phone" id="phone" type="text"></cavelizer-text-input>
       </cavelizer-input-group>
     </div>
 
-    <cavelizer-button (click)="onSavePublicProfile()" class="width--full mt--32" [attr.disabled]="!userPublicProfileFormGroup.dirty">Save </cavelizer-button>
+    <cavelizer-button (click)="onSavePublicProfile()" [attr.disabled]="!userPublicProfileFormGroup.dirty"
+                      class="width--full mt--32">Save
+    </cavelizer-button>
     <!--  TODO: Delete it after implementations / used only for tutorial-->
     <!--    <pre>{{ userPublicProfileFormGroup.value | json }}</pre>-->
   </form>

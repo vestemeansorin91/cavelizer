@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './user-start-end-dates.component.html',
   styleUrls: ['./user-start-end-dates.component.scss']
 })
-export class UserStartEndDatesComponent { }
+export class UserStartEndDatesComponent {
+}

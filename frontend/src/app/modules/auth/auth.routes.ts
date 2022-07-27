@@ -44,4 +44,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AuthRoutesModule {}
+export class AuthRoutesModule {
+}

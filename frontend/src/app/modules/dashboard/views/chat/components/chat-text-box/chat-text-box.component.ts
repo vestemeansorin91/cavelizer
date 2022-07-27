@@ -18,12 +18,12 @@ export class ChatTextBoxComponent {
   public typingMessage: any;
   public message = '';
   public socket: any;
+  toggled: boolean = false;
 
   constructor(private chatService: ChatService) {
     this.socket = io(environment.baseUrl);
   }
 
-  toggled: boolean = false;
   handleSelection(event: any) {
     this.message += event.char;
   }

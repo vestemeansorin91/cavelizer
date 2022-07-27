@@ -22,4 +22,5 @@ import {Component} from '@angular/core';
     </cavelizer-dropdown>
   </mat-expansion-panel>`
 })
-export class DropdownExampleComponent { }
+export class DropdownExampleComponent {
+}

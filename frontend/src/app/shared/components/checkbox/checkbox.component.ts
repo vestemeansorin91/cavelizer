@@ -24,14 +24,14 @@ export class CheckboxComponent implements ControlValueAccessor {
   @Input() radio = false;
   @Input() readonly = false;
   public _checked = false;
-  public onTouched = () => {};
-
   @Output() public changeValue = new EventEmitter<CavelizerCheckboxChange>();
-  private propagateChange: any = () => {};
 
   @Input() set value(v: any) {
     this.writeValue(v);
   }
+
+  public onTouched = () => {
+  };
 
   public writeValue(value: any): void {
     this._checked = value;
@@ -63,4 +63,7 @@ export class CheckboxComponent implements ControlValueAccessor {
   setDisabledState(isDisabled: boolean) {
     this.disabled = isDisabled;
   }
+
+  private propagateChange: any = () => {
+  };
 }

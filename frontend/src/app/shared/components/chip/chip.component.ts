@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './chip.component.html',
   styleUrls: ['./chip.component.scss']
 })
-export class ChipComponent {}
+export class ChipComponent {
+}

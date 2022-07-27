@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-tag-example',
@@ -29,4 +29,5 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class TagExampleComponent {}
+export class TagExampleComponent {
+}

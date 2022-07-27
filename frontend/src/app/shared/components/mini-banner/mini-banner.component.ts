@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './mini-banner.component.html',
   styleUrls: ['./mini-banner.component.scss']
 })
-export class MiniBannerComponent {}
+export class MiniBannerComponent {
+}

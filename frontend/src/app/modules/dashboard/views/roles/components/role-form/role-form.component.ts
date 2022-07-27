@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './role-form.component.html',
   styleUrls: ['./role-form.component.scss'],
 })
-export class RoleFormComponent { }
+export class RoleFormComponent {
+}

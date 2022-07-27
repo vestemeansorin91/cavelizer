@@ -8,9 +8,9 @@ describe('UserEmergencyContactComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserEmergencyContactComponent ]
+      declarations: [UserEmergencyContactComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

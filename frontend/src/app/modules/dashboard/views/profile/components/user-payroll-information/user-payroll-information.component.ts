@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProfileService } from '../../profile.service';
-import { NotificationsService } from 'angular2-notifications';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NotificationsService} from 'angular2-notifications';
+import {ProfileService} from '../../profile.service';
 
 @Component({
   selector: 'app-user-payroll-information',
@@ -34,7 +34,7 @@ export class UserPayrollInformationComponent {
   }
 
   private patchFormGroup() {
-    const { payrollInformation } = this.profileService.profile;
+    const {payrollInformation} = this.profileService.profile;
 
     if (!payrollInformation) {
       return;

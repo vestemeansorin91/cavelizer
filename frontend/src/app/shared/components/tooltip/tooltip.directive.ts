@@ -18,9 +18,20 @@ import tippy, {Instance, Placement} from 'tippy.js';
 export class TooltipDirective implements OnDestroy, OnChanges {
   @Input() public caveTooltip: string | TemplateRef<any> | null | undefined;
   @Input() public onlyEllipsisTooltip = false;
+  private _tippyInstance: Instance | undefined;
+
+  constructor(private _elementRef: ElementRef, private _containerRef: ViewContainerRef) {
+  }
 
   private _isDisabled = false;
-  private _tippyInstance: Instance | undefined;
+
+  @Input()
+  public set isDisabled(disabled: boolean) {
+    this._isDisabled = disabled;
+
+    this._handleTooltipState();
+  }
+
   private _placement: Placement = 'top';
 
   @Input()
@@ -31,17 +42,6 @@ export class TooltipDirective implements OnDestroy, OnChanges {
 
     this._placement = placement;
   }
-
-  @Input()
-  public set isDisabled(disabled: boolean) {
-    this._isDisabled = disabled;
-
-    this._handleTooltipState();
-  }
-
-  constructor(private _elementRef: ElementRef, private _containerRef: ViewContainerRef) {
-  }
-
 
   @HostListener('mouseout', ['$event'])
   public onMouseOut(event: MouseEvent): void {
@@ -76,7 +76,6 @@ export class TooltipDirective implements OnDestroy, OnChanges {
 
           tooltip = div;
           tooltipIsEmpty = div.innerHTML.length === 0;
-
         } else if (typeof this.caveTooltip === 'string') {
           tooltip = this.caveTooltip;
           tooltipIsEmpty = tooltip.length === 0;
@@ -93,7 +92,7 @@ export class TooltipDirective implements OnDestroy, OnChanges {
       if (this._tippyInstance) {
         this._tippyInstance.setProps({
           placement: this._placement as Placement
-        })
+        });
       }
     }
 
@@ -128,7 +127,6 @@ export class TooltipDirective implements OnDestroy, OnChanges {
 
     /* check is overflowing */
     const isOverflowing = this._elementRef.nativeElement.clientWidth < this._elementRef.nativeElement.scrollWidth;
-
 
     /* 'reset' overflow to initial state */
     this._elementRef.nativeElement.style.overflow = curOverflow;

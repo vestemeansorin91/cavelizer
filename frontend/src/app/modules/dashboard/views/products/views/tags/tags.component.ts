@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './tags.component.html',
   styleUrls: ['./tags.component.scss']
 })
-export class TagsComponent { }
+export class TagsComponent {
+}

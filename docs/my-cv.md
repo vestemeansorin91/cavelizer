@@ -1,8 +1,6 @@
 ### Skills
 
-NodeJS
-Javascript
-Bash script
+NodeJS Javascript Bash script
 
 ### Technologies
 

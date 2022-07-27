@@ -13,5 +13,6 @@ import {getUserSelector} from "../../../auth/store/auth.selectors";
 export class TopbarComponent {
   public currentUser$: Observable<JwtPayloadInterface | null> = this.store.select(getUserSelector);
 
-  constructor(private store: Store<StoreStateInterface>) {}
+  constructor(private store: Store<StoreStateInterface>) {
+  }
 }

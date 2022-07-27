@@ -11,7 +11,8 @@ const BASEURL = `${environment.apiUrl}/chat`;
   providedIn: "root",
 })
 export class ChatService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public getUsersForChat(): Observable<UserInterface[]> {
     return this.http.get<UserInterface[]>(`${BASEURL}/getUsersForChat`);

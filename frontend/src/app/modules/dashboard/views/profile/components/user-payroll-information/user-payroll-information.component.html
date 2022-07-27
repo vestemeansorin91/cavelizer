@@ -2,7 +2,7 @@
   <form [formGroup]="userPayrollInformationFormGroup" class="flex--column mt--40 gap--8">
     <div>
       <label class="mr--16" for="levelOfEducation">Level of Education</label>
-      <select name="" id="levelOfEducation" formControlName="levelOfEducation">
+      <select formControlName="levelOfEducation" id="levelOfEducation" name="">
         <option value="primary_school">Primary</option>
         <option value="high_school">High School</option>
         <option value="faculy">Faculty</option>
@@ -11,7 +11,7 @@
 
     <div>
       <label class="mr--16" for="salaryType">Salary Type</label>
-      <select name="" id="salaryType" formControlName="salaryType">
+      <select formControlName="salaryType" id="salaryType" name="">
         <option value="fixed">Fixed</option>
         <option value="flexible">Flexible</option>
       </select>
@@ -19,7 +19,7 @@
 
     <div>
       <label class="mr--16" for="typeOfHealthInsurance">Type of Health Insurance</label>
-      <select name="" id="typeOfHealthInsurance" formControlName="typeOfHealthInsurance">
+      <select formControlName="typeOfHealthInsurance" id="typeOfHealthInsurance" name="">
         <option value="private">Private</option>
         <option value="public">Public</option>
       </select>
@@ -27,7 +27,7 @@
 
     <div>
       <label class="mr--16" for="religion">Religion</label>
-      <select name="" id="religion" formControlName="religion">
+      <select formControlName="religion" id="religion" name="">
         <option value="ortodox">Ortodox</option>
         <option value="catolic">Catolic</option>
       </select>
@@ -35,12 +35,12 @@
 
     <div>
       <label class="mr--16" for="cnp">CNP</label>
-      <input id="cnp" type="string" formControlName="cnp" />
+      <input formControlName="cnp" id="cnp" type="string"/>
     </div>
 
     <div>
       <label class="mr--16" for="healthInsurance">Health Insurance</label>
-      <input id="healthInsurance" type="string" formControlName="healthInsurance" />
+      <input formControlName="healthInsurance" id="healthInsurance" type="string"/>
     </div>
 
     <cavelizer-button (click)="onSavePayrollInformation()"> Save</cavelizer-button>

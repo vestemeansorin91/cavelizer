@@ -4,4 +4,5 @@ import {Component} from '@angular/core';
   selector: 'app-shop-headline',
   templateUrl: './shop-headline.component.html'
 })
-export class ShopHeadlineComponent {}
+export class ShopHeadlineComponent {
+}

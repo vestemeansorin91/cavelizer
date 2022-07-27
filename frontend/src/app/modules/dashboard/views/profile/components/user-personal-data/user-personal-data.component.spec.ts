@@ -8,9 +8,9 @@ describe('UserPersonalDataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserPersonalDataComponent ]
+      declarations: [UserPersonalDataComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

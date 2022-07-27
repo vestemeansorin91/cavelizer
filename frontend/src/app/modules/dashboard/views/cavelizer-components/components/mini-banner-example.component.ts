@@ -17,4 +17,5 @@ import {Component} from '@angular/core';
     </cavelizer-mini-banner>
   </mat-expansion-panel>`
 })
-export class MiniBannerExampleComponent {}
+export class MiniBannerExampleComponent {
+}

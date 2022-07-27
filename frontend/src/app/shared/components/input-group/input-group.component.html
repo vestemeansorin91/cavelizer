@@ -1,9 +1,9 @@
 <div
   #group
-  class="input-group"
-  [class.focused]="focused"
   [class.error]="!focused && isInvalid"
+  [class.focused]="focused"
   [class.has-checkbox]="hasCheckbox"
+  class="input-group"
 >
   <div class="content-input">
     <ng-content></ng-content>

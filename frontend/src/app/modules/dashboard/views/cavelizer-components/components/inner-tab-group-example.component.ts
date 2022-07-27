@@ -39,5 +39,5 @@ import {Component} from '@angular/core';
 
   </mat-expansion-panel>`,
 })
-export class InnerTabGroupExampleComponent{
+export class InnerTabGroupExampleComponent {
 }

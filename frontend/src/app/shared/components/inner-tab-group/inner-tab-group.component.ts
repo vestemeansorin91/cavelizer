@@ -16,7 +16,7 @@ import {TabGroupBase} from './tab-group.base';
 @Component({
   selector: 'cavelizer-inner-tab-group',
   templateUrl: './inner-tab-group.component.html',
-  providers: [{ provide: TabGroupBase, useExisting: InnerTabGroupComponent }],
+  providers: [{provide: TabGroupBase, useExisting: InnerTabGroupComponent}],
   styleUrls: ['./inner-tab-group.component.scss']
 })
 export class InnerTabGroupComponent implements AfterContentInit, OnDestroy {
@@ -40,7 +40,7 @@ export class InnerTabGroupComponent implements AfterContentInit, OnDestroy {
     });
   }
 
-  public setActiveTab():void {
+  public setActiveTab(): void {
     if (this.tabs) {
       if (this.defaultIndex) {
         this.activeTab = this.tabs.toArray()[this.defaultIndex];

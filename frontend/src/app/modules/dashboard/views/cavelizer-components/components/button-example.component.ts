@@ -8,9 +8,7 @@ import {Component} from '@angular/core';
         <mat-panel-title>
           <strong>cavelizer-button</strong>
         </mat-panel-title>
-        <mat-panel-description>
-          Creat de Sorin
-        </mat-panel-description>
+        <mat-panel-description> Creat de Sorin</mat-panel-description>
       </mat-expansion-panel-header>
 
       <div class="flex--column align--start gap--16">
@@ -35,11 +33,11 @@ import {Component} from '@angular/core';
           </mat-form-field>
         </div>
 
-        <span>Classes added: {{size}} {{style}}</span>
+        <span>Classes added: {{ size }} {{ style }}</span>
         <cavelizer-button [ngClass]="[size, style]">Submit</cavelizer-button>
       </div>
     </mat-expansion-panel>
-  `,
+  `
 })
 export class ButtonExampleComponent {
   public size: 'big' | 'small' | '' = '';

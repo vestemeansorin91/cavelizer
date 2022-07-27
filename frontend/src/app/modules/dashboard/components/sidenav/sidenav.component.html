@@ -1,4 +1,4 @@
-<div class="sidenav" [class.toggle-expanded]="isExpanded">
+<div [class.toggle-expanded]="isExpanded" class="sidenav">
   <h1 *ngIf="isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">cavelizer</h1>
   <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">c</h1>
 
@@ -12,38 +12,38 @@
   <div class="menu">
     <div
       *ngFor="let sidenavItem of sidenav"
-      class="menu-item"
       [class.has-children]="sidenavItem | sidenavItemHasChildren"
-      [class.submenu-expanded]="sidenavItem.isSubmenuExpanded">
-      <div class="menu-item--link"
-           routerLinkActive="active"
-           (click)="toggleSidenav(sidenavItem)"
-           [routerLink]="sidenavItem.pathUrl"
-           [routerLinkActiveOptions]="{ exact: true }"
+      [class.submenu-expanded]="sidenavItem.isSubmenuExpanded"
+      class="menu-item">
+      <div (click)="toggleSidenav(sidenavItem)"
            [caveTooltip]="isExpanded ? '' : sidenavItem.name"
-           placement="right">
+           [routerLinkActiveOptions]="{ exact: true }"
+           [routerLink]="sidenavItem.pathUrl"
+           class="menu-item--link"
+           placement="right"
+           routerLinkActive="active">
         <i [ngClass]="sidenavItem.icon"></i>
         <span>{{sidenavItem.name}}</span>
-        <cavelizer-icon name="arrow-left" class="color-white"></cavelizer-icon>
+        <cavelizer-icon class="color-white" name="arrow-left"></cavelizer-icon>
       </div>
 
-      <div class="sub-menu"
-           [style.height]="sidenavItem | sidenavSubmenuHeight"
+      <div [style.height]="sidenavItem | sidenavSubmenuHeight"
+           class="sub-menu"
       >
         <div *ngFor="let subSidenavItem of sidenavItem.submenus"
-             class="menu-item--link"
-             routerLinkActive="active"
-             [routerLink]="subSidenavItem.pathUrl"
-             [routerLinkActiveOptions]="{ exact: true }"
              [caveTooltip]="isExpanded ? '' : subSidenavItem.name"
-             placement="right">
+             [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="subSidenavItem.pathUrl"
+             class="menu-item--link"
+             placement="right"
+             routerLinkActive="active">
           <i [ngClass]="subSidenavItem.icon"></i>
           <span>{{subSidenavItem.name}}</span>
         </div>
       </div>
     </div>
 
-    <div class="menu-item" (click)="logout()">
+    <div (click)="logout()" class="menu-item">
       <div class="menu-item--link">
         <i class="las la-power-off"></i>
         <span>Logout</span>

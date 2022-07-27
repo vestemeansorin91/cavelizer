@@ -9,19 +9,19 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {Store} from "@ngrx/store";
+import {ActivatedRoute} from '@angular/router';
+import {Store} from '@ngrx/store';
 import * as _ from 'lodash';
-import {Subscription} from "rxjs";
+import {Subscription} from 'rxjs';
 // @ts-ignore
 import io from 'socket.io-client';
-import {environment} from "../../../../../../../environments/environment";
-import {ChatContact} from "../../../../../../shared/mock/chat";
-import {UsersService} from "../../../../../../shared/services/users.service";
-import {JwtPayloadInterface} from "../../../../../../shared/types/jwt-payload.interface";
-import {StoreStateInterface} from "../../../../../../store";
-import {getUserSelector} from "../../../../../auth/store/auth.selectors";
-import {ChatService} from "../../services/chat.service";
+import {environment} from '../../../../../../../environments/environment';
+import {ChatContact} from '../../../../../../shared/mock/chat';
+import {UsersService} from '../../../../../../shared/services/users.service';
+import {JwtPayloadInterface} from '../../../../../../shared/types/jwt-payload.interface';
+import {StoreStateInterface} from '../../../../../../store';
+import {getUserSelector} from '../../../../../auth/store/auth.selectors';
+import {ChatService} from '../../services/chat.service';
 
 // import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
 
@@ -64,16 +64,12 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   public socket: any;
   private subs: Subscription[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private store: Store<StoreStateInterface>,
-    private chatService: ChatService,
-    private usersService: UsersService) {
+  constructor(private route: ActivatedRoute, private store: Store<StoreStateInterface>, private chatService: ChatService, private usersService: UsersService) {
     this.socket = io(environment.baseUrl);
   }
 
   ngOnInit(): void {
-    this.subs.push(this.store.select(getUserSelector).subscribe(user => this.user = user));
+    this.subs.push(this.store.select(getUserSelector).subscribe(user => (this.user = user)));
     this.receiverName = this.receiver.username;
     this.getUserByUsername();
 
@@ -84,7 +80,7 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['users'] && changes['users'].currentValue.length > 0) {
-      this.isOnline = (_.indexOf(changes['users'].currentValue, this.receiverName) > -1);
+      this.isOnline = _.indexOf(changes['users'].currentValue, this.receiverName) > -1;
     }
   }
 
@@ -98,18 +94,19 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   }
 
   public getUserByUsername() {
-      this.usersService.getUserByUsername(this.receiverName).subscribe((data) => {
-        this.receiverData = data.user;
-        this.getAllMessages(this.user._id, data.user._id);
-      });
+    this.usersService.getUserByUsername(this.receiverName).subscribe(data => {
+      this.receiverData = data.user;
+      this.getAllMessages(this.user._id, data.user._id);
+    });
   }
 
   public sendMessage() {
-    if (this.message ) {
+    if (this.message) {
       const receiver = this.receiverData;
 
-      if(this.user._id !== receiver._id) { // Need this extra for 2 windows on same pc
-        this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe((_) => {
+      if (this.user._id !== receiver._id) {
+        // Need this extra for 2 windows on same pc
+        this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe(_ => {
           this.socket.emit('refresh', {});
           this.message = '';
         });
@@ -118,7 +115,7 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   }
 
   public getAllMessages(sender: string, receiver: string) {
-    this.chatService.getMessages(sender, receiver).subscribe((data) => {
+    this.chatService.getMessages(sender, receiver).subscribe(data => {
       this.messages = data.message;
     });
   }

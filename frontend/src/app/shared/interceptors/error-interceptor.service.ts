@@ -7,7 +7,8 @@ import {catchError, map} from 'rxjs/operators';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-  constructor(private notificationsService: NotificationsService, private router: Router) {}
+  constructor(private notificationsService: NotificationsService, private router: Router) {
+  }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(

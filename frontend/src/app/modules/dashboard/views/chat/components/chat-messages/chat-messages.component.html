@@ -1,11 +1,11 @@
-<div class="messages" ngx-auto-scroll observe-attributes [lock-y-offset]="10">
+<div [lock-y-offset]="10" class="messages" ngx-auto-scroll observe-attributes>
   <ng-container *ngIf="messages && messages.length > 0; else noMessagesTpl">
-    <div *ngFor="let message of messages" class="message-wrapper"
-         [class.message-left-wrapper]="user.username !== message.senderName"
-         [class.message-right-wrapper]="user.username === message.senderName">
+    <div *ngFor="let message of messages" [class.message-left-wrapper]="user.username !== message.senderName"
+         [class.message-right-wrapper]="user.username === message.senderName"
+         class="message-wrapper">
       <div class="message">{{ message.body }}</div>
-      <img class="avatar"
-           [src]="(user.username === message.senderName ? currentUser.avatarBlobUrl :  receiver.avatarBlobUrl) | defaultImage"/>
+      <img [src]="(user.username === message.senderName ? currentUser.avatarBlobUrl :  receiver.avatarBlobUrl) | defaultImage"
+           class="avatar"/>
     </div>
   </ng-container>
 </div>

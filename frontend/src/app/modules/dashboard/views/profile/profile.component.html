@@ -1,12 +1,12 @@
 <div *ngIf="currentUser$ | async as currentUser" class="profile">
   <div class="profile-header">
     <div (click)="uploadInputRef.click()" class="avatar-wrapper">
-      <img class="avatar" [src]=" currentUser.avatarBlobUrl | defaultImage" alt>
+      <img [src]=" currentUser.avatarBlobUrl | defaultImage" alt class="avatar">
       <i class="las la-pen"></i>
-      <input #uploadInputRef type="file"
-             id="file"
+      <input #uploadInputRef (change)="handleFileInput($event.target)"
              accept="image/jpeg"
-             (change)="handleFileInput($event.target)">
+             id="file"
+             type="file">
     </div>
 
     <h1 class="mb--0">{{ currentUser?.fullName }}</h1>
@@ -16,19 +16,19 @@
 
 <ng-container *ngIf="profileService.profile">
   <nav mat-tab-nav-bar>
-    <span mat-tab-link [routerLink]="['/dashboard','user','profile']" routerLinkActive="active">Profile</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','personal-mock']"
+    <span [routerLink]="['/dashboard','user','profile']" mat-tab-link routerLinkActive="active">Profile</span>
+    <span [routerLink]="['/dashboard','user','personal-mock']" mat-tab-link
           routerLinkActive="active">Personal Data</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','hr-information']"
+    <span [routerLink]="['/dashboard','user','hr-information']" mat-tab-link
           routerLinkActive="active">HR Information</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','payroll-information']" routerLinkActive="active">Payroll Information</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','start-end-dates']"
+    <span [routerLink]="['/dashboard','user','payroll-information']" mat-tab-link routerLinkActive="active">Payroll Information</span>
+    <span [routerLink]="['/dashboard','user','start-end-dates']" mat-tab-link
           routerLinkActive="active">Start End Dates</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','clothes-sizes']"
+    <span [routerLink]="['/dashboard','user','clothes-sizes']" mat-tab-link
           routerLinkActive="active">Clothes sizes</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','bank-details']"
+    <span [routerLink]="['/dashboard','user','bank-details']" mat-tab-link
           routerLinkActive="active">Bank details</span>
-    <span mat-tab-link [routerLink]="['/dashboard','user','emergency-contact']" routerLinkActive="active">Emergency contact</span>
+    <span [routerLink]="['/dashboard','user','emergency-contact']" mat-tab-link routerLinkActive="active">Emergency contact</span>
   </nav>
   <router-outlet></router-outlet>
 </ng-container>

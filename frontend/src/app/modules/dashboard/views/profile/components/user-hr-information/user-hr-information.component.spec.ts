@@ -8,9 +8,9 @@ describe('UserHrInformationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserHrInformationComponent ]
+      declarations: [UserHrInformationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -17,7 +17,7 @@ export const signInSuccess = createAction(ActionTypes.SIGN_IN_SUCCESS, props<Sig
 export const signInFailure = createAction(ActionTypes.SIGN_IN_FAILURE, props<{ errors: ApiErrorsInterface }>());
 
 /*    Sign up   */
-export const signUp = createAction(ActionTypes.SIGN_UP, props<{payload: SignUpPayloadInterface}>());
+export const signUp = createAction(ActionTypes.SIGN_UP, props<{ payload: SignUpPayloadInterface }>());
 export const signUpSuccess = createAction(ActionTypes.SIGN_UP_SUCCESS, props<JwtPayloadInterface>());
 export const signUpFailure = createAction(ActionTypes.SIGN_UP_FAILURE, props<{ errors: ApiErrorsInterface }>());
 
@@ -38,7 +38,7 @@ export const getCurrentUserFailure = createAction(ActionTypes.GET_CURRENT_USER_F
 
 /* TODO: Should be moved to own store (profile) */
 /*    Avatar update   */
-export const avatarUpdate = createAction(ActionTypes.AVATAR_UPDATE, props<{file: File | null}>());
+export const avatarUpdate = createAction(ActionTypes.AVATAR_UPDATE, props<{ file: File | null }>());
 export const avatarUpdateSuccess = createAction(ActionTypes.AVATAR_UPDATE_SUCCESS, props<SignInResponseInterface>());
 export const avatarUpdateFailure = createAction(ActionTypes.AVATAR_UPDATE_FAILURE, props<{ errors: ApiErrorsInterface }>());
 

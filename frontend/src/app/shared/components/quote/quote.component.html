@@ -5,5 +5,5 @@
   <div class="quote-author">
     <ng-content select="[author]"></ng-content>
   </div>
-  <img class="quote-avatar" [src]="avatar | defaultImage">
+  <img [src]="avatar | defaultImage" class="quote-avatar">
 </div>

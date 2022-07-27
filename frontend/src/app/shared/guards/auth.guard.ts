@@ -5,9 +5,10 @@ import {Observable, of, switchMap} from 'rxjs';
 import {StoreStateInterface} from 'src/app/store';
 import {isLoggedInSelector} from '../../modules/auth/store/auth.selectors';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AuthGuard implements CanActivate {
-  constructor(private store: Store<StoreStateInterface>, private router: Router) {}
+  constructor(private store: Store<StoreStateInterface>, private router: Router) {
+  }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     console.log('AuthGuard');

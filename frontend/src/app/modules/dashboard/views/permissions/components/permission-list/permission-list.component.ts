@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './permission-list.component.html',
   styleUrls: ['./permission-list.component.scss'],
 })
-export class PermissionListComponent {}
+export class PermissionListComponent {
+}

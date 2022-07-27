@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './user-bank-details.component.html',
   styleUrls: ['./user-bank-details.component.scss']
 })
-export class UserBankDetailsComponent { }
+export class UserBankDetailsComponent {
+}

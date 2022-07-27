@@ -21,7 +21,8 @@ export class SidenavComponent implements OnInit {
   public currentUser$: Observable<JwtPayloadInterface | null> = this.store.select(getUserSelector);
   public sidenav: SidenavItem[] = SIDENAV;
 
-  constructor(private store: Store<StoreStateInterface>, public route: ActivatedRoute, private location: Location) {}
+  constructor(private store: Store<StoreStateInterface>, public route: ActivatedRoute, private location: Location) {
+  }
 
   public ngOnInit(): void {
     this.checkIfSubmenuIsActiveOnInit();
@@ -32,15 +33,15 @@ export class SidenavComponent implements OnInit {
   }
 
   public toggleSidenav(sidenavItem: SidenavItem) {
-    if(!!sidenavItem && !!sidenavItem.submenus && sidenavItem.submenus.length > 0) {
+    if (!!sidenavItem && !!sidenavItem.submenus && sidenavItem.submenus.length > 0) {
       sidenavItem.isSubmenuExpanded = !sidenavItem.isSubmenuExpanded;
     }
   }
 
   private checkIfSubmenuIsActiveOnInit() {
     const currentPath = this.location.path();
-    for(let sidenavItem of this.sidenav) {
-      if(sidenavItem && sidenavItem.submenus && sidenavItem.submenus.length) {
+    for (let sidenavItem of this.sidenav) {
+      if (sidenavItem && sidenavItem.submenus && sidenavItem.submenus.length) {
         const submenuPaths = sidenavItem.submenus.map(m => m.pathUrl.join('/'));
         sidenavItem.isSubmenuExpanded = submenuPaths.some(sbMenu => sbMenu === currentPath);
       }

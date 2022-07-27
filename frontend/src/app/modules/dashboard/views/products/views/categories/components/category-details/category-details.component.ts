@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './category-details.component.html',
   styleUrls: ['./category-details.component.scss'],
 })
-export class CategoryDetailsComponent { }
+export class CategoryDetailsComponent {
+}

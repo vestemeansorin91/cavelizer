@@ -5,13 +5,13 @@ import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {TopbarComponent} from './components/topbar/topbar.component';
 import {DashboardComponent} from './dashboard.component';
 import {DashboardRoutesModule} from './dashboard.routes';
-import {SidenavItemHasChildrenPipe} from "./pipes/sidenav-item-has-children.pipe";
-import {SidenavSubmenuHeightPipe} from "./pipes/sidenav-submenu-height.pipe";
-import {ArticlesComponent} from "./views/articles/articles.component";
+import {SidenavItemHasChildrenPipe} from './pipes/sidenav-item-has-children.pipe';
+import {SidenavSubmenuHeightPipe} from './pipes/sidenav-submenu-height.pipe';
+import {ArticlesComponent} from './views/articles/articles.component';
 
-import {CavelizerComponentsModule} from "./views/cavelizer-components/cavelizer-components.module";
-import {ChatModule} from "./views/chat/chat.module";
-import {CommentsComponent} from "./views/comments/comments.component";
+import {CavelizerComponentsModule} from './views/cavelizer-components/cavelizer-components.module';
+import {ChatModule} from './views/chat/chat.module';
+import {CommentsComponent} from './views/comments/comments.component';
 import {DocumentationComponent} from './views/documentation/documentation.component';
 import {PanelComponent} from './views/panel/panel.component';
 import {
@@ -24,13 +24,13 @@ import {ProductFormComponent} from './views/products/components/product-form/pro
 import {ProductListComponent} from './views/products/components/product-list/product-list.component';
 import {
   CategoryDetailsComponent
-} from "./views/products/views/categories/components/category-details/category-details.component";
+} from './views/products/views/categories/components/category-details/category-details.component';
 import {
   CategoryFormComponent
-} from "./views/products/views/categories/components/category-form/category-form.component";
+} from './views/products/views/categories/components/category-form/category-form.component';
 import {
   CategoryListComponent
-} from "./views/products/views/categories/components/category-list/category-list.component";
+} from './views/products/views/categories/components/category-list/category-list.component';
 import {TagsComponent} from './views/products/views/tags/tags.component';
 import {RoleDetailsComponent} from './views/roles/components/role-details/role-details.component';
 import {RoleFormComponent} from './views/roles/components/role-form/role-form.component';
@@ -46,33 +46,33 @@ const COMPONENTS = [
 
   /* TODO: Dashboard/Panel - Move to own module */
   PanelComponent,
-  DocumentationComponent, /* FIXME: Probably we will delete this in the future */
+  DocumentationComponent /* FIXME: Probably we will delete this in the future */,
 
   /* TODO: Shop - Move to own module */
-    ProductDetailsComponent,
-    ProductFormComponent,
-    ProductListComponent,
-    TagsComponent,
-    CategoryDetailsComponent,
-    CategoryFormComponent,
-    CategoryListComponent,
+  ProductDetailsComponent,
+  ProductFormComponent,
+  ProductListComponent,
+  TagsComponent,
+  CategoryDetailsComponent,
+  CategoryFormComponent,
+  CategoryListComponent,
 
   /* TODO: Blog - Move to own module */
-    ArticlesComponent,
-    CommentsComponent,
+  ArticlesComponent,
+  CommentsComponent,
 
   /* TODO: Clients - Move to own module */
-    UserDetailsComponent,
-    UserFormComponent,
-    UserListComponent,
+  UserDetailsComponent,
+  UserFormComponent,
+  UserListComponent,
 
-    RoleDetailsComponent,
-    RoleFormComponent,
-    RoleListComponent,
+  RoleDetailsComponent,
+  RoleFormComponent,
+  RoleListComponent,
 
-    PermissionDetailsComponent,
-    PermissionFormComponent,
-    PermissionListComponent,
+  PermissionDetailsComponent,
+  PermissionFormComponent,
+  PermissionListComponent
 ];
 
 const PIPES = [SidenavItemHasChildrenPipe, SidenavSubmenuHeightPipe];
@@ -80,8 +80,8 @@ const PIPES = [SidenavItemHasChildrenPipe, SidenavSubmenuHeightPipe];
 const MODULES = [CommonModule, ChatModule, DashboardRoutesModule, SharedModule, CavelizerComponentsModule];
 
 @NgModule({
-  declarations: [COMPONENTS, PIPES ],
-  imports: [MODULES],
+  declarations: [COMPONENTS, PIPES],
+  imports: [MODULES]
 })
 export class DashboardModule {
 }

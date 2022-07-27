@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { NotificationsService } from 'angular2-notifications';
-import { ProfileService } from '../../profile.service';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NotificationsService} from 'angular2-notifications';
+import {ProfileService} from '../../profile.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -34,7 +34,7 @@ export class UserProfileComponent {
 
   // Etapa .... optinal .. de patch
   private patchFormGroup() {
-    const { publicProfile } = this.profileService.profile;
+    const {publicProfile} = this.profileService.profile;
 
     if (!publicProfile) {
       return;
