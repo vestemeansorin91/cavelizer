@@ -1,1 +1,56 @@
-<p>user-hr-information works!</p>
+<div class="flex justify--center">
+  <form [formGroup]="userHrInformationFormGroup" class="flex--column mt--40 gap--8">
+    <div>
+      <label class="mr--16" for="birthDate">Birth Date</label>
+      <input formControlName="birthDate" id="birthDate" type="date" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="employmentType">Employment Type</label>
+      <select formControlName="employmentType" id="employmentType">
+        <option value="internal">Internal</option>
+        <option value="external">External</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="mr--16" for="status">Status</label>
+      <input formControlName="status" id="status" type="checkbox" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="nationality">Nationality</label>
+      <input formControlName="nationality" id="nationality" type="string" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="weeklyHours">Weekly Hours</label>
+      <input formControlName="weeklyHours" id="weeklyHours" type="number" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="gender">Gender</label>
+      <select formControlName="gender" id="gender">
+        <option value="man">Man</option>
+        <option value="woman">Woman</option>
+        <option value="all">All</option>
+      </select>
+    </div>
+
+    <cavelizer-button (click)="onSaveHrInformation()"> Save</cavelizer-button>
+  </form>
+</div>
+
+<!-- [formGroup]="userClothesSizesFormGroup" -->
+
+<!-- birthDate: Date,
+    employmentType: {
+        type: String,
+        enum: EmploymentTypeEnum
+    },
+    status: Boolean,
+    nationality: String,
+    weeklyHours: Number,
+    gender: {
+        type: String,
+        enum: GenderEnum -->

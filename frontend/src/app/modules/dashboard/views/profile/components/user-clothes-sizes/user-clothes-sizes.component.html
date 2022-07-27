@@ -2,7 +2,7 @@
   <form [formGroup]="userClothesSizesFormGroup" class="flex--column mt--40 gap--8">
     <div>
       <label class="mr--16" for="shirtSize">Shirt Size </label>
-      <select formControlName="shirtSize" id="shirtSize" name="">
+      <select formControlName="shirtSize" id="shirtSize">
         <option value="xs">XS</option>
         <option value="s">S</option>
         <option value="m">M</option>
@@ -14,12 +14,12 @@
 
     <div>
       <label class="mr--16" for="hipSize">Hip Size</label>
-      <input formControlName="hipSize" id="hipSize" type="number"/>
+      <input formControlName="hipSize" id="hipSize" type="number" />
     </div>
 
     <div>
       <label class="mr--16" for="footSize">Foot Size</label>
-      <input formControlName="footSize" id="footSize" type="number"/>
+      <input formControlName="footSize" id="footSize" type="number" />
     </div>
 
     <cavelizer-button (click)="onSaveClothesSizes()"> Save</cavelizer-button>
