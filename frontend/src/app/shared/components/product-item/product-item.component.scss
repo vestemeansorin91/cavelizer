@@ -14,7 +14,7 @@
       font-weight: 600;
       color: $color-primary;
       background-color: $color-primary-070;
-      display: none;
+      display: block;
     }
   }
 
@@ -31,12 +31,9 @@
 
   .rating {
     display: flex;
-    display: none;
+
     cavelizer-icon {
       color: $color-grey;
-    }
-    &.there--is {
-      display: block;
     }
   }
 
