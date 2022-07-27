@@ -48,4 +48,8 @@ export class ProfileService {
   public saveUserHrInformation(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updateHrInformation`, payload);
   }
+
+  public saveUserStartEndDates(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateStartEndDates`, payload);
+  }
 }
