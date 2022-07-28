@@ -49,6 +49,10 @@ export class ProfileService {
     return this.http.patch(`${BASE_URL}/${this.userId}/updateHrInformation`, payload);
   }
 
+  public saveUserBankDetails(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateBankDetails`, payload);
+  }
+
   public saveUserStartEndDates(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updateStartEndDates`, payload);
   }
