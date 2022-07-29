@@ -1,21 +1,23 @@
-<div class="best-product-item p--16 b-radius--12 width--270">
+<div class="best-product-item">
     <!-- <div class="image py--12 px--20 b-radius--12 width--240 height--180">
         <span class="discount b-radius--12">- 36 %</span>
     </div> -->
-    <img [src]="''|defaultImage" alt="">
-    <cavelizer-tag class="narrow">-38%</cavelizer-tag>
-    <div class="title mb--4 mt--16">Product Title</div>
-    <div class="description fs--12 mb--14">Space for a small product description</div>
-    <div class="rating mt--14 mb--18 gap--6 fs--16">
+    <div class="image-container">
+        <img [src]="''|defaultImage" alt="">
+        <cavelizer-tag class="narrow">-38%</cavelizer-tag>
+    </div>
+    <div class="title">Product Title</div>
+    <div class="description">Space for a small product description</div>
+    <div class="rating">
         <cavelizer-icon name="star-full"></cavelizer-icon>
         <cavelizer-icon name="star-full"></cavelizer-icon>
         <cavelizer-icon name="star-full"></cavelizer-icon>
         <cavelizer-icon name="star-full"></cavelizer-icon>
         <cavelizer-icon name="star-empty"></cavelizer-icon>
     </div>
-    <div class="footer justify--space-between align--center">
-        <div class="price fs--18"><span>1.48 USD</span>
-            <div class="first-price"><s><span class="fs--12"> 48.56 </span></s></div>
+    <div class="footer">
+        <div class="price"><span>1.48 USD</span>
+            <div class="first-price"><s><span> 48.56 </span></s></div>
         </div>
         <cavelizer-button class="small">Buy now</cavelizer-button>
     </div>

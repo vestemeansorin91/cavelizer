@@ -11,9 +11,7 @@ import { Component } from '@angular/core';
     </mat-expansion-panel-header>
     <div class="flex gap--20">
       <cavelizer-product-item> </cavelizer-product-item>
-      <cavelizer-product-item>
-        <ng-content class="rating there--is"></ng-content>
-      </cavelizer-product-item>
+      <cavelizer-product-item> </cavelizer-product-item>
     </div>
   </mat-expansion-panel>`
 })

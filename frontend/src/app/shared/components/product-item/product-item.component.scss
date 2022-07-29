@@ -4,33 +4,47 @@
 
 .best-product-item {
   border: 1px solid $color-grey-050;
+  padding: 16px;
+  width: 270px;
+  border-radius: 12px;
 
-  .image {
-    background: $color-grey-080;
-    height: 180px;
+  .image-container {
+    position: relative;
 
-    .discount {
-      @include default-poppins-text();
-      font-weight: 600;
-      color: $color-primary;
-      background-color: $color-primary-070;
-      display: block;
+    img {
+      border-radius: 12px;
+      width: 240px;
+      height: 180px;
+    }
+
+    cavelizer-tag {
+      position: absolute;
+      top: 12px;
+      left: 20px;
     }
   }
 
   .title {
     @include default-poppins-text();
     font-size: 15px;
+    margin-bottom: 4px;
+    margin-top: 16px;
     font-weight: 500;
   }
 
   .description {
     @include default-open-sans-text();
     color: $color-grey-010;
+    font-size: 12px;
+    margin-bottom: 14px;
   }
 
   .rating {
     display: flex;
+    margin-top: 14px;
+    margin-bottom: 18px;
+    gap: 6px;
+    font-size: 16px;
 
     cavelizer-icon {
       color: $color-grey;
@@ -38,18 +52,23 @@
   }
 
   .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     .price {
       @include default-poppins-text();
       font-weight: 600;
       line-height: 27px;
+      font-size: 18px;
 
       .first-price {
         @include default-poppins-text();
         font-weight: 600;
         color: $color-grey-050;
 
-        &.there--is {
-          display: block;
+        span {
+          font-size: 12px;
         }
       }
     }

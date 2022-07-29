@@ -28,6 +28,7 @@ import { QuoteComponent } from './components/quote/quote.component';
 import { TagComponent } from './components/tag/tag.component';
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { ToggleComponent } from './components/toggle/toggle.component';
+import { TooltipModule } from './components/tooltip/tooltip.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { PhonePipe } from './pipes/phone-format.pipe';
@@ -53,7 +54,7 @@ const COMPONENTS: any[] = [
 
 const SERVICES: any[] = [];
 
-const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule, TooltipModule];
 
 const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatTabsModule, MatExpansionModule, MatTooltipModule, ClipboardModule, MatSelectModule, MatInputModule, OverlayModule];
 
