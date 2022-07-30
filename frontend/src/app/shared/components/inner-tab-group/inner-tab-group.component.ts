@@ -8,15 +8,15 @@ import {
   Output,
   QueryList
 } from '@angular/core';
-import {Router} from '@angular/router';
-import {Subscription} from 'rxjs';
-import {InnerTabComponent} from './inner-tab/inner-tab.component';
-import {TabGroupBase} from './tab-group.base';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { InnerTabComponent } from './inner-tab/inner-tab.component';
+import { TabGroupBase } from './tab-group.base';
 
 @Component({
-  selector: 'cavelizer-inner-tab-group',
+  selector: 'cvz-inner-tab-group',
   templateUrl: './inner-tab-group.component.html',
-  providers: [{provide: TabGroupBase, useExisting: InnerTabGroupComponent}],
+  providers: [{ provide: TabGroupBase, useExisting: InnerTabGroupComponent }],
   styleUrls: ['./inner-tab-group.component.scss']
 })
 export class InnerTabGroupComponent implements AfterContentInit, OnDestroy {

@@ -1,8 +1,7 @@
 <div class="border-bottom py--16 px--32 width--full justify--space-between align--center">
-  <cavelizer-input-group class="width--320">
-    <cavelizer-text-input class="width--full" id="password" placeholder="Search for ..."
-                          type="text"></cavelizer-text-input>
-  </cavelizer-input-group>
+  <cvz-input-group class="width--320">
+    <cvz-input-text placeholder="Search for ..."></cvz-input-text>
+  </cvz-input-group>
 
   <div class="align--center">
     <i class="las la-cog fs--32 mr--40"></i>
@@ -16,7 +15,7 @@
         <span [routerLink]="['/dashboard/user/profile']"
               class="ml--32 mr--12 fs--14 text--bold pointer">{{ currentUser.username }}</span>
       </div>
-      <img [routerLink]="['/dashboard/user/profile']" [src]="currentUser?.avatarBlobUrl | defaultImage"
+      <img [routerLink]="['/dashboard/user/profile']" [src]="currentUser?.avatarBlobUrl | defaultImage" alt
            class="size--40 circle pointer">
     </ng-container>
   </div>

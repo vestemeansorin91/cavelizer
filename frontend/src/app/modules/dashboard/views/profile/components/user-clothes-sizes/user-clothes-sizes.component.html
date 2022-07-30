@@ -12,16 +12,16 @@
       </select>
     </div>
 
-    <div>
-      <label class="mr--16" for="hipSize">Hip Size</label>
-      <input formControlName="hipSize" id="hipSize" type="number" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Hip Size</cvz-label>
+      <cvz-input-text formControlName="hipSize" type="number"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="footSize">Foot Size</label>
-      <input formControlName="footSize" id="footSize" type="number" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Foot size</cvz-label>
+      <cvz-input-text formControlName="footSize" type="number"></cvz-input-text>
+    </cvz-input-group>
 
-    <cavelizer-button (click)="onSaveClothesSizes()"> Save</cavelizer-button>
+    <cvz-button (click)="onSaveClothesSizes()"> Save</cvz-button>
   </form>
 </div>

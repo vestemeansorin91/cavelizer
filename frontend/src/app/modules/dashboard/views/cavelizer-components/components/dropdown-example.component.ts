@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown-example',
@@ -12,15 +12,14 @@ import {Component} from '@angular/core';
 
     <span [dropdownTriggerFor]="dropdown" class="small transparent">
       Trigger dropdown
-      <cavelizer-icon name="arrow-down" class="primary-color"></cavelizer-icon>
+      <cvz-icon name="arrow-down" class="primary-color"></cvz-icon>
     </span>
 
-    <cavelizer-dropdown #dropdown>
+    <cvz-dropdown #dropdown>
       <div dropdownItem>Element 1</div>
       <div dropdownItem>Element 2</div>
       <div dropdownItem>Element 3</div>
-    </cavelizer-dropdown>
+    </cvz-dropdown>
   </mat-expansion-panel>`
 })
-export class DropdownExampleComponent {
-}
+export class DropdownExampleComponent {}

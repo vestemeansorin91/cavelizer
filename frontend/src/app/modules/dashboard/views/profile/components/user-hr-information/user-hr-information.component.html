@@ -13,20 +13,20 @@
       </select>
     </div>
 
-    <div>
-      <label class="mr--16" for="status">Status</label>
-      <input formControlName="status" id="status" type="checkbox" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Status</cvz-label>
+      <cvz-checkbox formControlName="status"></cvz-checkbox>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="nationality">Nationality</label>
-      <input formControlName="nationality" id="nationality" type="string" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Nationality</cvz-label>
+      <cvz-input-text formControlName="nationality"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="weeklyHours">Weekly Hours</label>
-      <input formControlName="weeklyHours" id="weeklyHours" type="number" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Weekly hours</cvz-label>
+      <cvz-input-text formControlName="weeklyHours" type="number"></cvz-input-text>
+    </cvz-input-group>
 
     <div>
       <label class="mr--16" for="gender">Gender</label>
@@ -37,8 +37,7 @@
       </select>
     </div>
 
-    <cavelizer-button (click)="onSaveHrInformation()">Save</cavelizer-button>
+    <cvz-button (click)="onSaveHrInformation()">Save</cvz-button>
   </form>
 
 </div>
-<pre class="justify--center">{{ userHrInformationFormGroup.value | json }}</pre>

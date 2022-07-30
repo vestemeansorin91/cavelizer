@@ -1,70 +1,80 @@
-import {NgxSliderModule} from '@angular-slider/ngx-slider';
-import {ClipboardModule} from '@angular/cdk/clipboard';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {RouterModule} from '@angular/router';
-import {BreadcrumbComponent} from './components/breadcrumb/breadcrumb.component';
-import {ButtonComponent} from './components/button/button.component';
-import {CheckboxComponent} from './components/checkbox/checkbox.component';
-import {ChipComponent} from './components/chip/chip.component';
-import {DropdownItemDirective} from './components/dropdown/dropdown-item.directive';
-import {DropdownTriggerForDirective} from './components/dropdown/dropdown-trigger-for.directive';
-import {DropdownComponent} from './components/dropdown/dropdown.component';
-import {IconComponent} from './components/icon/icon.component';
-import {InnerTabGroupComponent} from './components/inner-tab-group/inner-tab-group.component';
-import {InnerTabComponent} from './components/inner-tab-group/inner-tab/inner-tab.component';
-import {InputGroupComponent} from './components/input-group/input-group.component';
-import {MiniBannerComponent} from './components/mini-banner/mini-banner.component';
-import {QuoteComponent} from './components/quote/quote.component';
-import {TagComponent} from './components/tag/tag.component';
-import {TextInputComponent} from './components/text-input/text-input.component';
-import {ToggleComponent} from './components/toggle/toggle.component';
-import {TooltipModule} from './components/tooltip/tooltip.module';
-import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {DefaultImagePipe} from './pipes/default-image.pipe';
-import {PhonePipe} from './pipes/phone-format.pipe';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
+import { BreadcrumbModule } from './components/breadcrumb/breadcrumb.module';
+import { ButtonModule } from './components/button/button.module';
+import { CheckboxModule } from './components/checkbox/checkbox.module';
+import { ChipModule } from './components/chip/chip.module';
+import { DropdownItemDirective } from './components/dropdown/dropdown-item.directive';
+import { DropdownTriggerForDirective } from './components/dropdown/dropdown-trigger-for.directive';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { InputGroupModule } from './components/form-elements/input-group/input-group.module';
+import { LabelModule } from './components/form-elements/label/label.module';
+import { InputTextModule } from './components/form-elements/input-text/input-text.module';
+import { IconModule } from './components/icon/icon.module';
+import { InnerTabGroupModule } from './components/inner-tab-group/inner-tab-group.module';
+import { MiniBannerModule } from './components/mini-banner/mini-banner.module';
+import { QuoteModule } from './components/quote/quote.module';
+import { TagModule } from './components/tag/tag.module';
+import { ToggleModule } from './components/toggle/toggle.module';
+
+import { TooltipModule } from './components/tooltip/tooltip.module';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { DefaultImagePipeModule } from './pipes/default-image/default-image-pipe.module';
+import { PhoneFormatPipeModule } from './pipes/phone-format/phone-format-pipe.module';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
-  ButtonComponent,
-  BreadcrumbComponent,
-  MiniBannerComponent,
-  DropdownComponent,
-  IconComponent,
-  InnerTabGroupComponent,
-  InnerTabComponent,
-  QuoteComponent,
-  ChipComponent,
-  InputGroupComponent,
-  CheckboxComponent,
-  TextInputComponent,
-  ToggleComponent,
-  TagComponent
+  DropdownComponent // Todo: Need another implementation
 ];
 
-const SERVICES: any[] = [];
+const COMPONENTS_MODULES: any[] = [
+  BreadcrumbModule,
+  ButtonModule,
+  CheckboxModule,
+  ChipModule,
+  InputGroupModule,
+  LabelModule,
+  InputTextModule,
+  IconModule,
+  InnerTabGroupModule,
+  MiniBannerModule,
+  QuoteModule,
+  TagModule,
+  ToggleModule,
+  TooltipModule
+];
 
-const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule, TooltipModule];
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];
 
-const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatTabsModule, MatExpansionModule, MatTooltipModule, ClipboardModule, MatSelectModule, MatInputModule, OverlayModule];
+const ANGULAR_MATERIAL_MODULES = [
+  MatSidenavModule,
+  MatTabsModule,
+  MatExpansionModule,
+  MatTooltipModule,
+  MatSelectModule,
+  MatInputModule,
+  ClipboardModule,
+  OverlayModule
+];
 
-const PIPES: any[] = [DefaultImagePipe, PhonePipe];
+const PIPES_MODULES: any[] = [DefaultImagePipeModule, PhoneFormatPipeModule];
 
 const DIRECTIVES: any[] = [DropdownTriggerForDirective, DropdownItemDirective];
 
 @NgModule({
-  declarations: [COMPONENTS, PIPES, DIRECTIVES],
-  imports: [CommonModule, MODULES, ANGULAR_MATERIAL_MODULES],
-  providers: [SERVICES],
-  exports: [MODULES, COMPONENTS, PIPES, DIRECTIVES, SERVICES, ANGULAR_MATERIAL_MODULES]
+  declarations: [COMPONENTS, DIRECTIVES],
+  imports: [CommonModule, MODULES, ANGULAR_MATERIAL_MODULES, COMPONENTS_MODULES, PIPES_MODULES],
+  exports: [MODULES, COMPONENTS, PIPES_MODULES, DIRECTIVES, ANGULAR_MATERIAL_MODULES, COMPONENTS_MODULES]
 })
-export class SharedModule {
-}
+export class SharedModule {}

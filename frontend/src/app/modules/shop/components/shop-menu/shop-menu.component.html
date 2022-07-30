@@ -2,12 +2,12 @@
   <ng-container *ngFor="let menu of menuItems">
     <div [dropdownTriggerFor]="dropdown" class="shop-menu--item">
       <span>{{ menu.menuLabel }}</span>
-      <cavelizer-icon name="arrow-down"></cavelizer-icon>
+      <cvz-icon name="arrow-down"></cvz-icon>
     </div>
 
-    <cavelizer-dropdown #dropdown>
+    <cvz-dropdown #dropdown>
       <div (click)="test($event)" *ngFor="let option of menu.options" dropdownItem>{{option.value}}</div>
-    </cavelizer-dropdown>
+    </cvz-dropdown>
   </ng-container>
 </div>
 

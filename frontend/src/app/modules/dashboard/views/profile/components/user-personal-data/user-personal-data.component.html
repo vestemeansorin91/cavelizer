@@ -1,39 +1,41 @@
 <div class="flex justify--center">
   <form [formGroup]="userPersonalDataFormGroup" class="flex--column mt--40 gap--8">
-    <div>
-      <label class="mr--16" for="street">Street</label>
-      <input formControlName="street" id="street" type="text"/>
-    </div>
 
-    <div>
-      <label class="mr--16" for="houseNumber">House Number</label>
-      <input formControlName="houseNumber" id="houseNumber" type="number"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>Street</cvz-label>
+      <cvz-input-text formControlName="street"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="zipCode">Zip Code</label>
-      <input formControlName="zipCode" id="zipCode" type="text"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>House number</cvz-label>
+      <cvz-input-text formControlName="houseNumber"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="city">City</label>
-      <input formControlName="city" id="city" type="text"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>Zip code</cvz-label>
+      <cvz-input-text formControlName="zipCode"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="phoneNumber">Phone Number</label>
-      <input formControlName="phoneNumber" id="phoneNumber" type="text"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>City</cvz-label>
+      <cvz-input-text formControlName="city"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
+    <cvz-input-group>
+      <cvz-label>Phone Number</cvz-label>
+      <cvz-input-text formControlName="phoneNumber"></cvz-input-text>
+    </cvz-input-group>
+
+    <div class="flex--column">
       <label class="mr--16" for="validityIdentityCard">Validity Identity Card</label>
       <input formControlName="validityIdentityCard" id="validityIdentityCard" type="date"/>
     </div>
 
-    <div>
-      <label class="mr--16" for="privateEmail">Private Email</label>
-      <input formControlName="privateEmail" id="privateEmail" type="email"/>
-    </div>
-    <cavelizer-button (click)="onSavePersonalData()">Save</cavelizer-button>
+    <cvz-input-group>
+      <cvz-label>Private Email</cvz-label>
+      <cvz-input-text formControlName="privateEmail" type="email"></cvz-input-text>
+    </cvz-input-group>
+
+    <cvz-button (click)="onSavePersonalData()">Save</cvz-button>
   </form>
 </div>

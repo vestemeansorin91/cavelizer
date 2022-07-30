@@ -1,8 +1,8 @@
-import {Pipe, PipeTransform} from "@angular/core";
-import {environment} from "../../../environments/environment";
+import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Pipe({
-  name: "defaultImage"
+  name: 'defaultImage'
 })
 export class DefaultImagePipe implements PipeTransform {
   transform(avatarBlobUrl: string | null | undefined): string {
@@ -11,7 +11,7 @@ export class DefaultImagePipe implements PipeTransform {
         return avatarBlobUrl;
       }
       const prefix = environment.baseUrl;
-      return prefix + "/" + avatarBlobUrl;
+      return prefix + '/' + avatarBlobUrl;
     }
 
     return '/assets/default-avatar.jpeg';

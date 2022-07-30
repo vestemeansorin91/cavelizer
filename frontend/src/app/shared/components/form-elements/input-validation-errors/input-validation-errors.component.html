@@ -1,0 +1,21 @@
+<div class='errors-container'>
+  <div *ngIf='showErrors | async; else showInfo' class='errors-content'>
+    <ng-container *ngIf="!isFocused && control.errors">
+      <ng-container *ngIf="control.errors['required']">{{required}}</ng-container>
+      <ng-container *ngIf="control.errors['custom']">{{control.errors['custom']}}</ng-container>
+      <ng-container *ngIf="control.value">
+        <ng-container *ngIf="control.errors['pattern']"><span>Invalid format</span>
+        </ng-container>
+        <ng-container *ngIf="control.errors['email']"><span>Invalid email format</span>
+        </ng-container>
+        <ng-container *ngIf="control.errors['dates']"><span>{{control.errors['dates']}}</span></ng-container>
+        <ng-container *ngIf="control.errors['min']">The value is too low</ng-container>
+        <ng-container *ngIf="control.errors['max']">The value is too large</ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+
+</div>
+<ng-template #showInfo>
+  <ng-content></ng-content>
+</ng-template>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-text-input-example',
@@ -10,20 +10,19 @@ import {Component} from '@angular/core';
       <mat-panel-description> Creat de Sorin </mat-panel-description>
     </mat-expansion-panel-header>
 
-
     <div class="flex--column gap--16">
-      <cavelizer-input-group>
+      <cvz-input-group>
         <label>Hello</label>
-        <cavelizer-text-input [(ngModel)]="textHere"></cavelizer-text-input>
-      </cavelizer-input-group>
+        <cvz-input-text [(ngModel)]="textHere"></cvz-input-text>
+      </cvz-input-group>
 
-      <cavelizer-input-group>
-        <cavelizer-text-input [(ngModel)]="textHereDisabled" [disabled]="true"></cavelizer-text-input>
-      </cavelizer-input-group>
+      <cvz-input-group>
+        <cvz-input-text [(ngModel)]="textHereDisabled" [disabled]="true"></cvz-input-text>
+      </cvz-input-group>
     </div>
   </mat-expansion-panel>`
 })
-export class TextInputComponent {
+export class TextInputExampleComponent {
   public textHere = '';
   public textHereDisabled = 'this is disabled';
 }

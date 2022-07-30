@@ -1,6 +1,6 @@
-<cavelizer-button *ngIf="isAdmin$ | async" [routerLink]="['/dashboard', 'panel']"
-                  class="shortcut-dashboard-btn small grey"><i class="las la-user-shield "></i></cavelizer-button>
-<cavelizer-button *ngIf="isAdmin$ | async" [routerLink]="['/auth', 'login']" class="shortcut-login-btn small grey"><i
-  class="las la-unlock-alt"></i></cavelizer-button>
+<cvz-button *ngIf="isAdmin$ | async" [routerLink]="['/dashboard', 'panel']"
+                  class="shortcut-dashboard-btn small grey"><i class="las la-user-shield "></i></cvz-button>
+<cvz-button *ngIf="isAdmin$ | async" [routerLink]="['/auth', 'login']" class="shortcut-login-btn small grey"><i
+  class="las la-unlock-alt"></i></cvz-button>
 <router-outlet></router-outlet>
 <simple-notifications></simple-notifications>

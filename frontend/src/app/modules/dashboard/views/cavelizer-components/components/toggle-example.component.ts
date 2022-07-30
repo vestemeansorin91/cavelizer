@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-example',
@@ -10,14 +10,12 @@ import {Component} from '@angular/core';
       <mat-panel-description> Creat de Sorin </mat-panel-description>
     </mat-expansion-panel-header>
 
-
-   <div class="flex--column gap--16">
-     <cavelizer-toggle [(ngModel)]="leftOrRight">Activate some option</cavelizer-toggle>
-     <cavelizer-toggle [(ngModel)]="leftOrRight2">Activate some option</cavelizer-toggle>
-     <cavelizer-toggle [(ngModel)]="leftOrRightDisabled" [disabled]="true">This one is disabled</cavelizer-toggle>
-     <cavelizer-toggle [(ngModel)]="leftOrRightDisabledTrue" [disabled]="true">This one is disabled</cavelizer-toggle>
-   </div>
-
+    <div class="flex--column gap--16">
+      <cvz-toggle [(ngModel)]="leftOrRight">Activate some option</cvz-toggle>
+      <cvz-toggle [(ngModel)]="leftOrRight2">Activate some option</cvz-toggle>
+      <cvz-toggle [(ngModel)]="leftOrRightDisabled" [disabled]="true">This one is disabled</cvz-toggle>
+      <cvz-toggle [(ngModel)]="leftOrRightDisabledTrue" [disabled]="true">This one is disabled</cvz-toggle>
+    </div>
   </mat-expansion-panel>`
 })
 export class ToggleExampleComponent {
