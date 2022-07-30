@@ -1,4 +1,1 @@
-export const brandingIcons = [
-  'discord'
-];
-
+export const brandingIcons = [];

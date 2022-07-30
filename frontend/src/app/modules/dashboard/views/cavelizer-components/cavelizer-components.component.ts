@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cavelizer-components',
@@ -19,5 +19,4 @@ import {Component} from '@angular/core';
       <app-range-slider-example></app-range-slider-example>
     </mat-accordion>`
 })
-export class CavelizerComponentsComponent {
-}
+export class CavelizerComponentsComponent {}

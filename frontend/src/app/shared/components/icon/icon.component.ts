@@ -1,4 +1,4 @@
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -9,23 +9,16 @@ import {
   OnInit,
   SimpleChanges
 } from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
-import {Subscription} from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
 
 const ICONS_PATH = 'assets/icons/svg';
 const ICON_TYPE = '.svg';
 
 @Component({
-  selector: 'cavelizer-icon',
+  selector: 'cvz-icon',
   template: ``,
-  styles: [
-    `
-      :host {
-        display: inline-flex;
-        cursor: pointer;
-      }
-    `
-  ],
+  styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IconComponent implements OnInit, OnChanges, OnDestroy {
@@ -33,20 +26,27 @@ export class IconComponent implements OnInit, OnChanges, OnDestroy {
   @HostBinding('innerHTML') public svg: any;
   private subscription = new Subscription();
 
-  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {}
+
+  public ngOnInit(): void {
+    this.subscription.add(
+      this.http
+        .get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
+        .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
+    );
   }
 
-  ngOnInit() {
-    this.subscription.add(this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, {responseType: 'text'}).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value))));
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
+  public ngOnChanges(changes: SimpleChanges): void {
     if (changes['name'] && !changes['name'].firstChange) {
-      this.subscription.add(this.http.get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, {responseType: 'text'}).subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value))));
+      this.subscription.add(
+        this.http
+          .get(`${ICONS_PATH}/${this.name}${ICON_TYPE}`, { responseType: 'text' })
+          .subscribe(value => (this.svg = this.sanitizer.bypassSecurityTrustHtml(value)))
+      );
     }
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 }

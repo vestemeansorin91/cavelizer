@@ -3,10 +3,10 @@
   <h1 *ngIf="!isExpanded" [routerLink]="['/dashboard', 'panel']" class="cavelizer-title">c</h1>
 
   <span class="sidenav--menu-toggle">
-    <cavelizer-icon
+    <cvz-icon
       (click)="isExpanded = !isExpanded"
       [name]="isExpanded ? 'arrow-left' : 'arrow-right'"
-      class="color-white toggle-btn"></cavelizer-icon>
+      class="color-white toggle-btn"></cvz-icon>
   </span>
 
   <div class="menu">
@@ -24,7 +24,7 @@
            routerLinkActive="active">
         <i [ngClass]="sidenavItem.icon"></i>
         <span>{{sidenavItem.name}}</span>
-        <cavelizer-icon class="color-white" name="arrow-left"></cavelizer-icon>
+        <cvz-icon class="color-white" name="arrow-left"></cvz-icon>
       </div>
 
       <div [style.height]="sidenavItem | sidenavSubmenuHeight"

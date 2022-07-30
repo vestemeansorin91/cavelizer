@@ -1,7 +1,7 @@
-import {Component, Input} from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'cavelizer-quote',
+  selector: 'cvz-quote',
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.scss']
 })

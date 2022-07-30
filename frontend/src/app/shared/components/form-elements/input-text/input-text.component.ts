@@ -1,20 +1,20 @@
-import {Component, ElementRef, EventEmitter, forwardRef, Input, Output, ViewChild} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import { Component, ElementRef, EventEmitter, forwardRef, Input, Output, ViewChild } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const CAVELIZER_TEXT_INPUT_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => TextInputComponent),
+  useExisting: forwardRef(() => InputTextComponent),
   multi: true
 };
 
 @Component({
-  selector: 'cavelizer-text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss'],
+  selector: 'cvz-input-text',
+  templateUrl: './input-text.component.html',
+  styleUrls: ['./input-text.component.scss'],
   providers: [CAVELIZER_TEXT_INPUT_VALUE_ACCESSOR]
 })
-export class TextInputComponent implements ControlValueAccessor {
-  @ViewChild('input', {static: true}) input: ElementRef;
+export class InputTextComponent implements ControlValueAccessor {
+  @ViewChild('input', { static: true }) input: ElementRef;
   @Input() public mask = null;
   @Input() public disabled = false;
   @Input() public readonly = false;
@@ -34,8 +34,7 @@ export class TextInputComponent implements ControlValueAccessor {
   }
 
   // private lastMaskedValue = '';
-  public onTouched = () => {
-  };
+  public onTouched = () => {};
 
   public onEnter(e: any) {
     this.onEnterKey.emit(e);
@@ -79,7 +78,5 @@ export class TextInputComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  private propagateChange: any = () => {
-  };
-
+  private propagateChange: any = () => {};
 }

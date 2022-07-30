@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-button-example',
@@ -34,7 +34,7 @@ import {Component} from '@angular/core';
         </div>
 
         <span>Classes added: {{ size }} {{ style }}</span>
-        <cavelizer-button [ngClass]="[size, style]">Submit</cavelizer-button>
+        <cvz-button [ngClass]="[size, style]">Submit</cvz-button>
       </div>
     </mat-expansion-panel>
   `

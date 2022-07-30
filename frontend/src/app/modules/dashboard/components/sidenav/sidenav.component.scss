@@ -79,7 +79,7 @@
         }
 
         span,
-        cavelizer-icon {
+        cvz-icon {
           display: none;
         }
 
@@ -103,7 +103,7 @@
           background-color: transparent;
           padding-right: 24px;
 
-          cavelizer-icon {
+          cvz-icon {
             position: absolute;
             top: 12px;
             right: 0;
@@ -127,7 +127,7 @@
 
       &.submenu-expanded {
         .menu-item--link {
-          cavelizer-icon {
+          cvz-icon {
             transform: rotate(-90deg);
           }
         }
