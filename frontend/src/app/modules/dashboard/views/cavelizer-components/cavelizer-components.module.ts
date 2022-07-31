@@ -10,6 +10,7 @@ import { IconsExampleComponent } from './components/icons-example.component';
 import { InnerTabGroupExampleComponent } from './components/inner-tab-group-example.component';
 import { MiniBannerExampleComponent } from './components/mini-banner-example.component';
 import { QuoteExampleComponent } from './components/quote-example.component';
+import { RadioGroupExampleComponent } from './components/radio-group-example.component';
 import { RangeSliderComponent } from './components/range-slider.component';
 import { TagExampleComponent } from './components/tag-example.component';
 import { TextInputExampleComponent } from './components/text-input-example.component';
@@ -28,7 +29,8 @@ const COMPONENTS = [
   TextInputExampleComponent,
   ToggleExampleComponent,
   RangeSliderComponent,
-  TagExampleComponent
+  TagExampleComponent,
+  RadioGroupExampleComponent
 ];
 
 @NgModule({

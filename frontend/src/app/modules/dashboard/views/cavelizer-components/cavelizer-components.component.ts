@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
       <app-text-input-example></app-text-input-example>
       <app-toggle-example></app-toggle-example>
       <app-range-slider-example></app-range-slider-example>
+      <app-radio-group-example></app-radio-group-example>
     </mat-accordion>`
 })
 export class CavelizerComponentsComponent {}

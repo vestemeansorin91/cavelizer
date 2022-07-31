@@ -19,12 +19,13 @@ import { DropdownItemDirective } from './components/dropdown/dropdown-item.direc
 import { DropdownTriggerForDirective } from './components/dropdown/dropdown-trigger-for.directive';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { InputGroupModule } from './components/form-elements/input-group/input-group.module';
-import { LabelModule } from './components/form-elements/label/label.module';
 import { InputTextModule } from './components/form-elements/input-text/input-text.module';
+import { LabelModule } from './components/form-elements/label/label.module';
 import { IconModule } from './components/icon/icon.module';
 import { InnerTabGroupModule } from './components/inner-tab-group/inner-tab-group.module';
 import { MiniBannerModule } from './components/mini-banner/mini-banner.module';
 import { QuoteModule } from './components/quote/quote.module';
+import { RadioGroupModule } from './components/radio-group/radio-group.module';
 import { TagModule } from './components/tag/tag.module';
 import { ToggleModule } from './components/toggle/toggle.module';
 
@@ -52,7 +53,8 @@ const COMPONENTS_MODULES: any[] = [
   QuoteModule,
   TagModule,
   ToggleModule,
-  TooltipModule
+  TooltipModule,
+  RadioGroupModule
 ];
 
 const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];

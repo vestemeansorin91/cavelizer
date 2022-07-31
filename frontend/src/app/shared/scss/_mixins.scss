@@ -27,5 +27,6 @@
   @if ($typoName == 'normal') {           font-size: 16px;    font-weight: 300;    line-height: 1.5;  }
   @if ($typoName == 'simple') {           font-size: 16px;    font-weight: normal;    line-height: 1.33;  }
   @if ($typoName == 'normal-400') {       font-size: 16px;    font-weight: normal;    line-height: 1.5;  }
+  @if ($typoName == 'small-600') {            font-size: 14px;    font-weight: bold;    line-height: 1.43;  }
   @if ($typoName == 'small') {            font-size: 14px;    font-weight: normal;    line-height: 1.43;  }
 }
