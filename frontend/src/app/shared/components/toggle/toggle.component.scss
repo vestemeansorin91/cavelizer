@@ -14,7 +14,7 @@
     width: 36px;
     height: 20px;
     border-radius: 16px;
-    background: $color-grey-060;
+    background: $color-grey-040;
     cursor: pointer;
 
     .toggle-bullet {
@@ -54,40 +54,44 @@
       }
     }
   }
+}
 
-  span {
-    flex: 1 auto;
-    padding-left: 8px;
-    font-weight: 400;
-    cursor: pointer;
+:host {
+  &.active {
+    .toggle-input {
+      .toggle-bullet {
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: 5px;
+        background-color: $color-grey-010;
+      }
+    }
 
-    &:empty {
-      display: none;
+    .toggle-input {
+      .toggle-item {
+        &:hover {
+          background-color: $color-primary-010;
+        }
+        &.selected {
+          background-color: $color-success-020;
+
+          .toggle-bullet {
+            left: 22px;
+            top: 5px;
+            background-color: $color-white;
+          }
+        }
+      }
     }
   }
-}
-
-:host(.bold) {
-  .toggle-input {
-    span {
-      font-size: 20px;
-      font-weight: 700;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.6;
-      letter-spacing: normal;
-    }
-  }
-}
-
-:host(.big) {
-  .toggle-input {
-    padding: 6px 0;
-  }
-}
-
-:host(.spaced) {
-  .toggle-input {
-    margin: 4px 0;
-  }
+  // &.active {
+  //   .toggle-input {
+  //     .toggle-item {
+  //       &:hover {
+  //         background-color: $color-primary-010;
+  //       }
+  //     }
+  //   }
+  // }
 }
