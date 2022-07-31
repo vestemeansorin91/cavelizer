@@ -43,6 +43,6 @@
       <cvz-input-text formControlName="healthInsurance"></cvz-input-text>
     </cvz-input-group>
 
-    <cvz-button (click)="onSavePayrollInformation()"> Save</cvz-button>
+    <cvz-button (click)="onSavePayrollInformation()" [disabled]="!userPayrollInformationFormGroup.valid">Save</cvz-button>
   </form>
 </div>

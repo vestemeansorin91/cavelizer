@@ -2,40 +2,72 @@
 @import 'colors';
 @import 'mixins';
 
-button {
-  /* Reset */
-  @include disable-select;
-  outline: none;
-  cursor: pointer;
+:host {
+  button {
+    /* Reset */
+    @include disable-select;
+    outline: none;
+    cursor: pointer;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
 
-  padding: 12px 16px;
+    padding: 12px 16px;
 
-  color: $color-white;
-  font-size: 15px;
-  font-weight: 600;
-
-  background-color: $color-primary;
-  border: 2px solid $color-primary-010;
-  border-radius: $border-radius-md;
-
-  .prefix,
-  .suffix {
     color: $color-white;
+    font-size: 15px;
+    font-weight: 600;
+
+    background-color: $color-primary;
+    border: 2px solid $color-primary-010;
+    border-radius: $border-radius-md;
+
+    &:disabled {
+      background-color: $color-grey-040;
+      border: solid 1px $color-grey-040;
+      color: $color-grey-060;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &[ng-reflect-disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
 
-  .prefix {
-    margin-right: 4px;
+  a.disabled {
+    background-color: $color-grey-040;
+    border: solid 1px $color-grey-040;
+    color: $color-grey-060;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
-  .suffix {
-    margin-left: 4px;
+  .icon {
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 10px;
+  }
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &[ng-reflect-disabled=true] {
+    cursor: not-allowed;
+    pointer-events: none;
+
+    a {
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+    }
   }
 }
+
 
 :host {
   &.white {
@@ -43,11 +75,6 @@ button {
       border-color: $color-grey;
       color: $color-black;
       background-color: $color-white;
-
-      .prefix,
-      .suffix {
-        color: $color-primary-040;
-      }
     }
   }
 
@@ -69,11 +96,6 @@ button {
       border-color: $color-grey-070;
       background-color: $color-grey-070;
       color: $color-black;
-
-      .prefix,
-      .suffix {
-        color: $color-black;
-      }
     }
   }
 
@@ -82,11 +104,6 @@ button {
       border-color: transparent;
       background-color: transparent;
       color: $color-black;
-
-      .prefix,
-      .suffix {
-        color: $color-black;
-      }
     }
   }
 

@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {NotificationsService} from 'angular2-notifications';
-import {ProfileService} from '../../profile.service';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NotificationsService } from 'angular2-notifications';
+import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,7 +10,11 @@ import {ProfileService} from '../../profile.service';
 export class UserProfileComponent {
   public userPublicProfileFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
@@ -18,6 +22,7 @@ export class UserProfileComponent {
   public onSavePublicProfile() {
     this.profileService.saveUserPublicProfile(this.userPublicProfileFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User profile saved!');
+      this.userPublicProfileFormGroup.markAsPristine();
     });
   }
 
@@ -34,7 +39,7 @@ export class UserProfileComponent {
 
   // Etapa .... optinal .. de patch
   private patchFormGroup() {
-    const {publicProfile} = this.profileService.profile;
+    const { publicProfile } = this.profileService.profile;
 
     if (!publicProfile) {
       return;

@@ -38,7 +38,7 @@
       <cvz-input-text formControlName="phone"></cvz-input-text>
     </cvz-input-group>
 
-    <cvz-button (click)="onSavePublicProfile()" [attr.disabled]="!userPublicProfileFormGroup.dirty"
+    <cvz-button (click)="onSavePublicProfile()" [disabled]="!userPublicProfileFormGroup.dirty"
                       class="width--full mt--32">Save
     </cvz-button>
   </form>

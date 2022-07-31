@@ -22,7 +22,7 @@
       </select>
     </div>
 
-    <cvz-button (click)="onSaveUserEmergencyContact()"> Save</cvz-button>
+    <cvz-button (click)="onSaveUserEmergencyContact()" [disabled]="!userEmergencyContactFormGroup.valid">Save</cvz-button>
   </form>
 </div>
 

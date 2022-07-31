@@ -15,5 +15,5 @@
 
   <a routerLink="/auth/forgot-password">Forgot your password!</a>
 
-  <cvz-button (click)="loginClicked()" class="width--full">Login</cvz-button>
+  <cvz-button (click)="loginClicked()" [disabled]="!loginFormGroup.valid" class="width--full">Login</cvz-button>
 </form>

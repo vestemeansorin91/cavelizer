@@ -5,22 +5,24 @@ import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-bank-details',
-  templateUrl: './user-bank-details.component.html',
-  styleUrls: ['./user-bank-details.component.scss']
+  templateUrl: './user-bank-details.component.html'
 })
 export class UserBankDetailsComponent {
   public userBankDetailsFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
 
-  ngOnInit(): void {}
-
   public onSaveBankDetails() {
     this.profileService.saveUserBankDetails(this.userBankDetailsFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User Clothes Sizes saved!');
+      this.userBankDetailsFormGroup.markAsPristine();
     });
   }
 

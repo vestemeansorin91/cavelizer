@@ -22,6 +22,6 @@
       <cvz-input-text formControlName="footSize" type="number"></cvz-input-text>
     </cvz-input-group>
 
-    <cvz-button (click)="onSaveClothesSizes()"> Save</cvz-button>
+    <cvz-button (click)="onSaveClothesSizes()" [disabled]="!userClothesSizesFormGroup.valid">Save</cvz-button>
   </form>
 </div>
