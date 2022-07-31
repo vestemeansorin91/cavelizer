@@ -67,6 +67,10 @@
         background-color: $color-grey-010;
       }
       .toggle-item {
+        &.disabled {
+          background-color: $color-success-020;
+          opacity: calc(75%);
+        }
         &.selected {
           background-color: $color-success-020;
 
@@ -86,13 +90,4 @@
       }
     }
   }
-  // &.active {
-  //   .toggle-input {
-  //     .toggle-item {
-  //       &:hover {
-  //         background-color: $color-primary-010;
-  //       }
-  //     }
-  //   }
-  // }
 }
