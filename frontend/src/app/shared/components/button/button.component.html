@@ -1,11 +1,12 @@
-<button>
-    <span class="prefix">
-        <ng-content select="[prefix]"></ng-content>
-    </span>
-
-  <ng-content></ng-content>
-
-  <span class="suffix">
-        <ng-content select="[suffix]"></ng-content>
-    </span>
+<button *ngIf="!href" class="pu-button" [disabled]="disabled" (click)="onClick($event)" #btn  type="button">
+  <ng-container [ngTemplateOutlet]="content" (click)="onClick($event)"></ng-container>
 </button>
+
+<a [href]="href" *ngIf="href" [target]="target" class="pu-button" [class.disabled]="disabled">
+  <ng-container [ngTemplateOutlet]="content"></ng-container>
+</a>
+
+<ng-template #content>
+  <span *ngIf="icon" [class]="'icon icon-'+icon"></span>
+  <ng-content></ng-content>
+</ng-template>

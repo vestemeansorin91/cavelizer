@@ -5,22 +5,24 @@ import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-hr-information',
-  templateUrl: './user-hr-information.component.html',
-  styleUrls: ['./user-hr-information.component.scss']
+  templateUrl: './user-hr-information.component.html'
 })
 export class UserHrInformationComponent {
   public userHrInformationFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
 
-  ngOnInit(): void {}
-
   public onSaveHrInformation() {
     this.profileService.saveUserHrInformation(this.userHrInformationFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User Clothes Sizes saved!');
+      this.userHrInformationFormGroup.markAsPristine();
     });
   }
 

@@ -5,13 +5,16 @@ import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-emergency-contact',
-  templateUrl: './user-emergency-contact.component.html',
-  styleUrls: ['./user-emergency-contact.component.scss']
+  templateUrl: './user-emergency-contact.component.html'
 })
 export class UserEmergencyContactComponent {
   public userEmergencyContactFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
@@ -19,6 +22,7 @@ export class UserEmergencyContactComponent {
   public onSaveUserEmergencyContact() {
     this.profileService.saveUserEmergencyContact(this.userEmergencyContactFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User profile saved!');
+      this.userEmergencyContactFormGroup.markAsPristine();
     });
   }
 

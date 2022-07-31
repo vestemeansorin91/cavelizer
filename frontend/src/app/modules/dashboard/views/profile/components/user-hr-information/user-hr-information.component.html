@@ -37,7 +37,7 @@
       </select>
     </div>
 
-    <cvz-button (click)="onSaveHrInformation()">Save</cvz-button>
+    <cvz-button (click)="onSaveHrInformation()" [disabled]="!userHrInformationFormGroup.valid">Save</cvz-button>
   </form>
 
 </div>

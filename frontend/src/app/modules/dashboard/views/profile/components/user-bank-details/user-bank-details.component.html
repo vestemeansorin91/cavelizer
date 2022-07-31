@@ -10,6 +10,6 @@
       <cvz-input-text formControlName="bic"></cvz-input-text>
     </cvz-input-group>
 
-    <cvz-button (click)="onSaveBankDetails()"> Save</cvz-button>
+    <cvz-button (click)="onSaveBankDetails()" [disabled]="!userBankDetailsFormGroup.valid">Save</cvz-button>
   </form>
 </div>

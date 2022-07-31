@@ -30,9 +30,8 @@
   <cvz-checkbox formControlName="agreeTermsConditions">Agree with Terms & Conditions</cvz-checkbox>
   <cvz-checkbox formControlName="agreePolicyPrivacy">Agree with Policy & Privacy</cvz-checkbox>
 
-  <cvz-button (click)="registerClicked()" [attr.disabled]="!registerFormGroup.valid
-                    || registerFormGroup.get('password')?.value !== registerFormGroup.get('confirmPassword')?.value
-                    || null"
+  <cvz-button (click)="registerClicked()" [disabled]="!registerFormGroup.valid
+                    || registerFormGroup.get('password')?.value !== registerFormGroup.get('confirmPassword')?.value"
                     class="width--full">
     Register
   </cvz-button>

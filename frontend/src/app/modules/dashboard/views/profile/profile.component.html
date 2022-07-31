@@ -15,7 +15,7 @@
 </div>
 
 <ng-container *ngIf="profileService.profile">
-  <nav mat-tab-nav-bar>
+  <nav class="justify--center" mat-tab-nav-bar>
     <span [routerLink]="['/dashboard','user','profile']" mat-tab-link routerLinkActive="active">Profile</span>
     <span [routerLink]="['/dashboard','user','personal-mock']" mat-tab-link
           routerLinkActive="active">Personal Data</span>

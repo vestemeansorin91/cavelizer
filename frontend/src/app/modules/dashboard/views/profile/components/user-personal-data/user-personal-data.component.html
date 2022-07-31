@@ -36,6 +36,6 @@
       <cvz-input-text formControlName="privateEmail" type="email"></cvz-input-text>
     </cvz-input-group>
 
-    <cvz-button (click)="onSavePersonalData()">Save</cvz-button>
+    <cvz-button (click)="onSavePersonalData()" [disabled]="!userPersonalDataFormGroup.valid">Save</cvz-button>
   </form>
 </div>
