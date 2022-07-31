@@ -17,14 +17,17 @@ import { Component } from '@angular/core';
       <cvz-toggle [(ngModel)]="leftOrRightDisabledTrue" [disabled]="true">This one is disabled</cvz-toggle>
     </div>
     <div class="flex--column gap--16">
-      <cvz-toggle class="active" [(ngModel)]="leftOrRight">Activate some option</cvz-toggle>
-      <cvz-toggle class="active" [(ngModel)]="leftOrRight2">Activate some option</cvz-toggle>
-      <cvz-toggle [(ngModel)]="leftOrRightDisabled" [disabled]="true">This one is disabled</cvz-toggle>
-      <cvz-toggle [(ngModel)]="leftOrRightDisabledTrue" [disabled]="true">This one is disabled</cvz-toggle>
+      <cvz-toggle class="admin" [(ngModel)]="correct">Activate some option</cvz-toggle>
+      <cvz-toggle class="admin" [(ngModel)]="leftOrRight2">Activate some option</cvz-toggle>
+      <cvz-toggle class="admin" [(ngModel)]="leftOrRightDisabled" [disabled]="true">This one is disabled</cvz-toggle>
+      <cvz-toggle class="admin" [(ngModel)]="leftOrRightDisabledTrue" [disabled]="true"
+        >This one is disabled</cvz-toggle
+      >
     </div>
   </mat-expansion-panel>`
 })
 export class ToggleExampleComponent {
+  correct = true;
   leftOrRight = true;
   leftOrRight2 = true;
   leftOrRightDisabled = false;

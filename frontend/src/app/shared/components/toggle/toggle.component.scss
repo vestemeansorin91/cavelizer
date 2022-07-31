@@ -57,7 +57,7 @@
 }
 
 :host {
-  &.active {
+  &.admin {
     .toggle-input {
       .toggle-bullet {
         width: 10px;
@@ -66,13 +66,7 @@
         left: 5px;
         background-color: $color-grey-010;
       }
-    }
-
-    .toggle-input {
       .toggle-item {
-        &:hover {
-          background-color: $color-primary-010;
-        }
         &.selected {
           background-color: $color-success-020;
 
@@ -81,6 +75,13 @@
             top: 5px;
             background-color: $color-white;
           }
+        }
+      }
+    }
+    &:hover {
+      .toggle-input {
+        .toggle-item {
+          background-color: $color-primary-010;
         }
       }
     }
