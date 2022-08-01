@@ -1,14 +1,20 @@
 <div *ngIf="currentUser$ | async as currentUser" class="profile">
   <div class="profile-header">
-    <div (click)="uploadInputRef.click()" class="avatar-wrapper">
-      <img [src]=" currentUser.avatarBlobUrl | defaultImage" alt class="avatar">
-      <i class="las la-pen"></i>
-      <input #uploadInputRef (change)="handleFileInput($event.target)"
-             accept="image/jpeg"
-             id="file"
-             type="file">
-    </div>
-
+    <input #uploadInputRef (change)="handleFileInput($event.target)"
+           class="avatar-input"
+           accept="image/jpeg"
+           id="file"
+           type="file">
+    <cvz-avatar
+      (avatarClicked)="uploadInputRef.click()"
+      [size]="120"
+      [name]="currentUser.fullName"
+      [avatar]="currentUser?.avatarBlobUrl | defaultImage: true"
+      [editable]="true"
+      class="editable circle"></cvz-avatar>
+    <cvz-button *ngIf="currentUser.avatarBlobUrl" (click)="removeAvatarClicked()" class="grey small">
+      <i  class="las la-trash-alt"></i> Remove avatar
+    </cvz-button>
     <h1 class="mb--0">{{ currentUser?.fullName }}</h1>
     <h2>{{ currentUser?.username }}</h2>
   </div>

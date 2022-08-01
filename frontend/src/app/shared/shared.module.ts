@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
+import { AvatarModule } from './components/avatar/avatar.module';
 import { BreadcrumbModule } from './components/breadcrumb/breadcrumb.module';
 import { ButtonModule } from './components/button/button.module';
 import { CheckboxModule } from './components/checkbox/checkbox.module';
@@ -40,21 +41,22 @@ const COMPONENTS: any[] = [
 ];
 
 const COMPONENTS_MODULES: any[] = [
+  AvatarModule,
   BreadcrumbModule,
   ButtonModule,
   CheckboxModule,
   ChipModule,
   InputGroupModule,
-  LabelModule,
   InputTextModule,
+  LabelModule,
   IconModule,
   InnerTabGroupModule,
   MiniBannerModule,
   QuoteModule,
+  RadioGroupModule,
   TagModule,
   ToggleModule,
-  TooltipModule,
-  RadioGroupModule
+  TooltipModule
 ];
 
 const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];

@@ -15,8 +15,11 @@
         <span [routerLink]="['/dashboard/user/profile']"
               class="ml--32 mr--12 fs--14 text--bold pointer">{{ currentUser.username }}</span>
       </div>
-      <img [routerLink]="['/dashboard/user/profile']" [src]="currentUser?.avatarBlobUrl | defaultImage" alt
-           class="size--40 circle pointer">
+      <cvz-avatar
+        [routerLink]="['/dashboard/user/profile']"
+        [name]="currentUser.fullName"
+        [avatar]="currentUser?.avatarBlobUrl | defaultImage: true"
+        [size]="40" class="pointer circle"></cvz-avatar>
     </ng-container>
   </div>
 </div>

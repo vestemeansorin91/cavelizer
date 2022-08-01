@@ -7,16 +7,24 @@ const isAuthenticatedMiddleware = require('../../shared/middlewares/is-authentic
 const isAdminMiddleware = require('../../shared/middlewares/is-admin.middleware');
 const uploadAvatarMiddleware = require('../../shared/middlewares/upload-avatar.middleware');
 
-// User routes
+/* User routes */
 router.get('/users', UserController.getUsers);
 router.get('/users/:id/getUserById', UserController.getUserById);
 router.get('/users/:id/getUserByIdWithProfile', UserController.getUserByIdWithProfile);
 router.get('/users/:username/getUserByUsername', UserController.getUserByUsername);
-router.patch('/users/:id/toggleIsActive', isAuthenticatedMiddleware, isAdminMiddleware, UserController.toggleUserActive);
+router.patch(
+  '/users/:id/toggleIsActive',
+  isAuthenticatedMiddleware,
+  isAdminMiddleware,
+  UserController.toggleUserActive
+);
 router.delete('/users/:id', isAuthenticatedMiddleware, UserController.deleteUser);
-router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar);
 
-// Nested routes
+/* Avatar */
+router.post('/users/:id/uploadAvatar', uploadAvatarMiddleware, UserController.uploadAvatar);
+router.post('/users/:id/removeAvatar', UserController.removeAvatar);
+
+/* Nested routes */
 const bankDetailsRoutes = require('./schemas/bank-details/bank-details.routes');
 const clothesSizesRoutes = require('./schemas/clothes-sizes/clothes-sizes.routes');
 const emergencyContactRoutes = require('./schemas/emergency-contact/emergency-contact.routes');

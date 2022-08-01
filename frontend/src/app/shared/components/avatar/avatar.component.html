@@ -1,0 +1,20 @@
+<div
+  class="user-icon"
+  *ngIf="!avatarImg; else avatarImgContainer"
+  [style.width]="size + 'px'"
+  [style.height]="size + 'px'"
+>
+  <p [innerHTML]="avatarInitial" [style.fontSize]="size / 2 + 'px'"></p>
+</div>
+
+<ng-template #avatarImgContainer>
+  <img
+    class="avatar mr-0"
+    [src]="avatarImg"
+    [style.width]="size + 'px'"
+    [style.height]="size + 'px'"
+    alt=""
+  />
+</ng-template>
+
+<i class="las la-pen"></i>

@@ -1,9 +1,9 @@
 <div class="chat-top-bar pt--20 pb--24 px--24 justify--space-between align--center width--full">
   <div *ngIf="contact" class="flex">
-    <div class="avatar">
-      <img [src]="contact.avatarBlobUrl | defaultImage" alt="" class="ml--32 mr--16 size--54 circle">
-      <span class="avatar-status"></span>
-    </div>
+      <cvz-avatar
+        [name]="contact.fullName"
+        [avatar]="contact.avatarBlobUrl | defaultImage: true"
+        [size]="54" class="ml--32 mr--16 circle"></cvz-avatar>
 
     <div class="flex--column">
       <span class="fs--16 text--bold">{{contact.fullName}}</span>
