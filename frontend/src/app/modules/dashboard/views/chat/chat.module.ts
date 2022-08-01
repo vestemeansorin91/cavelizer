@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 import { AvatarModule } from '../../../../shared/components/avatar/avatar.module';
@@ -15,10 +16,17 @@ import { ChatTopBarComponent } from './components/chat-top-bar/chat-top-bar.comp
 const COMPONENTS = [
   ChatComponent,
   ChatContactsComponent,
+  ChatContactItemComponent,
   ChatMessagesComponent,
   ChatTextBoxComponent,
-  ChatTopBarComponent,
-  ChatContactItemComponent
+  ChatTopBarComponent
+];
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ChatComponent
+  }
 ];
 
 @NgModule({
@@ -28,6 +36,7 @@ const COMPONENTS = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forChild(routes),
 
     /* Angular Material Modules */
 
@@ -38,6 +47,7 @@ const COMPONENTS = [
     /* Vendors Modules */
     NgxAutoScrollModule,
     NgxEmojiPickerModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class ChatModule {}

@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {ChatContact} from "../../../../../../shared/mock/chat";
+import { Component, Input } from '@angular/core';
+import { ChatContact } from '../../../../../../shared/mock/chat';
 
 @Component({
   selector: 'app-chat-top-bar',

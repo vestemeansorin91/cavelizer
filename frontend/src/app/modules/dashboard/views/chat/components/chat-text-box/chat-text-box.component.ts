@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 // @ts-ignore
 import io from 'socket.io-client';
-import {environment} from "../../../../../../../environments/environment";
-import {ChatContact} from "../../../../../../shared/mock/chat";
-import {JwtPayloadInterface} from "../../../../../../shared/types/jwt-payload.interface";
-import {ChatService} from "../../services/chat.service";
+import { environment } from '../../../../../../../environments/environment';
+import { ChatContact } from '../../../../../../shared/mock/chat';
+import { JwtPayloadInterface } from '../../../../../../shared/types/jwt-payload.interface';
+import { ChatService } from '../../services/chat.service';
 
 @Component({
   selector: 'app-chat-text-box',
@@ -18,23 +18,19 @@ export class ChatTextBoxComponent {
   public typingMessage: any;
   public message = '';
   public socket: any;
-  toggled: boolean = false;
 
   constructor(private chatService: ChatService) {
     this.socket = io(environment.baseUrl);
   }
 
-  handleSelection(event: any) {
-    this.message += event.char;
-  }
-
   public sendMessage() {
-    console.log(this.receiver)
     if (this.message) {
-      this.chatService.sendMessage(this.currentUser._id, this.receiver._id, this.receiver.username, this.message).subscribe((_) => {
-        this.socket.emit('refresh', {});
-        this.message = '';
-      });
+      this.chatService
+        .sendMessage(this.currentUser._id, this.receiver._id, this.receiver.username, this.message)
+        .subscribe(_ => {
+          this.socket.emit('refresh', {});
+          this.message = '';
+        });
     }
   }
 

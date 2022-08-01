@@ -74,7 +74,7 @@ export const SIDENAV: SidenavItem[] = [
   },
   {
     name: 'Components',
-    pathUrl: ['/dashboard', 'cvz-components'],
+    pathUrl: ['/dashboard', 'components'],
     icon: 'las la-shapes'
   },
   {

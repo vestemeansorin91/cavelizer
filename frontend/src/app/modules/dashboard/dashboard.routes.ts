@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../../shared/guards/auth.guard';
 import { DashboardComponent } from './dashboard.component';
 import { ArticlesComponent } from './views/articles/articles.component';
-import { CavelizerComponentsComponent } from './views/cavelizer-components/cavelizer-components.component';
-import { ChatComponent } from './views/chat/chat.component';
 import { CommentsComponent } from './views/comments/comments.component';
 import { DocumentationComponent } from './views/documentation/documentation.component';
 import { PanelComponent } from './views/panel/panel.component';
@@ -42,8 +40,9 @@ const routes: Routes = [
         component: CommentsComponent
       },
       {
-        path: 'cvz-components',
-        component: CavelizerComponentsComponent
+        path: 'components',
+        loadChildren: () =>
+          import('./views/cavelizer-components/cavelizer-components.module').then(m => m.CavelizerComponentsModule)
       },
       {
         path: 'docs',
@@ -71,7 +70,7 @@ const routes: Routes = [
       },
       {
         path: 'chat',
-        component: ChatComponent
+        loadChildren: () => import('./views/chat/chat.module').then(m => m.ChatModule)
       },
       {
         path: 'user',

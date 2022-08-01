@@ -1,16 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {Store} from "@ngrx/store";
-import {Observable} from "rxjs";
-import {ChatContact, ChatContactStatusEnum} from "../../../../shared/mock/chat";
-import {JwtPayloadInterface} from "../../../../shared/types/jwt-payload.interface";
-import {StoreStateInterface} from "../../../../store";
-import {getUserSelector} from "../../../auth/store/auth.selectors";
-import {ChatService} from "./services/chat.service";
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { ChatContact, ChatContactStatusEnum } from '../../../../shared/mock/chat';
+import { JwtPayloadInterface } from '../../../../shared/types/jwt-payload.interface';
+import { StoreStateInterface } from '../../../../store';
+import { getUserSelector } from '../../../auth/store/auth.selectors';
+import { ChatService } from './services/chat.service';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.scss'],
+  styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
   public currentUser$: Observable<JwtPayloadInterface> = this.store.select(getUserSelector);
@@ -20,8 +20,7 @@ export class ChatComponent implements OnInit {
   public usersOnline: string[] = []; // fixme; should be deleted, same as contacts
   public receiverIsTyping: boolean = false;
 
-  constructor(private chatService: ChatService, private store: Store<StoreStateInterface>) {
-  }
+  constructor(private chatService: ChatService, private store: Store<StoreStateInterface>) {}
 
   ngOnInit(): void {
     this.chatService.getUsersForChat().subscribe(users => {
@@ -34,12 +33,12 @@ export class ChatComponent implements OnInit {
           lastMessage: '',
           lastMessageTime: new Date(),
           avatarBlobUrl: user.avatarBlobUrl,
-          status: ChatContactStatusEnum.online,
+          status: ChatContactStatusEnum.online
         } as ChatContact;
-      })
+      });
 
       this.selectedContact = this.contacts[this.selectedContactIndex];
-    })
+    });
   }
 
   public onSelectedContactChanged(index: number) {

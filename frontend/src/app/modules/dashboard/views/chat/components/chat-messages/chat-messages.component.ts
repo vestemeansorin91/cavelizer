@@ -9,19 +9,19 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Store} from '@ngrx/store';
+import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import * as _ from 'lodash';
-import {Subscription} from 'rxjs';
+import { Subscription } from 'rxjs';
 // @ts-ignore
 import io from 'socket.io-client';
-import {environment} from '../../../../../../../environments/environment';
-import {ChatContact} from '../../../../../../shared/mock/chat';
-import {UsersService} from '../../../../../../shared/services/users.service';
-import {JwtPayloadInterface} from '../../../../../../shared/types/jwt-payload.interface';
-import {StoreStateInterface} from '../../../../../../store';
-import {getUserSelector} from '../../../../../auth/store/auth.selectors';
-import {ChatService} from '../../services/chat.service';
+import { environment } from '../../../../../../../environments/environment';
+import { ChatContact } from '../../../../../../shared/mock/chat';
+import { UsersService } from '../../../../../../shared/services/users.service';
+import { JwtPayloadInterface } from '../../../../../../shared/types/jwt-payload.interface';
+import { StoreStateInterface } from '../../../../../../store';
+import { getUserSelector } from '../../../../../auth/store/auth.selectors';
+import { ChatService } from '../../services/chat.service';
 
 // import { CaretEvent, EmojiEvent } from 'ng2-emoji-picker';
 
@@ -51,20 +51,21 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
   public receiverName = '';
   public user: JwtPayloadInterface = {} as JwtPayloadInterface;
   public message = '';
-  public typingMessage: any = null;
   public messages: Message[] = [];
   public isOnline = false;
 
   // EMOJI PICKER
-  public eventMock: any = null;
-  public eventPosMock: any = null;
-  public toggled = false;
   public content = ' ';
 
   public socket: any;
   private subs: Subscription[] = [];
 
-  constructor(private route: ActivatedRoute, private store: Store<StoreStateInterface>, private chatService: ChatService, private usersService: UsersService) {
+  constructor(
+    private route: ActivatedRoute,
+    private store: Store<StoreStateInterface>,
+    private chatService: ChatService,
+    private usersService: UsersService
+  ) {
     this.socket = io(environment.baseUrl);
   }
 
@@ -98,20 +99,6 @@ export class ChatMessagesComponent implements OnInit, OnChanges, AfterViewInit, 
       this.receiverData = data.user;
       this.getAllMessages(this.user._id, data.user._id);
     });
-  }
-
-  public sendMessage() {
-    if (this.message) {
-      const receiver = this.receiverData;
-
-      if (this.user._id !== receiver._id) {
-        // Need this extra for 2 windows on same pc
-        this.chatService.sendMessage(this.user._id, receiver._id, receiver.username, this.message).subscribe(_ => {
-          this.socket.emit('refresh', {});
-          this.message = '';
-        });
-      }
-    }
   }
 
   public getAllMessages(sender: string, receiver: string) {

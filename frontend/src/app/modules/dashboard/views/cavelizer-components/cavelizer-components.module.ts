@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+import { RouterModule, Routes } from '@angular/router';
 import { ButtonModule } from '../../../../shared/components/button/button.module';
 import { CheckboxModule } from '../../../../shared/components/checkbox/checkbox.module';
 import { ChipModule } from '../../../../shared/components/chip/chip.module';
@@ -58,6 +59,13 @@ const EXAMPLE_COMPONENTS = [
   RadioGroupExample
 ];
 
+const routes: Routes = [
+  {
+    path: '',
+    component: CavelizerComponentsComponent
+  }
+];
+
 @NgModule({
   declarations: [EXAMPLE_COMPONENTS],
   imports: [
@@ -65,6 +73,7 @@ const EXAMPLE_COMPONENTS = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forChild(routes),
 
     /* Angular Material Modules */
     MatExpansionModule,
