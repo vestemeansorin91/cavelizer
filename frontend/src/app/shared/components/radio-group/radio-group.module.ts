@@ -6,7 +6,14 @@ import { RadioItemComponent } from './radio-item/radio-item.component';
 
 @NgModule({
   declarations: [RadioGroupComponent, RadioItemComponent],
-  imports: [CommonModule, DefaultImagePipeModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule,
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+    DefaultImagePipeModule
+  ],
   exports: [RadioGroupComponent, RadioItemComponent]
 })
 export class RadioGroupModule {}

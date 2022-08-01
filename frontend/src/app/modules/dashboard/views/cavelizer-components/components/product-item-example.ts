@@ -15,4 +15,4 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class ProductItemExampleComponent {}
+export class ProductItemExample {}

@@ -52,7 +52,7 @@ import { projectIcons } from '../../../../../shared/components/icon/project-icon
     </div>
   </mat-expansion-panel>`
 })
-export class IconsExampleComponent {
+export class IconsExample {
   public projectIcons = projectIcons;
   public iconsSize = '';
   public iconsColor = '';

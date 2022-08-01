@@ -45,4 +45,4 @@ import { Component } from '@angular/core';
     </cvz-inner-tab-group>
   </mat-expansion-panel>`
 })
-export class InnerTabGroupExampleComponent {}
+export class InnerTabGroupExample {}

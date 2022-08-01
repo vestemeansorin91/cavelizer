@@ -5,7 +5,14 @@ import { MiniBannerComponent } from './mini-banner.component';
 
 @NgModule({
   declarations: [MiniBannerComponent],
-  imports: [CommonModule, ButtonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule,
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+    ButtonModule
+  ],
   exports: [MiniBannerComponent]
 })
 export class MiniBannerModule {}

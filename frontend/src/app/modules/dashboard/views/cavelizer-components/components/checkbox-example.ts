@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class CheckboxExampleComponent {
+export class CheckboxExample {
   public agreeWithTerms = false;
   public doYouLikeCavelizer = false;
   public disabledByDefault = false;

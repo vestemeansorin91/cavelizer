@@ -47,7 +47,7 @@ export class InputGroupComponent implements AfterViewInit, AfterContentInit, OnD
   constructor(private renderer: Renderer2) {}
 
   get isInvalid() {
-    return this.control.invalid;
+    return this.control && this.control.invalid;
   }
 
   updateRedLabel(valid: boolean, force = false) {

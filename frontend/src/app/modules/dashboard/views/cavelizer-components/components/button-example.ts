@@ -39,7 +39,7 @@ import { Component } from '@angular/core';
     </mat-expansion-panel>
   `
 })
-export class ButtonExampleComponent {
+export class ButtonExample {
   public size: 'big' | 'small' | '' = '';
   public style: 'grey' | 'transparent' | 'white' | '' = '';
 }

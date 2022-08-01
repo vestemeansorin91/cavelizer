@@ -1,9 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-panel',
-  templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.scss'],
+  templateUrl: './articles.component.html'
 })
-export class ArticlesComponent {
-}
+export class ArticlesComponent {}

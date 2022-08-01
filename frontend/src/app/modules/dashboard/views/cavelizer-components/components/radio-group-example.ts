@@ -26,6 +26,6 @@ import { Component } from '@angular/core';
     </mat-expansion-panel>
   `
 })
-export class RadioGroupExampleComponent {
+export class RadioGroupExample {
   public gender = 'male';
 }

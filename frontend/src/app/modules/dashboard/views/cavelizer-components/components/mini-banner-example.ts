@@ -17,4 +17,4 @@ import { Component } from '@angular/core';
     </cvz-mini-banner>
   </mat-expansion-panel>`
 })
-export class MiniBannerExampleComponent {}
+export class MiniBannerExample {}

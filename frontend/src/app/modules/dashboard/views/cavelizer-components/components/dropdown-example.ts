@@ -22,4 +22,4 @@ import { Component } from '@angular/core';
     </cvz-dropdown>
   </mat-expansion-panel>`
 })
-export class DropdownExampleComponent {}
+export class DropdownExample {}

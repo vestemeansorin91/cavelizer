@@ -4,7 +4,13 @@ import { ChipComponent } from './chip.component';
 
 @NgModule({
   declarations: [ChipComponent],
-  imports: [CommonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+  ],
   exports: [ChipComponent]
 })
 export class ChipModule {}

@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class ToggleExampleComponent {
+export class ToggleExample {
   toggle1 = true;
   toggle2 = true;
   toggle3 = false;

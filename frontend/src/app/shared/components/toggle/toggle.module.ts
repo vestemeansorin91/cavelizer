@@ -4,7 +4,13 @@ import { ToggleComponent } from './toggle.component';
 
 @NgModule({
   declarations: [ToggleComponent],
-  imports: [CommonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+  ],
   exports: [ToggleComponent]
 })
 export class ToggleModule {}

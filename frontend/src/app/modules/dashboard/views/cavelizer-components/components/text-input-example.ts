@@ -22,7 +22,7 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class TextInputExampleComponent {
+export class TextInputExample {
   public textHere = '';
   public textHereDisabled = 'this is disabled';
 }

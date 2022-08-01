@@ -5,7 +5,14 @@ import { QuoteComponent } from './quote.component';
 
 @NgModule({
   declarations: [QuoteComponent],
-  imports: [CommonModule, DefaultImagePipeModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule,
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+    DefaultImagePipeModule
+  ],
   exports: [QuoteComponent]
 })
 export class QuoteModule {}

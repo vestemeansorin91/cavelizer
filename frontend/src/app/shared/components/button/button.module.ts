@@ -4,7 +4,13 @@ import { ButtonComponent } from './button.component';
 
 @NgModule({
   declarations: [ButtonComponent],
-  imports: [CommonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+  ],
   exports: [ButtonComponent]
 })
 export class ButtonModule {}

@@ -14,11 +14,11 @@ import { Component } from '@angular/core';
 
       <p>Min value: <input type="number" [(ngModel)]="minValue" /></p>
       <p>Max value: <input type="number" [(ngModel)]="maxValue" /></p>
-      <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+      <cvz-range-slider [minValue]="minValue" [maxValue]="maxValue" [options]="options"></cvz-range-slider>
     </mat-expansion-panel>
   `
 })
-export class RangeSliderComponent {
+export class RangeSliderExample {
   minValue: number = 50;
   maxValue: number = 200;
   options: Options = {

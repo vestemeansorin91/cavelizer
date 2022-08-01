@@ -4,7 +4,13 @@ import { TagComponent } from './tag.component';
 
 @NgModule({
   declarations: [TagComponent],
-  imports: [CommonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+  ],
   exports: [TagComponent]
 })
 export class TagModule {}

@@ -39,7 +39,7 @@ import { Component } from '@angular/core';
     </mat-expansion-panel>
   `
 })
-export class QuoteExampleComponent {
+export class QuoteExample {
   quote1AreVariabila = 'https://randomuser.me/api/portraits/men/54.jpg';
   message =
     'This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiin';

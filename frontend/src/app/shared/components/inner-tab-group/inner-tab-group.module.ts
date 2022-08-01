@@ -5,7 +5,13 @@ import { InnerTabComponent } from './inner-tab/inner-tab.component';
 
 @NgModule({
   declarations: [InnerTabGroupComponent, InnerTabComponent],
-  imports: [CommonModule],
+  imports: [
+    /* Angular Modules */
+    CommonModule
+
+    /* Angular Material Modules */
+    /* Cavelizer Modules */
+  ],
   exports: [InnerTabGroupComponent, InnerTabComponent]
 })
 export class InnerTabGroupModule {}

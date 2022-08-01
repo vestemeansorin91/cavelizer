@@ -29,4 +29,4 @@ import { Component } from '@angular/core';
     </div>
   </mat-expansion-panel>`
 })
-export class TagExampleComponent {}
+export class TagExample {}
