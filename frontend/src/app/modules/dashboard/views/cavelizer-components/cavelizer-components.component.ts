@@ -17,8 +17,8 @@ import { Component } from '@angular/core';
       <app-text-input-example></app-text-input-example>
       <app-toggle-example></app-toggle-example>
       <app-range-slider-example></app-range-slider-example>
+      <app-radio-group-example></app-radio-group-example>
       <app-product-item-example></app-product-item-example>
     </mat-accordion>`
 })
-export class CavelizerComponentsComponent {
-}
+export class CavelizerComponentsComponent {}

@@ -1,17 +1,20 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {NotificationsService} from 'angular2-notifications';
-import {ProfileService} from '../../profile.service';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NotificationsService } from 'angular2-notifications';
+import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-emergency-contact',
-  templateUrl: './user-emergency-contact.component.html',
-  styleUrls: ['./user-emergency-contact.component.scss']
+  templateUrl: './user-emergency-contact.component.html'
 })
 export class UserEmergencyContactComponent {
   public userEmergencyContactFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
@@ -19,6 +22,7 @@ export class UserEmergencyContactComponent {
   public onSaveUserEmergencyContact() {
     this.profileService.saveUserEmergencyContact(this.userEmergencyContactFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User profile saved!');
+      this.userEmergencyContactFormGroup.markAsPristine();
     });
   }
 
@@ -31,7 +35,7 @@ export class UserEmergencyContactComponent {
   }
 
   private patchFormGroup() {
-    const {emergencyContact} = this.profileService.profile;
+    const { emergencyContact } = this.profileService.profile;
 
     if (!emergencyContact) {
       return;

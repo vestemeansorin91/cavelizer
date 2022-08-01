@@ -1,0 +1,64 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+.errors-container {
+  width: 100%;
+  text-align: left;
+  @include typo(h7);
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: 0;
+  position: absolute;
+  @include empty-hidden;
+
+  .errors-content {
+    color: $color-danger-050;
+    position: absolute;
+    @include typo(h7);
+    text-align: left;
+    @include empty-hidden;
+    width: max-content;
+
+    span {
+      @include typo(h7);
+      color: $color-danger-050;
+    }
+  }
+}
+
+:host(.normal) {
+  .errors-container {
+    .errors-content {
+      @include typo(h7);
+      display: block;
+      width: 100%;
+      top: 0;
+    }
+  }
+}
+
+:host(.thin) {
+  .errors-container {
+    .errors-content {
+      @include typo(small);
+    }
+  }
+}
+
+:host(.block) {
+  .errors-content {
+    display: block;
+    clear: both;
+    height: auto;
+  }
+}
+
+:host(.full-width) {
+  .errors-container {
+    .errors-content {
+      width: max-content;
+    }
+  }
+
+}

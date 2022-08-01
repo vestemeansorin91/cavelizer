@@ -10,7 +10,7 @@ import {
   TemplateRef,
   ViewContainerRef
 } from '@angular/core';
-import tippy, {Instance, Placement} from 'tippy.js';
+import tippy, { Instance, Placement } from 'tippy.js';
 
 @Directive({
   selector: '[caveTooltip]'
@@ -20,8 +20,7 @@ export class TooltipDirective implements OnDestroy, OnChanges {
   @Input() public onlyEllipsisTooltip = false;
   private _tippyInstance: Instance | undefined;
 
-  constructor(private _elementRef: ElementRef, private _containerRef: ViewContainerRef) {
-  }
+  constructor(private _elementRef: ElementRef, private _containerRef: ViewContainerRef) {}
 
   private _isDisabled = false;
 
@@ -141,8 +140,7 @@ export class TooltipDirective implements OnDestroy, OnChanges {
         arrow: true,
         allowHTML: true,
         placement: this._placement,
-        followCursor: true,
-        duration: 200
+        duration: 600
       }) as any;
     } else {
       this._tippyInstance.setContent(tooltip as any);

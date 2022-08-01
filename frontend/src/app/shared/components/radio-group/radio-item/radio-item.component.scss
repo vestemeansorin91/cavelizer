@@ -1,0 +1,133 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+:host {
+  display: inline-flex;
+
+  div {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  margin-right: 20px;
+
+  .radio-input {
+    position: relative;
+    display: inline-block;
+
+    width: 24px;
+    height: 20px;
+
+    padding: 0;
+    margin-right: 16px;
+
+    color: black;
+    background: $color-white;
+
+    border-radius: 50%;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s linear;
+
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+      border: 1px solid $color-grey-050;
+    }
+
+    &.selected {
+      &:after {
+        transform: scale(1);
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      transition: all 0.3s linear;
+      transform: scale(0);
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background: black;
+    }
+
+    &:hover {
+      &:before {
+        border-color: $color-grey-100;
+      }
+    }
+  }
+
+  &.radio-block {
+    display: flex;
+    margin-bottom: 6px;
+    cursor: pointer;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &.radio-inline {
+    display: inline-flex;
+
+    &:last-child {
+      margin: 0;
+    }
+    div{
+      &:last-child{
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.radio-inline-vertical {
+    display: block;
+    text-align: center;
+
+    span {
+      @include typo(small-600);
+      cursor: pointer;
+    }
+  }
+}
+
+:host(.big) {
+  display: flex;
+  align-items: center;
+  color: $color-black;
+
+  .radio-input {
+    margin-right: 18px;
+  }
+
+  span {
+    @include typo(h5);
+  }
+}
+
+:host(.disabled) {
+  .radio-input {
+    cursor: not-allowed;
+  }
+
+  span {
+    color: $color-grey-060;
+  }
+}

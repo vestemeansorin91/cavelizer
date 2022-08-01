@@ -1,5 +1,5 @@
-import {Options} from "@angular-slider/ngx-slider";
-import {Component} from '@angular/core';
+import { Options } from '@angular-slider/ngx-slider';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-range-slider-example',
@@ -12,8 +12,8 @@ import {Component} from '@angular/core';
         <mat-panel-description> Creat de Sorin / ngx-slider</mat-panel-description>
       </mat-expansion-panel-header>
 
-      <p>Min value: <input type="number" [(ngModel)]="minValue"></p>
-      <p>Max value: <input type="number" [(ngModel)]="maxValue"></p>
+      <p>Min value: <input type="number" [(ngModel)]="minValue" /></p>
+      <p>Max value: <input type="number" [(ngModel)]="maxValue" /></p>
       <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
     </mat-expansion-panel>
   `
@@ -24,6 +24,6 @@ export class RangeSliderComponent {
   options: Options = {
     floor: 0,
     ceil: 250,
-    showTicksValues: false,
+    showTicksValues: false
   };
 }

@@ -33,16 +33,16 @@
       </select>
     </div>
 
-    <div>
-      <label class="mr--16" for="cnp">CNP</label>
-      <input formControlName="cnp" id="cnp" type="string"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>CNP</cvz-label>
+      <cvz-input-text formControlName="cnp"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="healthInsurance">Health Insurance</label>
-      <input formControlName="healthInsurance" id="healthInsurance" type="string"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>Health insurance</cvz-label>
+      <cvz-input-text formControlName="healthInsurance"></cvz-input-text>
+    </cvz-input-group>
 
-    <cavelizer-button (click)="onSavePayrollInformation()"> Save</cavelizer-button>
+    <cvz-button (click)="onSavePayrollInformation()" [disabled]="!userPayrollInformationFormGroup.valid">Save</cvz-button>
   </form>
 </div>

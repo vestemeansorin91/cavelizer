@@ -1,0 +1,87 @@
+@import 'colors';
+@import 'variables';
+
+:host {
+  position: relative;
+  border-radius: $border-radius-lg;
+
+  .user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: $color-success-050;
+    overflow: hidden;
+
+    p {
+      color: $color-white;
+      margin: 0;
+      font-size: 23px;
+    }
+  }
+
+  i {
+    display: none;
+  }
+
+  .user-icon {
+    background-color: grey;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+
+    p {
+      color: $color-white;
+    }
+  }
+
+  img {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+  }
+}
+
+:host(.circle) {
+  .user-icon,
+  img {
+    border-radius: 50%;
+  }
+}
+
+:host(.small) {
+  &,
+  .user-icon,
+  img {
+    border-radius: $border-radius-md;
+  }
+}
+
+:host(.pointer) {
+  .user-icon,
+  img {
+    cursor: pointer;
+  }
+}
+
+:host(.editable) {
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+
+    .user-icon,
+    img {
+      filter: brightness(20%);
+    }
+
+    i {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: $color-white;
+      font-size: 32px;
+    }
+  }
+}

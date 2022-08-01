@@ -1,22 +1,26 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {environment} from '../../../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from '../../../../../environments/environment';
 
 const BASE_URL = environment.apiUrl + '/users';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class ProfileService {
   public profile: any = null;
   public userId = '';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
+
+  public uploadAvatar(fileToUpload: File | any): Observable<{ accessToken: string }> {
+    const formData: FormData | null = new FormData();
+    formData.append('avatar', fileToUpload, fileToUpload.name);
+
+    return this.http.post<{ accessToken: string }>(`${BASE_URL}/${this.userId}/uploadAvatar`, formData);
   }
 
-  public uploadAvatar(fileToUpload: File | any): Observable<any> {
-    const formData: FormData = new FormData();
-    formData.append('avatar', fileToUpload, fileToUpload.name);
-    return this.http.post<any>(`${BASE_URL}/${this.userId}/uploadAvatar`, formData);
+  public removeAvatar(): Observable<{ accessToken: string }> {
+    return this.http.post<{ accessToken: string }>(`${BASE_URL}/${this.userId}/removeAvatar`, {});
   }
 
   /* This is to get all user profile */
@@ -44,5 +48,17 @@ export class ProfileService {
 
   public saveUserPayrollInformation(payload: any) {
     return this.http.patch(`${BASE_URL}/${this.userId}/updatePayrollInformation`, payload);
+  }
+
+  public saveUserHrInformation(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateHrInformation`, payload);
+  }
+
+  public saveUserBankDetails(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateBankDetails`, payload);
+  }
+
+  public saveUserStartEndDates(payload: any) {
+    return this.http.patch(`${BASE_URL}/${this.userId}/updateStartEndDates`, payload);
   }
 }

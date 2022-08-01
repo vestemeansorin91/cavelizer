@@ -1,17 +1,20 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {NotificationsService} from 'angular2-notifications';
-import {ProfileService} from '../../profile.service';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NotificationsService } from 'angular2-notifications';
+import { ProfileService } from '../../profile.service';
 
 @Component({
   selector: 'app-user-payroll-information',
-  templateUrl: './user-payroll-information.component.html',
-  styleUrls: ['./user-payroll-information.component.scss']
+  templateUrl: './user-payroll-information.component.html'
 })
 export class UserPayrollInformationComponent {
   public userPayrollInformationFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder, private profileService: ProfileService, private notificationsService: NotificationsService) {
+  constructor(
+    private fb: FormBuilder,
+    private profileService: ProfileService,
+    private notificationsService: NotificationsService
+  ) {
     this.buildFormGroup();
     this.patchFormGroup();
   }
@@ -19,6 +22,7 @@ export class UserPayrollInformationComponent {
   public onSavePayrollInformation() {
     this.profileService.saveUserPayrollInformation(this.userPayrollInformationFormGroup.value).subscribe(() => {
       this.notificationsService.success('Success', 'User Payroll Information saved!');
+      this.userPayrollInformationFormGroup.markAsPristine();
     });
   }
 
@@ -34,7 +38,7 @@ export class UserPayrollInformationComponent {
   }
 
   private patchFormGroup() {
-    const {payrollInformation} = this.profileService.profile;
+    const { payrollInformation } = this.profileService.profile;
 
     if (!payrollInformation) {
       return;

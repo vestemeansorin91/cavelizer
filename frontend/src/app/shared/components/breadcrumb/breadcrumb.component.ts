@@ -1,11 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash';
-import {Subscription} from 'rxjs';
-import {BreadCrumb} from './breadcrumb';
+import { Subscription } from 'rxjs';
+import { BreadCrumb } from './breadcrumb';
 
 @Component({
-  selector: 'cavelizer-breadcrumb',
+  selector: 'cvz-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
@@ -16,24 +16,16 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
   };
   private subs: Subscription[] = [];
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.breadcrumbs = this.buildBreadcrumb(this.route.root);
   }
 
-  public buildBreadcrumb(
-    route: ActivatedRoute,
-    url = '',
-    breadcrumbs: Array<BreadCrumb> = []
-  ): Array<BreadCrumb> {
-    const label =
-      route.routeConfig && route.routeConfig.data ? route.routeConfig.data['breadcrumb'] : 'Acasa';
+  public buildBreadcrumb(route: ActivatedRoute, url = '', breadcrumbs: Array<BreadCrumb> = []): Array<BreadCrumb> {
+    const label = route.routeConfig && route.routeConfig.data ? route.routeConfig.data['breadcrumb'] : 'Acasa';
     const i18n =
-      route.routeConfig && route.routeConfig.data
-        ? route.routeConfig.data['i18n']
-        : '@@messages.breadcrumb.home';
+      route.routeConfig && route.routeConfig.data ? route.routeConfig.data['i18n'] : '@@messages.breadcrumb.home';
 
     let path;
     if (route.routeConfig && route.routeConfig.data && route.routeConfig.data['breadcrumbPath']) {

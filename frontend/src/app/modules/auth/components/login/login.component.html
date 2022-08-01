@@ -2,22 +2,18 @@
   <h1>Login</h1>
 
   <a routerLink="/auth/register">You don't have an account? Create one!</a>
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="username">Username</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="username" id="username"
-                            type="text"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="password">Password</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="password" id="password"
-                            type="password"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>Username</cvz-label>
+    <cvz-input-text formControlName="username"> </cvz-input-text>
+  </cvz-input-group>
+
+  <cvz-input-group>
+    <cvz-label>Password</cvz-label>
+    <cvz-input-text formControlName="password" type="password"> </cvz-input-text>
+  </cvz-input-group>
+
   <a routerLink="/auth/forgot-password">Forgot your password!</a>
 
-  <cavelizer-button (click)="loginClicked()" class="width--full">Login</cavelizer-button>
+  <cvz-button (click)="loginClicked()" [disabled]="!loginFormGroup.valid" class="width--full">Login</cvz-button>
 </form>

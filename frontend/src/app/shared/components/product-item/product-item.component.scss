@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'mixins';
 
-.best-product-item {
+.product-item {
   border: 1px solid $color-grey-050;
   padding: 16px;
   width: 270px;
@@ -12,9 +12,10 @@
     position: relative;
 
     img {
-      border-radius: 12px;
+      border-radius: $border-radius-xl;
       width: 240px;
       height: 180px;
+      object-fit: contain;
     }
 
     cavelizer-tag {

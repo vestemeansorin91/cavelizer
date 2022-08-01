@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
       <mat-panel-description> Creat de Petrut</mat-panel-description>
     </mat-expansion-panel-header>
     <div class="flex gap--20">
-      <cavelizer-product-item> </cavelizer-product-item>
-      <cavelizer-product-item> </cavelizer-product-item>
+      <cvz-product-item> </cvz-product-item>
+      <cvz-product-item> </cvz-product-item>
     </div>
   </mat-expansion-panel>`
 })

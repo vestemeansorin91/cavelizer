@@ -11,61 +11,76 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
-import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
-import { ButtonComponent } from './components/button/button.component';
-import { CheckboxComponent } from './components/checkbox/checkbox.component';
-import { ChipComponent } from './components/chip/chip.component';
+import { AvatarModule } from './components/avatar/avatar.module';
+import { BreadcrumbModule } from './components/breadcrumb/breadcrumb.module';
+import { ButtonModule } from './components/button/button.module';
+import { CheckboxModule } from './components/checkbox/checkbox.module';
+import { ChipModule } from './components/chip/chip.module';
 import { DropdownItemDirective } from './components/dropdown/dropdown-item.directive';
 import { DropdownTriggerForDirective } from './components/dropdown/dropdown-trigger-for.directive';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { IconComponent } from './components/icon/icon.component';
-import { InnerTabGroupComponent } from './components/inner-tab-group/inner-tab-group.component';
-import { InnerTabComponent } from './components/inner-tab-group/inner-tab/inner-tab.component';
-import { InputGroupComponent } from './components/input-group/input-group.component';
-import { MiniBannerComponent } from './components/mini-banner/mini-banner.component';
-import { ProductItemComponent } from './components/product-item/product-item.component';
-import { QuoteComponent } from './components/quote/quote.component';
-import { TagComponent } from './components/tag/tag.component';
-import { TextInputComponent } from './components/text-input/text-input.component';
-import { ToggleComponent } from './components/toggle/toggle.component';
+import { InputGroupModule } from './components/form-elements/input-group/input-group.module';
+import { InputTextModule } from './components/form-elements/input-text/input-text.module';
+import { LabelModule } from './components/form-elements/label/label.module';
+import { IconModule } from './components/icon/icon.module';
+import { InnerTabGroupModule } from './components/inner-tab-group/inner-tab-group.module';
+import { MiniBannerModule } from './components/mini-banner/mini-banner.module';
+import { ProductItemModule } from './components/product-item/product-item.module';
+import { QuoteModule } from './components/quote/quote.module';
+import { RadioGroupModule } from './components/radio-group/radio-group.module';
+import { TagModule } from './components/tag/tag.module';
+import { ToggleModule } from './components/toggle/toggle.module';
+
 import { TooltipModule } from './components/tooltip/tooltip.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { DefaultImagePipe } from './pipes/default-image.pipe';
-import { PhonePipe } from './pipes/phone-format.pipe';
+import { DefaultImagePipeModule } from './pipes/default-image/default-image-pipe.module';
+import { PhoneFormatPipeModule } from './pipes/phone-format/phone-format-pipe.module';
 
 const COMPONENTS: any[] = [
   PageNotFoundComponent,
-  ButtonComponent,
-  BreadcrumbComponent,
-  MiniBannerComponent,
-  DropdownComponent,
-  IconComponent,
-  InnerTabGroupComponent,
-  InnerTabComponent,
-  QuoteComponent,
-  ChipComponent,
-  InputGroupComponent,
-  CheckboxComponent,
-  TextInputComponent,
-  ToggleComponent,
-  TagComponent,
-  ProductItemComponent
+  DropdownComponent // Todo: Need another implementation
 ];
 
-const SERVICES: any[] = [];
+const COMPONENTS_MODULES: any[] = [
+  AvatarModule,
+  BreadcrumbModule,
+  ButtonModule,
+  CheckboxModule,
+  ChipModule,
+  InputGroupModule,
+  InputTextModule,
+  LabelModule,
+  IconModule,
+  InnerTabGroupModule,
+  MiniBannerModule,
+  QuoteModule,
+  RadioGroupModule,
+  ProductItemModule,
+  TagModule,
+  ToggleModule,
+  TooltipModule
+];
 
-const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule, TooltipModule];
+const MODULES: any[] = [FormsModule, ReactiveFormsModule, RouterModule, NgxSliderModule];
 
-const ANGULAR_MATERIAL_MODULES = [MatSidenavModule, MatTabsModule, MatExpansionModule, MatTooltipModule, ClipboardModule, MatSelectModule, MatInputModule, OverlayModule];
+const ANGULAR_MATERIAL_MODULES = [
+  MatSidenavModule,
+  MatTabsModule,
+  MatExpansionModule,
+  MatTooltipModule,
+  MatSelectModule,
+  MatInputModule,
+  ClipboardModule,
+  OverlayModule
+];
 
-const PIPES: any[] = [DefaultImagePipe, PhonePipe];
+const PIPES_MODULES: any[] = [DefaultImagePipeModule, PhoneFormatPipeModule];
 
 const DIRECTIVES: any[] = [DropdownTriggerForDirective, DropdownItemDirective];
 
 @NgModule({
-  declarations: [COMPONENTS, PIPES, DIRECTIVES],
-  imports: [CommonModule, MODULES, ANGULAR_MATERIAL_MODULES],
-  providers: [SERVICES],
-  exports: [MODULES, COMPONENTS, PIPES, DIRECTIVES, SERVICES, ANGULAR_MATERIAL_MODULES]
+  declarations: [COMPONENTS, DIRECTIVES],
+  imports: [CommonModule, MODULES, ANGULAR_MATERIAL_MODULES, COMPONENTS_MODULES, PIPES_MODULES],
+  exports: [MODULES, COMPONENTS, PIPES_MODULES, DIRECTIVES, ANGULAR_MATERIAL_MODULES, COMPONENTS_MODULES]
 })
 export class SharedModule {}

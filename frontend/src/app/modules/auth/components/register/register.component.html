@@ -2,54 +2,37 @@
   <h1>Register</h1>
   <a routerLink="/auth/login">Already have an account?</a>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="fullName">Full name</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="fullName" id="fullName" placeholder="Full name"
-                            type="text"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>Full name</cvz-label>
+    <cvz-input-text formControlName="fullName"> </cvz-input-text>
+  </cvz-input-group>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="email">E-mail</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="email" id="email" placeholder="E-mail"
-                            type="text"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>E-mail</cvz-label>
+    <cvz-input-text formControlName="email" type="email"> </cvz-input-text>
+  </cvz-input-group>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="username">Username</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="username" id="username" placeholder="Username"
-                            type="text"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>Username</cvz-label>
+    <cvz-input-text formControlName="username"> </cvz-input-text>
+  </cvz-input-group>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="password">Password</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="password" id="password" placeholder="Password"
-                            type="password"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>Password</cvz-label>
+    <cvz-input-text formControlName="password" type="password"> </cvz-input-text>
+  </cvz-input-group>
 
-  <div class="flex--column align--start ">
-    <label class="mr--16 text--bold" for="confirmPassword">Confirm password</label>
-    <cavelizer-input-group class="width--full">
-      <cavelizer-text-input class="width--full" formControlName="confirmPassword" id="confirmPassword"
-                            placeholder="Confirm password"
-                            type="password"></cavelizer-text-input>
-    </cavelizer-input-group>
-  </div>
+  <cvz-input-group>
+    <cvz-label>Confirm password</cvz-label>
+    <cvz-input-text formControlName="confirmPassword" type="password"> </cvz-input-text>
+  </cvz-input-group>
 
-  <cavelizer-checkbox formControlName="agreeTermsConditions">Agree with Terms & Conditions</cavelizer-checkbox>
-  <cavelizer-checkbox formControlName="agreePolicyPrivacy">Agree with Policy & Privacy</cavelizer-checkbox>
+  <cvz-checkbox formControlName="agreeTermsConditions">Agree with Terms & Conditions</cvz-checkbox>
+  <cvz-checkbox formControlName="agreePolicyPrivacy">Agree with Policy & Privacy</cvz-checkbox>
 
-  <cavelizer-button (click)="registerClicked()" [attr.disabled]="!registerFormGroup.valid
-                    || registerFormGroup.get('password')?.value !== registerFormGroup.get('confirmPassword')?.value
-                    || null"
+  <cvz-button (click)="registerClicked()" [disabled]="!registerFormGroup.valid
+                    || registerFormGroup.get('password')?.value !== registerFormGroup.get('confirmPassword')?.value"
                     class="width--full">
     Register
-  </cavelizer-button>
+  </cvz-button>
 </form>

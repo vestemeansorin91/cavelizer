@@ -29,3 +29,28 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin empty-hidden {
+  &:empty {
+    visibility: hidden;
+  }
+}
+
+@mixin typo($typoName) {
+  @if ($typoName == 'h1') {               font-size: 36px;    font-weight: bold;    line-height: 1.11;  }
+  @if ($typoName == 'h2') {               font-size: 28px;    font-weight: bold;    line-height: 1.43;  }
+  @if ($typoName == 'h3') {               font-size: 24px;    font-weight: bold;    line-height: 1.5;  }
+  @if ($typoName == 'h4') {               font-size: 20px;    font-weight: bold;    line-height: 1.6;  }
+  @if ($typoName == 'h5') {               font-size: 18px;    font-weight: bold;    line-height: 1.33;  }
+  @if ($typoName == 'h6') {               font-size: 16px;    font-weight: bold;    line-height: 1.5;  }
+  @if ($typoName == 'h7') {               font-size: 14px;    font-weight: bold;    line-height: 1.5;  }
+  @if ($typoName == 'extralarge') {       font-size: 24px;    font-weight: 300;    line-height: 1.5;  }
+  @if ($typoName == 'large') {            font-size: 20px;    font-weight: 300;    line-height: 1.5;  }
+  @if ($typoName == 'large-normal') {     font-size: 20px;    font-weight: 400;    line-height: 1.5;  }
+  @if ($typoName == 'big-400') {          font-size: 18px;    font-weight: 400;    line-height: 1.33;  }
+  @if ($typoName == 'normal') {           font-size: 16px;    font-weight: 300;    line-height: 1.5;  }
+  @if ($typoName == 'simple') {           font-size: 16px;    font-weight: normal;    line-height: 1.33;  }
+  @if ($typoName == 'normal-400') {       font-size: 16px;    font-weight: normal;    line-height: 1.5;  }
+  @if ($typoName == 'small-600') {            font-size: 14px;    font-weight: bold;    line-height: 1.43;  }
+  @if ($typoName == 'small') {            font-size: 14px;    font-weight: normal;    line-height: 1.43;  }
+}

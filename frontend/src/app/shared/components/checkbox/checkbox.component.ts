@@ -1,6 +1,6 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {MatCheckboxChange} from '@angular/material/checkbox';
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
 interface CavelizerCheckboxChange {
   source: CheckboxComponent | MatCheckboxChange;
@@ -14,7 +14,7 @@ const CAVELIZER_CHECKBOX_VALUE_ACCESSOR: any = {
 };
 
 @Component({
-  selector: 'cavelizer-checkbox',
+  selector: 'cvz-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss'],
   providers: [CAVELIZER_CHECKBOX_VALUE_ACCESSOR]
@@ -30,8 +30,7 @@ export class CheckboxComponent implements ControlValueAccessor {
     this.writeValue(v);
   }
 
-  public onTouched = () => {
-  };
+  public onTouched = () => {};
 
   public writeValue(value: any): void {
     this._checked = value;
@@ -64,6 +63,5 @@ export class CheckboxComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  private propagateChange: any = () => {
-  };
+  private propagateChange: any = () => {};
 }

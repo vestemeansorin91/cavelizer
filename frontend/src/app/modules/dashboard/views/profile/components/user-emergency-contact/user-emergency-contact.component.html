@@ -1,14 +1,15 @@
 <div class="flex justify--center">
   <form [formGroup]="userEmergencyContactFormGroup" class="flex--column mt--40 gap--8">
-    <div>
-      <label class="mr--16" for="fullName">Full Name</label>
-      <input formControlName="fullName" id="fullName" type="string"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>Full name</cvz-label>
+      <cvz-input-text formControlName="fullName"></cvz-input-text>
+    </cvz-input-group>
 
-    <div>
-      <label class="mr--16" for="phoneNumber">Phone Number</label>
-      <input formControlName="phoneNumber" id="phoneNumber" type="number"/>
-    </div>
+    <cvz-input-group>
+      <cvz-label>Phone</cvz-label>
+      <cvz-input-text formControlName="phoneNumber"></cvz-input-text>
+    </cvz-input-group>
+
 
     <div>
       <label class="mr--16" for="relationshipType">Relationship Type</label>
@@ -21,6 +22,7 @@
       </select>
     </div>
 
-    <cavelizer-button (click)="onSaveUserEmergencyContact()"> Save</cavelizer-button>
+    <cvz-button (click)="onSaveUserEmergencyContact()" [disabled]="!userEmergencyContactFormGroup.valid">Save</cvz-button>
   </form>
 </div>
+

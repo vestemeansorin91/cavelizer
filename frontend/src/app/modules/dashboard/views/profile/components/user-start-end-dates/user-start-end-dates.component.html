@@ -1,1 +1,20 @@
-<p>user-start-end-dates works!</p>
+<div class="flex justify--center">
+  <form [formGroup]="userStartEndDatesFormGroup" class="flex--column mt--40 gap--8">
+    <div>
+      <label class="mr--16" for="hireDate">Hire Date</label>
+      <input formControlName="hireDate" id="hireDate" type="date" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="contractEndDate">Contract Date</label>
+      <input formControlName="contractEndDate" id="contractEndDate" type="date" />
+    </div>
+
+    <div>
+      <label class="mr--16" for="subCompany">Sub Company</label>
+      <input formControlName="subCompany" id="subCompany" type="string" />
+    </div>
+
+    <cvz-button (click)="onSaveStartEndDates()" [disabled]="!userStartEndDatesFormGroup.valid"> Save</cvz-button>
+  </form>
+</div>

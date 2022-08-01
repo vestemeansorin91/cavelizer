@@ -1,7 +1,7 @@
-import {createReducer, on} from '@ngrx/store';
-import {JwtPayloadInterface} from 'src/app/shared/types/jwt-payload.interface';
-import {avatarUpdateSuccess} from "./auth.actions";
-import {authActions} from './index';
+import { createReducer, on } from '@ngrx/store';
+import { JwtPayloadInterface } from 'src/app/shared/types/jwt-payload.interface';
+import { avatarRemoveSuccess, avatarUploadSuccess } from './auth.actions';
+import { authActions } from './index';
 
 export interface AuthStateInterface {
   currentUser: JwtPayloadInterface;
@@ -25,7 +25,7 @@ export const authReducer = createReducer<AuthStateInterface>(
     ...state,
     isLoading: true
   })),
-  on(authActions.signInSuccess, avatarUpdateSuccess, state => ({
+  on(authActions.signInSuccess, avatarUploadSuccess, avatarRemoveSuccess, state => ({
     ...state,
     isLoading: false
   })),

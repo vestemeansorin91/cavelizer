@@ -13,24 +13,27 @@ import { ProductItemExampleComponent } from './components/product-item-example.c
 import { QuoteExampleComponent } from './components/quote-example.component';
 import { RangeSliderComponent } from './components/range-slider.component';
 import { TagExampleComponent } from './components/tag-example.component';
-import { TextInputComponent } from './components/text-input.component';
+import { TextInputExampleComponent } from './components/text-input-example.component';
 import { ToggleExampleComponent } from './components/toggle-example.component';
+import { RadioGroupExampleComponent } from './components/radio-group-example.component';
 
 const COMPONENTS = [
-  CavelizerComponentsComponent,
   ButtonExampleComponent,
+  CavelizerComponentsComponent,
+  ChipExampleComponent,
   DropdownExampleComponent,
-  MiniBannerExampleComponent,
   IconsExampleComponent,
   InnerTabGroupExampleComponent,
+  MiniBannerExampleComponent,
+  ProductItemExampleComponent,
   QuoteExampleComponent,
-  ChipExampleComponent,
   CheckboxExampleComponent,
-  TextInputComponent,
   TagExampleComponent,
+  TextInputExampleComponent,
   ToggleExampleComponent,
   RangeSliderComponent,
-  ProductItemExampleComponent
+  TagExampleComponent,
+  RadioGroupExampleComponent
 ];
 
 @NgModule({

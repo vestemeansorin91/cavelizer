@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mini-banner-example',
@@ -10,12 +10,11 @@ import {Component} from '@angular/core';
       <mat-panel-description> Creat de Mihai</mat-panel-description>
     </mat-expansion-panel-header>
 
-    <cavelizer-mini-banner>
+    <cvz-mini-banner>
       <ng-container subtitle>Banner subfocus</ng-container>
       <ng-container title>Space for heading</ng-container>
       <ng-container action> Read recepies </ng-container>
-    </cavelizer-mini-banner>
+    </cvz-mini-banner>
   </mat-expansion-panel>`
 })
-export class MiniBannerExampleComponent {
-}
+export class MiniBannerExampleComponent {}

@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tag-example',
-  template: `<mat-expansion-panel expanded="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-tag</strong>
@@ -10,24 +10,23 @@ import {Component} from '@angular/core';
       <mat-panel-description> Creat de Mihai</mat-panel-description>
     </mat-expansion-panel-header>
     <div class="flex flex--wrap gap--16 mb--16">
-      <cavelizer-tag class="narrow">Tag</cavelizer-tag>
-      <cavelizer-tag class="extended">Tag</cavelizer-tag>
-      <cavelizer-tag class="fat">Tag</cavelizer-tag>
-      <cavelizer-tag class="fat extended">Tag</cavelizer-tag>
+      <cvz-tag class="narrow">Tag</cvz-tag>
+      <cvz-tag class="extended">Tag</cvz-tag>
+      <cvz-tag class="fat">Tag</cvz-tag>
+      <cvz-tag class="fat extended">Tag</cvz-tag>
     </div>
     <div class="flex flex--wrap gap--16 mb--16">
-      <cavelizer-tag class="disabled narrow ">Tag</cavelizer-tag>
-      <cavelizer-tag class="disabled extended ">Tag</cavelizer-tag>
-      <cavelizer-tag class="disabled fat">Tag</cavelizer-tag>
-      <cavelizer-tag class="disabled fat extended">Tag</cavelizer-tag>
+      <cvz-tag class="disabled narrow ">Tag</cvz-tag>
+      <cvz-tag class="disabled extended ">Tag</cvz-tag>
+      <cvz-tag class="disabled fat">Tag</cvz-tag>
+      <cvz-tag class="disabled fat extended">Tag</cvz-tag>
     </div>
     <div class="flex flex--wrap gap--16 mb--16">
-      <cavelizer-tag class="default narrow ">Tag</cavelizer-tag>
-      <cavelizer-tag class="default extended ">Tag</cavelizer-tag>
-      <cavelizer-tag class="default fat">Tag</cavelizer-tag>
-      <cavelizer-tag class="default fat extended">Tag</cavelizer-tag>
+      <cvz-tag class="default narrow ">Tag</cvz-tag>
+      <cvz-tag class="default extended ">Tag</cvz-tag>
+      <cvz-tag class="default fat">Tag</cvz-tag>
+      <cvz-tag class="default fat extended">Tag</cvz-tag>
     </div>
   </mat-expansion-panel>`
 })
-export class TagExampleComponent {
-}
+export class TagExampleComponent {}
