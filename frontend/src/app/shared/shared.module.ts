@@ -25,6 +25,7 @@ import { LabelModule } from './components/form-elements/label/label.module';
 import { IconModule } from './components/icon/icon.module';
 import { InnerTabGroupModule } from './components/inner-tab-group/inner-tab-group.module';
 import { MiniBannerModule } from './components/mini-banner/mini-banner.module';
+import { ProductItemModule } from './components/product-item/product-item.module';
 import { QuoteModule } from './components/quote/quote.module';
 import { RadioGroupModule } from './components/radio-group/radio-group.module';
 import { TagModule } from './components/tag/tag.module';
@@ -54,6 +55,7 @@ const COMPONENTS_MODULES: any[] = [
   MiniBannerModule,
   QuoteModule,
   RadioGroupModule,
+  ProductItemModule,
   TagModule,
   ToggleModule,
   TooltipModule

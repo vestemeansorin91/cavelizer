@@ -14,12 +14,11 @@ export const CAVELIZER_TOGGLE_VALUE_ACCESSOR: any = {
   providers: [CAVELIZER_TOGGLE_VALUE_ACCESSOR]
 })
 export class ToggleComponent implements ControlValueAccessor {
-  @Input() disabled = false;
-  @Input() readonly = false;
-  _placeholder = '';
-  @Output() changeValue: EventEmitter<any> = new EventEmitter<any>();
+  @Input() public disabled = false;
+  @Input() public readonly = false;
+  @Output() public changeValue: EventEmitter<any> = new EventEmitter<any>();
 
-  _checked = false;
+  private _checked = false;
 
   public get checked() {
     return this._checked;

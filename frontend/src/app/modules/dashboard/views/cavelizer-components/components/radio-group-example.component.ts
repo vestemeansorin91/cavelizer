@@ -1,4 +1,3 @@
-import { Options } from '@angular-slider/ngx-slider';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,7 +9,7 @@ import { Component } from '@angular/core';
           <strong>cvz-radio-group</strong>&nbsp; | &nbsp;
           <strong>cvz-radio-item</strong>
         </mat-panel-title>
-        <mat-panel-description> Creat de Sorin / ngx-slider</mat-panel-description>
+        <mat-panel-description> Creat de Sorin </mat-panel-description>
       </mat-expansion-panel-header>
 
       <h3>Horizontal (default)</h3>

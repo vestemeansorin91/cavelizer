@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChildren, forwardRef, Input, OnInit, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, forwardRef, Input, QueryList } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { RadioItemBase } from './radio-item.base';
 
@@ -21,9 +21,7 @@ export class RadioGroupComponent implements ControlValueAccessor, AfterContentIn
   public _selectedValue: any = null;
 
   constructor() {
-    this.buttons.changes.subscribe(btns => {
-      this.updateSelectedValue();
-    });
+    this.buttons.changes.subscribe(() => this.updateSelectedValue());
   }
 
   @Input() set value(v: any) {

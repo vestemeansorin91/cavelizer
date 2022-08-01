@@ -6,6 +6,30 @@
   -ms-user-select: none;
 }
 
+@mixin default-poppins-text {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-grey;
+}
+
+@mixin default-open-sans-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: $color-grey;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @mixin empty-hidden {
   &:empty {
     visibility: hidden;

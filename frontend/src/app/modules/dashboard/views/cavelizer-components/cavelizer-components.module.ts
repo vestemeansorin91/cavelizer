@@ -9,23 +9,26 @@ import { DropdownExampleComponent } from './components/dropdown-example.componen
 import { IconsExampleComponent } from './components/icons-example.component';
 import { InnerTabGroupExampleComponent } from './components/inner-tab-group-example.component';
 import { MiniBannerExampleComponent } from './components/mini-banner-example.component';
+import { ProductItemExampleComponent } from './components/product-item-example.component';
 import { QuoteExampleComponent } from './components/quote-example.component';
-import { RadioGroupExampleComponent } from './components/radio-group-example.component';
 import { RangeSliderComponent } from './components/range-slider.component';
 import { TagExampleComponent } from './components/tag-example.component';
 import { TextInputExampleComponent } from './components/text-input-example.component';
 import { ToggleExampleComponent } from './components/toggle-example.component';
+import { RadioGroupExampleComponent } from './components/radio-group-example.component';
 
 const COMPONENTS = [
-  CavelizerComponentsComponent,
   ButtonExampleComponent,
+  CavelizerComponentsComponent,
+  ChipExampleComponent,
   DropdownExampleComponent,
-  MiniBannerExampleComponent,
   IconsExampleComponent,
   InnerTabGroupExampleComponent,
+  MiniBannerExampleComponent,
+  ProductItemExampleComponent,
   QuoteExampleComponent,
-  ChipExampleComponent,
   CheckboxExampleComponent,
+  TagExampleComponent,
   TextInputExampleComponent,
   ToggleExampleComponent,
   RangeSliderComponent,
