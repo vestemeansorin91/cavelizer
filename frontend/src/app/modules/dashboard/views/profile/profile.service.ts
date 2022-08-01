@@ -12,10 +12,15 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {}
 
-  public uploadAvatar(fileToUpload: File | any): Observable<any> {
-    const formData: FormData = new FormData();
+  public uploadAvatar(fileToUpload: File | any): Observable<{ accessToken: string }> {
+    const formData: FormData | null = new FormData();
     formData.append('avatar', fileToUpload, fileToUpload.name);
-    return this.http.post<any>(`${BASE_URL}/${this.userId}/uploadAvatar`, formData);
+
+    return this.http.post<{ accessToken: string }>(`${BASE_URL}/${this.userId}/uploadAvatar`, formData);
+  }
+
+  public removeAvatar(): Observable<{ accessToken: string }> {
+    return this.http.post<{ accessToken: string }>(`${BASE_URL}/${this.userId}/removeAvatar`, {});
   }
 
   /* This is to get all user profile */

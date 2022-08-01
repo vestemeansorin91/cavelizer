@@ -1,6 +1,9 @@
 <div *ngIf="contact" class="chat-contact-item">
   <div class="avatar">
-    <img [src]="contact.avatarBlobUrl | defaultImage" class="avatar-image"/>
+    <cvz-avatar
+      [name]="contact.fullName"
+      [avatar]="contact?.avatarBlobUrl | defaultImage: true"
+      [size]="54" class="circle pointer"></cvz-avatar>
     <span class="avatar-status online"></span>
   </div>
   <div class="info">

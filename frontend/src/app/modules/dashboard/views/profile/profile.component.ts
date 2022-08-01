@@ -37,7 +37,11 @@ export class ProfileComponent implements OnInit {
   }
 
   public uploadFileToActivity(file: File) {
-    this.store.dispatch(authActions.avatarUpdate({ file }));
+    this.store.dispatch(authActions.avatarUpload({ file }));
+  }
+
+  public removeAvatarClicked() {
+    this.store.dispatch(authActions.avatarRemove());
   }
 
   private getUserProfile() {
