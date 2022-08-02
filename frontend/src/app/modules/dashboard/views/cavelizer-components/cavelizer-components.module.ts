@@ -10,21 +10,25 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonModule } from '../../../../shared/components/button/button.module';
-import { CheckboxModule } from '../../../../shared/components/checkbox/checkbox.module';
-import { ChipModule } from '../../../../shared/components/chip/chip.module';
-import { DropdownModule } from '../../../../shared/components/dropdown/dropdown.module';
-import { FormElementsModule } from '../../../../shared/components/form-elements/form-elements.module';
-import { IconModule } from '../../../../shared/components/icon/icon.module';
-import { InnerTabGroupModule } from '../../../../shared/components/inner-tab-group/inner-tab-group.module';
-import { MiniBannerModule } from '../../../../shared/components/mini-banner/mini-banner.module';
-import { ProductItemModule } from '../../../../shared/components/product-item/product-item.module';
-import { QuoteModule } from '../../../../shared/components/quote/quote.module';
-import { RadioGroupModule } from '../../../../shared/components/radio-group/radio-group.module';
-import { RangeSliderModule } from '../../../../shared/components/range-slider/range-slider.module';
-import { TagModule } from '../../../../shared/components/tag/tag.module';
-import { ToggleModule } from '../../../../shared/components/toggle/toggle.module';
+import {
+  ButtonModule,
+  CheckboxModule,
+  ChipModule,
+  DropdownModule,
+  FormElementsModule,
+  IconModule,
+  InnerTabGroupModule,
+  MiniBannerModule,
+  ProductItemModule,
+  QuoteModule,
+  RadioGroupModule,
+  RangeSliderModule,
+  TagModule,
+  ToggleModule
+} from '@cavelizer';
+
 import { CavelizerComponentsComponent } from './cavelizer-components.component';
+import { BlogItemPreviewExample2 } from './components/blog-item-preview-example2';
 import { ButtonExample } from './components/button-example';
 import { CheckboxExample } from './components/checkbox-example';
 import { ChipExample } from './components/chip-example';
@@ -56,7 +60,8 @@ const EXAMPLE_COMPONENTS = [
   ToggleExample,
   RangeSliderExample,
   TagExample,
-  RadioGroupExample
+  RadioGroupExample,
+  BlogItemPreviewExample2
 ];
 
 const routes: Routes = [

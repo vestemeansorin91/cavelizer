@@ -29,6 +29,7 @@ export * from './inner-tab-group/inner-tab-group.component';
 export * from './inner-tab-group/inner-tab-group.module';
 export * from './mini-banner/mini-banner.component';
 export * from './mini-banner/mini-banner.module';
+export * from './mini-banner/banner-setup.interface';
 export * from './product-item/product-item.component';
 export * from './product-item/product-item.module';
 export * from './quote/quote.component';

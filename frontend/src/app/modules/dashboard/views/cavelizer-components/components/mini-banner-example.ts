@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BannerSetup } from '@cavelizer';
 
 @Component({
   selector: 'app-mini-banner-example',
@@ -11,10 +12,30 @@ import { Component } from '@angular/core';
     </mat-expansion-panel-header>
 
     <cvz-mini-banner>
-      <ng-container subtitle>Banner subfocus</ng-container>
-      <ng-container title>Space for heading</ng-container>
-      <ng-container action> Read recepies </ng-container>
+      <ng-container subtitle>{{ banner.subtitle }}</ng-container>
+      <ng-container title>{{ banner.title }}</ng-container>
+      <ng-container action> {{ banner.button }} </ng-container>
     </cvz-mini-banner>
+
+    <cvz-mini-banner>
+      <ng-container subtitle>{{ banner2.subtitle }}</ng-container>
+      <ng-container title>{{ banner2.title }}</ng-container>
+      <ng-container action>{{ banner2.button }} </ng-container>
+    </cvz-mini-banner>
+
+    <cvz-mini-banner [banner]="banner"></cvz-mini-banner>
   </mat-expansion-panel>`
 })
-export class MiniBannerExample {}
+export class MiniBannerExample {
+  public banner: BannerSetup = {
+    subtitle: 'Banner subfocus',
+    title: 'Space for heading',
+    button: 'Read recepies'
+  };
+
+  public banner2: BannerSetup = {
+    subtitle: 'Banner subfocus',
+    title: 'Space for heading',
+    button: 'Read recepies'
+  };
+}
