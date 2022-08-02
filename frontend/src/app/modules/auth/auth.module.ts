@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ButtonModule } from '../../shared/components/button/button.module';
-import { FormElementsModule } from '../../shared/components/form-elements/form-elements.module';
+import { ButtonModule, FormElementsModule } from '@cavelizer';
+
 import { AuthShellComponent } from './auth-shell.component';
 import { AuthRoutesModule } from './auth.routes';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';

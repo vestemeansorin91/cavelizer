@@ -1,11 +1,7 @@
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ButtonModule } from '../../shared/components/button/button.module';
-import { DropdownModule } from '../../shared/components/dropdown/dropdown.module';
-import { IconModule } from '../../shared/components/icon/icon.module';
-import { MiniBannerModule } from '../../shared/components/mini-banner/mini-banner.module';
-import { QuoteModule } from '../../shared/components/quote/quote.module';
+import { ButtonModule, DropdownModule, IconModule, MiniBannerModule, QuoteModule } from '@cavelizer';
 import { ShopHeaderComponent } from './components/shop-header/shop-header.component';
 import { ShopHeadlineComponent } from './components/shop-headline/shop-headline.component';
 import { ShopMenuComponent } from './components/shop-menu/shop-menu.component';
