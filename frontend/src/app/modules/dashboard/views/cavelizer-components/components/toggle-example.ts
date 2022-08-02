@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-toggle-example',
-  template: ` <mat-expansion-panel expanded="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-toggle</strong>
@@ -25,12 +25,12 @@ import { Component } from '@angular/core';
   </mat-expansion-panel>`
 })
 export class ToggleExample {
-  toggle1 = true;
-  toggle2 = true;
-  toggle3 = false;
-  toggle4 = true;
-  adminToggle1 = true;
-  adminToggle2 = true;
-  adminToggle3 = false;
-  adminToggle4 = true;
+  public toggle1 = true;
+  public toggle2 = true;
+  public toggle3 = false;
+  public toggle4 = true;
+  public adminToggle1 = true;
+  public adminToggle2 = true;
+  public adminToggle3 = false;
+  public adminToggle4 = true;
 }
