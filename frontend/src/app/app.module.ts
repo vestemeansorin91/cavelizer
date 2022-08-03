@@ -3,6 +3,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule, ErrorInterceptor, IconModule, TokenInterceptor } from '@cavelizer';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -14,8 +15,6 @@ import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutesModule } from './app.routes';
 import { DashboardService } from './modules/dashboard/dashboard.service';
-import { ErrorInterceptor } from './shared/interceptors/error-interceptor.service';
-import { TokenInterceptor } from './shared/interceptors/token-interceptor.service';
 import { effects, metaReducers, reducers, strictStateChecks } from './store';
 
 const ErrorInterceptorService = {
@@ -45,6 +44,11 @@ const HashStrategy = {
     BrowserAnimationsModule,
 
     /* Angular Material Modules */
+
+    /* Cavelizer Modules*/
+    ButtonModule,
+    IconModule,
+
     /* Vendors Modules*/
     SimpleNotificationsModule.forRoot({
       showProgressBar: true,

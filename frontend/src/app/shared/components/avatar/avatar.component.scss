@@ -20,7 +20,7 @@
     }
   }
 
-  i {
+  cvz-icon {
     display: none;
   }
 
@@ -38,6 +38,17 @@
     overflow: hidden;
     object-fit: cover;
     border-radius: $border-radius-lg;
+  }
+
+  &:hover {
+    cvz-icon {
+      display: block;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 }
 
@@ -74,14 +85,6 @@
       filter: brightness(20%);
     }
 
-    i {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      color: $color-white;
-      font-size: 32px;
-    }
+
   }
 }

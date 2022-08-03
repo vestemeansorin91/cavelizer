@@ -22,9 +22,9 @@
            class="menu-item--link"
            placement="right"
            routerLinkActive="active">
-        <i [ngClass]="sidenavItem.icon"></i>
+        <cvz-icon [name]="sidenavItem.icon" class="color-white icon"></cvz-icon>
         <span>{{sidenavItem.name}}</span>
-        <cvz-icon class="color-white" name="arrow-left"></cvz-icon>
+        <cvz-icon class="color-white toggle-icon" name="arrow-left"></cvz-icon>
       </div>
 
       <div [style.height]="sidenavItem | sidenavSubmenuHeight"
@@ -37,7 +37,7 @@
              class="menu-item--link"
              placement="right"
              routerLinkActive="active">
-          <i [ngClass]="subSidenavItem.icon"></i>
+          <cvz-icon [name]="subSidenavItem.icon" class="color-white icon"></cvz-icon>
           <span>{{subSidenavItem.name}}</span>
         </div>
       </div>
@@ -45,7 +45,7 @@
 
     <div (click)="logout()" class="menu-item">
       <div class="menu-item--link">
-        <i class="las la-power-off"></i>
+        <cvz-icon name="logout" class="color-white icon"></cvz-icon>
         <span>Logout</span>
       </div>
     </div>

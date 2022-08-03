@@ -72,14 +72,14 @@
 
         padding: 4px 8px;
 
-        i {
+        .icon {
           margin: 8px 0;
           font-size: 24px;
           color: $color-white;
         }
 
         span,
-        cvz-icon {
+        .toggle-icon {
           display: none;
         }
 
@@ -90,7 +90,7 @@
         &.active {
           background-color: $sidenav-bg-color-active;
 
-          i,
+          .icon,
           span {
             color: $sidenav-text-color-active;
           }
@@ -103,7 +103,7 @@
           background-color: transparent;
           padding-right: 24px;
 
-          cvz-icon {
+          .toggle-icon {
             position: absolute;
             top: 12px;
             right: 0;
@@ -117,7 +117,7 @@
           }
 
           &.active {
-            i,
+            .icon,
             span {
               color: $color-white;
             }
@@ -127,7 +127,7 @@
 
       &.submenu-expanded {
         .menu-item--link {
-          cvz-icon {
+          .toggle-icon {
             transform: rotate(-90deg);
           }
         }
@@ -147,14 +147,14 @@
       padding-left: 0 !important;
       padding-right: 0 !important;
 
-      i {
+      .icon {
         margin-right: 0 !important;
       }
 
       &.active {
         background-color: $sidenav-bg-color-active !important;
 
-        i,
+        .icon,
         span {
           color: $sidenav-text-color-active !important;
         }
@@ -185,7 +185,7 @@
         &--link {
           justify-content: flex-start;
 
-          i {
+          .icon {
             margin-right: 16px;
           }
 
@@ -203,7 +203,7 @@
         justify-content: flex-start !important;
         padding: 4px 8px !important;
 
-        i {
+        .icon {
           margin-right: 16px !important;
         }
       }

@@ -39,7 +39,7 @@ import { projectIcons } from '../../../../../shared/components/icon/project-icon
       </mat-form-field>
     </div>
 
-    <div class="flex flex--wrap justify--space-between gap--12">
+    <div class="flex flex--wrap gap--12">
       <div
         *ngFor="let icon of projectIcons"
         (click)="copiedToClipboard(icon)"

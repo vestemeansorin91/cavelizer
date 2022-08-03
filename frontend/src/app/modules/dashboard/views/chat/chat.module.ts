@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AvatarModule, DefaultImagePipeModule } from '@cavelizer';
+import { AvatarModule, DefaultImagePipeModule, IconModule } from '@cavelizer';
 import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 
 import { ChatComponent } from './chat.component';
@@ -42,6 +42,7 @@ const routes: Routes = [
     /* Cavelizer Modules */
     AvatarModule,
     DefaultImagePipeModule,
+    IconModule,
 
     /* Vendors Modules */
     NgxAutoScrollModule

@@ -4,87 +4,87 @@ export const SIDENAV: SidenavItem[] = [
   {
     name: 'Dashboard',
     pathUrl: ['/dashboard', 'panel'],
-    icon: 'las la-desktop'
+    icon: 'dashboard'
   },
   {
     name: 'Clients',
     pathUrl: [],
-    icon: 'las la-user-friends',
+    icon: 'users',
     submenus: [
       {
         name: 'Users',
         pathUrl: ['/dashboard', 'users'],
-        icon: 'las la-user-alt'
+        icon: 'user'
       },
       {
         name: 'Roles',
         pathUrl: ['/dashboard', 'roles'],
-        icon: 'las la-id-badge'
+        icon: 'role'
       },
       {
         name: 'Permissions',
         pathUrl: ['/dashboard', 'permissions'],
-        icon: 'las la-user-shield'
+        icon: 'permission'
       }
     ]
   },
   {
     name: 'Shop',
     pathUrl: [],
-    icon: 'las  la-store-alt',
+    icon: 'shop',
     submenus: [
       {
         name: 'Products',
         pathUrl: ['/dashboard', 'products'],
-        icon: 'las la-shopping-bag'
+        icon: 'product'
       },
       {
         name: 'Categories',
         pathUrl: ['/dashboard', 'categories'],
-        icon: 'las la-list'
+        icon: 'category'
       },
       {
         name: 'Tags',
         pathUrl: ['/dashboard', 'tags'],
-        icon: 'las la-tag'
+        icon: 'tag'
       }
     ]
   },
   {
     name: 'Blog',
     pathUrl: [],
-    icon: 'las la-blog',
+    icon: 'article',
     submenus: [
       {
         name: 'Articles',
         pathUrl: ['/dashboard', 'articles'],
-        icon: 'las la-newspaper'
+        icon: 'article'
       },
       {
         name: 'Comments',
         pathUrl: ['/dashboard', 'comments'],
-        icon: 'las la-comment'
+        icon: 'comment'
       }
     ]
   },
   {
     name: 'Documentation',
     pathUrl: ['/dashboard', 'docs'],
-    icon: 'las la-book'
+    icon: 'docs'
   },
   {
     name: 'Components',
     pathUrl: ['/dashboard', 'components'],
-    icon: 'las la-shapes'
+    icon: 'components'
   },
   {
     name: 'Chat',
     pathUrl: ['/dashboard', 'chat'],
-    icon: 'las la-comments'
+    icon: 'chat'
   },
   {
     name: 'Go to shop',
     pathUrl: ['/shop'],
-    icon: 'las  la-store-alt'
+    icon: 'shop'
   }
 ];

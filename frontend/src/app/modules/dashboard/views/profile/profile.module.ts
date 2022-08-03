@@ -6,11 +6,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
-import { AvatarModule } from '../../../../shared/components/avatar/avatar.module';
-import { ButtonModule } from '../../../../shared/components/button/button.module';
-import { CheckboxModule } from '../../../../shared/components/checkbox/checkbox.module';
-import { FormElementsModule } from '../../../../shared/components/form-elements/form-elements.module';
-import { DefaultImagePipeModule } from '../../../../shared/pipes/default-image/default-image-pipe.module';
+import {
+  AvatarModule,
+  ButtonModule,
+  CheckboxModule,
+  DefaultImagePipeModule,
+  FormElementsModule,
+  IconModule
+} from '@cavelizer';
+
 import { UserBankDetailsComponent } from './components/user-bank-details/user-bank-details.component';
 import { UserClothesSizesComponent } from './components/user-clothes-sizes/user-clothes-sizes.component';
 import { UserEmergencyContactComponent } from './components/user-emergency-contact/user-emergency-contact.component';
@@ -55,6 +59,7 @@ const COMPONENTS = [
     ButtonModule,
     CheckboxModule,
     FormElementsModule,
+    IconModule,
 
     DefaultImagePipeModule
   ]

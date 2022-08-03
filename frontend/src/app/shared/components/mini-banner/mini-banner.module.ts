@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ButtonModule } from '../button/button.module';
+import { IconModule } from '../icon/icon.module';
 import { MiniBannerComponent } from './mini-banner.component';
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MiniBannerComponent } from './mini-banner.component';
 
     /* Angular Material Modules */
     /* Cavelizer Modules */
-    ButtonModule
+    ButtonModule,
+    IconModule
   ],
   exports: [MiniBannerComponent]
 })

@@ -7,14 +7,13 @@
          (keyup.enter)="sendMessage()" [(ngModel)]="message"
          class="chat-text-box--message" name="message" placeholder="Write your message..." type="text">
   <div class="align--center gap--32">
-    <!--      <i-->
+    <!--      <span-->
     <!--        (click)="toggled = !toggled"-->
     <!--        [(emojiPickerIf)]="toggled"-->
     <!--        [emojiPickerDirection]="'top'"-->
     <!--        (emojiPickerSelect)="handleSelection($event)"-->
     <!--        class="fs&#45;&#45;24 text&#45;&#45;normal pointer"-->
     <!--      >😍</i>-->
-    <i class="text--normal pointer fs--24">😍</i>
-    <i class="las la-link color--grey fs--24"></i>
+    <cvz-icon name="external-link"></cvz-icon>
   </div>
 </div>
