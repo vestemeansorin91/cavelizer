@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ButtonModule, FormElementsModule } from '@cavelizer';
+import { ButtonModule, CheckboxModule, FormElementsModule } from '@cavelizer';
 
 import { AuthShellComponent } from './auth-shell.component';
 import { AuthRoutesModule } from './auth.routes';
@@ -32,7 +32,8 @@ const COMPONENTS = [
 
     /* Cavelizer Modules */
     ButtonModule,
-    FormElementsModule
+    FormElementsModule,
+    CheckboxModule
   ],
   providers: [AuthService],
   exports: [COMPONENTS]
