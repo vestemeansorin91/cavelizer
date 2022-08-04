@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'colors';
+
+
+.title-blog {
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  max-height: 400px;
+  background-color: red;
+}
+
