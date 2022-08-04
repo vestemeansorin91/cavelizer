@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cvz-blog',
+  selector: 'cvz-blog-preview',
   templateUrl: './blog-item-preview.component.html',
   styleUrls: ['./blog-item-preview.component.scss']
 })
-export class BlogItemPreviewExampleComponent {}
+export class BlogPreviewComponent {}
