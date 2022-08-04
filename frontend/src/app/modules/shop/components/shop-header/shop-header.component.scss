@@ -23,7 +23,7 @@
     width: 500px;
 
     border: 1px solid $color-grey-050;
-    border-radius: 12px;
+    border-radius: $border-radius-xl;
     background-color: $color-grey-080;
 
     .all-categories {

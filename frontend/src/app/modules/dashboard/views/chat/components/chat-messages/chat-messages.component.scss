@@ -1,5 +1,5 @@
 @import 'colors';
-
+@import 'variables';
 :host {
   padding-bottom: 16px;
 
@@ -17,17 +17,14 @@
       .message {
         flex-direction: column;
         align-items: flex-start;
-
         display: inline-flex;
-
         padding: 16px;
         margin: 5px 10px;
         min-height: 40px;
         width: auto;
-        border-radius: 18px;
+        border-radius: $border-radius-semi-huge;
         background-color: $color-info-090;
         color: $color-white;
-
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -40,7 +37,6 @@
         top: 50%;
         right: -54px;
         transform: translateY(-50%);
-
         width: 54px;
         height: 54px;
         border-radius: 50%;
