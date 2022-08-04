@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import {BlogItemPreviewExampleComponent} from './blog-item-preview.component';
+import {BlogPreviewComponent} from './blog-item-preview.component';
 
 @NgModule({
-  declarations: [BlogItemPreviewExampleComponent],
+  declarations: [BlogPreviewComponent],
   imports: [CommonModule],
-  exports: [BlogItemPreviewExampleComponent]
+  exports: [BlogPreviewComponent]
 })
-export class BlogItemPreviewExampleModule {}
+export class BlogPreviewModule {}
