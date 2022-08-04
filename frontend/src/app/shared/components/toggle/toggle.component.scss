@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'mixins';
+@import 'variables';
 
 .toggle-input {
   width: fit-content;
@@ -13,7 +14,7 @@
 
     width: 36px;
     height: 20px;
-    border-radius: 16px;
+    border-radius: $border-radius-xxl;
     background: $color-grey-040;
     cursor: pointer;
 
