@@ -1,30 +1,5 @@
 
 @font-face {
-  font-family:'Source Sans Pro';
-  src: url("src/assets/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf") format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family:'Source Sans Pro';
-  src: url("src/assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf") format('truetype');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family:'Source Sans Pro';
-  src: url("src/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format('truetype');
-  font-weight: normal;
-}
-
-
-@font-face {
-  font-family:'Source Sans Pro';
-  src: url("src/assets/fonts/Source_Sans_Pro/SourceSansPro-light.ttf") format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
   font-family:'Poppins';
   src: url("src/assets/fonts/Poppins/Poppins-Bold.ttf") format('truetype');
   font-weight: bold;
@@ -70,24 +45,5 @@
 @font-face {
   font-family:'Open Sans';
   src: url("src/assets/fonts/Open_Sans/OpenSans-light.ttf") format('truetype');
-  font-weight: 300;
-}
-
-
-@font-face {
-  font-family:'Roboto';
-  src: url("src/assets/fonts/Roboto/Roboto-Bold.ttf") format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family:'Roboto';
-  src: url("src/assets/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family:'Roboto';
-  src: url("src/assets/fonts/Roboto/Roboto-light.ttf") format('truetype');
   font-weight: 300;
 }
