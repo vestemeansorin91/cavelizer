@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'variables';
 
 $chat-bg-color: #eff2f4;
 $chat-bg-color-hover: #deebfc;
@@ -21,7 +22,7 @@ $chat-bg-color-select: #eaf3ff;
   display: flex;
 
   background-color: $chat-bg-color;
-  border-radius: 16px;
+  border-radius: $border-radius-xxl;
   padding: 18px;
   margin: 0 24px;
 
@@ -103,7 +104,7 @@ $chat-bg-color-select: #eaf3ff;
     position: absolute;
     bottom: 16px;
     right: 16px;
-    border-radius: 8px;
+    border-radius:$border-radius-lg;
     width: 8px;
     height: 8px;
     background-color: $color-info-090;

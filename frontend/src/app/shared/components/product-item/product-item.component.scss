@@ -6,7 +6,7 @@
   border: 1px solid $color-grey-050;
   padding: 16px;
   width: 270px;
-  border-radius: 12px;
+  border-radius: $border-radius-xl;
 
   .image-container {
     position: relative;
