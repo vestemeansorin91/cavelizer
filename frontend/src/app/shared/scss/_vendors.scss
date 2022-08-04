@@ -1,5 +1,6 @@
 /* Sidenav */
 @import './colors';
+@import './variables';
 
 .mat-drawer-inner-container {
   background-color: $sidenav-bg-color;
@@ -15,7 +16,7 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: $sidenav-text-color-active;
-    border-radius: 20px;
+    border-radius: $border-radius-huge;
     border: 3px solid $sidenav-bg-color;
   }
 }
