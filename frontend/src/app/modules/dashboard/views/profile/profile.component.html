@@ -13,8 +13,7 @@
       [editable]="true"
       class="editable circle"></cvz-avatar>
     <cvz-button *ngIf="currentUser.avatarBlobUrl" (click)="removeAvatarClicked()" class="grey small">
-      <!--      TODO: Petrut Icon replace-->
-      <cvz-icon name="delete"></cvz-icon> Remove avatar
+      <cvz-icon name="remove"></cvz-icon> Remove avatar
     </cvz-button>
     <h1 class="mb--0">{{ currentUser?.fullName }}</h1>
     <h2>{{ currentUser?.username }}</h2>

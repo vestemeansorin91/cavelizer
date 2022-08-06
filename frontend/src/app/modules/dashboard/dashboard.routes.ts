@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from '../../shared/guards/auth.guard';
+import { AuthGuard } from '@cavelizer';
 import { DashboardComponent } from './dashboard.component';
 import { ArticlesComponent } from './views/articles/articles.component';
 import { CommentsComponent } from './views/comments/comments.component';
@@ -38,6 +38,10 @@ const routes: Routes = [
       {
         path: 'comments',
         component: CommentsComponent
+      },
+      {
+        path: 'icons',
+        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
       },
       {
         path: 'components',

@@ -1,5 +1,5 @@
 <div class="flex justify--center">
-  <form [formGroup]="userEmergencyContactFormGroup" class="flex--column mt--40 gap--8">
+  <form [formGroup]="userEmergencyContactFormGroup" class="flex--column mt--40 gap--8 width--300">
     <cvz-input-group>
       <cvz-label>Full name</cvz-label>
       <cvz-input-text formControlName="fullName"></cvz-input-text>
@@ -11,7 +11,7 @@
     </cvz-input-group>
 
 
-    <div>
+    <div class="flex--column">
       <label class="mr--16" for="relationshipType">Relationship Type</label>
       <select formControlName="relationshipType" id="relationshipType" name="">
         <option value="partner">Partner</option>
@@ -22,7 +22,7 @@
       </select>
     </div>
 
-    <cvz-button (click)="onSaveUserEmergencyContact()" [disabled]="!userEmergencyContactFormGroup.valid">Save</cvz-button>
+    <cvz-button (click)="onSaveUserEmergencyContact()" [disabled]="!userEmergencyContactFormGroup.valid" class="width--full mt--16">Save</cvz-button>
   </form>
 </div>
 

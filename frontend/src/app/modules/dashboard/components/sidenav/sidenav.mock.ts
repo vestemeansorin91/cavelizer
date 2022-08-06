@@ -1,4 +1,4 @@
-import { SidenavItem } from '../types/interfaces/sidenav.interface';
+import { SidenavItem } from '../../types/interfaces/sidenav.interface';
 
 export const SIDENAV: SidenavItem[] = [
   {
@@ -76,6 +76,11 @@ export const SIDENAV: SidenavItem[] = [
     name: 'Components',
     pathUrl: ['/dashboard', 'components'],
     icon: 'components'
+  },
+  {
+    name: 'Icons',
+    pathUrl: ['/dashboard', 'icons'],
+    icon: 'icons'
   },
   {
     name: 'Chat',
