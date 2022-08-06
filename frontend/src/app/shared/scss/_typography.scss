@@ -1,47 +1,39 @@
-@font-face {
-  font-family:'Poppins';
-  src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family:'Poppins';
-  src: url("/assets/fonts/Poppins/Poppins-SemiBold.ttf") format('truetype');
+h1{
+  font-size: 32px;
+  line-height: 45px;
   font-weight: 600;
 }
 
-@font-face {
-  font-family:'Poppins';
-  src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family:'Poppins';
-  src: url("/assets/fonts/Poppins/Poppins-light.ttf") format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family:'Open Sans';
-  src: url("/assets/fonts/Open_Sans/OpenSans-Bold.ttf") format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family:'Open Sans';
-  src: url("/assets/fonts/Open_Sans/OpenSans-SemiBold.ttf") format('truetype');
+h2{
+  font-size: 26px;
+  line-height: 39px;
   font-weight: 600;
 }
 
-@font-face {
-  font-family:'Open Sans';
-  src: url("/assets/fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype');
-  font-weight: normal;
+h3{
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
 }
 
-@font-face {
-  font-family:'Open Sans';
-  src: url("/assets/fonts/Open_Sans/OpenSans-light.ttf") format('truetype');
-  font-weight: 300;
+h4{
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+h5{
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+h6{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
 }

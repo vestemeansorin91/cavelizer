@@ -20,6 +20,7 @@ import { Component } from '@angular/core';
       <app-range-slider-example></app-range-slider-example>
       <app-radio-group-example></app-radio-group-example>
       <app-product-item-example></app-product-item-example>
+      <app-typography-example></app-typography-example>
     </mat-accordion>`
 })
 export class CavelizerComponentsComponent {}

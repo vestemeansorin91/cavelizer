@@ -43,6 +43,7 @@ import { RangeSliderExample } from './components/range-slider-example';
 import { TagExample } from './components/tag-example';
 import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
+import {TypographyExample} from "./components/typography-example";
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
@@ -61,7 +62,8 @@ const EXAMPLE_COMPONENTS = [
   RangeSliderExample,
   TagExample,
   RadioGroupExample,
-  BlogItemPreviewExample2
+  BlogItemPreviewExample2,
+  TypographyExample
 ];
 
 const routes: Routes = [
