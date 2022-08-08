@@ -35,8 +35,8 @@
       line-height: 20px;
 
       opacity: 0;
-      transition: all 0.3s;
-      transform: rotateZ(90deg);
+      transform: scale(0);
+      transition: all .4s ease-out;
     }
 
     span {
@@ -45,18 +45,18 @@
     }
 
     &.selected {
-      border-color: $color-primary;
+      border-color:$color-primary-020;
       background-color: $color-primary;
 
       cvz-icon {
         opacity: 1;
-        transform: rotateZ(0);
-        transition: all 0.4s;
+        transform: scale(1);
+        transition: all .4s ease-in;
       }
     }
 
     &:hover {
-      border-color: $color-primary;
+      border-color: $color-primary-020;
     }
 
     &.disabled {
