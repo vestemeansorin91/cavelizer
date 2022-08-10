@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <mat-panel-title>
         <strong>cavelizer-typography</strong>
       </mat-panel-title>
-      <mat-panel-description> Creat de Petrut</mat-panel-description>
+      <mat-panel-description>Creat de Petrut</mat-panel-description>
     </mat-expansion-panel-header>
     <h1 [innerText]="'This is a heading <h1>'"></h1>
     <h2 [innerText]="'This is a heading <h2>'"></h2>
