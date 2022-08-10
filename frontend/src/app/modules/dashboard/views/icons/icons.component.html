@@ -1,0 +1,38 @@
+<div class="justify--center gap--30">
+  <mat-form-field appearance="outline">
+    <mat-label>Size</mat-label>
+
+    <mat-select [(ngModel)]="iconsSize">
+      <mat-option value="small">Small (16x16px)</mat-option>
+      <mat-option value="">Normal (24x24px)</mat-option>
+      <mat-option value="big">Big (32x32px)</mat-option>
+      <mat-option value="xl">XL (64x64px)</mat-option>
+      <mat-option value="xxl">XXL (128x128px)</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Color</mat-label>
+
+    <mat-select [(ngModel)]="iconsColor">
+      <mat-option value="">Default</mat-option>
+      <mat-option value="color-primary">color-primary</mat-option>
+      <mat-option value="color-warning">color-warning</mat-option>
+      <mat-option value="color-error">color-error</mat-option>
+      <mat-option value="color-info">color-info</mat-option>
+      <mat-option value="color-white">color-white</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="flex flex--wrap justify--space-evenly gap--12">
+  <div
+    *ngFor="let icon of projectIcons"
+    (click)="copiedToClipboard(icon)"
+    [cdkCopyToClipboard]="copyToClipboard(icon)"
+    class="flex--column justify--center align--center pointer width--140 b-radius--8 hovered p--8"
+  >
+    <cvz-icon [name]="icon" [ngClass]="[iconsSize, iconsColor]"></cvz-icon>
+    <span class="fs--12 mt--4">{{ icon }}</span>
+  </div>
+</div>

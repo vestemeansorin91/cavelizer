@@ -1,20 +1,20 @@
 <div class="flex justify--center">
-  <form [formGroup]="userStartEndDatesFormGroup" class="flex--column mt--40 gap--8">
-    <div>
+  <form [formGroup]="userStartEndDatesFormGroup" class="flex--column mt--40 gap--8 width--300">
+    <div class="flex--column">
       <label class="mr--16" for="hireDate">Hire Date</label>
       <input formControlName="hireDate" id="hireDate" type="date" />
     </div>
 
-    <div>
+    <div class="flex--column">
       <label class="mr--16" for="contractEndDate">Contract Date</label>
       <input formControlName="contractEndDate" id="contractEndDate" type="date" />
     </div>
 
-    <div>
-      <label class="mr--16" for="subCompany">Sub Company</label>
-      <input formControlName="subCompany" id="subCompany" type="string" />
-    </div>
+    <cvz-input-group>
+      <cvz-label>Sub company</cvz-label>
+      <cvz-input-text formControlName="subCompany"></cvz-input-text>
+    </cvz-input-group>
 
-    <cvz-button (click)="onSaveStartEndDates()" [disabled]="!userStartEndDatesFormGroup.valid"> Save</cvz-button>
+    <cvz-button (click)="onSaveStartEndDates()" [disabled]="!userStartEndDatesFormGroup.valid" class="width--full mt--16"> Save</cvz-button>
   </form>
 </div>

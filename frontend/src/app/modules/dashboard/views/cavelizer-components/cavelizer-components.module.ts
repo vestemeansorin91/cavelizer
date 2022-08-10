@@ -34,7 +34,6 @@ import { ButtonExample } from './components/button-example';
 import { CheckboxExample } from './components/checkbox-example';
 import { ChipExample } from './components/chip-example';
 import { DropdownExample } from './components/dropdown-example';
-import { IconsExample } from './components/icons-example';
 import { InnerTabGroupExample } from './components/inner-tab-group-example';
 import { MiniBannerExample } from './components/mini-banner-example';
 import { ProductItemExample } from './components/product-item-example';
@@ -46,13 +45,13 @@ import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
 import {BlogItemPreviewExample} from "./components/blog-item-preview-example";
 
+import { TypographyExample } from './components/typography-example';
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
   ButtonExample,
   ChipExample,
   DropdownExample,
-  IconsExample,
   InnerTabGroupExample,
   MiniBannerExample,
   ProductItemExample,
@@ -65,7 +64,8 @@ const EXAMPLE_COMPONENTS = [
   TagExample,
   RadioGroupExample,
   BlogItemPreviewExample2,
-  BlogItemPreviewExample
+  BlogItemPreviewExample,
+  TypographyExample
 ];
 
 const routes: Routes = [
@@ -91,8 +91,6 @@ const routes: Routes = [
     MatInputModule,
     MatSelectModule,
     MatMenuModule,
-    ClipboardModule,
-    OverlayModule,
 
     /* Cavelizer Modules */
     ButtonModule,

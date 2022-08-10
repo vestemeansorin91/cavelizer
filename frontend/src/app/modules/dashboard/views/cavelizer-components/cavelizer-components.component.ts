@@ -4,10 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-cavelizer-components',
   template: ` <h1>CAVELIZER COMPONENTS</h1>
     <mat-accordion>
-      <!-- TODO: Delete this after you implement blog item preview -->
       <app-blog-item-preview-example></app-blog-item-preview-example>
       <app-blog-item-preview-example2></app-blog-item-preview-example2>
-      <app-icons-example></app-icons-example>
       <app-button-example></app-button-example>
       <app-dropdown-example></app-dropdown-example>
       <app-mini-banner-example></app-mini-banner-example>
@@ -21,6 +19,7 @@ import { Component } from '@angular/core';
       <app-range-slider-example></app-range-slider-example>
       <app-radio-group-example></app-radio-group-example>
       <app-product-item-example></app-product-item-example>
+      <app-typography-example></app-typography-example>
     </mat-accordion>`
 })
 export class CavelizerComponentsComponent {}

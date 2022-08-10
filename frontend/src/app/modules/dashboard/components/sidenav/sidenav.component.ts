@@ -4,8 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { authActions } from 'src/app/modules/auth/store';
 import { StoreStateInterface } from 'src/app/store';
-import { SIDENAV } from '../../mock/sidenav.mock';
 import { SidenavItem } from '../../types/interfaces/sidenav.interface';
+import { SIDENAV } from './sidenav.mock';
 
 @Component({
   selector: 'app-sidenav',

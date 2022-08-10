@@ -3,19 +3,25 @@
 @import 'mixins';
 
 .product-item {
-  border: 1px solid $color-grey-050;
-  padding: 16px;
   width: 270px;
-  border-radius: $border-radius-xl;
+  padding: 16px;
+
+  border: 1px solid $color-grey-050;
+  border-radius: 12px;
 
   .image-container {
     position: relative;
 
-    img {
-      border-radius: $border-radius-xl;
+
+    div {
       width: 240px;
       height: 180px;
+
+      border-radius: $border-radius-xl;
+      background-color: $color-grey-080;
+
       object-fit: contain;
+      overflow: hidden;
     }
 
     cvz-tag {
@@ -26,25 +32,30 @@
   }
 
   .title {
-    @include default-poppins-text();
-    font-size: 15px;
     margin-bottom: 4px;
     margin-top: 16px;
+
+    @include default-poppins-text();
+    font-size: 15px;
     font-weight: 500;
+
   }
 
   .description {
-    @include default-open-sans-text();
-    color: $color-grey-010;
-    font-size: 12px;
     margin-bottom: 14px;
+
+    @include default-open-sans-text();
+    font-size: 12px;
+    color: $color-grey-010;
   }
 
   .rating {
     display: flex;
+    gap: 6px;
+
     margin-top: 14px;
     margin-bottom: 18px;
-    gap: 6px;
+
     font-size: 16px;
 
     cvz-icon {
@@ -60,8 +71,8 @@
     .price {
       @include default-poppins-text();
       font-weight: 600;
-      line-height: 27px;
       font-size: 18px;
+      line-height: 27px;
 
       .first-price {
         @include default-poppins-text();
