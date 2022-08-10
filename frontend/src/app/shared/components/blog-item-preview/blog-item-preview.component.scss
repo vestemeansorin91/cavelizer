@@ -41,7 +41,7 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
-        font-family: 'Open Sans';
+
 
         .avatar-image {
           background-color: $color-white;
@@ -52,11 +52,13 @@
         }
 
         .author {
+          font-family: 'Open Sans';
           font-size: 12px;
           margin-right: 16px;
         }
 
         .date {
+          font-family: 'Open Sans';
           font-size: 12px;
         }
       }
