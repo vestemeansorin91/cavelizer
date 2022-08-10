@@ -1,7 +1,7 @@
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ButtonModule, DropdownModule, IconModule, MiniBannerModule, QuoteModule } from '@cavelizer';
+import { ButtonModule, DropdownModule, IconModule, MiniBannerModule, ProductItemModule, QuoteModule } from '@cavelizer';
 import { ShopHeaderComponent } from './components/shop-header/shop-header.component';
 import { ShopHeadlineComponent } from './components/shop-headline/shop-headline.component';
 import { ShopMenuComponent } from './components/shop-menu/shop-menu.component';
@@ -25,7 +25,8 @@ const COMPONENTS = [ShopComponent, ShopHeadlineComponent, ShopMenuComponent, Sho
     DropdownModule,
     IconModule,
     MiniBannerModule,
-    QuoteModule
+    QuoteModule,
+    ProductItemModule
   ]
 })
 export class ShopModule {}

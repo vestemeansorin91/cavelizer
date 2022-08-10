@@ -4,9 +4,9 @@
   <app-shop-menu></app-shop-menu>
 
   <!--  Categories / Mini banners -->
-  <div class="flex pl--46 pr--30">
-    <div class="flex--column flex--1">
-      <span class="fs--18 my--16 text--bold">Category menu</span>
+  <div class="flex mt--48 pl--46 pr--30">
+    <div class="flex--column width--320">
+      <h4 class="my--14">Category menu</h4>
 
       <div class="flex--column flex--1">
         <a class="mb--12">Bakery</a>
@@ -34,9 +34,31 @@
     </cvz-mini-banner>
   </div>
 
-  <div class="bordered text--center p--32">
-    <a href="https://trello.com/c/HzZh3nWm/63-component-product-item" target="_blank">products list component</a>
+
+  <div class="flex mt--48 pl--46 pr--30">
+    <div class="flex--column width--320">
+      <h4 class="my--14">Category menu</h4>
+
+      <div class="flex--column flex--1">
+        <a class="mb--12">Bakery</a>
+        <a class="mb--12">Fruit and vegetables</a>
+        <a class="mb--12">Meat and fish</a>
+        <a class="mb--12">Drinks</a>
+        <a class="mb--12">Kitchen</a>
+      </div>
+
+      <cvz-button class="small grey mb--16">More categories
+        <cvz-icon name="arrow-right"></cvz-icon>
+      </cvz-button>
+    </div>
+
+    <div class="flex gap--32 mr--16">
+      <cvz-product-item></cvz-product-item>
+      <cvz-product-item></cvz-product-item>
+      <cvz-product-item></cvz-product-item>
+    </div>
   </div>
+
 
   <div class="bordered text--center p--32">
     <a href="https://trello.com/c/HzZh3nWm/63-component-product-item" target="_blank">products list component</a>
@@ -44,7 +66,7 @@
 
   <!-- Reviews -->
   <div class="justify--space-between width--full pl--44 mt--24 pr--20 mb--36">
-    <span class="fs--18 text--bold">Our customer says</span>
+    <h4>Our customer says</h4>
     <cvz-button class="small transparent">See more
       <cvz-icon class="primary-color" name="arrow-right"></cvz-icon>
     </cvz-button>
@@ -108,7 +130,7 @@
 
   <div class="flex py--64 px--46 justify--space-between">
     <div *ngFor="let group of footerLinkGroups" class="flex--column">
-      <span class="fs--18 my--16 text--bold">{{ group.headline }}</span>
+      <h4 class="my--16">{{ group.headline }}</h4>
 
       <div class="flex--column flex--1">
         <a *ngFor="let item of group.items" [routerLink]="item.urlPath" class="mb--12">{{ item.name }}</a>

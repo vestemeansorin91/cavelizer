@@ -1,8 +1,4 @@
-<div class="border-bottom py--16 px--32 width--full justify--space-between align--center">
-  <cvz-input-group class="width--320">
-    <cvz-input-text placeholder="Search for ..."></cvz-input-text>
-  </cvz-input-group>
-
+<div class="border-bottom py--16 px--32 width--full justify--end align--center">
   <div class="align--center">
     <cvz-icon name="settings" class="mr--40"></cvz-icon>
     <cvz-icon name="notification" class="mr--40"></cvz-icon>
@@ -16,9 +12,10 @@
               class="ml--32 mr--12 fs--14 text--bold pointer">{{ currentUser.username }}</span>
       </div>
       <cvz-avatar
+        *ngIf="currentUser"
         [routerLink]="['/dashboard/user/profile']"
         [name]="currentUser.fullName"
-        [avatar]="currentUser?.avatarBlobUrl | defaultImage: true"
+        [avatar]="currentUser.avatarBlobUrl | defaultImage: true"
         [size]="40" class="pointer circle"></cvz-avatar>
     </ng-container>
   </div>
