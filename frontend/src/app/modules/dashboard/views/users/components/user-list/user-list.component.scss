@@ -1,0 +1,122 @@
+@import 'variables';
+@import 'colors';
+@import 'helpers';
+
+.user-list {
+  .filters {
+    display: none;
+
+    .filters-specified {
+      display: flex;
+      gap: 14px;
+      flex: 1;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        border: 2px solid $color-grey-120;
+        border-radius: $border-radius-lg;
+        padding-left: 15px;
+        min-width: 157px;
+        font-size: 14px;
+        font-weight: 500;
+
+        cvz-icon {
+          padding: 12px 14px;
+          border-left: 2px solid $color-grey-120;
+        }
+
+        span {
+          flex: 1;
+          width: 100px;
+        }
+      }
+
+      .search {
+        padding-right: 32px;
+
+        cvz-icon {
+          padding: 0;
+          margin-right: 12px;
+          border: none;
+        }
+      }
+    }
+
+    .sort-by {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+  }
+
+  .table {
+    display: table;
+
+    .row {
+      display: table-row;
+
+      .cell {
+        display: table-cell;
+        padding-top: 20px;
+        padding-bottom: 26px;
+        padding-right: 55px;
+        vertical-align: middle;
+
+        .check-filter {
+          display: flex;
+
+          span {
+            font-size: 18px;
+          }
+
+          cvz-checkbox {
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 16px;
+        }
+
+        span {
+          font-size: 14px;
+
+          &.label {
+            font-weight: 600;
+            font-size: 16px;
+          }
+
+          &.status {
+            font-size: 16px;
+            color: #17E383;
+          }
+        }
+
+        .money-used {
+          font-size: 20px;
+        }
+      }
+
+    }
+
+    &.table-head {
+      font-size: 18px !important;
+      font-weight: 500;
+
+      .cell {
+        font-size: 18px;
+        padding-right: 55px;
+        padding-top: 31px;
+        border-bottom: 2px solid $color-grey-070;
+        padding-bottom: 37px;
+      }
+    }
+  }
+}
+
