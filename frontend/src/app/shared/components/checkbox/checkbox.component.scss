@@ -36,7 +36,7 @@
 
       opacity: 0;
       transform: scale(0);
-      transition: all .4s ease-out;
+      transition: all 0.2s linear;
     }
 
     span {
@@ -51,7 +51,7 @@
       cvz-icon {
         opacity: 1;
         transform: scale(1);
-        transition: all .4s ease-in;
+        transition: all 0.2s linear;
       }
     }
 
@@ -87,7 +87,7 @@
         border-radius: 50%;
         background: $color-grey-060;
 
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
         transform: scale(0);
       }
 
