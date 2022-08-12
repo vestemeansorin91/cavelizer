@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
 import {BlogPreviewComponent} from './blog-item-preview.component';
 import {TagModule} from "../tag/tag.module";
 
@@ -9,4 +9,5 @@ import {TagModule} from "../tag/tag.module";
   imports: [CommonModule, TagModule],
   exports: [BlogPreviewComponent]
 })
-export class BlogPreviewModule {}
+export class BlogPreviewModule {
+}

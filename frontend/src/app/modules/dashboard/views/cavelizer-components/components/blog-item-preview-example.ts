@@ -11,10 +11,7 @@ import { Component } from '@angular/core';
     </mat-expansion-panel-header>
     <div class="flex flex--wrap gap--16 mb--16">
       <cvz-blog-preview></cvz-blog-preview>
-
     </div>
-
-
   </mat-expansion-panel>`
 })
 export class BlogItemPreviewExample {}
