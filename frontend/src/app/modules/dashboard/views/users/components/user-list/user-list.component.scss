@@ -106,12 +106,11 @@
 
     }
 
-    &.table-head {
-      font-size: 18px !important;
+    &-head {
       font-weight: 500;
 
       .cell {
-        font-size: 18px;
+        font-size: 18px !important;
         padding-right: 55px;
         padding-top: 31px;
         border-bottom: 2px solid $color-grey-070;
