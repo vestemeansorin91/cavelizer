@@ -82,7 +82,58 @@
       </div>
       <div class="cell">
         <div class="flex">
-          <cvz-radio-item></cvz-radio-item>
+          <cvz-radio-group [(ngModel)]="gender">
+            <cvz-radio-item [value]="false" [isActive]="false"></cvz-radio-item>
+          </cvz-radio-group>
+          <span class="status">Done</span>
+        </div>
+      </div>
+      <div class="cell">
+        <span class="label">Jan 2,2022</span>
+      </div>
+      <div class="cell">
+        <div class="flex align--center mr--0">
+          <span class="fw--500 mr--60 money-used">$783.22</span>
+          <cvz-icon name="more-vertical"></cvz-icon>
+        </div>
+      </div>
+    </div>
+    <div class="row mt--20">
+      <div class="cell">
+        <div class="cell-content  flex">
+          <div class="check-filter ">
+            <cvz-checkbox></cvz-checkbox>
+            <img src="../../../assets/default-avatar.jpeg" alt="">
+          </div>
+          <div class="flex--column">
+            <span class="label">Figma</span>
+            <span>https://www.figma.com/</span>
+          </div>
+        </div>
+      </div>
+      <div class="cell test">
+        <div class="flex--column">
+          <span class="label">Visa</span>
+          <span>***** 2468</span>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="flex--column">
+          <span class="label">Itai Bracha</span>
+          <span>Itai Bracha31@gmail.com</span>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="flex--column">
+          <span class="label">Jan 2,2022</span>
+          <span>$783.22</span>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="flex">
+          <cvz-radio-group [(ngModel)]="gender">
+            <cvz-radio-item [value]="false" [isActive]="false"></cvz-radio-item>
+          </cvz-radio-group>
           <span class="status">Done</span>
         </div>
       </div>
