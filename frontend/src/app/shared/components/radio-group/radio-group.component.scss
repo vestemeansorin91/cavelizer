@@ -1,3 +1,5 @@
+@import 'colors';
+
 :host {
   display: inline-flex;
   flex-direction: row;
@@ -6,5 +8,17 @@
 
   &.vertical {
     flex-direction: column;
+  }
+
+  &.bordered {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: 400px;
+    border: 1px solid $color-grey-090;
+    border-radius: 12px;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: $color-white;
   }
 }
