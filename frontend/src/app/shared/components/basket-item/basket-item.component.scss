@@ -1,0 +1,133 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+:host {
+  display: flex;
+
+  .view {
+    .image {
+      width: 100px;
+      height: 67px;
+
+      border-radius: $border-radius-xl;
+      margin-bottom: 12px;
+      background: $color-grey-080;
+
+    }
+
+    .function {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      span {
+        margin-left: 8px;
+
+        @include default-open-sans-text();
+        color: $color-grey-090;
+      }
+    }
+  }
+
+  .details {
+    margin-left: 16px;
+
+    .title {
+      margin-bottom: 4px;
+
+      color: $color-grey-020;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .properties {
+      display: flex;
+      gap: 14px;
+
+      ul {
+        @include reset-list();
+        @include default-open-sans-text();
+        color: $color-grey-020;
+
+        li {
+          font-size: 12px;
+        }
+
+        &.label {
+          color: $color-grey-090;
+        }
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 12px;
+      margin-bottom: 18px;
+
+      cvz-icon[name="star-full"] {
+        fill: $color-gold;
+      }
+
+      cvz-icon[name="star-empty"] {
+        fill: $color-grey-060;
+      }
+    }
+
+    .buy-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        margin-right: 140px;
+        font-weight: 600;
+
+        &-actual {
+          color: $color-primary;
+          font-size: 18px;
+        }
+
+        &-old {
+          color: $color-grey-090;
+          font-size: 12px;
+          text-decoration-line: line-through;
+        }
+      }
+
+      .no-pcs {
+        display: flex;
+        align-items: center;
+        padding: 7px 6px;
+
+        background: $color-grey-080;
+        border: 1px solid $color-grey-050;
+        border-radius: $border-radius-xl;
+
+        .no {
+          padding-right: 6px;
+          border-right: 1px solid $color-grey-050;
+
+          @include default-open-sans-text();
+          font-size: 14px;
+          color: $color-grey-050;
+        }
+
+        .select-pcs {
+          display: flex;
+          align-items: center;
+
+          span {
+            padding-left: 6px;
+
+            color: $color-grey-020;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
