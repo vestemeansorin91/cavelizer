@@ -8,7 +8,7 @@ import {IconModule} from "../icon/icon.module";
   imports: [
     /* Angular Modules */
     CommonModule,
-  IconModule,
+    IconModule,
     /* Angular Material Modules */
     /* Cavelizer Modules */
   ],

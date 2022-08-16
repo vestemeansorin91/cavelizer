@@ -75,7 +75,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [EXAMPLE_COMPONENTS, BasketItemExample],
+  declarations: [EXAMPLE_COMPONENTS],
   imports: [
     /* Angular Modules */
     CommonModule,
