@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-cavelizer-components',
   template: ` <h1>CAVELIZER COMPONENTS</h1>
     <mat-accordion>
+      <app-product-item-large-example></app-product-item-large-example>
       <app-blog-item-preview-example2></app-blog-item-preview-example2>
       <app-button-example></app-button-example>
       <app-dropdown-example></app-dropdown-example>

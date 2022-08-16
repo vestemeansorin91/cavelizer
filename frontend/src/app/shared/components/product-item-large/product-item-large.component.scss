@@ -1,0 +1,120 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+.product-item-large {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 870px;
+  height: 280px;
+
+  border: 1px solid $color-grey-060;
+  border-radius: $border-radius-xl;
+  background-color: $color-white;
+
+  .product-image {
+    width: 30%;
+    border-radius: $border-radius-xl;
+    background-color: $color-orange;
+  }
+
+  .product-title {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 32px;
+
+    .title {
+      @include default-poppins-text();
+      color: $color-black;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .subtitle {
+      @include default-open-sans-text();
+      line-height: 16px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 5px;
+      padding-top: 10px;
+
+      cvz-icon[name='star-empty'] {
+        fill: $color-grey-090;
+      }
+    }
+
+    .information {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+      margin-top: 27px;
+
+      .key-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
+        @include default-open-sans-text();
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      .value-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60%;
+        @include default-open-sans-text();
+
+        .text {
+          span {
+            &.important {
+              margin-right: 5px;
+              color: $color-primary;
+            }
+          }
+        }
+
+        .important {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  .product-price {
+    width: 30%;
+    border-radius: $border-radius-xl;
+    padding: 32px;
+
+    .title {
+      @include default-poppins-text();
+      color: $color-black;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .subtitle {
+      @include default-poppins-text();
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .shipping {
+      margin-top: 16px;
+      @include default-poppins-text();
+    }
+
+    .delivery {
+      @include default-open-sans-text();
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -32,6 +32,8 @@ export * from './mini-banner/mini-banner.module';
 export * from './mini-banner/banner-setup.interface';
 export * from './product-item/product-item.component';
 export * from './product-item/product-item.module';
+export * from './product-item-large/product-item-large.component';
+export * from './product-item-large/product-item-large.module';
 export * from './quote/quote.component';
 export * from './quote/quote.module';
 export * from './radio-group/radio-item/radio-item.component';
