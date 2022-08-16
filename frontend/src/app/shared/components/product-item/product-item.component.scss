@@ -58,8 +58,8 @@
 
     font-size: 16px;
 
-    cvz-icon {
-      color: $color-grey;
+    cvz-icon[name="star-empty"] {
+      fill:$color-grey-060;
     }
   }
 

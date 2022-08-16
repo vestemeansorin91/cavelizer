@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
 import {
+  BasketItemModule,
   ButtonModule,
   CheckboxModule,
   ChipModule,
@@ -43,9 +44,11 @@ import { TagExample } from './components/tag-example';
 import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
 import { TypographyExample } from './components/typography-example';
+import {BasketItemExample} from "./components/basket-item-example";
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
+  BasketItemExample,
   ButtonExample,
   ChipExample,
   DropdownExample,
@@ -72,7 +75,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [EXAMPLE_COMPONENTS],
+  declarations: [EXAMPLE_COMPONENTS, BasketItemExample],
   imports: [
     /* Angular Modules */
     CommonModule,
@@ -89,6 +92,7 @@ const routes: Routes = [
     MatMenuModule,
 
     /* Cavelizer Modules */
+    BasketItemModule,
     ButtonModule,
     CheckboxModule,
     ChipModule,
