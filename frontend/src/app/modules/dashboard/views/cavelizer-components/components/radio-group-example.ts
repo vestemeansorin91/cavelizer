@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-radio-group-example',
   template: `
-    <mat-expansion-panel>
+    <mat-expansion-panel expanded="true">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <strong>cvz-radio-group</strong>&nbsp; | &nbsp;
@@ -12,14 +12,20 @@ import { Component } from '@angular/core';
         <mat-panel-description> Creat de Sorin </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <h3>Horizontal (default)</h3>
+      <h3 class="my--36">Horizontal (default)</h3>
       <cvz-radio-group [(ngModel)]="gender">
         <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
         <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
       </cvz-radio-group>
 
-      <h3>Vertical</h3>
+      <h3 class="my--36">Vertical</h3>
       <cvz-radio-group [(ngModel)]="gender" class="vertical">
+        <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
+        <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
+      </cvz-radio-group>
+
+      <h3 class="my--36">Bordered</h3>
+      <cvz-radio-group [(ngModel)]="gender" class="bordered">
         <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
         <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
       </cvz-radio-group>

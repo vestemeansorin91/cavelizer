@@ -47,3 +47,5 @@ export * from './toggle/toggle.component';
 export * from './toggle/toggle.module';
 export * from './tooltip/tooltip.directive';
 export * from './tooltip/tooltip.module';
+export * from './blog-item-preview/blog-item-preview.module';
+export * from './blog-item-preview/blog-item-preview.component';
