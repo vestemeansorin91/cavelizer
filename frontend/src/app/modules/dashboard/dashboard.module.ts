@@ -8,7 +8,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { AvatarModule, DefaultImagePipeModule, FormElementsModule, IconModule, TooltipModule } from '@cavelizer';
+import {
+    AvatarModule,
+    CheckboxModule,
+    DefaultImagePipeModule,
+    FormElementsModule,
+    IconModule, RadioGroupModule,
+    TooltipModule
+} from '@cavelizer';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { DashboardComponent } from './dashboard.component';
@@ -95,12 +102,14 @@ const MODULES = [
   FormElementsModule,
   IconModule,
   TooltipModule,
+  CheckboxModule,
+  RadioGroupModule,
 
   DefaultImagePipeModule
 ];
 
 @NgModule({
   declarations: [COMPONENTS, PIPES],
-  imports: [MODULES]
+    imports: [MODULES]
 })
 export class DashboardModule {}
