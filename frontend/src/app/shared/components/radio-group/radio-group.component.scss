@@ -13,12 +13,12 @@
   &.bordered {
     flex-direction: row;
     justify-content: space-between;
-    height: 50px;
+    align-items: center;
     width: 400px;
+    height: 50px;
+    padding: 8px 12px;
     border: 1px solid $color-grey-090;
     border-radius: 12px;
-    align-items: center;
-    padding: 8px 12px;
-    background-color: $color-white;
+    background-color: $color-grey-080;
   }
 }

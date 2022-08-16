@@ -12,19 +12,19 @@ import { Component } from '@angular/core';
         <mat-panel-description> Creat de Sorin </mat-panel-description>
       </mat-expansion-panel-header>
 
-      <h3 class="mb--36 mt--36">Horizontal (default)</h3>
+      <h3 class="my--36">Horizontal (default)</h3>
       <cvz-radio-group [(ngModel)]="gender">
         <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
         <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
       </cvz-radio-group>
 
-      <h3 class="mb--36 mt--36">Vertical</h3>
+      <h3 class="my--36">Vertical</h3>
       <cvz-radio-group [(ngModel)]="gender" class="vertical">
         <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
         <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
       </cvz-radio-group>
 
-      <h3 class="mb--36 mt--36">Bordered</h3>
+      <h3 class="my--36">Bordered</h3>
       <cvz-radio-group [(ngModel)]="gender" class="bordered">
         <cvz-radio-item [value]="true" [isActive]="true">Default on true</cvz-radio-item>
         <cvz-radio-item [value]="false">Default on false</cvz-radio-item>
