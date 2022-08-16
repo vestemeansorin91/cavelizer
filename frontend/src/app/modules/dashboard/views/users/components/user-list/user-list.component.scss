@@ -3,10 +3,11 @@
 @import 'helpers';
 
 .user-list {
-  .filters {
-    display: none;
 
-    .filters-specified {
+  .filters {
+    display: flex;
+
+    .filter {
       display: flex;
       gap: 14px;
       flex: 1;
@@ -18,6 +19,7 @@
         border-radius: $border-radius-lg;
         padding-left: 15px;
         min-width: 157px;
+
         font-size: 14px;
         font-weight: 500;
 
@@ -26,9 +28,15 @@
           border-left: 2px solid $color-grey-120;
         }
 
-        span {
+        input {
           flex: 1;
           width: 100px;
+          border: none;
+          background: transparent;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -47,11 +55,13 @@
       display: flex;
       gap: 18px;
       align-items: center;
+      padding-right: 55px;
     }
   }
 
   .table {
     display: table;
+    width: 100%;
 
     .row {
       display: table-row;
@@ -60,9 +70,32 @@
         display: table-cell;
         padding-top: 20px;
         padding-bottom: 26px;
-        padding-right: 55px;
         vertical-align: middle;
-        border-bottom: 1px solid #f5f5f5;
+        border-bottom: 1px solid $color-grey-070;
+
+        .bullet {
+          width: 24px;
+          height: 24px;
+          background: $color-status-done;
+          position: relative;
+          border-radius: 50%;
+          margin-right: 7px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            top: 6px;
+            left: 6px;
+          }
+
+          &.pending {
+            background: $color-status-pending;
+          }
+        }
 
         .check-filter {
           display: flex;
@@ -85,23 +118,28 @@
           margin-right: 16px;
         }
 
+        label {
+          font-weight: 600;
+          font-size: 16px;
+        }
+
         span {
           font-size: 14px;
 
-          &.label {
-            font-weight: 600;
-            font-size: 16px;
-          }
-
           &.status {
             font-size: 16px;
-            color: #17E383;
+            color: $color-status-done;
+          }
+
+          &.pending {
+            color: $color-status-pending;
           }
         }
 
         .money-used {
           font-size: 20px;
         }
+
       }
 
     }
@@ -110,11 +148,12 @@
       font-weight: 500;
 
       .cell {
-        font-size: 18px !important;
         padding-right: 55px;
         padding-top: 31px;
         border-bottom: 2px solid $color-grey-070;
         padding-bottom: 37px;
+
+        font-size: 18px;
       }
     }
   }

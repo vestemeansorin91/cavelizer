@@ -102,12 +102,14 @@ const MODULES = [
   FormElementsModule,
   IconModule,
   TooltipModule,
+  CheckboxModule,
+  RadioGroupModule,
 
   DefaultImagePipeModule
 ];
 
 @NgModule({
   declarations: [COMPONENTS, PIPES],
-    imports: [MODULES, CheckboxModule, RadioGroupModule]
+    imports: [MODULES]
 })
 export class DashboardModule {}

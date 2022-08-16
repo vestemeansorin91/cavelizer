@@ -10,7 +10,6 @@ import {UserInterface} from "../../../../../../shared/types/user.interface";
 })
 export class UserListComponent {
   public users$: Observable<UserInterface[]> = this.usersService.getUsers();
-  gender: any;
 
   constructor(private usersService: UsersService) {
   }
