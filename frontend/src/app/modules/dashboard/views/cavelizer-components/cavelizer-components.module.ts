@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
 import {
+  BlogPreviewModule,
   ButtonModule,
   CheckboxModule,
   ChipModule,
@@ -43,6 +44,8 @@ import { RangeSliderExample } from './components/range-slider-example';
 import { TagExample } from './components/tag-example';
 import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
+import {BlogItemPreviewExample} from "./components/blog-item-preview-example";
+
 import { TypographyExample } from './components/typography-example';
 
 const EXAMPLE_COMPONENTS = [
@@ -63,6 +66,7 @@ const EXAMPLE_COMPONENTS = [
   TagExample,
   RadioGroupExample,
   BlogItemPreviewExample2,
+  BlogItemPreviewExample,
   TypographyExample
 ];
 
@@ -92,6 +96,7 @@ const routes: Routes = [
 
     /* Cavelizer Modules */
     ButtonModule,
+    BlogPreviewModule,
     CheckboxModule,
     ChipModule,
     DropdownModule,

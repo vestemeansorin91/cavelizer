@@ -1,0 +1,161 @@
+@import 'variables';
+@import 'colors';
+@import 'helpers';
+
+.user-list {
+
+  .filters {
+    display: flex;
+
+    .filter {
+      display: flex;
+      gap: 14px;
+      flex: 1;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        border: 2px solid $color-grey-120;
+        border-radius: $border-radius-lg;
+        padding-left: 15px;
+        min-width: 157px;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        cvz-icon {
+          padding: 12px 14px;
+          border-left: 2px solid $color-grey-120;
+        }
+
+        input {
+          flex: 1;
+          width: 100px;
+          border: none;
+          background: transparent;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .search {
+        padding-right: 32px;
+
+        cvz-icon {
+          padding: 0;
+          margin-right: 12px;
+          border: none;
+        }
+      }
+    }
+
+    .sort-by {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding-right: 55px;
+    }
+  }
+
+  .table {
+    display: table;
+    width: 100%;
+
+    .row {
+      display: table-row;
+
+      .cell {
+        display: table-cell;
+        padding-top: 20px;
+        padding-bottom: 26px;
+        vertical-align: middle;
+        border-bottom: 1px solid $color-grey-070;
+
+        .bullet {
+          width: 24px;
+          height: 24px;
+          background: $color-status-done;
+          position: relative;
+          border-radius: 50%;
+          margin-right: 7px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            top: 6px;
+            left: 6px;
+          }
+
+          &.pending {
+            background: $color-status-pending;
+          }
+        }
+
+        .check-filter {
+          display: flex;
+
+          span {
+            font-size: 18px;
+          }
+
+          cvz-checkbox {
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 16px;
+        }
+
+        label {
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 14px;
+
+          &.status {
+            font-size: 16px;
+            color: $color-status-done;
+          }
+
+          &.pending {
+            color: $color-status-pending;
+          }
+        }
+
+        .money-used {
+          font-size: 20px;
+        }
+
+      }
+
+    }
+
+    &-head {
+      font-weight: 500;
+
+      .cell {
+        padding-right: 55px;
+        padding-top: 31px;
+        border-bottom: 2px solid $color-grey-070;
+        padding-bottom: 37px;
+
+        font-size: 18px;
+      }
+    }
+  }
+}
+
