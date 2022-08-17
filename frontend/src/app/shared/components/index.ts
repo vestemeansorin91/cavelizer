@@ -47,3 +47,5 @@ export * from './tooltip/tooltip.directive';
 export * from './tooltip/tooltip.module';
 export * from './blog-item-preview/blog-item-preview.module';
 export * from './blog-item-preview/blog-item-preview.component';
+export * from './blog-preview-small/blog-preview-small.module';
+export * from './blog-preview-small/blog-preview-small.component';

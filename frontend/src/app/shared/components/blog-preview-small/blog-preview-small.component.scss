@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+
+.blog {
+  display: flex;
+  width: 370px;
+  height: 100px;
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+
+    .text-area {
+      @include default-poppins-text();
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      color: $color-black;
+    }
+
+    .information {
+      display: flex;
+      @include default-open-sans-text();
+      line-height: 16px;
+      color: $color-black;
+
+      .author-name {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .image {
+    width: 100px;
+    margin-left: 20px;
+    border-radius: $border-radius-xl;
+    background-color: $color-grey-070;
+  }
+}
