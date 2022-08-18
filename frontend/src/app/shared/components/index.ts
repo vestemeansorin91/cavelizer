@@ -1,5 +1,7 @@
 export * from './avatar/avatar.component';
 export * from './avatar/avatar.module';
+export * from './basket-item/basket-item.component';
+export * from './basket-item/basket-item.module';
 export * from './breadcrumb/breadcrumb.component';
 export * from './breadcrumb/breadcrumb.module';
 export * from './button/button.component';

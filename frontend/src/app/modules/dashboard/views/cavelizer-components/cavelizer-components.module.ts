@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
 import {
+  BasketItemModule,
   BlogPreviewModule,
   BlogPreviewSmallModule,
   ButtonModule,
@@ -48,9 +49,11 @@ import { BlogItemPreviewExample } from './components/blog-item-preview-example';
 import { BlogPreviewSmallExample } from './components/blog-preview-small-example';
 
 import { TypographyExample } from './components/typography-example';
+import {BasketItemExample} from "./components/basket-item-example";
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
+  BasketItemExample,
   ButtonExample,
   ChipExample,
   DropdownExample,
@@ -96,6 +99,7 @@ const routes: Routes = [
     MatMenuModule,
 
     /* Cavelizer Modules */
+    BasketItemModule,
     ButtonModule,
     BlogPreviewModule,
     BlogPreviewSmallModule,

@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
       <app-toggle-example></app-toggle-example>
       <app-range-slider-example></app-range-slider-example>
       <app-radio-group-example></app-radio-group-example>
+      <app-basket-item-example></app-basket-item-example>
       <app-product-item-example></app-product-item-example>
       <app-typography-example></app-typography-example>
     </mat-accordion>`

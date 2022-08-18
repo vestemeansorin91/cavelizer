@@ -14,6 +14,13 @@
     }
 
     /* Sizes */
+    &.very-small {
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
     &.small {
       svg {
         width: 16px;
