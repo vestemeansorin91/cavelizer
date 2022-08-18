@@ -1,0 +1,114 @@
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+
+.product-item-large {
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid $color-grey-060;
+  border-radius: $border-radius-xl;
+  background-color: $color-white;
+
+  .product-image {
+    width: 270px;
+    height: 280px;
+
+    border-radius: $border-radius-xl;
+    background-color: $color-orange;
+  }
+
+  .product-title {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 32px;
+
+    .title {
+      @include default-poppins-text();
+      color: $color-black;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .subtitle {
+      @include default-open-sans-text();
+      line-height: 16px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 5px;
+      padding-top: 10px;
+
+      cvz-icon[name='star-empty'] {
+        fill: $color-grey-090;
+      }
+    }
+
+    .information {
+      display: flex;
+      height: 100%;
+      margin-top: 28px;
+      @include default-open-sans-text();
+
+      .key-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35%;
+        margin-right: 50px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      .value-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+
+        .text {
+          span {
+            &.important {
+              margin-right: 5px;
+              color: $color-primary;
+            }
+          }
+        }
+
+        .important {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  .product-price {
+    width: 250px;
+    border-radius: $border-radius-xl;
+    padding: 32px;
+    @include default-poppins-text();
+
+    .title {
+      color: $color-black;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .subtitle {
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .shipping {
+      margin-top: 16px;
+    }
+
+    .delivery {
+      @include default-open-sans-text();
+      margin-bottom: 10px;
+    }
+  }
+}

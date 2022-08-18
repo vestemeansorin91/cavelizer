@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: ` <h1>CAVELIZER COMPONENTS</h1>
     <mat-accordion>
       <app-blog-preview-small-example></app-blog-preview-small-example>
+      <app-product-item-large-example></app-product-item-large-example>
       <app-blog-item-preview-example></app-blog-item-preview-example>
       <app-button-example></app-button-example>
       <app-dropdown-example></app-dropdown-example>

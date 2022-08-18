@@ -23,13 +23,13 @@ import {
   InnerTabGroupModule,
   MiniBannerModule,
   ProductItemModule,
+  ProductItemLargeModule,
   QuoteModule,
   RadioGroupModule,
   RangeSliderModule,
   TagModule,
   ToggleModule
 } from '@cavelizer';
-
 import { CavelizerComponentsComponent } from './cavelizer-components.component';
 import { BlogItemPreviewExample2 } from './components/blog-item-preview-example2';
 import { ButtonExample } from './components/button-example';
@@ -39,6 +39,7 @@ import { DropdownExample } from './components/dropdown-example';
 import { InnerTabGroupExample } from './components/inner-tab-group-example';
 import { MiniBannerExample } from './components/mini-banner-example';
 import { ProductItemExample } from './components/product-item-example';
+import { ProductItemLargeExample } from './components/product-item-large-example';
 import { QuoteExample } from './components/quote-example';
 import { RadioGroupExample } from './components/radio-group-example';
 import { RangeSliderExample } from './components/range-slider-example';
@@ -60,6 +61,7 @@ const EXAMPLE_COMPONENTS = [
   InnerTabGroupExample,
   MiniBannerExample,
   ProductItemExample,
+  ProductItemLargeExample,
   QuoteExample,
   CheckboxExample,
   TagExample,
@@ -110,6 +112,7 @@ const routes: Routes = [
     InnerTabGroupModule,
     MiniBannerModule,
     ProductItemModule,
+    ProductItemLargeModule,
     QuoteModule,
     RadioGroupModule,
     RangeSliderModule,
