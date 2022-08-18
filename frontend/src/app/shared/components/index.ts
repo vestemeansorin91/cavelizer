@@ -1,5 +1,7 @@
 export * from './avatar/avatar.component';
 export * from './avatar/avatar.module';
+export * from './basket-item/basket-item.component';
+export * from './basket-item/basket-item.module';
 export * from './breadcrumb/breadcrumb.component';
 export * from './breadcrumb/breadcrumb.module';
 export * from './button/button.component';
@@ -49,3 +51,5 @@ export * from './tooltip/tooltip.directive';
 export * from './tooltip/tooltip.module';
 export * from './blog-item-preview/blog-item-preview.module';
 export * from './blog-item-preview/blog-item-preview.component';
+export * from './blog-preview-small/blog-preview-small.module';
+export * from './blog-preview-small/blog-preview-small.component';

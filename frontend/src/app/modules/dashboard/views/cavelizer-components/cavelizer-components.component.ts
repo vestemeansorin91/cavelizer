@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-cavelizer-components',
   template: ` <h1>CAVELIZER COMPONENTS</h1>
     <mat-accordion>
+      <app-blog-preview-small-example></app-blog-preview-small-example>
       <app-product-item-large-example></app-product-item-large-example>
-      <app-blog-item-preview-example2></app-blog-item-preview-example2>
+      <app-blog-item-preview-example></app-blog-item-preview-example>
       <app-button-example></app-button-example>
       <app-dropdown-example></app-dropdown-example>
       <app-mini-banner-example></app-mini-banner-example>
@@ -18,6 +19,7 @@ import { Component } from '@angular/core';
       <app-toggle-example></app-toggle-example>
       <app-range-slider-example></app-range-slider-example>
       <app-radio-group-example></app-radio-group-example>
+      <app-basket-item-example></app-basket-item-example>
       <app-product-item-example></app-product-item-example>
       <app-typography-example></app-typography-example>
     </mat-accordion>`

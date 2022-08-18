@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-blog-item-preview-example',
-  template: `<mat-expansion-panel expanded="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <strong>cavelizer-blog-item-preview-example</strong>
