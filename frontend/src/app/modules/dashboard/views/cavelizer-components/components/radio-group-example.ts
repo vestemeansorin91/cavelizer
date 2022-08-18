@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-radio-group-example',
   template: `
-    <mat-expansion-panel expanded="true">
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           <strong>cvz-radio-group</strong>&nbsp; | &nbsp;
