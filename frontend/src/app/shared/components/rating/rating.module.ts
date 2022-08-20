@@ -4,7 +4,6 @@ import { IconModule } from '../icon/icon.module';
 import { CheckboxModule } from "../checkbox/checkbox.module";
 import { RatingComponent } from './rating.component';
 
-
 @NgModule({
   declarations: [RatingComponent],
   imports: [
