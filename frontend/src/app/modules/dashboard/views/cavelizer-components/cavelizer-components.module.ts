@@ -51,8 +51,8 @@ import { BlogItemPreviewExample } from './components/blog-item-preview-example';
 import { BlogPreviewSmallExample } from './components/blog-preview-small-example';
 
 import { TypographyExample } from './components/typography-example';
-import {BasketItemExample} from "./components/basket-item-example";
-import {RatingExample} from "./components/rating-example";
+import { BasketItemExample } from "./components/basket-item-example";
+import { RatingExample } from "./components/rating-example";
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
