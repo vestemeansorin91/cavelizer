@@ -27,6 +27,7 @@ import {
   QuoteModule,
   RadioGroupModule,
   RangeSliderModule,
+  RatingModule,
   TagModule,
   ToggleModule
 } from '@cavelizer';
@@ -51,6 +52,7 @@ import { BlogPreviewSmallExample } from './components/blog-preview-small-example
 
 import { TypographyExample } from './components/typography-example';
 import {BasketItemExample} from "./components/basket-item-example";
+import {RatingExample} from "./components/rating-example";
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
@@ -68,6 +70,7 @@ const EXAMPLE_COMPONENTS = [
   TextInputExample,
   ToggleExample,
   RangeSliderExample,
+  RatingExample,
   TagExample,
   RadioGroupExample,
   BlogItemPreviewExample2,
@@ -115,6 +118,7 @@ const routes: Routes = [
     ProductItemLargeModule,
     QuoteModule,
     RadioGroupModule,
+    RatingModule,
     RangeSliderModule,
     TagModule,
     FormElementsModule,
