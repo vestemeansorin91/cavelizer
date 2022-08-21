@@ -89,6 +89,12 @@
         }
       }
     }
+    &.color-grey {
+      svg {
+        path {
+          fill: $color-grey;
+        }
+      }
+    }
   }
 }
-

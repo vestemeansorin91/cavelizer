@@ -14,15 +14,6 @@
   /* Green background */
   &.narrow {
     .tag {
-      width: $dimension-40;
-      color: $color-primary;
-      background-color: $color-primary-070;
-    }
-  }
-
-  &.extended {
-    .tag {
-      width: $dimension-50;
       color: $color-primary;
       background-color: $color-primary-070;
     }
@@ -31,18 +22,9 @@
   &.fat {
     .tag {
       align-items: center;
-      width: $dimension-40;
-      height: $dimension-35;
+      padding: 4px 10px;
       color: $color-primary;
       background-color: $color-primary-070;
-    }
-  }
-
-  &.fat {
-    &.extended {
-      .tag {
-        width: $dimension-50;
-      }
     }
   }
 
@@ -50,17 +32,6 @@
   &.disabled {
     &.narrow {
       .tag {
-        width: $dimension-40;
-        color: $color-grey;
-        background-color: $color-grey-050;
-      }
-    }
-  }
-
-  &.disabled {
-    &.extended {
-      .tag {
-        width: $dimension-50;
         color: $color-grey;
         background-color: $color-grey-050;
       }
@@ -70,20 +41,9 @@
   &.disabled {
     &.fat {
       .tag {
-        width: $dimension-40;
-        height: $dimension-35;
+        padding: 4px 10px;
         color: $color-grey;
         background-color: $color-grey-050;
-      }
-    }
-  }
-
-  &.disabled {
-    &.fat {
-      &.extended {
-        .tag {
-          width: $dimension-50;
-        }
       }
     }
   }
@@ -92,18 +52,6 @@
   &.default {
     &.narrow {
       .tag {
-        width: $dimension-40;
-        color: $color-grey;
-        background-color: $color-white;
-        border: 1px solid $color-grey-050;
-      }
-    }
-  }
-
-  &.default {
-    &.extended {
-      .tag {
-        width: $dimension-50;
         color: $color-grey;
         background-color: $color-white;
         border: 1px solid $color-grey-050;
@@ -114,21 +62,10 @@
   &.default {
     &.fat {
       .tag {
-        width: $dimension-40;
-        height: $dimension-35;
+        padding: 4px 10px;
         color: $color-grey;
         background-color: $color-white;
         border: 1px solid $color-grey-050;
-      }
-    }
-  }
-
-  &.default {
-    &.fat {
-      &.extended {
-        .tag {
-          width: $dimension-50;
-        }
       }
     }
   }
