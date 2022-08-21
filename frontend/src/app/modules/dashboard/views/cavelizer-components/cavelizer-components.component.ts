@@ -21,6 +21,7 @@ import { Component } from '@angular/core';
       <app-radio-group-example></app-radio-group-example>
       <app-basket-item-example></app-basket-item-example>
       <app-product-item-example></app-product-item-example>
+      <app-rating-example></app-rating-example>
       <app-typography-example></app-typography-example>
     </mat-accordion>`
 })

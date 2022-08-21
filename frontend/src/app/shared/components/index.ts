@@ -41,6 +41,8 @@ export * from './quote/quote.module';
 export * from './radio-group/radio-item/radio-item.component';
 export * from './radio-group/radio-group.module';
 export * from './radio-group/radio-group.component';
+export * from './rating/rating.module';
+export * from './rating/rating.component';
 export * from './range-slider/range-slider.component';
 export * from './range-slider/range-slider.module';
 export * from './tag/tag.component';
