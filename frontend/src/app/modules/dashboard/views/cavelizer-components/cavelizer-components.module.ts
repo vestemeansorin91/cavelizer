@@ -14,6 +14,7 @@ import {
   BasketItemModule,
   BlogPreviewModule,
   BlogPreviewSmallModule,
+  BlogPreviewVerticalModule,
   ButtonModule,
   CheckboxModule,
   ChipModule,
@@ -49,10 +50,10 @@ import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
 import { BlogItemPreviewExample } from './components/blog-item-preview-example';
 import { BlogPreviewSmallExample } from './components/blog-preview-small-example';
-
+import { BlogPreviewVerticalExample } from './components/blog-preview-vertical-example';
 import { TypographyExample } from './components/typography-example';
-import { BasketItemExample } from "./components/basket-item-example";
-import { RatingExample } from "./components/rating-example";
+import { BasketItemExample } from './components/basket-item-example';
+import { RatingExample } from './components/rating-example';
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
@@ -76,6 +77,7 @@ const EXAMPLE_COMPONENTS = [
   BlogItemPreviewExample2,
   BlogItemPreviewExample,
   BlogPreviewSmallExample,
+  BlogPreviewVerticalExample,
   TypographyExample
 ];
 
@@ -108,6 +110,7 @@ const routes: Routes = [
     ButtonModule,
     BlogPreviewModule,
     BlogPreviewSmallModule,
+    BlogPreviewVerticalModule,
     CheckboxModule,
     ChipModule,
     DropdownModule,
