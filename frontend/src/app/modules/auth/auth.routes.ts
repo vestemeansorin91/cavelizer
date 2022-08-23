@@ -1,10 +1,10 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {AuthShellComponent} from './auth-shell.component';
-import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
-import {LoginComponent} from './components/login/login.component';
-import {RegisterComponent} from './components/register/register.component';
-import {ResetPasswordComponent} from './components/reset-password/reset-password.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthShellComponent } from './auth-shell.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -14,35 +14,34 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'login',
+        redirectTo: 'login'
       },
       {
         path: 'login',
-        component: LoginComponent,
+        component: LoginComponent
       },
       {
         path: 'register',
-        component: RegisterComponent,
+        component: RegisterComponent
       },
       {
         path: 'forgot-password',
-        component: ForgotPasswordComponent,
+        component: ForgotPasswordComponent
       },
       {
         path: 'reset-password',
-        component: ResetPasswordComponent,
+        component: ResetPasswordComponent
       },
       {
         path: '**',
-        redirectTo: 'login',
-      },
-    ],
-  },
+        redirectTo: 'login'
+      }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AuthRoutesModule {
-}
+export class AuthRoutesModule {}

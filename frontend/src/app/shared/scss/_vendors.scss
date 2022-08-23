@@ -21,6 +21,18 @@
   }
 }
 
-.mat-expansion-panel-header-title {
-  width: 400px;
+
+
+mat-accordion {
+  mat-expansion-panel-header {
+    &.wip {
+      background-color: lightsalmon !important;
+    }
+
+    mat-panel-title {
+      &.mat-expansion-panel-header-title {
+        width: 400px;
+      }
+    }
+  }
 }

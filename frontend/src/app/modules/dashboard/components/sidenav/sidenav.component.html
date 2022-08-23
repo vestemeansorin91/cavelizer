@@ -20,7 +20,6 @@
            [routerLinkActiveOptions]="{ exact: true }"
            [routerLink]="sidenavItem.pathUrl"
            class="menu-item--link"
-           placement="right"
            routerLinkActive="active">
         <cvz-icon [name]="sidenavItem.icon" class="color-white icon"></cvz-icon>
         <span>{{sidenavItem.name}}</span>
@@ -32,11 +31,11 @@
       >
         <div *ngFor="let subSidenavItem of sidenavItem.submenus"
              [caveTooltip]="isExpanded ? '' : subSidenavItem.name"
-             [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="subSidenavItem.pathUrl"
+             [routerLinkActiveOptions]="{ exact: true }"
+             routerLinkActive="active"
              class="menu-item--link"
-             placement="right"
-             routerLinkActive="active">
+             >
           <cvz-icon [name]="subSidenavItem.icon" class="color-white icon"></cvz-icon>
           <span>{{subSidenavItem.name}}</span>
         </div>

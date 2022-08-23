@@ -1,22 +1,30 @@
-<div class="product-item">
-    <div class="image-container">
-<!--      <img [src]="avatar | defaultImage" alt="">-->
-      <div></div>
-        <cvz-tag class="narrow">-38%</cvz-tag>
+<div *ngIf="product" class="product-item">
+  <div class="image-container">
+    <img [src]="product.mainImageBlobUrl | defaultImage" alt="">
+    <cvz-tag *ngIf="discountedPrice" class="narrow">-{{ discountedPrice }}%</cvz-tag>
+  </div>
+  <div class="title">{{ product.title }}</div>
+  <div class="description">{{ product.shortDescription }}</div>
+  <div class="rating">
+    <cvz-icon name="star-full"></cvz-icon>
+    <cvz-icon name="star-full"></cvz-icon>
+    <cvz-icon name="star-full"></cvz-icon>
+    <cvz-icon name="star-full"></cvz-icon>
+    <cvz-icon name="star-empty"></cvz-icon>
+  </div>
+  <div class="footer">
+    <div *ngIf="discountedPrice" class="price">
+      <span>{{ product.priceDiscounted }} USD</span>
+      <div class="first-price">
+        <s> <span>{{ product.price }}</span> </s>
+      </div>
     </div>
-    <div class="title">Product Title</div>
-    <div class="description">Space for a small product description</div>
-    <div class="rating">
-        <cvz-icon name="star-full"></cvz-icon>
-        <cvz-icon name="star-full"></cvz-icon>
-        <cvz-icon name="star-full"></cvz-icon>
-        <cvz-icon name="star-full"></cvz-icon>
-        <cvz-icon name="star-empty"></cvz-icon>
+
+    <div *ngIf="!discountedPrice" class="price">
+      <span>{{ product.price }} USD</span>
     </div>
-    <div class="footer">
-        <div class="price"><span>1.48 USD</span>
-            <div class="first-price"><s><span>48.56</span></s></div>
-        </div>
-        <cvz-button class="small">Buy now</cvz-button>
-    </div>
+
+    <cvz-button class="small">Buy now</cvz-button>
+  </div>
 </div>
+
