@@ -2,23 +2,31 @@
 @import 'variables';
 @import 'mixins';
 
-:host {
+.basket-item {
   display: flex;
 
   .item {
-    .image {
+    .img-container {
       width: 100px;
       height: 67px;
-
-      border-radius: $border-radius-xl;
       margin-bottom: 12px;
-      background: $color-grey-080;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius-xl !important;
+        object-fit: cover;
+      }
     }
 
     .function {
       display: flex;
       align-items: center;
       margin-bottom: 8px;
+
+      cvz-icon[name="close"] {
+        margin-right: 4px;
+      }
 
       span {
         margin-left: 8px;
@@ -91,7 +99,7 @@
 
         &-old {
           color: $color-grey-090;
-          font-size: 12px;
+          font-size: 12px !important;
           text-decoration-line: line-through;
         }
       }
