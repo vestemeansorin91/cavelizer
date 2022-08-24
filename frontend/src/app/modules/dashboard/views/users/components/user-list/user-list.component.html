@@ -1,7 +1,5 @@
-<h1>USERS LIST</h1>
-
 <div class="user-list">
-  <div *ngIf="true" class="filters">
+  <div class="filters">
     <div class="filter">
       <div class="search filter-item">
         <cvz-icon name="search"></cvz-icon>
@@ -24,6 +22,7 @@
         <cvz-icon name="facebook"></cvz-icon>
       </div>
     </div>
+
     <div class="sort-by">
       <div class="filter-item">
         <input placeholder="Sort by"/>
@@ -34,15 +33,11 @@
   </div>
   <div class="table mt--26">
     <div class="row table-head">
-      <div class="cell">
-        <div class="cell-content">
-          <div class="check-filter">
-            <cvz-checkbox></cvz-checkbox>
-            <span>Name</span>
-          </div>
-        </div>
+      <div class="cell width--50">
+        <cvz-checkbox></cvz-checkbox>
       </div>
-      <div class="cell">Card</div>
+      <div class="cell p--0"></div>
+      <div class="cell pl--24">Full name / username</div>
       <div class="cell">Assigned to</div>
       <div class="cell">Last Transcation</div>
       <div class="cell">Status</div>
@@ -50,117 +45,66 @@
       <div class="cell">Total Used</div>
       <div class="cell"></div>
     </div>
-    <div class="row">
-      <div class="cell">
-        <div class="flex cell-content">
-          <div class="check-filter">
-            <cvz-checkbox></cvz-checkbox>
-            <img [src]="'' | defaultImage" alt="">
-          </div>
-          <div class="flex--column">
-            <label>Figma</label>
-            <span>https://www.figma.com/</span>
-          </div>
+    <ng-container *ngIf="users$ | async  as users">
+      <div *ngFor="let user of users" class="row">
+        <div class="cell width--50">
+          <cvz-checkbox></cvz-checkbox>
         </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Visa</label>
-          <span>***** 2468</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Itai Bracha</label>
-          <span>Itai Bracha31@gmail.com</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Jan 2,2022</label>
-          <span>$783.22</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex">
-          <div class="bullet"></div>
-          <span class="status">Done</span>
-        </div>
-      </div>
-      <div class="cell">
-        <label>Jan 2,2022</label>
-      </div>
-      <div class="cell">
-        <div class="align--center mr--0">
-          <span class="fw--500 mr--60 money-used">$783.22</span>
-        </div>
-      </div>
 
-      <div class="cell">
-        <div class="justify--end">
-          <cvz-icon name="more-vertical"></cvz-icon>
+        <div class="cell p--0">
+          <img class="justify--center size--50 circle" [src]="'' | defaultImage" alt="">
         </div>
-      </div>
-    </div>
-    <div class="row mt--20">
-      <div class="cell">
-        <div class="flex cell-content">
-          <div class="check-filter ">
-            <cvz-checkbox></cvz-checkbox>
-            <img [src]="'' | defaultImage" alt>
-          </div>
-          <div class="flex--column">
-            <label>Figma</label>
-            <span>https://www.figma.com/</span>
-          </div>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Visa</label>
-          <span>***** 2468</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Itai Bracha</label>
-          <span>Itai Bracha31@gmail.com</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex--column">
-          <label>Jan 2,2022</label>
-          <span>$783.22</span>
-        </div>
-      </div>
-      <div class="cell">
-        <div class="flex">
-          <div class="bullet pending"></div>
-          <span class="status pending">Pending</span>
-        </div>
-      </div>
-      <div class="cell">
-        <label>Jan 2,2022</label>
-      </div>
-      <div class="cell">
-        <div class="align--center mr--0">
-          <span class="fw--500 mr--60 money-used">$783.22</span>
-        </div>
-      </div>
 
-      <div class="cell">
-        <div class="justify--end">
-          <cvz-icon name="more-vertical"></cvz-icon>
+        <div class="cell pl--24">
+          <div class="flex--column">
+            <label>{{ user.fullName }}</label>
+            <span>{{ user.username }}</span>
+          </div>
+        </div>
+
+        <div class="cell">
+          <div class="flex--column">
+            <label>Visa</label>
+            <span>***** 2468</span>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="flex--column">
+            <label>Itai Bracha</label>
+            <span>Itai Bracha31@gmail.com</span>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="flex--column">
+            <label>Jan 2,2022</label>
+            <span>$783.22</span>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="flex">
+            <div class="bullet"></div>
+            <span class="status">Done</span>
+          </div>
+        </div>
+        <div class="cell">
+          <label>Jan 2,2022</label>
+        </div>
+        <div class="cell">
+          <div class="align--center">
+            <span class="fw--500 mr--60 money-used">$783.22</span>
+          </div>
+        </div>
+
+        <div class="cell">
+          <div class="justify--end">
+            <cvz-icon name="more-vertical"></cvz-icon>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 </div>
 
-<pre *ngIf="users$ | async  as users">
-  <div *ngFor="let user of users">
-    <pre>{{ user | json }}</pre>
-  </div>
-</pre>
+
 
 

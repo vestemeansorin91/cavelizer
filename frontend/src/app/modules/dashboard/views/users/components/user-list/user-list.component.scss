@@ -10,14 +10,15 @@
 
     .filter {
       display: flex;
-      gap: 14px;
       flex: 1;
+      gap: 14px;
 
       &-item {
         display: flex;
         align-items: center;
         border: 2px solid $color-grey-120;
         border-radius: $border-radius-lg;
+        background-color: $color-white;
         padding-left: 15px;
         min-width: 157px;
 
@@ -108,27 +109,6 @@
           &.pending {
             background: $color-status-pending;
           }
-        }
-
-        .check-filter {
-          display: flex;
-
-          span {
-            font-size: 18px;
-          }
-
-          cvz-checkbox {
-            margin-right: 24px;
-            display: flex;
-            align-items: center;
-          }
-        }
-
-        img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          margin-right: 16px;
         }
 
         label {
