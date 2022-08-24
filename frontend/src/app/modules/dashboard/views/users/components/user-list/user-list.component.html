@@ -1,6 +1,6 @@
 <h1>USERS LIST</h1>
 
-<div class="user-list mt--60">
+<div class="user-list">
   <div *ngIf="true" class="filters">
     <div class="filter">
       <div class="search filter-item">
@@ -48,11 +48,11 @@
       <div class="cell">Status</div>
       <div class="cell">End date</div>
       <div class="cell">Total Used</div>
+      <div class="cell"></div>
     </div>
     <div class="row">
       <div class="cell">
-        <div class="cell-content  flex">
-
+        <div class="flex cell-content">
           <div class="check-filter">
             <cvz-checkbox></cvz-checkbox>
             <img [src]="'' | defaultImage" alt="">
@@ -91,18 +91,23 @@
         <label>Jan 2,2022</label>
       </div>
       <div class="cell">
-        <div class="flex align--center mr--0">
+        <div class="align--center mr--0">
           <span class="fw--500 mr--60 money-used">$783.22</span>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="justify--end">
           <cvz-icon name="more-vertical"></cvz-icon>
         </div>
       </div>
     </div>
     <div class="row mt--20">
       <div class="cell">
-        <div class="cell-content  flex">
+        <div class="flex cell-content">
           <div class="check-filter ">
             <cvz-checkbox></cvz-checkbox>
-            <img src="../../../assets/default-avatar.jpeg" alt="">
+            <img [src]="'' | defaultImage" alt>
           </div>
           <div class="flex--column">
             <label>Figma</label>
@@ -138,8 +143,13 @@
         <label>Jan 2,2022</label>
       </div>
       <div class="cell">
-        <div class="flex align--center mr--0">
+        <div class="align--center mr--0">
           <span class="fw--500 mr--60 money-used">$783.22</span>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="justify--end">
           <cvz-icon name="more-vertical"></cvz-icon>
         </div>
       </div>

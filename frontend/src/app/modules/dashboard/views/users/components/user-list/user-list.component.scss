@@ -3,6 +3,7 @@
 @import 'helpers';
 
 .user-list {
+  margin-top: 60px;
 
   .filters {
     display: flex;
@@ -62,16 +63,28 @@
   .table {
     display: table;
     width: 100%;
+    background-color: $color-white;
+    border-radius: 30px;
 
     .row {
       display: table-row;
 
+      &:not(:first-of-type) {
+        &:hover {
+          background-color: $color-grey-080;
+        }
+      }
+
       .cell {
         display: table-cell;
-        padding-top: 20px;
-        padding-bottom: 26px;
+        padding: 20px 42px 26px;
+
         vertical-align: middle;
         border-bottom: 1px solid $color-grey-070;
+
+        &:first-of-type {
+          padding-top: 35px;
+        }
 
         .bullet {
           width: 24px;
@@ -139,9 +152,7 @@
         .money-used {
           font-size: 20px;
         }
-
       }
-
     }
 
     &-head {
