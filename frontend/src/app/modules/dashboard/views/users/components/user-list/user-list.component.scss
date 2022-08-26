@@ -3,20 +3,22 @@
 @import 'helpers';
 
 .user-list {
+  margin-top: 60px;
 
   .filters {
     display: flex;
 
     .filter {
       display: flex;
-      gap: 14px;
       flex: 1;
+      gap: 14px;
 
       &-item {
         display: flex;
         align-items: center;
         border: 2px solid $color-grey-120;
         border-radius: $border-radius-lg;
+        background-color: $color-white;
         padding-left: 15px;
         min-width: 157px;
 
@@ -62,16 +64,28 @@
   .table {
     display: table;
     width: 100%;
+    background-color: $color-white;
+    border-radius: 30px;
 
     .row {
       display: table-row;
 
+      &:not(:first-of-type) {
+        &:hover {
+          background-color: $color-grey-080;
+        }
+      }
+
       .cell {
         display: table-cell;
-        padding-top: 20px;
-        padding-bottom: 26px;
+        padding: 20px 42px 26px;
+
         vertical-align: middle;
         border-bottom: 1px solid $color-grey-070;
+
+        &:first-of-type {
+          padding-top: 35px;
+        }
 
         .bullet {
           width: 24px;
@@ -97,27 +111,6 @@
           }
         }
 
-        .check-filter {
-          display: flex;
-
-          span {
-            font-size: 18px;
-          }
-
-          cvz-checkbox {
-            margin-right: 24px;
-            display: flex;
-            align-items: center;
-          }
-        }
-
-        img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          margin-right: 16px;
-        }
-
         label {
           font-weight: 600;
           font-size: 16px;
@@ -139,9 +132,7 @@
         .money-used {
           font-size: 20px;
         }
-
       }
-
     }
 
     &-head {

@@ -1,8 +1,9 @@
-import { CommonModule } from '@angular/common';
+import {CommonModule, CurrencyPipe} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BasketItemComponent } from './basket-item.component';
 import {IconModule} from "../icon/icon.module";
-
+import {DefaultImagePipeModule} from "../../pipes";
+import {LOCALE_ID} from '@angular/core';
 @NgModule({
   declarations: [BasketItemComponent],
   imports: [
@@ -11,6 +12,7 @@ import {IconModule} from "../icon/icon.module";
     IconModule,
     /* Angular Material Modules */
     /* Cavelizer Modules */
+    DefaultImagePipeModule,
   ],
   exports: [BasketItemComponent]
 })

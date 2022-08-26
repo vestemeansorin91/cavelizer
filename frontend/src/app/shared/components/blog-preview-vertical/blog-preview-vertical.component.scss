@@ -11,7 +11,12 @@
     background-color: $color-grey-070;
   }
 
+  .bottom-tag {
+    margin-top: 24px;
+  }
+
   .text {
+    margin-top: 8px;
     @include default-poppins-text();
     font-size: 18px;
     line-height: 27px;
@@ -22,7 +27,17 @@
     display: flex;
     padding: 16px 0;
     @include default-open-sans-text();
+    font-size: 12px;
     line-height: 16px;
     color: $color-black;
+
+    .author {
+      margin-right: 16px;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 12px;
+    }
   }
 }

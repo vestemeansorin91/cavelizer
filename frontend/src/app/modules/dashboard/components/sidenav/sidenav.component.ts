@@ -35,6 +35,7 @@ export class SidenavComponent implements OnInit {
 
   private checkIfSubmenuIsActiveOnInit() {
     const currentPath = this.location.path();
+
     for (let sidenavItem of this.sidenav) {
       if (sidenavItem && sidenavItem.submenus && sidenavItem.submenus.length) {
         const submenuPaths = sidenavItem.submenus.map(m => m.pathUrl.join('/'));

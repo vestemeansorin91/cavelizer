@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
-import {Observable} from "rxjs";
-import {UsersService} from "../../../../../../shared/services/users.service";
-import {UserInterface} from "../../../../../../shared/types/user.interface";
+import { Component } from '@angular/core';
+import { UserInterface, UsersService } from '@cavelizer';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-list',
@@ -11,7 +10,5 @@ import {UserInterface} from "../../../../../../shared/types/user.interface";
 export class UserListComponent {
   public users$: Observable<UserInterface[]> = this.usersService.getUsers();
 
-  constructor(private usersService: UsersService) {
-  }
+  constructor(private usersService: UsersService) {}
 }
-

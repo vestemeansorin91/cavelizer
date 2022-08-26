@@ -1,5 +1,3 @@
-import { ClipboardModule } from '@angular/cdk/clipboard';
-import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,8 +21,8 @@ import {
   IconModule,
   InnerTabGroupModule,
   MiniBannerModule,
-  ProductItemModule,
   ProductItemLargeModule,
+  ProductItemModule,
   QuoteModule,
   RadioGroupModule,
   RangeSliderModule,
@@ -33,7 +31,10 @@ import {
   ToggleModule
 } from '@cavelizer';
 import { CavelizerComponentsComponent } from './cavelizer-components.component';
+import { BasketItemExample } from './components/basket-item-example';
+import { BlogItemPreviewExample } from './components/blog-item-preview-example';
 import { BlogItemPreviewExample2 } from './components/blog-item-preview-example2';
+import { BlogPreviewSmallExample } from './components/blog-preview-small-example';
 import { ButtonExample } from './components/button-example';
 import { CheckboxExample } from './components/checkbox-example';
 import { ChipExample } from './components/chip-example';
@@ -48,11 +49,9 @@ import { RangeSliderExample } from './components/range-slider-example';
 import { TagExample } from './components/tag-example';
 import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
-import { BlogItemPreviewExample } from './components/blog-item-preview-example';
-import { BlogPreviewSmallExample } from './components/blog-preview-small-example';
 import { BlogPreviewVerticalExample } from './components/blog-preview-vertical-example';
 import { TypographyExample } from './components/typography-example';
-import { BasketItemExample } from './components/basket-item-example';
+
 import { RatingExample } from './components/rating-example';
 
 const EXAMPLE_COMPONENTS = [
