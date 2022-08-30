@@ -11,33 +11,34 @@
     background-color: $color-grey-070;
   }
 
-  .bottom-tag {
+
+  section {
     margin-top: 24px;
-  }
 
-  .text {
-    margin-top: 8px;
-    @include default-poppins-text();
-    font-size: 18px;
-    line-height: 27px;
-    color: $color-black;
-  }
-
-  .footer {
-    display: flex;
-    padding: 16px 0;
-    @include default-open-sans-text();
-    font-size: 12px;
-    line-height: 16px;
-    color: $color-black;
-
-    .author {
-      margin-right: 16px;
-      font-size: 12px;
+    .title {
+      margin-top: 8px;
+      @include default-poppins-text();
+      font-size: 18px;
+      line-height: 27px;
+      color: $color-black;
     }
 
-    .date {
+    .footer {
+      display: flex;
+      padding: 16px 0;
+      @include default-open-sans-text();
       font-size: 12px;
+      line-height: 16px;
+      color: $color-black;
+
+      .author {
+        margin-right: 16px;
+        font-size: 12px;
+      }
+
+      .date {
+        font-size: 12px;
+      }
     }
   }
 }
