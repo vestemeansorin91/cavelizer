@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {PRODUCTS_MOCK} from "../mock/products.mock";
-import {ProductInterface} from "../../../../../shared/components/product-item/product.interface";
+import { PRODUCTS_MOCK } from '../mock/products.mock';
+import { ProductInterface } from '../../../../../shared/components/product-item/product.interface';
 
 @Component({
   selector: 'app-basket-item-example',
@@ -17,5 +17,5 @@ import {ProductInterface} from "../../../../../shared/components/product-item/pr
   </mat-expansion-panel>`
 })
 export class BasketItemExample {
-  public products : ProductInterface[] = PRODUCTS_MOCK;
+  public products: ProductInterface[] = PRODUCTS_MOCK;
 }

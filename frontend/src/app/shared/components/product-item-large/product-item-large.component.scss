@@ -5,15 +5,13 @@
 .product-item-large {
   display: flex;
   flex-direction: row;
-
+  height: 280px;
   border: 1px solid $color-grey-060;
   border-radius: $border-radius-xl;
   background-color: $color-white;
 
   .product-image {
     width: 270px;
-    height: 280px;
-
     border-radius: $border-radius-xl;
     background-color: $color-orange;
   }

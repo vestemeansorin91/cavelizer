@@ -12,6 +12,7 @@ import {
   BasketItemModule,
   BlogPreviewModule,
   BlogPreviewSmallModule,
+  BlogPreviewVerticalModule,
   ButtonModule,
   CheckboxModule,
   ChipModule,
@@ -45,12 +46,13 @@ import { ProductItemLargeExample } from './components/product-item-large-example
 import { QuoteExample } from './components/quote-example';
 import { RadioGroupExample } from './components/radio-group-example';
 import { RangeSliderExample } from './components/range-slider-example';
-import { RatingExample } from './components/rating-example';
 import { TagExample } from './components/tag-example';
 import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
-
+import { BlogPreviewVerticalExample } from './components/blog-preview-vertical-example';
 import { TypographyExample } from './components/typography-example';
+
+import { RatingExample } from './components/rating-example';
 
 const EXAMPLE_COMPONENTS = [
   CavelizerComponentsComponent,
@@ -74,6 +76,7 @@ const EXAMPLE_COMPONENTS = [
   BlogItemPreviewExample2,
   BlogItemPreviewExample,
   BlogPreviewSmallExample,
+  BlogPreviewVerticalExample,
   TypographyExample
 ];
 
@@ -106,6 +109,7 @@ const routes: Routes = [
     ButtonModule,
     BlogPreviewModule,
     BlogPreviewSmallModule,
+    BlogPreviewVerticalModule,
     CheckboxModule,
     ChipModule,
     DropdownModule,
