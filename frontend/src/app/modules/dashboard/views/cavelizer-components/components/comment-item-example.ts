@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-blog-preview-small-example',
-  template: `<mat-expansion-panel>
+  selector: 'app-comment-example',
+  template: `<mat-expansion-panel expanded="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <strong>cavelizer-blog-preview-small-example</strong>
+        <strong>cavelizer-comment-example</strong>
       </mat-panel-title>
       <mat-panel-description> Creat de Mihai</mat-panel-description>
     </mat-expansion-panel-header>
-    <cvz-blog-preview-small></cvz-blog-preview-small>
+    <div class="flex flex--wrap gap--16 mb--16">
+      <cvz-comment></cvz-comment>
+    </div>
   </mat-expansion-panel>`
 })
-export class BlogPreviewSmallExample {}
+export class CommentExample {}

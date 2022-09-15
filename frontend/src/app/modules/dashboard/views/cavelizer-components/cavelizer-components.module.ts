@@ -16,6 +16,7 @@ import {
   ButtonModule,
   CheckboxModule,
   ChipModule,
+  CommentlModule,
   DropdownModule,
   FormElementsModule,
   IconModule,
@@ -38,6 +39,7 @@ import { BlogPreviewSmallExample } from './components/blog-preview-small-example
 import { ButtonExample } from './components/button-example';
 import { CheckboxExample } from './components/checkbox-example';
 import { ChipExample } from './components/chip-example';
+import { CommentExample } from './components/comment-item-example';
 import { DropdownExample } from './components/dropdown-example';
 import { InnerTabGroupExample } from './components/inner-tab-group-example';
 import { MiniBannerExample } from './components/mini-banner-example';
@@ -51,7 +53,6 @@ import { TextInputExample } from './components/text-input-example';
 import { ToggleExample } from './components/toggle-example';
 import { BlogPreviewVerticalExample } from './components/blog-preview-vertical-example';
 import { TypographyExample } from './components/typography-example';
-
 import { RatingExample } from './components/rating-example';
 
 const EXAMPLE_COMPONENTS = [
@@ -59,6 +60,7 @@ const EXAMPLE_COMPONENTS = [
   BasketItemExample,
   ButtonExample,
   ChipExample,
+  CommentExample,
   DropdownExample,
   InnerTabGroupExample,
   MiniBannerExample,
@@ -112,6 +114,7 @@ const routes: Routes = [
     BlogPreviewVerticalModule,
     CheckboxModule,
     ChipModule,
+    CommentlModule,
     DropdownModule,
     IconModule,
     InnerTabGroupModule,
