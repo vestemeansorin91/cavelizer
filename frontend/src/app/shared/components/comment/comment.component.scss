@@ -26,6 +26,8 @@
 
     .info {
       display: flex;
+      @include default-poppins-text();
+      color: $color-black;
       cvz-tag[class='narrow'] {
         margin-left: 6px;
       }
@@ -55,12 +57,19 @@
 }
 
 .comment:nth-child(2) {
+  margin-left: 100px;
   width: 470px;
 
   .info {
     display: flex;
     cvz-tag[class='disabled narrow'] {
       margin-left: 6px;
+
+      p {
+        margin: 0;
+        @include default-poppins-text();
+        color: $color-black;
+      }
     }
   }
 }
