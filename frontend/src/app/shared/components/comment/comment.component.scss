@@ -4,7 +4,6 @@
 
 .comment {
   width: 570px;
-  height: 170px;
   padding: 16px;
   border: 1px solid $color-grey-050;
   border-radius: $border-radius-xl;
@@ -52,11 +51,11 @@
   }
 }
 
-.comment:nth-child(1) {
+.comment:nth-child(odd) {
   margin-bottom: 20px;
 }
 
-.comment:nth-child(2) {
+.comment:nth-child(even) {
   margin-left: 100px;
   width: 470px;
 
