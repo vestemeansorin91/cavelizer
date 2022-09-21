@@ -21,6 +21,10 @@ tbody td {
   color: $color-grey-010;
 }
 
+tbody tr:nth-child(odd) {
+  background-color: $color-grey-130;
+}
+
 thead th {
   padding: 6px 0px;
   @include default-poppins-text();
