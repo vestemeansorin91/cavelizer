@@ -45,6 +45,8 @@ export * from './rating/rating.module';
 export * from './rating/rating.component';
 export * from './range-slider/range-slider.component';
 export * from './range-slider/range-slider.module';
+export * from './table/table.component';
+export * from './table/table.module';
 export * from './tag/tag.component';
 export * from './tag/tag.module';
 export * from './toggle/toggle.component';
