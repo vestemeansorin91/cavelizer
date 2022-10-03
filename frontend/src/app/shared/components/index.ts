@@ -10,6 +10,8 @@ export * from './checkbox/checkbox.component';
 export * from './checkbox/checkbox.module';
 export * from './chip/chip.component';
 export * from './chip/chip.module';
+export * from './comment/comment.component';
+export * from './comment/comment.module';
 export * from './dropdown/dropdown.component';
 export * from './dropdown/dropdown-panel';
 export * from './dropdown/dropdown-item.directive';

@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+
+.comment {
+  width: 570px;
+  padding: 16px;
+  border: 1px solid $color-grey-050;
+  border-radius: $border-radius-xl;
+  background-color: $color-white;
+
+  .info-box {
+    display: flex;
+
+    .avatar {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: $color-grey-080;
+    }
+
+    .info-plus-date {
+      margin-left: 12px;
+    }
+
+    .info {
+      display: flex;
+      @include default-poppins-text();
+      color: $color-black;
+      cvz-tag[class='narrow'] {
+        margin-left: 6px;
+      }
+    }
+
+    .date {
+      @include default-open-sans-text();
+      line-height: 16px;
+    }
+  }
+
+  .comment-box {
+    div {
+      @include default-open-sans-text();
+      color: $color-black;
+      font-size: 14px;
+    }
+    padding-top: 24px;
+    @include default-open-sans-text();
+    color: $color-black;
+    font-size: 14px;
+  }
+}
+
+.comment:nth-child(odd) {
+  margin-bottom: 20px;
+}
+
+.comment:nth-child(even) {
+  margin-left: 100px;
+  width: 470px;
+
+  .info {
+    display: flex;
+    cvz-tag[class='disabled narrow'] {
+      margin-left: 6px;
+
+      p {
+        margin: 0;
+        @include default-poppins-text();
+        color: $color-black;
+      }
+    }
+  }
+}

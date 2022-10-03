@@ -4,7 +4,7 @@ import { PRODUCTS_MOCK } from '../mock/products.mock';
 
 @Component({
   selector: 'app-product-item-example',
-  template: `<mat-expansion-panel expanded="true">
+  template: `<mat-expansion-panel>
     <mat-expansion-panel-header class="wip">
       <mat-panel-title>
         <strong>cavelizer-product-item</strong>
